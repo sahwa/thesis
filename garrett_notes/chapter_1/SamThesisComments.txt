@@ -1,0 +1,47 @@
+
+-- use "I" throughout rather than "we"
+p.16 -- "usually on the order of 0.001"
+p.17 -- with CP, samples files are also used?
+p.19, 2.2.2 -- motivation for what you'll do in this section
+p.20 -- why choose GLIMPSE? Should mention other programs and note why GLIMPSE is the best one for what you want to accomplish here
+p.21 -- GLIMPSE/CP: need a lot more description, e.g. what donors/recipients were used (and why), what was used in the phasing, what values of Ne/Mut were used (did you use E-M steps?), etc. There has to be enough information that this can be exactly replicated by someone.
+p.22 -- need to describe SOURCEFIND: what is it? What does it take as input?
+p.22 -- why did you use Yamanaya, Anatolian Neolithic and HGs only?
+p.22 -- define what you mean by sensitivity and precision
+Fig 2.1 (and all other figures) -- axis numbers, axis labels, legend and all other text need to be much larger
+Fig 2.3 -- I don't follow this? Is this assuming phasing is correct in the high coverage sample? If so, we don't want to assume that.
+p.22-25 -- you need to motivate what this does beyond what was done in GLIMPSE, e.g. they did not specifically look at ancient genomes in that paper
+p.26 -- haven't yet defined copyvector
+Fig 2.5 -- this suggests you should be looking between 0.1-0.5x, as everything is essentially perfect after 0.5x? You definitely don't need all panels, given they are all nearly identical
+Fig 2.6 -- Am I right that the only genome changing coverage here is Yamnaya? If so, you should make only one PCA plot, putting on it all the different coverages of Yamnaya. I think the labels are too small; I would use colors for culture and different symbols (or different shades of that color??) for coverage. I would repeat this for all ancient samples you mention at beignning, not just Yamnaya, but again you need only 1 PCA plot presumably.
+p.27-28 -- I couldn't follow what you've done here with the new ancient samples? E.g. what do you mean by "increasing the reference panel coverage" -- do you mean coverage in terms of new aDNA samples? And what do you mean by "including more ancient targets"? If they are not in the donor set, you can always exclude them later, so I'm not clear what you mean by it not being a fair test or what two variables have changed? Or is this using the new 1000 Genomes versus old 1000 Genomes, so that "increasing the reference panel coverage" means only that?
+Fig 2.8: what coverage is this? What do we conclude from this? Why only Yamnaya?
+Fig 2.9: this is so poor it's not worth showing, as it suggests something is fundamentally wrong (e.g. it gets worse as coverage gets higher??). Also unclear what parameters you used for this, and why it never converges to the blue lines.
+p.30 -- need to motivate SOURCEFIND; why do we care? Good to use qpAdm as a comparison, as that only requires one read per SNP presumably?
+p.33 -- not sure the original POBI dataset had 477,439 SNPs? Again you need to describe all QC, all merging, etc, to show how you ended up with 477K SNPs.
+p.33 -- why Devon and Cornwall? Why do leave-one-out?
+Fig 2.13/2.14 -- should run unlinked as comparison
+p.36 -- why 1000? Isn't 5000 where it breaks down?
+p.38 -- you can test whether this is the problem by removing some of the Cornwall/Devon donors. Can you do this in a way to match (roughly) the number of donors that Yamnaya has to match to? 
+p.39 -- So you're saying using 500K SNPs with a high INFO score did very poorly? If you took 500K random SNPs from the high coverage genome, that would presumably do very well. So are the 500K SNPs with high INFO imputed very poorly if compared to the high coverage sample? That seems to contradict your early findings showing it was well-calibrated?
+p.40 -- what does it mean to be a FN or FP here? Isn't it just whether the genotype matched or not?
+p.40 -- what is the "set of SNPs used in 2.2.4"? 
+p.40 -- "something other than incorrectly imputed"? What can it be? Is the only possibility the phasing? In general I don't understand what you did here. First off, why does the 0.1x ind still have 443,934 SNPs? What do you mean by a genotype match, given probabilities are used (if using UncertaintyCP)? Can you list what the possible causes of this are.
+
+In general:
+Nearly every section requires 1-2 sentences explaining the motivation. E.g. why use CPUncertainty? Why use CPRemoveRegions (though probably will end up removing this, given how the results make no sense)?
+Then for each analysis, what are the main conclusions you are making? You should state them clearly and show the evidence. 
+
+I think the main points of Chapter 2 should be explained in this order:
+(1) Coverage doesn't matter if >=0.5x, regardless of culture. To show ths, you need to have more than Yamnaya for every test you present. Plus this has been shown before presumably?
+(2) With coverage lower than 0.5x, is the issue imputation bias? E.g. do samples from different ancients converge towards each other on PCA? Or is it random noise (e.g. they do random directions, away from other inds, on PC)?
+(3) Can we recover hap information from genomes with coverage < 0.5x? To do so, we can try:
+   (i) modeling uncertainty (CPUncertainty), which seems to help
+   (ii) being more strict with SNPs we include (using imputation score)
+   (iii) only use SNPs with >x coverage
+
+You should first do (3) for the same ancients you've explored throughout. Then move on to Devon/Cornwall and Mandenka/Yoruba to explore (3) further, for more challenging situations.
+
+
+
+
