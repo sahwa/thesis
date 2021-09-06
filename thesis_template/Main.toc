@@ -24,9 +24,9 @@
 \contentsline {subsection}{\numberline {2.3.6}SOURCEFIND}{50}{subsection.2.3.6}%
 \contentsline {section}{\numberline {2.4}Issues and possible solutions for low coverage ancient DNA}{55}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}PCA imputation test}{55}{subsection.2.4.1}%
-\contentsline {section}{\numberline {2.5}Solutions}{58}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Accounting for allele likelihoods}{58}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Filtering SNPs}{59}{subsection.2.5.2}%
+\contentsline {section}{\numberline {2.5}Solutions}{56}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Accounting for allele likelihoods}{56}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Filtering SNPs}{60}{subsection.2.5.2}%
 \contentsline {subsection}{\numberline {2.5.3}Upweighting densely genotype regions of high coverage}{61}{subsection.2.5.3}%
 \contentsline {subsection}{\numberline {2.5.4}Incorporating the sample size vector into SOURCEFIND}{70}{subsection.2.5.4}%
 \contentsline {chapter}{\numberline {3}Investigating the sub-continental ancestry of ethnic minorities within the UK Biobank from sparse genotype data}{71}{chapter.3}%

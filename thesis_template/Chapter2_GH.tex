@@ -322,7 +322,9 @@ To explicitly test whether imputation or noise was driving the observed pattern 
 
 First, to determine whether imputation was causing bias in the samples independent from ChromoPainter, I performed PCA projections of all downsampled ancient individuals onto modern individuals using i) pre-GLIMPSE genotypes (Fig. \ref{fig:pre_GLIMPSE_PCA}) and ii) post GLIMPSE (imputed) genotypes Fig. \ref{fig:post_GLIMPSE_PCA}). 
 
-The results show that there is no coverage-related bias in the pre-GLIMPSE PCA, in that the 0.1x samples did not diverge substantially from the other samples. However, there is a degree of noise; for example, the LBK samples are spread over a small region on the PCA. On the other hand, there is a clear effect of the 0.1x shifting to the centre of the post-GLIMPSE PCA. Interestingly, GLIMPSE appears to have removed some of the noise in some of the downsampled individuals. A
+The results show that there is no coverage-related bias in the pre-GLIMPSE PCA, in that the 0.1x samples did not diverge substantially from the other samples. However, there is a degree of noise; for example, the LBK samples are spread over a small region on the PCA. 
+
+On the other hand, there is a clear effect of the 0.1x samples shifting to the centre of the post-GLIMPSE PCA. This suggests that coverage-related bias is being introduced in the imputation stage. Interestingly, GLIMPSE appears to have removed some of the noise in some of the downsampled individuals. For instance, the noise observed in the LBK samples in the pre-imputation PCA is substantially reduced, as all the samples fall on the same point. 
 
 I also performed a PCA, using exactly the same set of modern samples and downsampled ancient individuals as previously, but on the chunklengths matrix ChromoPainter output (Fig. \ref{fig:CP_linked_PCA}). The positions 
 
@@ -343,7 +345,7 @@ I also performed a PCA, using exactly the same set of modern samples and downsam
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1.0\textwidth]{../images/chapter1/CP_linked_PCA.pdf}
-    \caption{Pr}
+    \caption{Principle Component Analysis on post-imputed ChromoPainter output of all downsampled and full coverage ancient samples projected onto a set of modern populations. White labels correspond to the midpoint of all samples from that population, grey points correspond to modern individuals.}
     \label{fig:CP_linked_PCA}
 \end{figure}
 
