@@ -5,7 +5,7 @@
 \BOOKMARK [1][-]{section.2.2}{Methods}{chapter.2}% 5
 \BOOKMARK [2][-]{subsection.2.2.1}{Description of the ChromoPainter algorithm}{section.2.2}% 6
 \BOOKMARK [2][-]{subsection.2.2.2}{Generation of downsampled genomes}{section.2.2}% 7
-\BOOKMARK [2][-]{subsection.2.2.3}{Generation of reference ancient individuals}{section.2.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.3}{Generation of reference ancient samples}{section.2.2}% 8
 \BOOKMARK [2][-]{subsection.2.2.4}{Imputation and phasing - GLIMPSE}{section.2.2}% 9
 \BOOKMARK [2][-]{subsection.2.2.5}{Estimating imputation sensitivity and specificity}{section.2.2}% 10
 \BOOKMARK [2][-]{subsection.2.2.6}{ChromoPainter analysis}{section.2.2}% 11
