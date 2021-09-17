@@ -1,0 +1,57 @@
+General comments:
+(1) can you provide more specific conclusions on when the E.Asian ancestry is inferred to have occurred? Ideally you'd see a more recent inferred date in the ancient samples relative to present-day E.Europeans, so that the dates align when you account for the age of the ancient samples? It seems this might be what happens for Early Middle Ages (Fig 5.11), but this isn't entirely clear from the write-up.
+(2) did you run fastGT on these data? If so, it would be good to put these results in. If not, you could exclude mentioning fastGT here, instead comparing MOSAIC to the Hellenthal 2014 GT results, which use the same target populations largely (including N.Italians)?
+(3) It seems as if the 3-way admixture event inferred in present-day Slavs is also seen in the Early Middle Ages (Fig 5.3)? Following up from (1), do the dates align? It's interesting Migration Period comes up as a source for the southern component (Fig 5.12), but which Migration Period samples are you using here (given the high degree of heterogeneity)? It seems you should divide the Migration Period samples; otherwise this source is confusing to pinpoint.
+
+I think the information above is probably there, but the writing could be tightened up a bit when explaining this. Some potentially helpful things:
+-- a map of the observed genetic structure in Slavic Middle Ages and present-day Slavics, also containing information on language sub-classifications
+-- a figure containing all present-day and ancient populations, like Fig 5.10-5.11 (which are great), but showing how admixture signals vary among Slavic populations (maybe using Fig 3 from Hellenthal 2014 as a basis). Do they vary much, e.g. in terms of number of sources inferred?
+-- perhaps descibing the PCAs when using ancient versus modern individuals at the same time, since they convey similar information?
+-- title headings can have more information, related to your earlier questions, like "Present-day Slavic populations show continunity with MiddleAge Slavs", with this section showing the qpAdm, PCA, and admixture evidence, and "population structure among Middle Age Slavic samples"
+
+You don't need to make paper-ready figures (though would be helpful to, with an eye towards publishing!), but I think this can maybe restructured to make what you're testing and concluding more clear.
+
+other comments:
+p.96 -- helpful to include maps of slav settlements? And/or present-day Slavs divided into different language groups (or table listing this) (if helpful later)
+p.96 -- typo -- "... can be artificially [be] split into 3 periods..." why artificially? Invites more information!
+p.96 -- should note what explicit (or vague) times periods each of the 3 periods cover
+p.97 -- you mention the "Germanic ruins in the context of Slavic peoples", but this wasn't clear; was the animal bone found among other Slavic items?
+p.97 -- "...could further [refine] the admixture [date]"?
+p.97 -- do you mean "For example, different admixture dates in different Slavic populations may reveal structure amongs present-day Slavs" or something?
+p.98 -- "tentatively estimated" -- why tentatively?
+p.98 -- in general, better to use "inferred" rather than "found" throughout
+p.98 -- not really "consistent with these estimates", but consistent with a small effective pop size; worth re-writing the last two sentences of first paragraph. For example, our date estimates are much more precise than 0-1000AD -- worth mentioning our date estimates (plus those of MOSAIC).
+p.98 -- the data description is a bit confusing -- are these 17 all new? Are they the first high coverage autosomal-DNA Slavic samples?
+p.99, point 6 -- do you mean "present-day Slavic groups"? Or what do you mean by different affinities to different language groups?
+p.99, point 7 -- incomplete
+p.100 -- make a proper table, with label
+p.100 -- you can write "(Z.Hofmanova, personal communication)"
+p.100 -- worth mentioning a bit more coverage of data (ideally this can tie back into Chap 2 about what coverage you think is appropriate for GLIMPSE imputation)
+p.102 -- a bit confusing -- you used GLIMPSE and then also SHAPEIT, after adding modern samples? Ancients and moderns were phased together, presumably?
+p.102 -- maybe "I performed PCA on the ancient samples, including only 500,000 non-imputed SNPs with the lowest amount of missingness" -- this isn't quite right, I think -- you did LD pruning, after which how many sNps were left? Anyway you can probably reduce the two paragraphs of 5.2.4 to 2-3 sentences.
+p.102 -- for 5.2.5, worth having a reason for why you didn't use (e.g.) Daniel Wegmann's ROH software for aDNA (even if just in case you are asked); I guess the coverage here is high enough to be appropriate for PLINK?
+p.103 -- better to have more details -- e.g. "I selected all XX ancient samples with coverage >2x, and ..."
+p.103 -- have you defined what the "C factor" is? If so, you should reference that chapter here; otherwise you need to describe it (intuitively, in 1-2 sentences) somewhere.
+p.104 -- "However, these cannot be seen as true ancestry proportions" -- this depends on how you define "ancestry proportions". I think you mean to say you can't think of them as "admixture fractions" or similar?
+p.104 -- you mention in the fineSTRUCTURE section where the "47 clusters" come from -- was this the final fineSTRUCTURE solution, or based on the tree?
+p.104 -- should (briefly) describe results from using "auto-corr.diag" -- e.g. was there evidence of convergence, and how did you assess this?
+p.106 -- fastGT section incomplete
+p.110 -- there seem to be way more "Viking" labels in Fig 5.2 relative to 5.1? In general the references seem different; e.g. where is "Imperial_Rome" in Fig 5.2?
+p.111 -- do these samples "really share most haplotypes" with each other? The PCA suggests that they have similar patterns of matching to other samples. The fineSTRUCTURE heatmap + tree will be more informative than just the PC; you don't need to mention the clustering with Neolithic samples (which could be an artefact of looking at only PCs 1 and 2) if fineSTRUCTURE shows more sensible clustering with recent groups.
+p.111 -- in general I don't think you want to conflate "Neolithic-like" and southern (as in your Bavarian analysis). You can probably drop mention of "Neolithic" altogether. The point is that southern Europe groups look more Neolithic-like and also some Slavic inds appear southern Europe-like, and not that there is a direct link from Neolithic to Slavic. It's likely just southern European admixture?
+p.112 -- replace "derives 25% of their ancestry from Anatolia" with "shares 25% of their ancestry most recently with people from Anatolia"
+p.113 -- can you use single-sample surrogates in MOSAIC?
+p.113 -- when mentioning admixture in present-day E.Europe, can you give ranges (e.g. CIs) on the inferred admixture dates? The dates you give here are very precise; don't they vary across different E.Europe pops?
+p.114 -- is the 3-way event significant from 2-way in MOSAIC? (Does it quantify this? If so, worth saying.)
+p.115 -- "[following Leslie et al 2015] I performed a TVD permutation...."
+p.117 -- "[across] between the Migration Period..."
+p.118 -- it seems this PCA results description (e.g. Fig 5.6) largely repeats what you said from your earlier ancients PCA? Again probably don't want to refer to "Neolithic-like" sources, but instead relationships with southern Europe
+p.121 -- presumably the f3-stats used non-imputed data only, so that this first sentence makes sense? Also you should point out issues with f3 outgroup tests when presenting your Fig 5.8 plot (e.g. how often the most drifted group wins)
+p.122 -- the rank 0 matrix canNOT be rejected -- doesn't this mean the data can be explained without requiring admixture (i.e. "one wave of migration"), suggesting Middle Age is consistent with continuity with present-day Slavs? (You should read the Supp Mat (Note S6) of Reich et al 2009 Nature 488:370-374 to try to understand the details. We should discuss!)
+p.123 -- are the Finestructure clusters consistent with those reported in Hellenthal 2014 and Busby 2015? If so, should mention this.
+p.125 -- does MOSAIC conclude 2-way or 3-way? If 3-way, better to just show results from that (e.g. having multiple dates per population, indicating which admixture is E.Asian related). Do the Early Middle Ages dates of admixture fit in with the predictions from GT in Hellenthal 2014? They seem to; if so, worth reporting this, even though MOSAIC dates are more recent for some reason.
+p.126 -- I think the text says fig 5.12 is for Polish, but the legend says Belorussians? Think the "Polish" (p.125) may be wrong?
+p.127 -- "[In particular I inferred] ancestry sources from Southern Europe and Scandinavia."
+p.127 -- again are the clustering results consistent with Busby 2015 and Hellenthal 2014?
+p.127 -- "most clost" -- "closest"
+p.127 -- interesting you find E.Asian admixture in N.Italians, is that right? Is that signal reported in the MOSAIC paper? It doesn't appear to be detected by GT in Hellenthal 2014.

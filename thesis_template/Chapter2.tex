@@ -427,7 +427,11 @@ However, the relationship between the 'dense' copyvector and full coverage copyv
 
 With this information in mind, we can consider its use for ancient DNA. The previous section showed that imputed SNPs are the primary cause of coverage-related bias. Therefore, if we can find dense regions of non-imputed genotypes at sufficient coverage, we may be able to recover a large amount of the haplotype information from low coverage (<0.5x) samples.
 
-The previous section informed us that approximately 2259 SNPs spaced over on chromosome 22 was sufficient to recover haplotype information. To obtain the mean number of SNPs per chunk, we can calculate $\dfrac{\sum_{i=1}^{d} \sum_{j=1}^{r} (c_{ij})}{d*r} * n$, where $d$ is the number of donor individuals, $r$ is the number of recipient individuals, $n$ is the number of SNPs over the region of interest and $c_{ij}$ is the number of chunks donated from donor $i$ to recipient $j$. In the case of chromosome 22 at density 0.3, this yields 572 SNPs per chunk. We can also calculate the mean segment length as $L \div C$, (element-wise division) where $C$ is the chunkcounts matrix and $L$ is the  chunklengths matrix, which gives the average segment length each donor contributes towards each recipient. Taking the mean across all donors and recipients yields a value of 0.77cM. 
+The previous section informed us that approximately 2259 SNPs spaced over on chromosome 22 was sufficient to recover haplotype information. To obtain the mean number of SNPs per chunk, we can calculate $\dfrac{\sum_{i=1}^{d} \sum_{j=1}^{r} (c_{ij})}{d*r} * n$, where $d$ is the number of donor individuals, $r$ is the number of recipient individuals, $n$ is the number of SNPs over the region of interest and $c_{ij}$ is the number of chunks donated from donor $i$ to recipient $j$. In the case of chromosome 22 at density 0.3, this yields 14.3 SNPs per chunk. 
+
+We can also calculate the mean segment length as $L \div C$, (element-wise division) where $C$ is the chunkcounts matrix and $L$ is the  chunklengths matrix, which gives the average segment length each donor contributes towards each recipient. Taking the mean across all donors and recipients yields a value of 0.46cM. 
+
+Thus, we can search for regions of approximately 0.46cM which contain at least 14.3
 
 The genetic map used in the analysis was 70cM and there are 545,870 corresponding to a density of 1 SNP per 0.00012cM. 
 

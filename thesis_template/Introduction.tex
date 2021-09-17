@@ -2,9 +2,15 @@
 
 \section{Chromopainter and ancient DNA}
 
+In this introduction, I will discuss i) the broad outline of methods used to determine population structure in ancient DNA, ii) the history and usage of haplotype-based methods in ancient DNA and iii) the history of imputation in ancient DNA.
+
+\section{Methods used to analyse ancient DNA}
+
 The first ancient DNA papers relied principally on statistical methods based upon allele-sharing or allele-frequencies. These methods, in particular f-statistics \cite{Green2010, Patterson2012, peter2016admixture} and Principle Component Analysis \cite{price2006principal}. 
 
 The early studies of ancient DNA generally considered broad-scale questions about human history, such as the nature of human-archaic interactions or the spread of farming technology across Europe \cite{Lazaridis2014}. Due to the infancy of the field, sample sizes were small, as efficient methods to obtain genetic data from ancient samples, such as SNP capture arrays, had yet to be developed. These studies tended to look for genetic differences between populations which had been diverged for many generations; in such cases, powerful methods are not required. In the case of Lazaridis et al (2014), simply plotting Loschbour and Stuttgart/LBK on a PCA of modern individual showed they had substantially divergent ancestries, with Loschbour being most similar to present-day North-East Europeans, but falling well outside the variation of present-day Europeans, and Stuttgart clustering with present-day individuals from Tuscany. 
+
+Such methods, which I will hereafter refer to as `unlinked', as they assume a model of linkage equilibrium between neighbouring SNPs, are useful for ancient DNA studies. Firstly, it is relatively easy to account for missingness in the data, by using e.g. a PCA projection. 
 
 The first use of chromopainter on ancient DNA was in a seminal paper from Lazaridis et al (2014) \cite{Lazaridis2014}. The two samples, Loschbour and Stuttgart, we of high coverage and therefore imputation was not used.
 
@@ -13,3 +19,29 @@ Perhaps the first study to explicitly investigate chromopainter on ancient DNA w
 As sample sizes used in ancient DNA studies has rapidly increased to >100, more analyeses have incorporate haplotype-based methods. Each study typically carries out a small analysis to ensure that imputation in low-coverage ancient DNA samples is accurate. Antonio et al (2019) \cite{antonio2019ancient} analysed 127 ancient genomes of a mean coverage of 1x. To test imputation accuracy, they downsampled a single individual (NE1) to different levels of coverage and calculated the proportion of genotypes which matched the full coverage. However, this analysis was only performed on a single sample and the effect of imputation on the chromopainter process was not evaluated. 
 
 More recently, ChromoPainter has been used to study aspects of archaic hominin ancestry in present-day humans \cite{JACOBS20191010, teixeira2021widespread}. 
+
+\section{Combining data from multiple chips}
+
+A related issue stems from the current practice of developing a large number of genotyping arrays. Different cohorts are genotpyed on different arrays and sets of SNPs, as different SNPs have different characteristics. For example, some SNPs are known to be associated with particular phenotypes, some SNPs are known to be more variable (and therefore more informative at identifying structure) in certain populations.
+
+\section{Issues with low coverage}
+
+Coverage is an issue which has plagued the field of ancient DNA since its inception. Compared to DNA obtained from present-day samples, ancient DNA samples typically have a much lower proportion of endogenous DNA. This is because DNA degrades over time from environmental factors. Therefore, when the DNA fragments are sequenced, relatively few of them will align to the human reference. The coverage of a genome is therefore the mean number of reads mapped to each position in the genome. 
+
+The primary issue with low-coverage data is the increased uncertainty when calling diploid genotypes, particularly when the true genotype is heterozygous. To mitigate this issue, many studies used `pseudo-haploid' genotyping, where a diploid genotype is reduced to a haploid by randomly sampling an allele from all the reads which have been aligned to that position in the genome. Whilst the use of pseudo-haploid calling eradicates the need to call heterozygous genotypes at low coverage positions, it also necessarily reduces the amount of information present at each position in the genome.
+
+I will discuss in more detail later the effect of coverage on other methods. 
+
+\subsection{Gains to be made with haplotype information}
+
+Here, I will define `haplotype-based' method as one which explicitly models linkage between neighbouring SNPs. Although LD has been studied since the earliest days of genetics (cite), its use in population structure inference was  developed in the early 2000s \cite{conrad2006worldwide}.
+
+Accounting for recombination and LD within a model is necessarily computationally complex, as the number of combinations of alleles and their associated evolutionary histories balloons as the number of loci considered increases (does it scale quadraticlly?). The Li and Stephens copying model was instrumental in the development of such methods \cite{song2016li} and provided an elegant solution to the increased complexity when using linked loci. As such, it is now a critical model in virtually all areas of genomic methodology, from imputation, phasing etc etc. 
+
+Perhaps the first paper to formalise a haplotype-based approach was that of Hellenthal et al 2008 \cite{hellenthal2008inferring}.
+
+Later, Lawson et al (2015) \cite{Lawson2012} developed what is now one of the leading approaches to modeling linkage between markers. This study showed that ChromoPainter had an enhanced ability to separate closely related populations when plotted on a PCA. ChromoPainter was originally developed in tandem with its own clustering method fineSTRUCTURE, and has since been extended into methods to detect and date admixture, and infer ancestry proportions. 
+
+It has since become a mainstay of population genetic reaearch
+
+Usage of haplotype-based methods is not without drawbacks. They are typically slower by several orders of magnitude 

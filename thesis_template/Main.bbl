@@ -101,6 +101,28 @@ Jo{\~a}o~C Teixeira, Guy~S Jacobs, Chris Stringer, Jonathan Tuke, Georgi
   evidence of substantial super-archaic hominin admixture.
 \newblock {\em Nature Ecology \& Evolution}, 5(5):616--624, 2021.
 
+\bibitem{conrad2006worldwide}
+Donald~F Conrad, Mattias Jakobsson, Graham Coop, Xiaoquan Wen, Jeffrey~D Wall,
+  Noah~A Rosenberg, and Jonathan~K Pritchard.
+\newblock A worldwide survey of haplotype variation and linkage disequilibrium
+  in the human genome.
+\newblock {\em Nature genetics}, 38(11):1251--1260, 2006.
+
+\bibitem{song2016li}
+Yun~S Song.
+\newblock Na li and matthew stephens on modeling linkage disequilibrium.
+\newblock {\em Genetics}, 203(3):1005--1006, 2016.
+
+\bibitem{hellenthal2008inferring}
+Garrett Hellenthal, Adam Auton, and Daniel Falush.
+\newblock Inferring human colonization history using a copying model.
+\newblock {\em PLoS genetics}, 4(5):e1000078, 2008.
+
+\bibitem{Lawson2012}
+Daniel~John Lawson, Garrett Hellenthal, Simon Myers, and Daniel Falush.
+\newblock {Inference of population structure using dense haplotype data}.
+\newblock {\em PLoS Genetics}, 8(1):11--17, 2012.
+
 \bibitem{Link2017}
 Vivian Link, Athanasios Kousathanas, Krishna Veeramah, Christian Sell, Amelie
   Scheu, and Daniel Wegmann.
@@ -112,11 +134,6 @@ Simone Rubinacci, Diogo~M Ribeiro, Robin~J Hofmeister, and Olivier Delaneau.
 \newblock Efficient phasing and imputation of low-coverage sequencing data
   using large reference panels.
 \newblock {\em Nature Genetics}, 53(1):120--126, 2021.
-
-\bibitem{Lawson2012}
-Daniel~John Lawson, Garrett Hellenthal, Simon Myers, and Daniel Falush.
-\newblock {Inference of population structure using dense haplotype data}.
-\newblock {\em PLoS Genetics}, 8(1):11--17, 2012.
 
 \bibitem{Chacon-Duque2018}
 Juan~C. Chacon-Duque, Kaustubh Adhikari, Macarena Fuentes-Guajardo, Javier
