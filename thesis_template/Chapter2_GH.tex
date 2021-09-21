@@ -250,7 +250,7 @@ Fig. \ref{fig:CP_correlation_allSamples_0.1x_0.5x_30x} displays the relationship
     \label{fig:CP_correlation_allSamples_0.1x_0.5x_30x}
 \end{figure}
 
-As expected, the r-squared value between the full-coverage and downsampled copyvectors increased with coverage. The 0.1x genome had a substantially reduced r-squared value, similar to the much reduced imputation accuracy. For each of the genomes downsampled to 0.1x, a particular difference to the 0.5x downsampled genomes is that, for each individual, the lowest contributing donors contribute more to the 0.1x downsampled genome than to the full coverage genome and that the highest contributing donors contribute less to the 0.1x genome than they do the full coverage genome. Put in other words, the copyvectors at 0.1x are tending towards coming more 'flat', or copying the same amount from each donor individual. This can be observed as the coefficients of the linear model lines on the figures are much less in the 0.1x than the 0.5x individuals. This can also be seen as `regressing to the prior', where in this case, the prior is copying an equal amount to each donor individual. This can be visualised explicitly by calculating TVD between each downsampled genome and a flat prior, a vector of length $D$, where $D$ is the total number of donor individuals and each element of $D$ is equal to 1 / $D$ (Fig. \ref{fig:TVD_ancients_flat_prior}). This clearly shows the reduced TVD to the flat copyvector for the 0.1x individual relative to other coverages.{\color{red}[A VITAL POINT IS TO SHOW WHETHER THERE IS BIAS CAUSED BY IMPUTATION (RATHER THAN JUST LOSS-OF-INFORMATION OR NOISE). THAT MAY BE EASIER IN LATER UKBIOBANK SECTIONS, BUT -- IF SO -- YOU SHOULD MENTION YOU'LL REPORT ON THIS LATER]}
+As expected, the r-squared value between the full-coverage and downsampled copyvectors increased with coverage. The 0.1x genome had a substantially reduced r-squared value, similar to the much reduced imputation accuracy. For each of the genomes downsampled to 0.1x, a particular difference to the 0.5x downsampled genomes is that, for each individual, the lowest contributing donors contribute more to the 0.1x downsampled genome than to the full coverage genome and that the highest contributing donors contribute less to the 0.1x genome than they do the full coverage genome. Put in other words, the copyvectors at 0.1x are tending towards coming more 'flat', or copying the same amount from each donor individual. This can be observed as the coefficients of the linear model lines on the figures are much less in the 0.1x than the 0.5x individuals. This can also be seen as `regressing to the prior', where in this case, the prior is copying an equal amount to each donor individual. This can be visualised explicitly by calculating TVD between each downsampled genome and a flat prior, a vector of length $D$, where $D$ is the total number of donor individuals and each element of $D$ is equal to 1 / $D$ (Fig. \ref{fig:TVD_ancients_flat_prior}). This clearly shows the reduced TVD to the flat copyvector for the 0.1x individual relative to other coverages. In later sections, I will discuss whether this is `noise' or `bias' induced by imputation. 
 
 \begin{figure}[htp]
     \centering
@@ -274,12 +274,12 @@ Principle component analysis (PCA) is a widely used technique to visualise the r
 
 The position of the full coverage individuals are consistent with prior knowledge about their ancestry; Loschbour is positioned alongside other Hunter Gatherers who are highly differentiated from the later Neolithic farmers and Bronze Age Europeans. sf12 clusters with the other Scandinavian Hunter Gatherers in the dataset. Yamnaya is differentiated from the group of Bronze Age individuals and situated close to individuals from the Poltavka and Srubnaya culture. LBK is located with other individuals from the early to middle Neolithic in central Europe. Consistent with sharing little ancestry with any group over another, UstIshim is positioned close to the central Bronze Age mass where most of the individuals in the PCA are located (I presume this is because UstIshim has a relatively flat copyvector and therefore is positioned near to where most of these samples are). 
 
-For all levels of downsampling other than the 0.1x, the downsampled and full coverage genomes were positioned very closely to one another on the PCA. When considering all downsampled individuals, a pattern emerges whereby the genome downsampled to 0.1x for each individual is 'pulled' towards the origin of the PCA. {\color{red}This may reflect a 'homogenisation' of low coverage genomes when most of the positions are imputed.[AGAIN WOULD BE HELPFUL TO KNOW IF THIS IS RANDOM NOISE OR BIAS?]}
+For all levels of downsampling other than the 0.1x, the downsampled and full coverage genomes were positioned very closely to one another on the PCA. When considering all downsampled individuals, a pattern emerges whereby the genome downsampled to 0.1x for each individual is 'pulled' towards the origin of the PCA. This may reflect a homogenisation' of low coverage genomes when most of the positions are imputed.
 
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1.0\textwidth]{../images/chapter1/PCA_panel_allInds.allCoverage.pdf}
-    \caption{Principle component analysis (PCA) of downsampled, full coverage and reference ancient individuals generated from the linked chunklengths matrix. Full coverage and downsampled genomes of the same individual are coloured the same. Reference individuals are grouped into populations plotted as the mean principle components for all individuals within the population{\color{red}[NEXT TO EACH LABEL, CAN YOU THEN PUT THE NUMBER OF INDS IN THAT POPULATION (JUST FOR CASES WITH > 1 INDIVIDUAL?)].}}
+    \caption{Principle component analysis (PCA) of downsampled, full coverage and reference ancient individuals generated from the linked chunklengths matrix. Full coverage and downsampled genomes of the same individual are coloured the same. Reference individuals are grouped into populations plotted as the mean principle components for all individuals within the population.}
     \label{fig:PCA_panel_allInds_allCoverage}
 \end{figure}
 
@@ -316,11 +316,11 @@ Again, Loschbour seems to be the least affected by coverage, with only slight di
 
 The previous section detailed some of the drawbacks of performing ChromoPainter analysis on low coverage ($<$0.5x) ancient DNA samples. In particular, reducing the sequencing coverage of ancient DNA samples has the effect of pulling each sample towards origin of a principle component analysis (PCA) relative to the same sample at higher coverage (Fig. \ref{fig:PCA_panel_allInds_allCoverage}). This is evident for the lowest coverage samples at 0.1x. 
 
-This section will therefore consider mitigation strategies. However, first it is necessary to elucidate the potential causes of this coverage related bias. 
+This section will consider mitigation strategies. However, first it is necessary to determine at which stage of the analysis pipline this bias is introduced. By `analysis pipeline', I mean the stages of variant calling (atlas), imputation and phasing (GLIMPSE) and ChromoPainter. Specifically, I wanted to know whether moving towards the reference occurs before or after imputation and whether ChromoPainter exacerbates the problem.   
 
 \subsection{PCA imputation test}
 
-To explicitly test whether imputation or noise was driving the observed pattern in the low-coverage ancient genomes, I performed a series of tests. 
+To explicitly test at what stage the issue is occuring, I performed a set of principle component analyses on the downsampled data. 
 
 First, to determine whether imputation was causing bias in the samples independent from ChromoPainter, I performed PCA projections of all downsampled ancient individuals onto modern individuals using i) pre-GLIMPSE genotypes (Fig. \ref{fig:pre_GLIMPSE_PCA}) and ii) post GLIMPSE (imputed) genotypes Fig. \ref{fig:post_GLIMPSE_PCA}). 
 
@@ -363,11 +363,7 @@ Fig. \ref{fig:CP_unlinked_PCA} displays the PCA for the same painting, but using
 
 \subsection{Direct imputation test}
 
-To directly test the effect of imputation on modern genomes, I performed a controlled test.
-
-I took the POBI dataset (appendix x) which originally contained 500,000 SNPs. I removed 430,000 of those and imputed the missing SNPs using the 1000 genome as a reference.
-
-We can make 2 predictions to determine whether it is noise or bias. First, if it is pure noise, we would expect the mean chunk size to be lower, as the chunks are being distributed randomly across donors rather than to a specific donor and vice versa. This was the case, as each individual had a longer mean chunk size using non-imputed SNPs compared to imputed SNPs.
+To directly test the effect of imputation on modern genomes, I performed a controlled test. I took the POBI dataset (appendix x) which originally contained 500,000 SNPs. I removed 430,000 of those and imputed the missing SNPs using the 1000 genome as a reference. We can make 2 predictions to determine whether it is noise or bias. First, if it is pure noise, we would expect the mean chunk size to be lower, as the chunks are being distributed randomly across donors rather than to a specific donor and vice versa. This was the case, as each individual had a longer mean chunk size using non-imputed SNPs compared to imputed SNPs (Fig. \ref{fig:mean_chunk_size_comparison}).
 
 
 \begin{figure}[htp]
@@ -387,48 +383,50 @@ In this section I will explore several potential solutions to the issue of cover
 
 \subsection{Accounting for allele likelihoods}
 
-Section 2.2.1 describes a novel improvement to the ChromoPainter algorithm. Briefly, instead of assuming that each allele along a haplotype is correct with a probability $1-\theta$, where $\theta$ represents a generic error probability, the posterior genotype probability from GLIMPSE is accounted for in the emission probabilities of the copying model. The motivation behind this improvement is that the uncertainty associated with genotype calls at low coverage is suitably propagated throughout the painting process, resulting in uncertain alleles contributing less towards the expected copying values than more certain ones. This is similar in spirit to that of Viera et al (2016), who account for genotype likelihoods to infer inbreeding IBD tracts from low coverage NGS data.
+Section 2.2.1 describes an improvement to the ChromoPainter algorithm. Instead of assuming that each allele on a haplotype is correct with a probability $1-\theta$, where $\theta$ represents a generic error probability (often on the order of 0.001), the posterior genotype probability from GLIMPSE is accounted for in the emission probabilities of the copying model. The motivation behind this improvement is that the uncertainty associated with genotype calls at low coverage is suitably propagated throughout the painting process, resulting in uncertain alleles contributing less towards the expected copying values than more certain ones. This is similar in spirit to that of Viera et al (2016), who account for genotype likelihoods to infer inbreeding IBD tracts from low coverage NGS data.
 
-To test this approach, I calculated r-squared between the copyvectors of full coverage and downsampled individuals using the two different methods (Fig. \ref{fig:uncertainty_v_noUncertainty_0.5x_0.1x}) at both 0.1x and 0.5x coverage. This shows that at 0.1x, the standard ChromoPainter method clearly outperforms the new method, across all samples, whereas at 0.5x, the new method marginally outperforms the standard method. 
+To determine whether accounting for allele likelihoods improved the painting accuracy of a low-coverage genome, I calculated r-squared between the copyvectors of full coverage and downsampled individuals using the two different methods (Fig. \ref{fig:uncertainty_v_noUncertainty_0.5x_0.1x}) at both 0.1x and 0.5x coverage. This shows that at 0.1x, the standard ChromoPainter method clearly outperforms the new method, across all samples, whereas at 0.5x, the new method marginally outperforms the standard method. Clearly accounting for allele likelihoods does not particularly improve the performance of ChromoPainter.
 
 
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1.0\textwidth]{../images/chapter1/uncertainty_v_noUncertainty_0.5x_0.1x.pdf}
-    \caption{}
+    \caption{Comparison of performance of ChromoPainterV2 and ChromoPainterV2Uncertainty. Panels correspond to samples downsampled to 0.1x (left) and 0.5x (right). Points correspond to the r-squared between the downsampled individual and the same individual at full coverage. Red points are values obtained from ChromoPainterV2 and blue points are those obtained from ChromoPainterV2Uncertainty.}
     \label{fig:uncertainty_v_noUncertainty_0.5x_0.1x}
 \end{figure}
 
 
 \subsection{Filtering SNPs}
 
-Here I will test whether filtering the set of input SNPs on different criteria reduces the effect of coverage related bias. 
+In this section, I will test whether filtering the set of input SNPs on different criteria reduces the effect of coverage related bias. 
 
 The frequency of a particular variant in the reference panel (RAF - reference allele frequency) used for imputation is known to affect how accurately that variant can be imputed \cite{rubinacci2021efficient, delaneau2018integrative, Browning2016, hui2020evaluating}. Specifically, we expect variants which are less frequent in the reference panel to be imputed at a lower accuracy than those which are more frequent. Therefore, removing variants with a low frequency in the reference panel may mitigate the coverage related bias by removing variants which have been incorrectly imputed. In other words, we want to retain the SNPs where both alleles are relatively common within the population. 
 
-I took the 428,425 SNPs retained form the HellBus set and removed SNPs with $0.1 > RAF$ or $RAF > 0.9$, removing a total of 50,187 SNPs. I painted individuals downsampled to 0.1x and 0.5x using the standard set of 125 ancient donor individuals. 
+For each individual, I took the 428,425 SNPs in the HellBus set and removed SNPs with $0.1 > RAF$ or $RAF > 0.9$, removing an average of 50,187 SNPs per individual. I then painted individuals downsampled to 0.1x and 0.5x using the standard set of 125 ancient donor individuals described in section x.  
 
 Comparing the r-squared and visually inspecting the relationship between the copvectors showed that this did not improve the 0.5x copyvectors (Fig.  \ref{fig:CP_correlation_allSamples_0.1x_0.5x_30x.RAF_filter}.
 
+I then chose to filter SNPs based on $max(GP)$ at each position. $max(GP)$ correspond to the accuracy with which a SNP has been imputed, with higher values reflecting a higher chance of that genotype being imputed correctly. For each individual downsampled to 0.5x, I only retained positions where the $max(GP) >= 0.990$. This resulted in a total of 348,852 SNPs for LBK, 339,949 for Loschbour, 315,075 for sf12, 308,961 for UstIshim and 386,484 for Yamnaya. Because different SNPs were removed from different individuals, each individual was painted separately. The same standard set of 124 ancient donors was used. Again, this did not improve the accuracy of the copyvectors. 
 
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../images/chapter1/CP_correlation_allSamples_0.1x_0.5x_30x.RAF_filter.png}
-    \caption{R-squared between downsampled and full coverage copyvectors when filtering out sites with $0.1 < RAF > 0.9$ at 0.1x coverage ({\color{red}top row?}L) and 0.5 coverage (R).{\color{red}[PERHAPS BETTER TO SHOW THIS -- AND FIG 2.14 -- AS A TABLE OF $r^2$ VALUES, SHOWING THE PREVIOUS CASE AND AFTER REDUCING LOW-FREQUENCY VARIANTS]}}
-    \label{fig:CP_correlation_allSamples_0.1x_0.5x_30x.RAF_filter}
-\end{figure}
- 
-I then chose to filter SNPs based on $max(GP)$ at each position. For each individual downsampled to 0.5x, I only retained positions where the $max(GP) >= 0.990$. This resulted in a total of 348,852 SNPs for LBK, 339,949 for Loschbour, 315,075 for sf12, 308,961 for UstIshim and 386,484 for Yamnaya. Because different SNPs were removed from different individuals, each individual was painted separately. The same standard set of 124 ancient donors was used. 
-
-Again, this did not improve the accuracy of the copyvectors (Fig. \ref{fig:CP_correlation_allSamples_0.1x_0.5x_30x.GP_filter}).
-
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../images/chapter1/CP_correlation_allSamples_0.1x_0.5x_30x.GP_filter.pdf}
-    \caption{R-squared between downsampled and full coverage copyvectors when filtering out sites with $max(GP) >= 0.990$ at 0.1x coverage (L) and 0.5 coverage (R).}
-    \label{fig:CP_correlation_allSamples_0.1x_0.5x_30x.GP_filter}
-\end{figure}
-
+\begin{table}[ht]
+\centering
+\begin{tabular}{rllrrr}
+  \hline
+ & sample & coverage & uncertainty & raf & gp \\ 
+  \hline
+1 & LBK & 01x & 0.98 & 0.98 &  \\ 
+  2 & LBK & 05x & 1.00 & 1.00 & 0.99 \\ 
+  3 & Loschbour & 01x & 0.99 & 0.99 &  \\ 
+  4 & Loschbour & 05x & 1.00 & 1.00 & 0.99 \\ 
+  5 & sf12 & 01x & 0.97 & 0.97 &  \\ 
+  6 & sf12 & 05x & 1.00 & 1.00 & 0.98 \\ 
+  7 & Yamnaya & 01x & 0.97 & 0.97 &  \\ 
+  8 & Yamnaya & 05x & 1.00 & 1.00 & 0.99 \\ 
+  9 & UstIshim & 01x & 0.94 & 0.93 &  \\ 
+  10 & UstIshim & 05x & 0.98 & 0.98 & 0.97 \\ 
+   \hline
+\end{tabular}
+\end{table}
 
 \subsection{Upweighting densely genotype regions of high coverage}
 
@@ -436,7 +434,7 @@ Again, this did not improve the accuracy of the copyvectors (Fig. \ref{fig:CP_co
 
 Excluding SNPs would result in using a set of SNPs which is necessarily a) smaller and b) less dense than the original set of SNPs. Reducing the total number or density of SNPs may reduce the accuracy / increase the noise of estimated copvectors. Therefore, it is necessary to precisely determine what effect reducing the number of SNPs might have. In particular, we would like to know what the minimum number and density of SNPs is needed to retain useful haplotype information and the advantages of haplotype-based methods over unlinked methods. 
 
-One way to test this is to utilise previous results which showed it is possible to distinguish between individuals sampled from Devon and Cornwall using haplotype-based methods (e.g.\ ChromoPainter and the fineSTRUCTURE algorithm), but not unlinked methods (ADMIXTURE \cite{alexander2009fast}) \cite{Leslie2015}. Leslie et al (2015) identified structure between individuals from Devon and Cornwall via fineSTRUCTURE groupings. The test therefore consists of attempting to replicate this result with reduced number of SNPs and lower SNP density. Repeating the fineSTRUCTURE analysis from Leslie et al is time consuming, and similar conclusions can be drawn from considering the aggregated amount individuals from Devon and Cornwall copy from their own populations.
+One way to test this is to utilise previous results which showed it is possible to distinguish between individuals sampled from Devon and Cornwall using haplotype-based methods (e.g.\ ChromoPainter and the fineSTRUCTURE algorithm), but not unlinked methods (ADMIXTURE \cite{alexander2009fast}) \cite{Leslie2015}. Leslie et al (2015) identified structure between individuals from Devon and Cornwall through fineSTRUCTURE groupings. The test will perform, therefore consists of attempting to replicate this result with reduced number of SNPs and lower SNP density. Repeating the fineSTRUCTURE analysis from Leslie et al is time consuming, and similar conclusions can be drawn from considering the aggregated amount individuals from Devon and Cornwall copy from their own populations.
 
 Firstly, to test the effect of reducing the number of SNPS, I painted individuals from Cornwall with all other POBI populations as donors, using the full set of SNPs (n=xx) and a reduced set of SNPs 
 

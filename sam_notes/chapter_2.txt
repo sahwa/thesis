@@ -1,0 +1,9 @@
+1) Depends on the high sensitivity - I think the absolute value kind of depends on the system and you can only really compare results when you are using the same callset - so not sure if this is possible. 
+
+2) Tried to find something which calculates switching errors but failed - there isn't anything well documented 
+
+3) LBK seems to be behaving badly - I suspect it was something to do with atlas - should I exclude it or just say 'something went wrong and I don't know what it was'?
+
+4)
+
+
