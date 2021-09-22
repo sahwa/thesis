@@ -1,30 +1,26 @@
 \begin{thebibliography}{100}
 
-\bibitem{Green2010}
-H.A. {Green, R.E., Krause, J., Briggs, A., W., Maricic, T., Stenzel, U.,
-  Kircher, M., Patterson, N., Li, H., Zhai, W., Fritz, M.H., Hansen, N.F.,
-  Durand, E., Y., Malaspinas, A., Jensen, J., D., Marques-Bonet, T., Alkan, C.,
-  Pr{\"{u}}fer, K., Meyer, M., Burbano}.
-\newblock {A Draft Sequence of the Neandertal Genome}.
-\newblock {\em Science (New York, N.Y.)}, 328(5979):710--22, 2010.
+\bibitem{conrad2006worldwide}
+Donald~F Conrad, Mattias Jakobsson, Graham Coop, Xiaoquan Wen, Jeffrey~D Wall,
+  Noah~A Rosenberg, and Jonathan~K Pritchard.
+\newblock A worldwide survey of haplotype variation and linkage disequilibrium
+  in the human genome.
+\newblock {\em Nature genetics}, 38(11):1251--1260, 2006.
 
-\bibitem{Patterson2012}
-Nick Patterson, Priya Moorjani, Yontao Luo, Swapan Mallick, Nadin Rohland,
-  Yiping Zhan, Teri Genschoreck, Teresa Webster, and David Reich.
-\newblock {Ancient admixture in human history}.
-\newblock {\em Genetics}, 192(3):1065--1093, 2012.
+\bibitem{song2016li}
+Yun~S Song.
+\newblock Na li and matthew stephens on modeling linkage disequilibrium.
+\newblock {\em Genetics}, 203(3):1005--1006, 2016.
 
-\bibitem{peter2016admixture}
-Benjamin~M Peter.
-\newblock Admixture, population structure, and f-statistics.
-\newblock {\em Genetics}, 202(4):1485--1501, 2016.
+\bibitem{hellenthal2008inferring}
+Garrett Hellenthal, Adam Auton, and Daniel Falush.
+\newblock Inferring human colonization history using a copying model.
+\newblock {\em PLoS genetics}, 4(5):e1000078, 2008.
 
-\bibitem{price2006principal}
-Alkes~L Price, Nick~J Patterson, Robert~M Plenge, Michael~E Weinblatt, Nancy~A
-  Shadick, and David Reich.
-\newblock Principal components analysis corrects for stratification in
-  genome-wide association studies.
-\newblock {\em Nature genetics}, 38(8):904--909, 2006.
+\bibitem{Lawson2012}
+Daniel~John Lawson, Garrett Hellenthal, Simon Myers, and Daniel Falush.
+\newblock {Inference of population structure using dense haplotype data}.
+\newblock {\em PLoS Genetics}, 8(1):11--17, 2012.
 
 \bibitem{Lazaridis2014}
 Iosif Lazaridis, Nick Patterson, Alissa Mittnik, Gabriel Renaud, Swapan
@@ -101,27 +97,31 @@ Jo{\~a}o~C Teixeira, Guy~S Jacobs, Chris Stringer, Jonathan Tuke, Georgi
   evidence of substantial super-archaic hominin admixture.
 \newblock {\em Nature Ecology \& Evolution}, 5(5):616--624, 2021.
 
-\bibitem{conrad2006worldwide}
-Donald~F Conrad, Mattias Jakobsson, Graham Coop, Xiaoquan Wen, Jeffrey~D Wall,
-  Noah~A Rosenberg, and Jonathan~K Pritchard.
-\newblock A worldwide survey of haplotype variation and linkage disequilibrium
-  in the human genome.
-\newblock {\em Nature genetics}, 38(11):1251--1260, 2006.
+\bibitem{Green2010}
+H.A. {Green, R.E., Krause, J., Briggs, A., W., Maricic, T., Stenzel, U.,
+  Kircher, M., Patterson, N., Li, H., Zhai, W., Fritz, M.H., Hansen, N.F.,
+  Durand, E., Y., Malaspinas, A., Jensen, J., D., Marques-Bonet, T., Alkan, C.,
+  Pr{\"{u}}fer, K., Meyer, M., Burbano}.
+\newblock {A Draft Sequence of the Neandertal Genome}.
+\newblock {\em Science (New York, N.Y.)}, 328(5979):710--22, 2010.
 
-\bibitem{song2016li}
-Yun~S Song.
-\newblock Na li and matthew stephens on modeling linkage disequilibrium.
-\newblock {\em Genetics}, 203(3):1005--1006, 2016.
+\bibitem{Patterson2012}
+Nick Patterson, Priya Moorjani, Yontao Luo, Swapan Mallick, Nadin Rohland,
+  Yiping Zhan, Teri Genschoreck, Teresa Webster, and David Reich.
+\newblock {Ancient admixture in human history}.
+\newblock {\em Genetics}, 192(3):1065--1093, 2012.
 
-\bibitem{hellenthal2008inferring}
-Garrett Hellenthal, Adam Auton, and Daniel Falush.
-\newblock Inferring human colonization history using a copying model.
-\newblock {\em PLoS genetics}, 4(5):e1000078, 2008.
+\bibitem{peter2016admixture}
+Benjamin~M Peter.
+\newblock Admixture, population structure, and f-statistics.
+\newblock {\em Genetics}, 202(4):1485--1501, 2016.
 
-\bibitem{Lawson2012}
-Daniel~John Lawson, Garrett Hellenthal, Simon Myers, and Daniel Falush.
-\newblock {Inference of population structure using dense haplotype data}.
-\newblock {\em PLoS Genetics}, 8(1):11--17, 2012.
+\bibitem{price2006principal}
+Alkes~L Price, Nick~J Patterson, Robert~M Plenge, Michael~E Weinblatt, Nancy~A
+  Shadick, and David Reich.
+\newblock Principal components analysis corrects for stratification in
+  genome-wide association studies.
+\newblock {\em Nature genetics}, 38(8):904--909, 2006.
 
 \bibitem{Link2017}
 Vivian Link, Athanasios Kousathanas, Krishna Veeramah, Christian Sell, Amelie
