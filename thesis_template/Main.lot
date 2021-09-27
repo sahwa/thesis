@@ -1,13 +1,15 @@
 \babel@toc {english}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Number of approximately 0.46cM windows which contain at least 13 SNPs above the coverage specified in min\_depth.\relax }}{79}{table.caption.27}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Table of r-squared values between the copyvectors of full coverage and downsampled individuals. `uncertainty' refers to ChromoPainterUncertainty, `standard' refers to ChromoPainterV2, RAF refers to filtering SNPs with reference allele frequency (RAF) $0.1 > RAF$ or $RAF > 0.9$ and `GP' refers to filtering $max(GP) >= 0.990$. [SAM: sorry this has gone off the edge - tried to fix it, but it was causing a lot of issues.]\relax }}{73}{table.caption.22}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Number of approximately 0.46cM windows which contain at least 13 SNPs above the coverage specified in min\_depth.\relax }}{81}{table.caption.27}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Name of population and number of samples used in the present-day ChromoPainter analysis\relax }}{101}{table.caption.36}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Name of population and number of samples used in the present-day ChromoPainter analysis\relax }}{103}{table.caption.36}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Name of population and number of samples used in the present-day ChromoPainter analysis\relax }}{136}{table.caption.46}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Name of populations and number of samples used in the present-day MOSAIC analysis\relax }}{138}{table.caption.47}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Information on newly sequenced ancient samples. Date (AD) estimated from radiocarbon dating. `Migration' corresponds to Migration Period and `EMA' corresponds to Early Middle Ages. Coverage calculated as the mean depth across all 77,213,942 genome-wide SNPs where genotypes were called at.\relax }}{134}{table.caption.47}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Name of population and number of samples used in the present-day ChromoPainter analysis\relax }}{138}{table.caption.48}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Name of populations and number of samples used in the present-day MOSAIC analysis\relax }}{141}{table.caption.49}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

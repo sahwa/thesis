@@ -401,6 +401,14 @@ Wolfgang Haak, Iosif Lazaridis, Nick Patterson, Nadin Rohland, Swapan Mallick,
   languages in Europe}.
 \newblock {\em Nature}, 522(7555):207--211, 2015.
 
+\bibitem{loh2016reference}
+Po-Ru Loh, Petr Danecek, Pier~Francesco Palamara, Christian Fuchsberger,
+  Yakir~A Reshef, Hilary~K Finucane, Sebastian Schoenherr, Lukas Forer, Shane
+  McCarthy, Goncalo~R Abecasis, et~al.
+\newblock Reference-based phasing using the haplotype reference consortium
+  panel.
+\newblock {\em Nature genetics}, 48(11):1443--1448, 2016.
+
 \bibitem{Haak2005}
 W~Haak, P~Forster, B~Bramanti, S~Matsumura, G~Brandt, M~T{\"{a}}nzer,
   R~Villems, C~Renfrew, D~Gronenborn, K~W Alt, and J~Burger.
@@ -459,6 +467,11 @@ Qiaomei Fu, Cosimo Posth, Mateja Hajdinjak, Martin Petr, Swapan Mallick, Daniel
   P{\"{a}}{\"{a}}bo, and David Reich.
 \newblock {The genetic history of Ice Age Europe}.
 \newblock {\em Nature}, 534(7606):200--205, 2016.
+
+\bibitem{vieira2016estimating}
+Filipe~G Vieira, Anders Albrechtsen, and Rasmus Nielsen.
+\newblock Estimating ibd tracts from low coverage ngs data.
+\newblock {\em Bioinformatics}, 32(14):2096--2102, 2016.
 
 \bibitem{Browning2016}
 Brian~L. Browning and Sharon~R. Browning.

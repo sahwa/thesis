@@ -15,45 +15,45 @@ Warning--I didn't find a database entry for ""
 Warning--I didn't find a database entry for "African_Inds_proportions_ADMIXTURE"
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--there's a number but no series in fouracre1995new
-You've used 107 entries,
+You've used 109 entries,
             1791 wiz_defined-function locations,
-            1088 strings with 64108 characters,
-and the built_in function-call counts, 49803 in all, are:
-= -- 2239
-> -- 6909
+            1098 strings with 64571 characters,
+and the built_in function-call counts, 50448 in all, are:
+= -- 2291
+> -- 6955
 < -- 7
-+ -- 2344
-- -- 2237
-* -- 5747
-:= -- 9758
-add.period$ -- 323
-call.type$ -- 107
-change.case$ -- 97
++ -- 2360
+- -- 2251
+* -- 5810
+:= -- 9866
+add.period$ -- 329
+call.type$ -- 109
+change.case$ -- 99
 chr.to.int$ -- 0
-cite$ -- 108
-duplicate$ -- 1003
-empty$ -- 2368
-format.name$ -- 2237
-if$ -- 9240
+cite$ -- 110
+duplicate$ -- 1021
+empty$ -- 2420
+format.name$ -- 2251
+if$ -- 9372
 int.to.chr$ -- 0
-int.to.str$ -- 107
-missing$ -- 115
-newline$ -- 539
-num.names$ -- 107
-pop$ -- 203
+int.to.str$ -- 109
+missing$ -- 117
+newline$ -- 549
+num.names$ -- 109
+pop$ -- 205
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 394
+skip$ -- 400
 stack$ -- 0
-substring$ -- 1921
-swap$ -- 162
+substring$ -- 1983
+swap$ -- 164
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 249
-width$ -- 110
-write$ -- 1163
+while$ -- 255
+width$ -- 112
+write$ -- 1185
 (There were 3 warnings)
