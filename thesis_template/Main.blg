@@ -11,49 +11,47 @@ A level-1 auxiliary file: Chapter5.aux
 A level-1 auxiliary file: Conclusions.aux
 A level-1 auxiliary file: Appendices.aux
 Database file #1: /home/sam/Dropbox/Documents/PhD/PhD/papers/Humans/library.bib
-Warning--I didn't find a database entry for ""
-Warning--I didn't find a database entry for "African_Inds_proportions_ADMIXTURE"
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--there's a number but no series in fouracre1995new
-You've used 109 entries,
+You've used 111 entries,
             1791 wiz_defined-function locations,
-            1098 strings with 64571 characters,
-and the built_in function-call counts, 50448 in all, are:
-= -- 2291
-> -- 6955
+            1106 strings with 64657 characters,
+and the built_in function-call counts, 50661 in all, are:
+= -- 2321
+> -- 6939
 < -- 7
-+ -- 2360
-- -- 2251
-* -- 5810
-:= -- 9866
-add.period$ -- 329
-call.type$ -- 109
-change.case$ -- 99
++ -- 2356
+- -- 2245
+* -- 5806
+:= -- 9893
+add.period$ -- 335
+call.type$ -- 111
+change.case$ -- 100
 chr.to.int$ -- 0
-cite$ -- 110
-duplicate$ -- 1021
-empty$ -- 2420
-format.name$ -- 2251
-if$ -- 9372
+cite$ -- 112
+duplicate$ -- 1039
+empty$ -- 2456
+format.name$ -- 2245
+if$ -- 9427
 int.to.chr$ -- 0
-int.to.str$ -- 109
-missing$ -- 117
-newline$ -- 549
-num.names$ -- 109
-pop$ -- 205
+int.to.str$ -- 111
+missing$ -- 120
+newline$ -- 559
+num.names$ -- 111
+pop$ -- 215
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 400
+skip$ -- 405
 stack$ -- 0
-substring$ -- 1983
-swap$ -- 164
+substring$ -- 1996
+swap$ -- 166
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 255
-width$ -- 112
-write$ -- 1185
-(There were 3 warnings)
+while$ -- 258
+width$ -- 114
+write$ -- 1205
+(There was 1 warning)

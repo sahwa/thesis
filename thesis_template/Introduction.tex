@@ -2,23 +2,24 @@
 
 \section{Chromopainter and ancient DNA}
 
-In this introduction I will outline the following: i) What are `haplotype-based' methods and what advantages and disadvantages do they offer over `unlinked' methods, ii) a summary of different methods used to analyse ancient DNA and 
+In this introduction I will outline the following: i) What are `haplotype-based' methods and what advantages and disadvantages do they offer over `unlinked' methods, ii) a summary of different methods used to analyse ancient DNA and iii) the need to merge datasets genotyped on different arrays and options for imputation. 
 
 \subsection{Gains to be made with haplotype information}
 
-Here, I will define `haplotype-based' method as one which explicitly models linkage between neighbouring SNPs. Although LD has been studied since the earliest days of genetics (cite), its use in population structure inference was developed in the early 2000s \cite{conrad2006worldwide}.
+Haplotype-based methods are those which explicitly model Linkage Disequilibrium (LD) between neighbouring SNPs along a haplotype. A `haplotype' is a sequence of alleles along chromosome. Note that other methods, for example \texttt{octopus} \cite{octopus} are referred to as `haplotype-based' genotype callers, but they represent a distinct group of methods to e.g. ChromoPainter.  
 
-Accounting for recombination and LD within a model is necessarily computationally complex, as the number of combinations of alleles and their associated evolutionary histories balloons as the number of loci considered increases (does it scale quadratically?). The Li and Stephens copying model was instrumental in the development of such methods \cite{song2016li} and provided an elegant solution to the increased complexity when using linked loci. As such, it is now a critical model in virtually all areas of genomic methodology, from imputation, phasing etc etc. 
+Linkage Disequilibrium (LD), the non-independence of alleles carried at different positions in the genome, has been studied since the earliest days of genetics \cite{morgan1912complete, bateson1902experiments} and has since been a fundamental aspect of virtually all areas of genetics. Interest in LD grew rapidly in the 1980s when its relevance to gene mapping was realised. Although understanding LD is of critical important to natural selection, gene conversion, mutation and other forces that cause a change in allele-frequency \cite{slatkin2008linkage}, here I will focus on its application to inference of haplotype sharing between individuals. 
 
-Perhaps the first paper to formalise a haplotype-based approach was that of Hellenthal et al 2008 \cite{hellenthal2008inferring}.
+The application of haplotype-based methods to research into human population structure inference was developed in the early 2000s \cite{conrad2006worldwide}. Although the study only used a small number of SNPs relative to the number used today, it revealed insights which are still relevant today, such as the presence of long haplotype blocks in highly drifted Native American populations. 
+ 
+Accounting for recombination and LD within a model is necessarily computationally complex, as the number of combinations of alleles and their possible evolutionary histories balloons as the number of loci considered increases (does it scale quadratically?). Thus, the creation of the Li and Stephens copying model \cite{Li2003} was instrumental in the development of such methods \cite{song2016li} and provided an elegant solution to the increased complexity when using linked loci. As such, it is now a critical model in virtually all areas of genomic methodology, such as gene conversion parameters, admixed populations, human colonization history, local ancestry in admixed populations, imputation and haplotype estimation. 
 
-Later, Lawson et al (2015) \cite{Lawson2012} developed what is now one of the leading approaches to modeling linkage between markers. This study showed that ChromoPainter had an enhanced ability to separate closely related populations when plotted on a PCA. ChromoPainter was originally developed in tandem with its own clustering method fineSTRUCTURE, and has since been extended into methods to detect and date admixture, and infer ancestry proportions. 
+Perhaps the first paper to formalise a haplotype-based approach for the study of population history was that of Hellenthal et al 2008 \cite{hellenthal2008inferring}. Building on the copying model proposed by Hellenthal et al, Lawson et al (2015) \cite{Lawson2012} created ChromoPainter, a model which explicitly accounts for linkage and variable recombination rates in order to find the genealogically closest haplotype to a target in a set of references. The authors showed that ChromoPainter had an enhanced ability to separate closely related populations when plotted on a PCA compared to unlinked methods. ChromoPainter was originally developed in tandem with its own clustering method fineSTRUCTURE, and has since been extended into methods to detect and date admixture \cite{Hellenthal2014}, and infer ancestry proportions \cite{Chacon-Duque2018}. 
 
 ChromoPainter can be run in either `linked' or `unlinked' mode. In the linked mode, described in detail in later sections, LD between neighbouring SNPs is accounted for. `Unlinked' mode assumes a model of linkage equilibrium between markers and has been shown to be statistically identical to the likelihood model underlying the commonly used ADMIXTURE algorithm. 
 
 A typical case study, and one which I will return to in later chapters, was a study which attempted to identify population structure among individuals from the British Isles. This study, hereafter referred to as POBI, genotyped 2039 people from England, Wales and Scotland. In summary, it was possible to detect structure down to the level of Devon and Cornwall (two neighbouring counties) using ChromoPainter. On the other hand, little structure was apparent when using unlinked methods (PCA). This outlines the benefits of incorporating linkage information when attempting to identify fine-scale structure between closely related populations.
 
-The gains from accounting for linkage between markers can be thought of as incorporating an additional spatial dimension into the data. 
 
 It has since become a mainstay of population genetic research, both in humans and other organisms. It has also been incorporated into many ancient DNA studies, which I will discuss in the next section. 
 
@@ -26,28 +27,30 @@ However, the usage of haplotype-based methods is not without drawbacks. They are
 
 Secondly, the nature of haplotype-based methods means they require the data to be phased. Phasing is a statistical procedure \footnote{Phasing can also be performed using other methods, such as sequencing family trios. However, this is rarely used in population genetic studies and so I will not discuss it here} that requires substantial computation resources. Phasing is a procedure which is often error-prone (switch errors).
 
-The first use of chromopainter on ancient DNA was in a seminal paper from Lazaridis et al (2014) \cite{Lazaridis2014}. The two samples, Loschbour and Stuttgart, we of high coverage and therefore imputation was not used.
-
-Perhaps the first study to explicitly investigate chromopainter on ancient DNA was Martiniano et al (2017) \cite{Martiniano2017}. They first tested the accuracy of imputation on ancient DNA samples.
-
-
-As sample sizes used in ancient DNA studies has rapidly increased to >100, more analyses have incorporate haplotype-based methods. Each study typically carries out a small analysis to ensure that imputation in low-coverage ancient DNA samples is accurate. Antonio et al (2019) \cite{antonio2019ancient} analysed 127 ancient genomes of a mean coverage of 1x. To test imputation accuracy, they downsampled a single individual (NE1) to different levels of coverage and calculated the proportion of genotypes which matched the full coverage. However, this analysis was only performed on a single sample and the effect of imputation on the chromopainter process was not evaluated. 
-
-More recently, ChromoPainter has been used to study aspects of archaic hominin ancestry in present-day humans \cite{JACOBS20191010, teixeira2021widespread}. 
 
 \section{Methods used to analyse ancient DNA}
 
 The first ancient DNA papers mostly relied on statistical methods which compare allele-sharing or allele-frequencies between populations or individuals. These methods, in particular f-statistics and their extensions \cite{Green2010, Patterson2012, peter2016admixture} and Principle Component Analysis \cite{price2006principal}, can address a wide-range of questions pertaining, but not limited to, population structure, admixture, genetic similarity and population graphs. 
 
-The early studies of ancient DNA generally considered broad-scale questions about human history, such as the nature of human-archaic interactions or the spread of farming technology across Europe \cite{Lazaridis2014}. Due to the infancy of the field, sample sizes were small, as efficient methods to obtain genetic data from ancient samples, such as SNP capture arrays, had yet to be developed. Early studies tended to look for genetic differences between populations which had been diverged for many generations. For example, in the case of Lazaridis et al (2014), simply plotting Loschbour and Stuttgart/LBK on a PCA of modern individual showed they had substantially different ancestries, with Loschbour being most similar to present-day North-East Europeans, but falling well outside the variation of present-day Europeans, and Stuttgart clustering with present-day individuals from Tuscany. 
+The early studies of ancient DNA generally considered broad-scale questions about human history, such as the nature of human-archaic interactions or the spread of farming technology across Europe \cite{Lazaridis2014}. Due to the infancy of the field, sample sizes were small, as efficient methods to obtain genetic data from ancient samples, such as SNP capture arrays, had yet to be developed. Early studies tended to look for genetic differences between populations which diverged many generations ago. For example, in the case of Lazaridis et al (2014), simply plotting Loschbour and Stuttgart on a PCA of modern individual showed they had substantially different ancestries, with Loschbour being most similar to present-day North-East Europeans, but falling well outside the variation of present-day Europeans, and Stuttgart clustering with present-day individuals from Tuscany. 
 
-These methods are suitable for such studies with
+Such methods, which I will hereafter refer to as `unlinked', as they assume a model of linkage equilibrium (i.e. each SNP is independent of another in the context of) between neighbouring SNPs, are useful for ancient DNA studies.  Data is often represented in `psuedo-haploid' format to avoid making diploid genotype calls at low coverage positions; true heterozygous positions may be mis-called as homozgyous at low coverages, as there is a probability of $p()$ that no reads mapping to a particular allele may be sampled. Representing variants psuedo-haploid is used widely in past and current ancient DNA studies. It is also simple to account for missing data in PCA and f-statistics.    
 
-Such methods, which I will hereafter refer to as `unlinked', as they assume a model of linkage equilibrium between neighbouring SNPs, are useful for ancient DNA studies. Firstly, it is relatively easy to account for missingness in the data, by using e.g. a PCA projection. Second, you can use pseudo-haploid data with them. Lastly, something.
+However, in recent years, the low hanging fruit of broad-scale questions have mostly been answered and studies into more fine-scale populations structures have become more prevalent. Accordingly, methods which can detect more subtle population structure have been required. Include example here. 
 
-However, in recent years, the low hanging fruit of broad-scale questions have mostly been answered and studies into more fine-scale populations structures have become more prevalent. Accordingly, methods which can detect more subtle population structure.
 
 Another reason for the use of alternate methods to $f_{3}$ statistics is that they possibly display bias in the face of drifted populations. 
+
+
+The first use of chromopainter on ancient DNA was in a seminal paper from Lazaridis et al (2014) \cite{Lazaridis2014}. The two samples, Loschbour and Stuttgart, we of high coverage and therefore imputation was not used.
+
+The first study to explicitly investigate the reliability of ChromoPainter on ancient DNA was Martiniano et al (2017) \cite{Martiniano2017}. They first tested the accuracy of imputation on ancient DNA samples by downsampling high coverage ancient genomes and comparing imputed to full-coverage non-imputed genotypes. Overall, they found a good correspondence. They also found that filtering the SNPs based on posterior genotype probabilities had little effect. 
+
+As there is currently no way to allow missing positions ChromoPainter, imputation is necessary. Recently, Hui et al (2020) evaluated the accuracy of genotype imputation in ancient DNA samples \cite{hui2020evaluating}. 
+
+As sample sizes used in ancient DNA studies has rapidly increased to >100, more analyses have incorporate haplotype-based methods. Each study typically carries out a small analysis to ensure that imputation in low-coverage ancient DNA samples is accurate. Antonio et al (2019) \cite{antonio2019ancient} analysed 127 ancient genomes of a mean coverage of 1x. To test imputation accuracy, they downsampled a single individual (NE1) to different levels of coverage and calculated the proportion of genotypes which matched the full coverage. However, this analysis was only performed on a single sample and the effect of imputation on the chromopainter process was not evaluated. As of writing (September 2021), the study of Margaryan et al (2020) is the biggest so far to use ChromoPainter, with over 400 samples used \cite{margaryan2020population}.
+
+More recently, ChromoPainter has been used to study aspects of archaic hominin ancestry in present-day humans \cite{JACOBS20191010, teixeira2021widespread}. 
 
 \section{Combining data from multiple chips}
 

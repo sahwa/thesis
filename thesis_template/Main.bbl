@@ -1,11 +1,39 @@
 \begin{thebibliography}{100}
 
+\bibitem{octopus}
+Daniel~P. Cooke, David~C. Wedge, and Gerton Lunter.
+\newblock A unified haplotype-based method for accurate and comprehensive
+  variant calling.
+\newblock {\em Nature Biotechnology}, 2021.
+
+\bibitem{morgan1912complete}
+Thomas~Hunt Morgan.
+\newblock Complete linkage in the second chromosome of the male of drosophila.
+\newblock {\em Science}, 36(934):719--720, 1912.
+
+\bibitem{bateson1902experiments}
+William Bateson and Edith~Rebecca Saunders.
+\newblock {\em Experiments [in the Physiology of Heredity]}.
+\newblock Harrison, 1902.
+
+\bibitem{slatkin2008linkage}
+Montgomery Slatkin.
+\newblock Linkage disequilibrium—understanding the evolutionary past and
+  mapping the medical future.
+\newblock {\em Nature Reviews Genetics}, 9(6):477--485, 2008.
+
 \bibitem{conrad2006worldwide}
 Donald~F Conrad, Mattias Jakobsson, Graham Coop, Xiaoquan Wen, Jeffrey~D Wall,
   Noah~A Rosenberg, and Jonathan~K Pritchard.
 \newblock A worldwide survey of haplotype variation and linkage disequilibrium
   in the human genome.
 \newblock {\em Nature genetics}, 38(11):1251--1260, 2006.
+
+\bibitem{Li2003}
+Na~Li and Matthew Stephens.
+\newblock {Modeling Linkage Disequilibrium and Identifying Recombination
+  Hotspots Using Single-Nucleotide Polymorphism Data}.
+\newblock {\em Genetics}, 165(4):2213--2233, 2003.
 
 \bibitem{song2016li}
 Yun~S Song.
@@ -21,6 +49,57 @@ Garrett Hellenthal, Adam Auton, and Daniel Falush.
 Daniel~John Lawson, Garrett Hellenthal, Simon Myers, and Daniel Falush.
 \newblock {Inference of population structure using dense haplotype data}.
 \newblock {\em PLoS Genetics}, 8(1):11--17, 2012.
+
+\bibitem{Hellenthal2014}
+Garrett Hellenthal, George B.J.~J. Busby, Gavin Band, James~F. Wilson, Cristian
+  Capelli, Daniel Falush, and Simon Myers.
+\newblock {A Genetic Atlas of Human Admixture History}.
+\newblock {\em Science}, 343(6172):747--751, 2014.
+
+\bibitem{Chacon-Duque2018}
+Juan~C. Chacon-Duque, Kaustubh Adhikari, Macarena Fuentes-Guajardo, Javier
+  Mendoza-Revilla, Victor Acuna-Alonzo, Rodrigo~Barquera Lozano, Mirsha
+  Quinto-Sanchez, Jorge Gomez-Valdes, Paola~Everardo Martinez, Hugo
+  Villamil-Ramirez, Tabita Hunemeier, Virginia Ramallo, Caio C.~Silva
+  de~Cerqueira, Malena Hurtado, Valeria Villegas, Vanessa Granja, Mercedes
+  Villena, Rene Vasquez, Elena Llop, Jose~R. Sandoval, Alberto~A.
+  Salazar-Granara, Maria-Laura Parolin, Karla Sandoval, Rosenda~I.
+  Penaloza-Espinosa, Hector Rangel-Villalobos, Cheryl Winkler, William Klitz,
+  Claudio Bravi, Julio Molina, Daniel Corach, Ramiro Barrantes, Veronica Gomes,
+  Carlos Resende, Leonor Gusmao, Antonio Amorim, Yali Xue, Jean-Michel
+  Dugoujon, Pedro Moral, Rolando Gonzalez-Jose, Lavinia Schuler-Faccini,
+  Francisco~M. Salzano, Maria-Catira Bortolini, Samuel Canizales-Quinteros,
+  Giovanni Poletti, Carla Gallo, Gabriel Bedoya, Francisco Rothhammer, David
+  Balding, Garrett Hellenthal, and Andres Ruiz-Linares.
+\newblock {Latin Americans show wide-spread Converso ancestry and the imprint
+  of local Native ancestry on physical appearance}.
+\newblock {\em Nature Communications}, page 252155, 2018.
+
+\bibitem{Green2010}
+H.A. {Green, R.E., Krause, J., Briggs, A., W., Maricic, T., Stenzel, U.,
+  Kircher, M., Patterson, N., Li, H., Zhai, W., Fritz, M.H., Hansen, N.F.,
+  Durand, E., Y., Malaspinas, A., Jensen, J., D., Marques-Bonet, T., Alkan, C.,
+  Pr{\"{u}}fer, K., Meyer, M., Burbano}.
+\newblock {A Draft Sequence of the Neandertal Genome}.
+\newblock {\em Science (New York, N.Y.)}, 328(5979):710--22, 2010.
+
+\bibitem{Patterson2012}
+Nick Patterson, Priya Moorjani, Yontao Luo, Swapan Mallick, Nadin Rohland,
+  Yiping Zhan, Teri Genschoreck, Teresa Webster, and David Reich.
+\newblock {Ancient admixture in human history}.
+\newblock {\em Genetics}, 192(3):1065--1093, 2012.
+
+\bibitem{peter2016admixture}
+Benjamin~M Peter.
+\newblock Admixture, population structure, and f-statistics.
+\newblock {\em Genetics}, 202(4):1485--1501, 2016.
+
+\bibitem{price2006principal}
+Alkes~L Price, Nick~J Patterson, Robert~M Plenge, Michael~E Weinblatt, Nancy~A
+  Shadick, and David Reich.
+\newblock Principal components analysis corrects for stratification in
+  genome-wide association studies.
+\newblock {\em Nature genetics}, 38(8):904--909, 2006.
 
 \bibitem{Lazaridis2014}
 Iosif Lazaridis, Nick Patterson, Alissa Mittnik, Gabriel Renaud, Swapan
@@ -74,12 +153,26 @@ Rui Martiniano, Lara~M. Cassidy, Ros {\'{O}}'Maold{\'{u}}in, Russell
   methods}.
 \newblock {\em PLoS Genetics}, 13(7):1--24, 2017.
 
+\bibitem{hui2020evaluating}
+Ruoyun Hui, Eugenia D’Atanasio, Lara~M Cassidy, Christiana~L Scheib, and
+  Toomas Kivisild.
+\newblock Evaluating genotype imputation pipeline for ultra-low coverage
+  ancient genomes.
+\newblock {\em Scientific reports}, 10(1):1--8, 2020.
+
 \bibitem{antonio2019ancient}
 Margaret~L Antonio, Ziyue Gao, Hannah~M Moots, Michaela Lucci, Francesca
   Candilio, Susanna Sawyer, Victoria Oberreiter, Diego Calderon, Katharina
   Devitofranceschi, Rachael~C Aikens, et~al.
 \newblock Ancient rome: a genetic crossroads of europe and the mediterranean.
 \newblock {\em Science}, 366(6466):708--714, 2019.
+
+\bibitem{margaryan2020population}
+Ashot Margaryan, Daniel~J Lawson, Martin Sikora, Fernando Racimo, Simon
+  Rasmussen, Ida Moltke, Lara~M Cassidy, Emil J{\o}rsboe, Andr{\'e}s Ingason,
+  Mikkel~W Pedersen, et~al.
+\newblock Population genomics of the viking world.
+\newblock {\em Nature}, 585(7825):390--396, 2020.
 
 \bibitem{JACOBS20191010}
 Guy~S. Jacobs, Georgi Hudjashov, Lauri Saag, Pradiptajati Kusuma, Chelzie~C.
@@ -97,32 +190,6 @@ Jo{\~a}o~C Teixeira, Guy~S Jacobs, Chris Stringer, Jonathan Tuke, Georgi
   evidence of substantial super-archaic hominin admixture.
 \newblock {\em Nature Ecology \& Evolution}, 5(5):616--624, 2021.
 
-\bibitem{Green2010}
-H.A. {Green, R.E., Krause, J., Briggs, A., W., Maricic, T., Stenzel, U.,
-  Kircher, M., Patterson, N., Li, H., Zhai, W., Fritz, M.H., Hansen, N.F.,
-  Durand, E., Y., Malaspinas, A., Jensen, J., D., Marques-Bonet, T., Alkan, C.,
-  Pr{\"{u}}fer, K., Meyer, M., Burbano}.
-\newblock {A Draft Sequence of the Neandertal Genome}.
-\newblock {\em Science (New York, N.Y.)}, 328(5979):710--22, 2010.
-
-\bibitem{Patterson2012}
-Nick Patterson, Priya Moorjani, Yontao Luo, Swapan Mallick, Nadin Rohland,
-  Yiping Zhan, Teri Genschoreck, Teresa Webster, and David Reich.
-\newblock {Ancient admixture in human history}.
-\newblock {\em Genetics}, 192(3):1065--1093, 2012.
-
-\bibitem{peter2016admixture}
-Benjamin~M Peter.
-\newblock Admixture, population structure, and f-statistics.
-\newblock {\em Genetics}, 202(4):1485--1501, 2016.
-
-\bibitem{price2006principal}
-Alkes~L Price, Nick~J Patterson, Robert~M Plenge, Michael~E Weinblatt, Nancy~A
-  Shadick, and David Reich.
-\newblock Principal components analysis corrects for stratification in
-  genome-wide association studies.
-\newblock {\em Nature genetics}, 38(8):904--909, 2006.
-
 \bibitem{Link2017}
 Vivian Link, Athanasios Kousathanas, Krishna Veeramah, Christian Sell, Amelie
   Scheu, and Daniel Wegmann.
@@ -134,31 +201,6 @@ Simone Rubinacci, Diogo~M Ribeiro, Robin~J Hofmeister, and Olivier Delaneau.
 \newblock Efficient phasing and imputation of low-coverage sequencing data
   using large reference panels.
 \newblock {\em Nature Genetics}, 53(1):120--126, 2021.
-
-\bibitem{Chacon-Duque2018}
-Juan~C. Chacon-Duque, Kaustubh Adhikari, Macarena Fuentes-Guajardo, Javier
-  Mendoza-Revilla, Victor Acuna-Alonzo, Rodrigo~Barquera Lozano, Mirsha
-  Quinto-Sanchez, Jorge Gomez-Valdes, Paola~Everardo Martinez, Hugo
-  Villamil-Ramirez, Tabita Hunemeier, Virginia Ramallo, Caio C.~Silva
-  de~Cerqueira, Malena Hurtado, Valeria Villegas, Vanessa Granja, Mercedes
-  Villena, Rene Vasquez, Elena Llop, Jose~R. Sandoval, Alberto~A.
-  Salazar-Granara, Maria-Laura Parolin, Karla Sandoval, Rosenda~I.
-  Penaloza-Espinosa, Hector Rangel-Villalobos, Cheryl Winkler, William Klitz,
-  Claudio Bravi, Julio Molina, Daniel Corach, Ramiro Barrantes, Veronica Gomes,
-  Carlos Resende, Leonor Gusmao, Antonio Amorim, Yali Xue, Jean-Michel
-  Dugoujon, Pedro Moral, Rolando Gonzalez-Jose, Lavinia Schuler-Faccini,
-  Francisco~M. Salzano, Maria-Catira Bortolini, Samuel Canizales-Quinteros,
-  Giovanni Poletti, Carla Gallo, Gabriel Bedoya, Francisco Rothhammer, David
-  Balding, Garrett Hellenthal, and Andres Ruiz-Linares.
-\newblock {Latin Americans show wide-spread Converso ancestry and the imprint
-  of local Native ancestry on physical appearance}.
-\newblock {\em Nature Communications}, page 252155, 2018.
-
-\bibitem{Li2003}
-Na~Li and Matthew Stephens.
-\newblock {Modeling Linkage Disequilibrium and Identifying Recombination
-  Hotspots Using Single-Nucleotide Polymorphism Data}.
-\newblock {\em Genetics}, 165(4):2213--2233, 2003.
 
 \bibitem{Watterson1975}
 G.~A. Watterson.
@@ -478,13 +520,6 @@ Brian~L. Browning and Sharon~R. Browning.
 \newblock {Genotype Imputation with Millions of Reference Samples}.
 \newblock {\em American Journal of Human Genetics}, 98(1):116--126, 2016.
 
-\bibitem{hui2020evaluating}
-Ruoyun Hui, Eugenia D’Atanasio, Lara~M Cassidy, Christiana~L Scheib, and
-  Toomas Kivisild.
-\newblock Evaluating genotype imputation pipeline for ultra-low coverage
-  ancient genomes.
-\newblock {\em Scientific reports}, 10(1):1--8, 2020.
-
 \bibitem{alexander2009fast}
 David~H Alexander, John Novembre, and Kenneth Lange.
 \newblock Fast model-based estimation of ancestry in unrelated individuals.
@@ -506,24 +541,6 @@ Shaun Purcell, Benjamin Neale, Kathe Todd-Brown, Lori Thomas, Manuel~AR
   linkage analyses.
 \newblock {\em The American journal of human genetics}, 81(3):559--575, 2007.
 
-\bibitem{10002010map}
-1000 Genomes~Project Consortium et~al.
-\newblock A map of human genome variation from population-scale sequencing.
-\newblock {\em Nature}, 467(7319):1061, 2010.
-
-\bibitem{bycroft2018uk}
-Clare Bycroft, Colin Freeman, Desislava Petkova, Gavin Band, Lloyd~T Elliott,
-  Kevin Sharp, Allan Motyer, Damjan Vukcevic, Olivier Delaneau, Jared
-  O’Connell, et~al.
-\newblock The uk biobank resource with deep phenotyping and genomic data.
-\newblock {\em Nature}, 562(7726):203--209, 2018.
-
-\bibitem{li2009sequence}
-Heng Li, Bob Handsaker, Alec Wysoker, Tim Fennell, Jue Ruan, Nils Homer, Gabor
-  Marth, Goncalo Abecasis, and Richard Durbin.
-\newblock The sequence alignment/map format and samtools.
-\newblock {\em Bioinformatics}, 25(16):2078--2079, 2009.
-
 \bibitem{micheletti2020genetic}
 Steven~J Micheletti, Kasia Bryc, Samantha G~Ancona Esselmann, William~A
   Freyman, Meghan~E Moreno, G~David Poznik, Anjali~J Shastri, M~Agee,
@@ -544,17 +561,17 @@ Nicholas~J Conard, Maria Malina, and Susanne~C M{\"u}nzel.
   germany.
 \newblock {\em Nature}, 460(7256):737--740, 2009.
 
+\bibitem{li2009sequence}
+Heng Li, Bob Handsaker, Alec Wysoker, Tim Fennell, Jue Ruan, Nils Homer, Gabor
+  Marth, Goncalo Abecasis, and Richard Durbin.
+\newblock The sequence alignment/map format and samtools.
+\newblock {\em Bioinformatics}, 25(16):2078--2079, 2009.
+
 \bibitem{MOSAIC_2019}
 Michael Salter-Townshend and Simon Myers.
 \newblock {Fine-Scale Inference of Ancestry Segments Without Prior Knowledge of
   Admixing Groups}.
 \newblock {\em Genetics}, 212(3):869--889, 05 2019.
-
-\bibitem{Hellenthal2014}
-Garrett Hellenthal, George B.J.~J. Busby, Gavin Band, James~F. Wilson, Cristian
-  Capelli, Daniel Falush, and Simon Myers.
-\newblock {A Genetic Atlas of Human Admixture History}.
-\newblock {\em Science}, 343(6172):747--751, 2014.
 
 \bibitem{AssessingqpAdm}
 Éadaoin Harney, Nick Patterson, David Reich, and John Wakeley.
@@ -933,13 +950,6 @@ Krishna~R Veeramah, Anke T{\"o}njes, Peter Kovacs, Arnd Gross, Daniel Wegmann,
 \newblock Genetic variation in the sorbs of eastern germany in the context of
   broader european genetic diversity.
 \newblock {\em European Journal of Human Genetics}, 19(9):995--1001, 2011.
-
-\bibitem{margaryan2020population}
-Ashot Margaryan, Daniel~J Lawson, Martin Sikora, Fernando Racimo, Simon
-  Rasmussen, Ida Moltke, Lara~M Cassidy, Emil J{\o}rsboe, Andr{\'e}s Ingason,
-  Mikkel~W Pedersen, et~al.
-\newblock Population genomics of the viking world.
-\newblock {\em Nature}, 585(7825):390--396, 2020.
 
 \bibitem{Allentoft2015}
 Morten~E. Allentoft, Martin Sikora, Karl~G{\"{o}}ran Sj{\"{o}}gren, Simon

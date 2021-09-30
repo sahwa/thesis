@@ -165,8 +165,35 @@ This dataset consists of 1 shotgun sequenced individual.
 
 Aligned reads in .bam format were downloaded from the ENA under accession number PRJNA230689.
 
+\section{Ancient reference dataset} \label{AncientReferenceDataset}
 
-\section{30x 1000 genomes dataset}
+This section describes the generation of the dataset of reference ancient individuals used in Chapters 2, 4 and 5. 
+
+The following steps were used to generate the data:
+
+\begin{enumerate}
+\item Each \texttt{.bam} was processed with \texttt{PicardTools ValidateBam} \cite{Picard2018toolkit} task to ensure no files were corrupted or contained incorrect read group information.
+\item Each \texttt{.bam} file was processed with atlas (version 1.0, commit f612f28) pipeline \cite{Link2017} (\url{https://bitbucket.org/wegmannlab/atlas/wiki/Home}). For .bam file, I estimated post-mortem damage (PMD) patterns using atlas \texttt{estimatePMD} task. Recalibration parameters were then estimated using atlas \texttt{recal} task. Finally, both the recalibration and PMD parameters were given to the \texttt{callNEW} task which produces genotype calls and genotype likelihood estimates for each downsampled and full coverage .bam. For this stage, I made calls at the 77,818,345 genome-wide positions present in the phase 3 thousand genomes project \cite{1000GenomesProjectConsortium2015}. This was done to reduce the risk of calling false-positive non-polymorphic sites. This resulted in a \texttt{.bcf} file for each ancient sample. 
+\item All \texttt{.bcf} files were split into chromosomes and all samples from the same chromosome were merged. Imputation and phasing was performed with GLIMPSE (version 1.1.1). I followed the steps laid out in the GLIMPSE tutorial (\url{https://odelaneau.github.io/GLIMPSE/tutorial_b38.html}). First, I used \texttt{GLIMPSE\_chunk} to split up each reference chromosome into chunks, keeping both \texttt{--window-size} and \texttt{--buffer-size} to 2,000,000, their default settings. Across all chromosomes, this produced 936 chunks of an average 2.99Mb long. I used the b37 genetic map supplied by GLIMPSE for the \texttt{--map} argument. 
+
+Each chunk was then imputed separately using \texttt{GLIMPSE\_phase} using the same 1000 genomes dataset as a reference. Default settings and the supplied b37 genetic map were used. This stage both imputes missing genotypes and generates a set of haplotype pairs which can be sampled from in a later step to produced phased haplotypes.
+
+\texttt{GLIMPSE\_ligate} was then used to merge the imputed chunks back to form single chromosomes using the default settings and the supplied b37 genetic map. 
+
+Haplotypes were then sampled using \texttt{GLIMPSE\_sample} to produce a .vcf with phased haplotypes for each individual, again using default settings and the supplied b37 genetic map. 
+
+Consequently, the output of GLIMPSE is i) unphased genotype calls with posterior genotype likelihoods and ii) phased haplotypes.
+
+
+\item Finally, the posterior genotype likelihoods and phased haplotypes were combined to generate ChromoPainterUncertainty output using a custom script (\url{https://github.com/sahwa/vcf_to_chromopainter}).
+
+
+
+\end{enumerate}
+
+
+
+\section{30x 1000 genomes dataset} \label{1000genomesdataset}
 
 Samples from \cite{byrska2021high}.
 
@@ -187,19 +214,34 @@ The following steps were taken to process the data before being used as an imput
 
 \section{Human Origins dataset}
 
-Samples from various studies. 
+This dataset consists of 560,420 SNPS and 5998 individuals from 509 worldwide populations. It has a particularly large number of samples from West and East Africa; in particular, Cameroon, Ethiopia, Nigeria and Ghana. 
 
-This dataset consists of 560,420 SNPS and 5998 individuals from 509 worldwide populations. 
+\subsection{Processing}
+
+Only bi-allelic SNPs were retained. To ensure that all datasets, ancient and modern, can be merged together without the confounding effects of strand flips, I then used conform-gt (\url{https://faculty.washington.edu/browning/conform-gt.html}) to align all alleles to the same strand as the 1000 genomes reference, keeping all parameters as default. Any genotypes which had a genotype likelihood of below 0.990 were set as missing.
+
+Data was phased use \texttt{shapeit4} \ref{delaneau2018integrative}, setting \texttt{--pbwt 8} and keeping all other parameters as default. The 1000 Genomes was used as as reference (section \ref{1000genomesdataset}). Sporadic low quality missing genotypes were imputed. 
+
+
 
 \section{MS POBI HellBus dataset}
 \ref{sssec:MSPOBIHellBus}
 
 
-Multiple Sclerosis (MS), People of the British Isles (POBI), Hellenthal and Busby (HB) / MS POBI HellBus
+Multiple Sclerosis (MS), People of the British Isles (POBI), Hellenthal and Busby (HB) / MS POBI HellBus contains a total of 14,795 individuals from 211 worldwide populations. 
 
-Samples from Sawcer et al (2011) \cite{Sawcer2011}, Leslie et al 2015 \cite{Leslie2015} and 
+Samples from Sawcer et al (2011) \cite{Sawcer2011} (10299 individuals from 15 pops), Leslie et al 2015 \cite{Leslie2015} (2039 individuals from 35 pops) and Busby et al (2457 individuals from  161 pops). 
 
+Individuals from MS populations USA, Canada and New Zealand were all removed as the individuals were not native to that country.
 
+The following steps were taken to process the data
+
+\begin{enumerate}
+\item Filtered such that SNPs with only 2 alleles were retained
+\item Phase using shapeit4 \ref{delaneau2018integrative} setting \texttt{--pbwt-depth 8}.
+\item Remove duplicated SNPs using bcftools norm \cite{li2009sequence} 
+\item Use Beagle's conform-gt utility to ensure reference alleles were consistent with the previous 1000 genomes build. This was done because all previous datasets I have compiled were also conformed to the previous 1000 genomes build. 
+\end{enumerate}
 
 \chapter{Another Appendix About Things}
 \label{appendixlabel2}
@@ -207,11 +249,11 @@ Samples from Sawcer et al (2011) \cite{Sawcer2011}, Leslie et al 2015 \cite{Lesl
 
 \chapter{Colophon}
 \label{appendixlabel3}
-\textit{This is a description of the tools you used to make your thesis. It helps people make future documents, reminds you, and looks good.}
 
-\textit{(example)} This document was set in the Times Roman typeface using \LaTeX\ and Bib\TeX , composed with a text editor. 
- % description of document, e.g. type faces, TeX used, TeXmaker, packages and things used for figures. Like a computational details section.
-% e.g. http://tex.stackexchange.com/questions/63468/what-is-best-way-to-mention-that-a-document-has-been-typeset-with-tex#63503
+This document was produced using the UCL thesis \LaTeX\ template (\url{https://github.com/UCL/ucl-latex-thesis-templates}).
 
-% Side note:
-%http://tex.stackexchange.com/questions/1319/showcase-of-beautiful-typography-done-in-tex-friends
+This document was set in the lmodern typeface using \LaTeX\ and Bib\TeX, composed with a text TexMaker on Linux. \texttt{microtype} was also used.
+
+All figures were generated using \texttt{ggplot2} using \texttt{theme\_light()}.
+
+The final version of the thesis can be found at \url{https://github.com/sahwa/thesis}.

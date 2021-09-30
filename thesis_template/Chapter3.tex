@@ -3,14 +3,17 @@
 
 \section{Introduction}
 
-From a genetic standpoint, the native British population is one of the most highly studied in the world \cite{Leslie2015, }.
+From a genetic standpoint, the native British population is one of the most highly studied in the world \cite{Leslie2015}, with dozens of different studies sequencing or genotyping individuals from across the U.K. The U.K. is also an ethnically diverse country, with x people having ancestry from outside Western Europe. Despite this, the roughly 8 million ethnic minorities within the U.K. remain relatively understudied. For example, all of the 27 papers were deposited between  in the GWAS catalogue “UK Biobank” in the title between x and y, z papers excluded individuals of non-European ancestry. 
+
+Understanding the ancestry of these individuals is important for e.g. designing GWAS. It is also of interest and ethnic minorities deserve to have their genetic data studies in the same way as British individuals. 
+
+During the course of my PhD, I was fortunate to obtain the `Human Origins' dataset which, at the time of writing, is the most detailed dataset of African genotypes. In particular, it contains many individuals from South Africa (n=104), Cameroon (n=567) and Ghana (n=211), which are countries known to have contributed immigrants to the U.K. Therefore, this dataset is ideal for use as a reference panel to investigate the ancestry of ethnic minorities within the U.K. Biobank. 
+
+In particular, I am interested in investigating the ancestry of individuals with recent African ancestry. 
+
+One issue is that a relatively small proportion of the SNPs overlap between the U.K. Biobank and Human Origins genotyping array; only 70,776 SNPs overlap, compared to a typical number between 500,000 and 700,000. Using a low number of SNPs in the analysis may reduce the power to infer accurate ancestry proportions, as there is less data points to compare populations with. Therefore, one option is to impute the non-overlapping SNPs using a reference panel. However, the effect of imputation on ChromoPainter-style analyses has yet to be fully investigated. It is possible that imputing a large number of positions may introduce biases, particularly towards populations which are present in the reference panel. Studies have shown repeatedly that genotypes in non-European individuals are imputed less accurately compared to European individuals. Accordingly, we can ask whether it is preferable to retain a smaller number of non-imputed SNPs or a larger number of imputed SNPs. 
 
 
-Despite this, the roughly 8 million ethnic minorities within the U.K. remain relatively understudied. For example, all of the 27 papers were deposited between  in the GWAS catalogue “UK Biobank” in the title between 
-
-
-
-We took advantage of the U.K. Biobank (UKB) resource and detailed reference panel of worldwide individuals (Human Origins) in order to investigate the ancestry of the ethnic minorities within the UKB. 
 
 \section{Methods}
 
@@ -18,47 +21,50 @@ We took advantage of the U.K. Biobank (UKB) resource and detailed reference pane
 
 Access was obtained to study the UK Biobank dataset via UCL genetics institute. 
 
+I first accessed the U.K. Biobank genotype data, consisting of 488,377 individuals genotyped at 784,256 genome-wide SNPs. Hereafter I will refer to this data as the `non-imputed' data. plink1.9 \cite{purcell2007plink} was used to convert the binary plink files to bgzipped vcf format. Strand inconsistencies between the UK Biobank and Human Origins dataset were identified using the gt-conform utilty from Beagle and any inconsistent positions removed. 
+
+I also download U.K. Biobank data which has been imputed to approximately 96m SNPs. Data was imputed using the combined references of the Haplotype Reference Consortium (HRC) and UK10K haplotype resource. Full details of imputation can be found in the paper of McCarthy et al (2016) \cite{mccarthy2016reference}. The imputed data was downloaded and converted from .bgen to .vcf format using qctool. Strand inconsistencies between the UK Biobank and Human Origins dataset were identified using the gt-conform utilty from Beagle and any inconsistent positions removed.
+
+\subsection{Data preparation - Human Origins}
+
+To determine the ancestry patterns in U.K. Biobank individuals, it is necessary to compare them to reference dataset of individuals of known origin. As I am particularly interested in studying individuals with recent African ancestry, the Human Origins dataset (appendix A.20) is ideal for this purpose, as it contains many individuals from many different ethnic groups from across Africa. 
+
 \subsection{ADMIXTURE analysis}
 
-Performing chromopainter analysis on the entire UK Biobank dataset (n=488,377 individuals) is currently computationally infeasible. Thus, we chose to analyse only a subset of individuals; a) individuals with more than 50\% non-European ancestry, b) individuals who had recieved a Covid-19 test.
+Performing chromopainter analysis on the entire UK Biobank dataset (n=488,377 individuals) is currently computationally infeasible. Thus, I chose to analyse only those individuals with more than 50\% non-European ancestry. ADMIXTURE is a fast and accurate way to estimate continental-scale ancestry proportions.
 
-To identify individuals who had more than 50\% non-European ancestry, we split all UK Biobank individuals into 100 batches and performed supervised ADMIXTURE \cite{alexander2009fast} analysis on each batch. Prior to performing ADMIXTURE, we LD pruned the SNPs using the plink \cite{purcell2007plink} command --indep-pairwise 50 10 0.02, retaining 70,776 SNPs. The pruned UK Biobank dataset was then merged with the 1000 genomes genotypes \cite{10002010map}. 
+I first LD pruned the non-imputed U.K. Biobank dataset using using the \texttt{plink --indep-pairwise 50 10 0.02} \cite{purcell2007plink}. This left a total of  70,776 bi allelic SNPs. I then subsetted the 1000 genomes dataset down to the 70,776 SNPs retained in the U.K. Biobank dataset and merged them using \texttt{bcftools merge}. Thus, I had a dataset containing all U.K. Biobank and 1000 genomes individuals. 
 
-I ran a supervised ADMIXTURE analysis on each batch by using the --supervised command and fixing the 4 reference populations as GBR British, Nigeria Yoruba, Han Chinese and Gujarati Indian. The rest of the arguments were left to default.
-
-\subsection{Data preparation - imputed data}
-
-To jointly analyse the UK Biobank the Human Origins datasets, it is necessary to merge them and retain only SNPs which have been genotyped in both datasets (i.e. contain no missing genotypes). The number of common SNPs between the UK Biobank chip and the Human Origins chip was 65,727. Using this number of SNPs in the chromosome painting analysis may reduce power to detect fine-scale genetic differences between samples relative to using the roughly 500,000 SNPs present. One option is to therefore use the imputed UK Biobank dataset \cite{bycroft2018uk}. This has been imputed using the haplotype reference consortium reference panel \cite{mccarthy2016reference}.
-
-The imputed data was downloaded and converted from .bgen to .vcf format using qctool. Strand inconsistencies between the UK Biobank and Human Origins dataset were identified using the gt-conform utilty from Beagle and any inconsistent positions removed. The Human Origins and UK Biobank datsets were then merged using the bcftools merge command. The resulting merged dataset contained 493,407 individuals and 535,544 SNPs.
-
-The merged dataset was then phased using shapeit4 \cite{delaneau2018integrative}, setting --pbwt-depth 1 to increase speed at this large sample size. The phased output was converted to chromopainter output using a custom script.
+I ran a supervised ADMIXTURE analysis on each batch by using the \texttt{--supervised} command and fixing the 4 reference populations as GBR British, Nigeria Yoruba, Han Chinese and Gujarati Indian. The rest of the arguments were left to default.
 
 \subsection{Data preparation - non imputed data}
 
-I also performed an analysis using only the 65,727 SNPs which overlap exactly between the UK Biobank chip and the Human Origins chip. 
+It is necessary to merge datasets in order to jointly analyse them. I therefore merged the Human Origins and non-imputed U.K. Biobank datasets. I first identified which SNPs were common to both datasets and then subsetted both so that they contained only those SNPs, resulting in a total of 65,749 SNPs. I then merged the two datasets using \texttt{bcftools merge}. I only retained U.K. Biobank individuals if they had 50\% non-European ancestry or more, resulting in a total of 26,298 individuals. 
 
-plink1.9 \cite{purcell2007plink} was used to convert the binary plink files to bgzipped vcf format. The resulting vcf was filtered to include only those common with the Human Origins SNPs using bcftools view \cite{li2009sequence} and those individuals which had either a) at least 50\% non-European ancestry or b) for which we have data on Covid-19 test, leaving 26,298 individuals. The filtered UK Biobank dataset was then merged with the Human Origins dataset using bcftools merge.
+I phased the merged UK Biobank / Human Origins dataset using shapeit4 \cite{delaneau2018integrative}. I set \texttt{--pbwt-depth 8} and left all other parameters as default. The resulting vcf of phased haplotypes was converted to chromopainter format using a custom script.  
 
-I next phased the merged UK Biobank / Human Origins dataset using shapeit4 \cite{delaneau2018integrative}. I set --pbwt-depth 8 and left all other parameters as default. The resulting vcf of phased haplotypes was converted to chromopainter format using a custom script (appendix?).  
+\subsection{Data preparation - imputed data}
+
+Similarly to above, I needed to merge the imputed Biobank data with the Human Origins dataset. Again, I filtered both datasets to retain only SNPs which were common to both the datasets. The Human Origins and UK Biobank datsets were then merged using the \texttt{bcftools merge} command. The resulting merged dataset contained 493,407 individuals and 535,544 SNPs.
+
+The merged dataset was then phased using shapeit4 \cite{delaneau2018integrative}, setting \texttt{--pbwt-depth 1} to increase speed at this large sample size. The phased output was converted to chromopainter output using a custom script.
+
 
 \subsection{Imputation bias test}
 
-When using a reference panel of individuals comprising primarily of European individuals, imputating genotypes in individuals of majority non-European ancestry can be innacurate. Therefore, we needed to test the effect of genotype imputation on the estimated copyvectors and ancestry proportions in the African UK Biobank individuals. 
+Imputing variants in non-European individuals using a reference panel that is primarily composed of European individuals may lead to biased or inaccurate imputation. To explicitly evaluate this possibility, I performed a test using the Human Origins dataset.
+ 
+To do this, I took the entire Human Origins dataset (5998 individuals and 560,420 SNPs) and submitted it to the Sanger Imputation Server, using the full Haplotype Reference Consortium (HRC) as a reference for phasing and imputation. This reference panel was chosen because it was the same one used for imputing the Biobank individuals.
 
-To do this, we took the entire Human Origins dataset (5998 individuals and 560,420 SNPs) and submitted it to the Sanger Imputation Server, using the full Haplotype Reference Consortium (HRC) as a reference for phasing and imputation. This reference panel was chosen because it was the same one used for imputing the Biobank individuals.
+I next subsetted the imputed Human Origins dataset down to SNPs present in the UK Biobank array , leaving 727,325 positions present in the imputed Human Origins dataset. I then performed an `all-v-all' painting, forming each target haplotype as a mosaic of all other haplotypes. I also performed an identical `all-v-all' painting of the same Human Origins dataset, but using the original set of SNPs where none had been imputed. 
 
-I next subsetted the imputed Human Origins dataset down to SNPs present in the UK Biobank array , leaving 727,325 positions present in the imputed Human Origins dataset. I then performed an 'all-v-all' painting, forming each target haplotype as a mosaic of all other haplotypes. I also performed an identical 'all-v-all' painting of the same Human Origins dataset, but using the original set of SNPs where none had been imputed. 
-
-Therefore, we had 2 coancestry matrices of identical struture, but one was generated using a majority of imputed SNPs and the other was generated using no imputed SNPs. 
+Therefore, we had 2 coancestry matrices of identical structure, but one was generated using a majority of imputed SNPs and the other was generated using no imputed SNPs. 
 
 I also performed SOURCEFIND analysis on both matrices. Individuals were grouped into populations and all populations were used as surrogates for each target population. Default parameters were used and each SOURCEFIND target was analysed for 2,000,000 MCMC iterations. Ancestry proportions and confidence intervals were estimated from the raw MCMC output using the Coda R library \cite{oro22547}.
 
 \subsection{Chromopainter}
 
-After the decision to not use the imputed data, we performed the following painting analysis using the dataset described above in "Data preparation - non imputed data". To maximise efficiency, we performed 2 different paintings.
-
-Firstly, we performed an all-v-all painting of the Human Origins dataset (excluding the admixed individuals assigned to the AA Denver population). Secondly, we painted each of the retained UK Biobank individuals (n=26,298) as recipients and all non AA Denver individuals as donors. The resulting coancestry matrices for these 2 paintings were then combined with one another to give a combined coancestry matrix with Human Origins individuals as donors (n=5998) and Human Origins + retained UK Biobank individuals as recipients (n=32,296).
+I performed 2 identical paintings using the imputed and non-imputed datasets. Both used all Human Origins samples as donors and all U.K. Biobank individuals as recipients. 
 
 \subsection{SOURCEFIND}
 
@@ -66,33 +72,37 @@ Firstly, we performed an all-v-all painting of the Human Origins dataset (exclud
 
 \subsection{ADMIXTURE}
 
-I performed supervised ADMIXTURE on all 488,378 UK Biobank individuals in order to identify individuals with at least 50\% non-European ancestry. These individuals would then be carried forward to later analyses. In total, there were 8476, 2653, 9171 indivisuals with at least 50\% ancestry from Yoruba, Han Chinese and Gujarati reference populations respectively. 
+I performed supervised ADMIXTURE on all 488,378 UK Biobank individuals in order to identify individuals with at least 50\% non-European ancestry. These individuals would then be carried forward to later analyses. In total, there were 8476, 2653, 9171 individuals with at least 50\% ancestry from Yoruba, Han Chinese and Gujarati reference populations respectively. 
 
-To verify the accuracy of the ADMIXTURE results, I selected all individuals who self-identified as being either "Caribbean", "African" or "Black or Black British" (n=7527) and assessed the distribution of ADMIXTURE ancestry proportions, under the assumption that these individuals should contain more African than other kinds of ancestry. This was the case, with the mean proportion of African ancrstryn amongst these individuals being 0.85 (Fig. \cite{African_Inds_proportions_ADMIXTURE}.
+To verify the accuracy of the ADMIXTURE results, I selected all individuals who self-identified as being either "Caribbean", "African" or "Black or Black British" (n=7527) and assessed the distribution of ADMIXTURE ancestry proportions, under the assumption that these individuals should contain more African than other kinds of ancestry. This was the case, with the mean proportion of African ancestry among these individuals being 0.85 (Fig. \ref{fig:African_Inds_proportions_ADMIXTURE}).
 
-We observed substantial variation in the ancestry proportions for those self-identified as being either "Caribbean", "African" or "Black or Black British" - proportions of Yoruban and British ancestry ranged from 0.00001 to 1, Han Chinese from 0.00001 to 0.53 and Gujarati from 0.759 to 0.00001, reflecting the diverse array of genetic ancestries that can fall under a given ethnic label.
+There is substantial variation in the ancestry proportions for those self-identified as being either "Caribbean", "African" or "Black or Black British" - proportions of Yoruban and British ancestry ranged from 0.00001 to 1, Han Chinese from 0.00001 to 0.53 and Gujarati from 0.759 to 0.00001, reflecting the diverse array of genetic ancestries that can fall under a given ethnic label. 
 
 
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1.0\textwidth]{../images/chapter3/African_Inds_proportions.pdf}
-    \caption{Ancestry proportions inferred from supervised Admixture run (k=4) for all individuals who self identified as being either "Caribbean", "African" or "Black or Black British".}
+    \caption{Ancestry proportions inferred from supervised Admixture run (k=4) for all individuals who self identified as being either "Caribbean", "African" or "Black or Black British"}
     \label{fig:African_Inds_proportions_ADMIXTURE}
 \end{figure}
 
 
 \subsection{Chromopainter}
 
-Our Chromopainter analysis generated a 27,529 x 5999 co-ancestry matrix. Principle component analysis on this matrix reveals the general structure of the selected individuals, alongside the reference populations (Fig. \ref{fig:/PCA_chunklengths_HumanOrigins_UKBiobank})
+I performed a painting using all Human Origins individuals as donors and all U.K. Biobank individuals with at least 50\% African ancestry as recipients. 
+
+Principle component analysis on this matrix reveals the general structure of the selected individuals, alongside the reference populations (Fig. \ref{fig:/PCA_chunklengths_HumanOrigins_UKBiobank}). Principle Component Analysis (PCA) can be performed on the co-ancestry matrix in order to visualise the underlying structure. As expected, PC1 seperates Africans from non-Africans and positions Europeans slightly closer to Africans than east-Asians, likely reflecting admixture into Africa from populations closer to Europeans than East-Asians. PC2 splits east and west Eurasians, again placing Africans closer to West than East Eurasians. 
+
+Several notable patterns can be observed in the PCA. Firstly, whilst the Human Origins samples (green points) are more or less found entirely on 2 perpendicular lines, representing African and non-African samples, the UK Biobank samples are spread over the centre of the PCA. This reflects the different nature of the 2 datasets; the samples in Human Origins are not recently mixed, whereas many of the UK Biobank samples are.
 
 \begin{figure}[htp]
     \centering
-    \includegraphics[width=1.0\textwidth]{../images/chapter3/PCA_chunklengths_HumanOrigins_UKBiobank.png}
+    \includegraphics[width=1.0\textwidth]{../images/chapter3/ChromoPainter_PCA_UKB_HO.pdf}
     \caption{Principle component analysis of chunklengths matrix for all African UK Biobank individuals and human origins array. Individuals are coloured dependent on whether they are UK Biobank (green) or Human Origins (purple) samples. Labels indicate mean principle component coordinates for individuals in that population. A random sample of populations were chosen to have labels to prevent the figure from being too cluttered.}
-    \label{fig:/PCA_chunklengths_HumanOrigins_UKBiobank}
+    \label{fig:PCA_chunklengths_HumanOrigins_UKBiobank}
 \end{figure}
 
-Aggregating the columns of the aforementioned co-ancestry matrix by reference population by mean/sum gives the total length of genome each UK Biobank individual most closely matches individuals from that reference population. This can be visualised on a map, where each point represents a reference population and the colour corresponds to the total amount that reference population contributes towards the ancestry of all retained UK Biobank individuals (Fig. \ref{fig:haplotype_sharing_map_zoomed_II}).
+Aggregating the columns of the aforementioned co-ancestry matrix by reference population by mean/sum gives the total length of genome that donor population has contributed to the selected U.K. Biobank individuals. This can be visualised on a map, where each point represents a reference population and the colour corresponds to the total amount that reference population contributes towards the ancestry of all retained UK Biobank individuals (Fig. \ref{fig:haplotype_sharing_map_zoomed_II}).
 
 \begin{figure}[htp]
     \centering
