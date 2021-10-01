@@ -3,16 +3,17 @@
 
 \section{Introduction}
 
-From a genetic standpoint, the native British population is one of the most highly studied in the world \cite{Leslie2015}, with dozens of different studies sequencing or genotyping individuals from across the U.K. The U.K. is also an ethnically diverse country, with x people having ancestry from outside Western Europe. Despite this, the roughly 8 million ethnic minorities within the U.K. remain relatively understudied. For example, all of the 27 papers were deposited between  in the GWAS catalogue “UK Biobank” in the title between x and y, z papers excluded individuals of non-European ancestry. 
+From a genetic standpoint, the native British population is one of the most highly studied in the world, with many different studies sequencing or genotyping individuals from across the U.K (e.g. \cite{bycroft2018uk, Leslie2015, turnbull2018introducing, uk10k2015uk10k}). These studies have been aimed primarily at researching the genetic basis of disease. These data have also been used to investigate population history, substructure  and the relatiobship of different sub-populations in the U.K. to other European countries \cite{Leslie2015}.  
 
-Understanding the ancestry of these individuals is important for e.g. designing GWAS. It is also of interest and ethnic minorities deserve to have their genetic data studies in the same way as British individuals. 
+The U.K. is also an ethnically diverse country, at least 8m ethnic miority individuals living in the U.K. Groups of people from across the world have migrated to the U.K. at different periods in the previous 3 centuries, driven by the legacy of colonialism, the transatlantic Slave Trade and economic reasons. Despite this, the roughly 8 million ethnic minorities within the U.K. remain relatively understudied. For example, every one of the 27 papers in the GWAS catalog with "UK Biobank" in the title, and 2 others presently in the catalog curation queue, limited their analyses to EA subgroups varying described as "White British", "British" "European" "White European" "Caucasian" or "White" \cite{manolio2019using}. The primary reason for this is reasonable concerns over the confounding effect of population substructure within a cohort; retaining a more genetically homogeneous cohort is one strategy to mitigate this. 
 
-During the course of my PhD, I was fortunate to obtain the `Human Origins' dataset which, at the time of writing, is the most detailed dataset of African genotypes. In particular, it contains many individuals from South Africa (n=104), Cameroon (n=567) and Ghana (n=211), which are countries known to have contributed immigrants to the U.K. Therefore, this dataset is ideal for use as a reference panel to investigate the ancestry of ethnic minorities within the U.K. Biobank. 
+Because of this, evidence is mounting that the results from GWAS studies, such as Polygenic Risk Scores, may not be transferrable to other populations if they have been conducted in cohorts of exclusively European individuals. The reasons for this is currently unclear, but it has been suggested that differences in LD structure may be the cause. Ethnic minorities may therefore miss out on the advances in healthcare driven by large-scale genomic projects. Understanding the population structure of ethnic minorities within the U.K. Biobank is an important step towards including a diversity of ancestries in GWAS. 
 
-In particular, I am interested in investigating the ancestry of individuals with recent African ancestry. 
+During the course of my PhD, I was fortunate to obtain the `Human Origins' dataset which, at the time of writing, is the most detailed dataset of genotype data from African individuals. Whilst the dataset contains individuals from across Africa, it contains particularly large numbers of individuals from South Africa (n=104), Cameroon (n=567) and Ghana (n=211), which are countries known to have contributed immigrants to the U.K. Therefore, this dataset is ideal for use as a reference panel to investigate the ancestry of ethnic minorities within the U.K. Biobank. In particular, I am interested in investigating the ancestry of individuals with recent African ancestry. 
 
-One issue is that a relatively small proportion of the SNPs overlap between the U.K. Biobank and Human Origins genotyping array; only 70,776 SNPs overlap, compared to a typical number between 500,000 and 700,000. Using a low number of SNPs in the analysis may reduce the power to infer accurate ancestry proportions, as there is less data points to compare populations with. Therefore, one option is to impute the non-overlapping SNPs using a reference panel. However, the effect of imputation on ChromoPainter-style analyses has yet to be fully investigated. It is possible that imputing a large number of positions may introduce biases, particularly towards populations which are present in the reference panel. Studies have shown repeatedly that genotypes in non-European individuals are imputed less accurately compared to European individuals. Accordingly, we can ask whether it is preferable to retain a smaller number of non-imputed SNPs or a larger number of imputed SNPs. 
+As noted in the introduction, one issue is that a relatively small proportion of the SNPs overlap between the U.K. Biobank and Human Origins genotyping array; only 70,776 SNPs overlap, compared to a typical number between 500,000 and 700,000. Using a low number of SNPs in the analysis may reduce the power to infer accurate ancestry proportions, as there is less data points to compare populations with. Therefore, one option is to impute the non-overlapping SNPs using a reference panel. However, the effect of imputation on ChromoPainter-style analyses has yet to be fully investigated. It is possible that imputing a large number of positions may introduce biases, particularly towards populations which are present in the reference panel. Studies have shown repeatedly that genotypes in non-European individuals are imputed less accurately compared to European individuals. Accordingly, we can ask whether it is preferable to retain a smaller number of non-imputed SNPs or a larger number of imputed SNPs. 
 
+This chapter will focus on two questions. Firstly, I am interested in relating the genetic variation of individuals in the U.K. Biobank with recent African ancestry to the populations in the Human Origins dataset. 
 
 
 \section{Methods}
@@ -28,6 +29,14 @@ I also download U.K. Biobank data which has been imputed to approximately 96m SN
 \subsection{Data preparation - Human Origins}
 
 To determine the ancestry patterns in U.K. Biobank individuals, it is necessary to compare them to reference dataset of individuals of known origin. As I am particularly interested in studying individuals with recent African ancestry, the Human Origins dataset (appendix A.20) is ideal for this purpose, as it contains many individuals from many different ethnic groups from across Africa. 
+
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/chapter3/HumanOriginsMap.pdf}
+    \caption{Location of individuals present in the Human Origin dataset.}
+    \label{fig:PCA_chunklengths_HumanOrigins_UKBiobank}
+\end{figure}
 
 \subsection{ADMIXTURE analysis}
 
@@ -143,6 +152,8 @@ As a more formal test of the painting accuracy, I estimated SOURCEFIND ancestry 
 
 The overall accuracy at predicting birth location was 81.63\%, suggesting there was substantial information within the coancestry matrix. For the countries where there was a large number of reference populations, such as Ghana and Nigeria, the prediction accuracy was high. For certain countries, the prediction accuracy was much lower. For example, Tanzania was only represented by a single reference population. Zimbabwe...
 
+I also wanted to perform the same analysis but using the data which had been imputed. This stands as a practical test of whether it is preferable to impute or retain a smaller number of non-imputed SNPs. 
+
 \subsection{Imputation bias}
 
 The imputed dataset consisted of 535,544 SNPs in total, 87.7\% of which were imputed. Having a high percentage of imputed SNPs may bias downstream analyses. 
@@ -163,6 +174,8 @@ Comparing the imputed and non-imputed coancestry matrices revealed biases consis
 Of the 568 populations tested, 6 were present in the 1000 genomes reference panel. 
 
 Considering the SOURCEFIND results shows strong evidence that imputation alters the inferred ancestry proportions of the Human Origins individuals. If we take each target population and assign the surrogate with the largest ancestry proportion as the 'best surrogate', then only 30\% (144/478) of the best surrogates match between the imputed and non-imputed datasets. 
+
+\subsection{Comparing sparse genotype to imputation}
 
 
 
