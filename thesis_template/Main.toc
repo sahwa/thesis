@@ -41,84 +41,84 @@
 \contentsline {subsection}{\numberline {3.2.2}Data preparation - Human Origins}{87}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}ADMIXTURE analysis}{87}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}Data preparation - non imputed data}{88}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Data preparation - imputed data}{89}{subsection.3.2.5}%
-\contentsline {subsection}{\numberline {3.2.6}Imputation bias test}{89}{subsection.3.2.6}%
-\contentsline {subsection}{\numberline {3.2.7}Chromopainter}{90}{subsection.3.2.7}%
+\contentsline {subsection}{\numberline {3.2.5}Data preparation - imputed data}{88}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Imputation bias test}{88}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}Chromopainter}{89}{subsection.3.2.7}%
 \contentsline {subsection}{\numberline {3.2.8}SOURCEFIND}{90}{subsection.3.2.8}%
 \contentsline {section}{\numberline {3.3}Results}{90}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}ADMIXTURE}{90}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Chromopainter}{91}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Verifying painting accuracy}{95}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Imputation bias}{97}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Comparing sparse genotype to imputation}{99}{subsection.3.3.5}%
-\contentsline {chapter}{\numberline {4}Bavaria ancient DNA}{100}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Introduction}{100}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Methods}{102}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Data generation}{102}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Stuff that Jens did (e.g. read aligning)}{104}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Genotype imputation and phasing using GLIMPSE}{104}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Estimation sample-heterozygosity}{105}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}plink PCA}{105}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}Chromopainter analysis}{106}{subsection.4.2.6}%
-\contentsline {subsection}{\numberline {4.2.7}SOURCEFIND}{108}{subsection.4.2.7}%
-\contentsline {subsection}{\numberline {4.2.8}MOSAIC admixture analysis}{110}{subsection.4.2.8}%
-\contentsline {subsection}{\numberline {4.2.9}Allele-frequency based tests}{111}{subsection.4.2.9}%
-\contentsline {section}{\numberline {4.3}Results}{112}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Broad overview of genetic ancestry}{112}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Early Neolithic}{115}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Hunter-gather ancestry in Neolithic farmers}{119}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Late Neolithic}{123}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Bronze Age}{127}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Iron Age}{127}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Modern day legacy of the Altheim and Molzbichl samples}{128}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}Sample heterozygosity and homozygosity}{130}{subsection.4.4.5}%
-\contentsline {subsection}{\numberline {4.4.6}Discussion}{130}{subsection.4.4.6}%
-\contentsline {chapter}{\numberline {5}The genomics of the Slavic migration period, Early Middle Ages and their links to the present day}{133}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Introduction}{133}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Methods}{138}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Description of samples}{138}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Ancient DNA processing}{139}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Present-day DNA processing}{140}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}plink PCA}{141}{subsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.2.5}Sample heterozygosity and ROH}{141}{subsection.5.2.5}%
-\contentsline {subsection}{\numberline {5.2.6}Allele-frequency based tests}{141}{subsection.5.2.6}%
-\contentsline {subsection}{\numberline {5.2.7}ChromoPainter and fineSTRUCTURE analysis}{142}{subsection.5.2.7}%
-\contentsline {subsection}{\numberline {5.2.8}SOURCEFIND ancestry proportion analysis}{144}{subsection.5.2.8}%
-\contentsline {subsection}{\numberline {5.2.9}MOSAIC admixture analysis}{144}{subsection.5.2.9}%
-\contentsline {section}{\numberline {5.3}Results}{145}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Mixed ancestry of migration period Slavs}{145}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Early Middle Age Slavs}{151}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Do the samples cluster together - TVD permutation test}{152}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Interactions between the two groups}{155}{subsection.5.3.4}%
-\contentsline {subsection}{\numberline {5.3.5}Legacy of Slavic migrations in present-day individuals}{156}{subsection.5.3.5}%
-\contentsline {subsection}{\numberline {5.3.6}Continuity with present-day day Slavs}{159}{subsection.5.3.6}%
-\contentsline {subsection}{\numberline {5.3.7}Genetic structure and admixture events of present-day Slavic people}{160}{subsection.5.3.7}%
-\contentsline {section}{\numberline {5.4}Discussion}{166}{section.5.4}%
-\contentsline {chapter}{\numberline {6}General Conclusions}{168}{chapter.6}%
-\contentsline {chapter}{Appendices}{169}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Datasets used}{169}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Antonio et al 2019}{169}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Margaryan et al 2020}{169}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Rivollat et al 2020}{170}{section.A.3}%
-\contentsline {section}{\numberline {A.4}Brunel et al 2018}{170}{section.A.4}%
-\contentsline {section}{\numberline {A.5}Allentoft et al 2015}{170}{section.A.5}%
-\contentsline {section}{\numberline {A.6}Broushaki et al 2016}{171}{section.A.6}%
-\contentsline {section}{\numberline {A.7}Cassidy et al 2016}{171}{section.A.7}%
-\contentsline {section}{\numberline {A.8}de Barros Damgaard et al 2018a}{171}{section.A.8}%
-\contentsline {section}{\numberline {A.9}de Barros Damgaard et al 2018b}{172}{section.A.9}%
-\contentsline {section}{\numberline {A.10}Gamba et al 2014}{172}{section.A.10}%
-\contentsline {section}{\numberline {A.11}Gunther et al 2015}{172}{section.A.11}%
-\contentsline {section}{\numberline {A.12}Hofmanová et al 2016}{173}{section.A.12}%
-\contentsline {section}{\numberline {A.13}Jones et al 2015}{173}{section.A.13}%
-\contentsline {section}{\numberline {A.14}Marchi et al 2020}{173}{section.A.14}%
-\contentsline {section}{\numberline {A.15}Olalde et al 2014}{174}{section.A.15}%
-\contentsline {section}{\numberline {A.16}Sánchez-Quinto et al 2019}{174}{section.A.16}%
-\contentsline {section}{\numberline {A.17}Seguin-Orlando et al 2014}{174}{section.A.17}%
-\contentsline {section}{\numberline {A.18}Ancient reference dataset}{175}{section.A.18}%
-\contentsline {section}{\numberline {A.19}30x 1000 genomes dataset}{176}{section.A.19}%
-\contentsline {section}{\numberline {A.20}Human Origins dataset}{177}{section.A.20}%
-\contentsline {subsection}{\numberline {A.20.1}Processing}{177}{subsection.A.20.1}%
-\contentsline {section}{\numberline {A.21}MS POBI HellBus dataset}{178}{section.A.21}%
-\contentsline {chapter}{\numberline {B}Another Appendix About Things}{179}{appendix.B}%
-\contentsline {chapter}{\numberline {C}Colophon}{180}{appendix.C}%
-\contentsline {chapter}{Bibliography}{181}{appendix.C}%
+\contentsline {subsection}{\numberline {3.3.1}4\% of UK Biobank individuals have at least 50\% non-European ancestry}{90}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}To impute or not?}{91}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}The distribution of sub-continental African ancestry in the U.K. Biobank}{95}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Verifying painting accuracy}{99}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Patterns of African ancestry across the U.K.}{102}{subsection.3.3.5}%
+\contentsline {chapter}{\numberline {4}Bavaria ancient DNA}{103}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{103}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Methods}{105}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Data generation}{105}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Stuff that Jens did (e.g. read aligning)}{107}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Genotype imputation and phasing using GLIMPSE}{107}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Estimation sample-heterozygosity}{108}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}plink PCA}{108}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Chromopainter analysis}{109}{subsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.2.7}SOURCEFIND}{111}{subsection.4.2.7}%
+\contentsline {subsection}{\numberline {4.2.8}MOSAIC admixture analysis}{113}{subsection.4.2.8}%
+\contentsline {subsection}{\numberline {4.2.9}Allele-frequency based tests}{114}{subsection.4.2.9}%
+\contentsline {section}{\numberline {4.3}Results}{115}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Broad overview of genetic ancestry}{115}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Early Neolithic}{118}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Hunter-gather ancestry in Neolithic farmers}{122}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Late Neolithic}{126}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Bronze Age}{130}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Iron Age}{130}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Modern day legacy of the Altheim and Molzbichl samples}{131}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}Sample heterozygosity and homozygosity}{133}{subsection.4.4.5}%
+\contentsline {subsection}{\numberline {4.4.6}Discussion}{133}{subsection.4.4.6}%
+\contentsline {chapter}{\numberline {5}The genomics of the Slavic migration period, Early Middle Ages and their links to the present day}{136}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{136}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Methods}{141}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Description of samples}{141}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Ancient DNA processing}{142}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Present-day DNA processing}{143}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}plink PCA}{144}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Sample heterozygosity and ROH}{144}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}Allele-frequency based tests}{144}{subsection.5.2.6}%
+\contentsline {subsection}{\numberline {5.2.7}ChromoPainter and fineSTRUCTURE analysis}{145}{subsection.5.2.7}%
+\contentsline {subsection}{\numberline {5.2.8}SOURCEFIND ancestry proportion analysis}{147}{subsection.5.2.8}%
+\contentsline {subsection}{\numberline {5.2.9}MOSAIC admixture analysis}{147}{subsection.5.2.9}%
+\contentsline {section}{\numberline {5.3}Results}{148}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Mixed ancestry of migration period Slavs}{148}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Early Middle Age Slavs}{154}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Do the samples cluster together - TVD permutation test}{155}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Interactions between the two groups}{158}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.5}Legacy of Slavic migrations in present-day individuals}{159}{subsection.5.3.5}%
+\contentsline {subsection}{\numberline {5.3.6}Continuity with present-day day Slavs}{162}{subsection.5.3.6}%
+\contentsline {subsection}{\numberline {5.3.7}Genetic structure and admixture events of present-day Slavic people}{163}{subsection.5.3.7}%
+\contentsline {section}{\numberline {5.4}Discussion}{169}{section.5.4}%
+\contentsline {chapter}{\numberline {6}General Conclusions}{171}{chapter.6}%
+\contentsline {chapter}{Appendices}{172}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Datasets used}{172}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Antonio et al 2019}{172}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Margaryan et al 2020}{172}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Rivollat et al 2020}{173}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Brunel et al 2018}{173}{section.A.4}%
+\contentsline {section}{\numberline {A.5}Allentoft et al 2015}{173}{section.A.5}%
+\contentsline {section}{\numberline {A.6}Broushaki et al 2016}{174}{section.A.6}%
+\contentsline {section}{\numberline {A.7}Cassidy et al 2016}{174}{section.A.7}%
+\contentsline {section}{\numberline {A.8}de Barros Damgaard et al 2018a}{174}{section.A.8}%
+\contentsline {section}{\numberline {A.9}de Barros Damgaard et al 2018b}{175}{section.A.9}%
+\contentsline {section}{\numberline {A.10}Gamba et al 2014}{175}{section.A.10}%
+\contentsline {section}{\numberline {A.11}Gunther et al 2015}{175}{section.A.11}%
+\contentsline {section}{\numberline {A.12}Hofmanová et al 2016}{176}{section.A.12}%
+\contentsline {section}{\numberline {A.13}Jones et al 2015}{176}{section.A.13}%
+\contentsline {section}{\numberline {A.14}Marchi et al 2020}{176}{section.A.14}%
+\contentsline {section}{\numberline {A.15}Olalde et al 2014}{177}{section.A.15}%
+\contentsline {section}{\numberline {A.16}Sánchez-Quinto et al 2019}{177}{section.A.16}%
+\contentsline {section}{\numberline {A.17}Seguin-Orlando et al 2014}{177}{section.A.17}%
+\contentsline {section}{\numberline {A.18}Ancient reference dataset}{178}{section.A.18}%
+\contentsline {section}{\numberline {A.19}30x 1000 genomes dataset}{179}{section.A.19}%
+\contentsline {section}{\numberline {A.20}Human Origins dataset}{180}{section.A.20}%
+\contentsline {subsection}{\numberline {A.20.1}Processing}{180}{subsection.A.20.1}%
+\contentsline {section}{\numberline {A.21}MS POBI HellBus dataset}{181}{section.A.21}%
+\contentsline {chapter}{\numberline {B}Another Appendix About Things}{182}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Colophon}{183}{appendix.C}%
+\contentsline {chapter}{Bibliography}{184}{appendix.C}%
