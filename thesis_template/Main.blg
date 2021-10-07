@@ -13,45 +13,45 @@ A level-1 auxiliary file: Appendices.aux
 Database file #1: /home/sam/Dropbox/Documents/PhD/PhD/papers/Humans/library.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--there's a number but no series in fouracre1995new
-You've used 115 entries,
+You've used 122 entries,
             1791 wiz_defined-function locations,
-            1128 strings with 65354 characters,
-and the built_in function-call counts, 51642 in all, are:
-= -- 2406
-> -- 6990
+            1165 strings with 67174 characters,
+and the built_in function-call counts, 53736 in all, are:
+= -- 2565
+> -- 7159
 < -- 7
-+ -- 2375
-- -- 2260
-* -- 5889
-:= -- 10056
-add.period$ -- 347
-call.type$ -- 115
-change.case$ -- 104
++ -- 2434
+- -- 2312
+* -- 6093
+:= -- 10421
+add.period$ -- 368
+call.type$ -- 122
+change.case$ -- 111
 chr.to.int$ -- 0
-cite$ -- 116
-duplicate$ -- 1075
-empty$ -- 2547
-format.name$ -- 2260
-if$ -- 9633
+cite$ -- 123
+duplicate$ -- 1138
+empty$ -- 2707
+format.name$ -- 2312
+if$ -- 10055
 int.to.chr$ -- 0
-int.to.str$ -- 115
-missing$ -- 124
-newline$ -- 579
-num.names$ -- 115
-pop$ -- 219
+int.to.str$ -- 122
+missing$ -- 131
+newline$ -- 614
+num.names$ -- 122
+pop$ -- 226
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 418
+skip$ -- 439
 stack$ -- 0
-substring$ -- 2077
-swap$ -- 170
+substring$ -- 2228
+swap$ -- 177
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 269
-width$ -- 118
-write$ -- 1249
+while$ -- 290
+width$ -- 125
+write$ -- 1326
 (There was 1 warning)

@@ -551,10 +551,59 @@ UK10K consortium et~al.
 \newblock The uk10k project identifies rare variants in health and disease.
 \newblock {\em Nature}, 526(7571):82, 2015.
 
+\bibitem{schiffels2016iron}
+Stephan Schiffels, Wolfgang Haak, Pirita Paajanen, Bastien Llamas, Elizabeth
+  Popescu, Louise Loe, Rachel Clarke, Alice Lyons, Richard Mortimer, Duncan
+  Sayer, et~al.
+\newblock Iron age and anglo-saxon genomes from east england reveal british
+  migration history.
+\newblock {\em Nature communications}, 7(1):1--9, 2016.
+
+\bibitem{liu2020human}
+Xiaoming Liu.
+\newblock Human prehistoric demography revealed by the polymorphic pattern of
+  cpg transitions.
+\newblock {\em Molecular biology and evolution}, 37(9):2691--2698, 2020.
+
 \bibitem{manolio2019using}
 Teri~A Manolio.
 \newblock Using the data we have: improving diversity in genomic research.
 \newblock {\em The American Journal of Human Genetics}, 105(2):233--236, 2019.
+
+\bibitem{hellwege2017population}
+Jacklyn~N Hellwege, Jacob~M Keaton, Ayush Giri, Xiaoyi Gao, Digna~R
+  Velez~Edwards, and Todd~L Edwards.
+\newblock Population stratification in genetic association studies.
+\newblock {\em Current protocols in human genetics}, 95(1):1--22, 2017.
+
+\bibitem{kuchenbaecker2019transferability}
+Karoline Kuchenbaecker, Nikita Telkar, Theresa Reiker, Robin~G Walters, Kuang
+  Lin, Anders Eriksson, Deepti Gurdasani, Arthur Gilly, Lorraine Southam,
+  Emmanouil Tsafantakis, et~al.
+\newblock The transferability of lipid loci across african, asian and european
+  cohorts.
+\newblock {\em Nature communications}, 10(1):1--10, 2019.
+
+\bibitem{martin2017human}
+Alicia~R Martin, Christopher~R Gignoux, Raymond~K Walters, Genevieve~L Wojcik,
+  Benjamin~M Neale, Simon Gravel, Mark~J Daly, Carlos~D Bustamante, and
+  Eimear~E Kenny.
+\newblock Human demographic history impacts genetic risk prediction across
+  diverse populations.
+\newblock {\em The American Journal of Human Genetics}, 100(4):635--649, 2017.
+
+\bibitem{bustamante2011genomics}
+Carlos~D Bustamante, M~Francisco, and Esteban~G Burchard.
+\newblock Genomics for the world.
+\newblock {\em Nature}, 475(7355):163--165, 2011.
+
+\bibitem{vilhjalmsson2015modeling}
+Bjarni~J Vilhj{\'a}lmsson, Jian Yang, Hilary~K Finucane, Alexander Gusev, Sara
+  Lindstr{\"o}m, Stephan Ripke, Giulio Genovese, Po-Ru Loh, Gaurav Bhatia, Ron
+  Do, et~al.
+\newblock Modeling linkage disequilibrium increases accuracy of polygenic risk
+  scores.
+\newblock {\em The american journal of human genetics}, 97(4):576--592, 2015.
 
 \bibitem{purcell2007plink}
 Shaun Purcell, Benjamin Neale, Kathe Todd-Brown, Lori Thomas, Manuel~AR
