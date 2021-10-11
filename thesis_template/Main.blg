@@ -12,10 +12,11 @@ A level-1 auxiliary file: Conclusions.aux
 A level-1 auxiliary file: Appendices.aux
 Database file #1: /home/sam/Dropbox/Documents/PhD/PhD/papers/Humans/library.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+Warning--I didn't find a database entry for "Duque2018"
 Warning--there's a number but no series in fouracre1995new
 You've used 122 entries,
             1791 wiz_defined-function locations,
-            1165 strings with 67174 characters,
+            1167 strings with 67192 characters,
 and the built_in function-call counts, 53736 in all, are:
 = -- 2565
 > -- 7159
@@ -54,4 +55,4 @@ warning$ -- 1
 while$ -- 290
 width$ -- 125
 write$ -- 1326
-(There was 1 warning)
+(There were 2 warnings)
