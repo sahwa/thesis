@@ -4,7 +4,7 @@ The top-level auxiliary file: Main.aux
 The style file: unsrt.bst
 A level-1 auxiliary file: Preamble.aux
 A level-1 auxiliary file: Introduction.aux
-A level-1 auxiliary file: Chapter2_GH.aux
+A level-1 auxiliary file: Chapter2_GH_Oct2021.aux
 A level-1 auxiliary file: Chapter3.aux
 A level-1 auxiliary file: Chapter4.aux
 A level-1 auxiliary file: Chapter5.aux
@@ -12,47 +12,48 @@ A level-1 auxiliary file: Conclusions.aux
 A level-1 auxiliary file: Appendices.aux
 Database file #1: /home/sam/Dropbox/Documents/PhD/PhD/papers/Humans/library.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
-Warning--I didn't find a database entry for "Duque2018"
+Warning--I didn't find a database entry for "bycroft2018U.K."
+Warning--I didn't find a database entry for "U.K.10k2015U.K.10k"
 Warning--there's a number but no series in fouracre1995new
-You've used 122 entries,
+You've used 119 entries,
             1791 wiz_defined-function locations,
-            1167 strings with 67192 characters,
-and the built_in function-call counts, 53736 in all, are:
-= -- 2565
-> -- 7159
+            1152 strings with 66674 characters,
+and the built_in function-call counts, 53070 in all, are:
+= -- 2515
+> -- 7112
 < -- 7
-+ -- 2434
-- -- 2312
-* -- 6093
-:= -- 10421
-add.period$ -- 368
-call.type$ -- 122
-change.case$ -- 111
++ -- 2417
+- -- 2298
+* -- 6041
+:= -- 10302
+add.period$ -- 359
+call.type$ -- 119
+change.case$ -- 108
 chr.to.int$ -- 0
-cite$ -- 123
-duplicate$ -- 1138
-empty$ -- 2707
-format.name$ -- 2312
-if$ -- 10055
+cite$ -- 120
+duplicate$ -- 1112
+empty$ -- 2650
+format.name$ -- 2298
+if$ -- 9917
 int.to.chr$ -- 0
-int.to.str$ -- 122
-missing$ -- 131
-newline$ -- 614
-num.names$ -- 122
-pop$ -- 226
+int.to.str$ -- 119
+missing$ -- 128
+newline$ -- 599
+num.names$ -- 119
+pop$ -- 221
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 439
+skip$ -- 429
 stack$ -- 0
-substring$ -- 2228
-swap$ -- 177
+substring$ -- 2197
+swap$ -- 174
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 290
-width$ -- 125
-write$ -- 1326
-(There were 2 warnings)
+while$ -- 284
+width$ -- 122
+write$ -- 1294
+(There were 3 warnings)

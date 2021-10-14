@@ -202,12 +202,6 @@ Simone Rubinacci, Diogo~M Ribeiro, Robin~J Hofmeister, and Olivier Delaneau.
   using large reference panels.
 \newblock {\em Nature Genetics}, 53(1):120--126, 2021.
 
-\bibitem{Watterson1975}
-G.~A. Watterson.
-\newblock {On the number of segregating sites in genetical models without
-  recombination}.
-\newblock {\em Theoretical Population Biology}, 1975.
-
 \bibitem{deBarrosDamgaardeaar7711}
 Peter de~Barros~Damgaard, Rui Martiniano, Jack Kamm, J.~V{\'\i}ctor
   Moreno-Mayar, Guus Kroonen, Micha{\"e}l Peyrot, Gojko Barjamovic, Simon
@@ -443,6 +437,19 @@ Wolfgang Haak, Iosif Lazaridis, Nick Patterson, Nadin Rohland, Swapan Mallick,
   languages in Europe}.
 \newblock {\em Nature}, 522(7555):207--211, 2015.
 
+\bibitem{alexander2009fast}
+David~H Alexander, John Novembre, and Kenneth Lange.
+\newblock Fast model-based estimation of ancestry in unrelated individuals.
+\newblock {\em Genome research}, 19(9):1655--1664, 2009.
+
+\bibitem{Leslie2015}
+Stephen Leslie, Bruce Winney, Garrett Hellenthal, Dan Davison, Abdelhamid
+  Boumertit, Tammy Day, Katarzyna Hutnik, Ellen~C. Royrvik, Barry Cunliffe,
+  Daniel~J. Lawson, Daniel Falush, Colin Freeman, Matti Pirinen, Simon Myers,
+  Mark Robinson, Peter Donnelly, and Walter Bodmer.
+\newblock {The fine-scale genetic structure of the British population}.
+\newblock {\em Nature}, 519(7543):309--314, 2015.
+
 \bibitem{loh2016reference}
 Po-Ru Loh, Petr Danecek, Pier~Francesco Palamara, Christian Fuchsberger,
   Yakir~A Reshef, Hilary~K Finucane, Sebastian Schoenherr, Lukas Forer, Shane
@@ -520,36 +527,11 @@ Brian~L. Browning and Sharon~R. Browning.
 \newblock {Genotype Imputation with Millions of Reference Samples}.
 \newblock {\em American Journal of Human Genetics}, 98(1):116--126, 2016.
 
-\bibitem{alexander2009fast}
-David~H Alexander, John Novembre, and Kenneth Lange.
-\newblock Fast model-based estimation of ancestry in unrelated individuals.
-\newblock {\em Genome research}, 19(9):1655--1664, 2009.
-
-\bibitem{Leslie2015}
-Stephen Leslie, Bruce Winney, Garrett Hellenthal, Dan Davison, Abdelhamid
-  Boumertit, Tammy Day, Katarzyna Hutnik, Ellen~C. Royrvik, Barry Cunliffe,
-  Daniel~J. Lawson, Daniel Falush, Colin Freeman, Matti Pirinen, Simon Myers,
-  Mark Robinson, Peter Donnelly, and Walter Bodmer.
-\newblock {The fine-scale genetic structure of the British population}.
-\newblock {\em Nature}, 519(7543):309--314, 2015.
-
-\bibitem{bycroft2018uk}
-Clare Bycroft, Colin Freeman, Desislava Petkova, Gavin Band, Lloyd~T Elliott,
-  Kevin Sharp, Allan Motyer, Damjan Vukcevic, Olivier Delaneau, Jared
-  O’Connell, et~al.
-\newblock The uk biobank resource with deep phenotyping and genomic data.
-\newblock {\em Nature}, 562(7726):203--209, 2018.
-
 \bibitem{turnbull2018introducing}
 Clare Turnbull.
 \newblock Introducing whole-genome sequencing into routine cancer care: the
   genomics england 100 000 genomes project.
 \newblock {\em Annals of Oncology}, 29(4):784--787, 2018.
-
-\bibitem{uk10k2015uk10k}
-UK10K consortium et~al.
-\newblock The uk10k project identifies rare variants in health and disease.
-\newblock {\em Nature}, 526(7571):82, 2015.
 
 \bibitem{schiffels2016iron}
 Stephan Schiffels, Wolfgang Haak, Pirita Paajanen, Bastien Llamas, Elizabeth

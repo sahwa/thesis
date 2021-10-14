@@ -30,19 +30,19 @@
 \BOOKMARK [2][-]{subsection.2.7.1}{Accounting for allele likelihoods}{section.2.7}% 30
 \BOOKMARK [2][-]{subsection.2.7.2}{Filtering SNPs}{section.2.7}% 31
 \BOOKMARK [2][-]{subsection.2.7.3}{Upweighting densely genotype regions of high coverage}{section.2.7}% 32
-\BOOKMARK [0][-]{chapter.3}{Investigating the sub-continental ancestry of ethnic minorities within the UK Biobank from sparse genotype data}{}% 33
+\BOOKMARK [0][-]{chapter.3}{Investigating the sub-continental ancestry of ethnic minorities within the U.K. Biobank from sparse genotype data}{}% 33
 \BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 34
 \BOOKMARK [1][-]{section.3.2}{Methods}{chapter.3}% 35
 \BOOKMARK [2][-]{subsection.3.2.1}{U.K. Biobank data access and initial processing}{section.3.2}% 36
 \BOOKMARK [2][-]{subsection.3.2.2}{Data preparation - Human Origins}{section.3.2}% 37
 \BOOKMARK [2][-]{subsection.3.2.3}{ADMIXTURE analysis}{section.3.2}% 38
-\BOOKMARK [2][-]{subsection.3.2.4}{Data preparation - non imputed data}{section.3.2}% 39
+\BOOKMARK [2][-]{subsection.3.2.4}{Data merge - non-imputed data and Human Origins}{section.3.2}% 39
 \BOOKMARK [2][-]{subsection.3.2.5}{Data preparation - imputed data}{section.3.2}% 40
-\BOOKMARK [2][-]{subsection.3.2.6}{Imputation bias test}{section.3.2}% 41
-\BOOKMARK [2][-]{subsection.3.2.7}{Chromopainter}{section.3.2}% 42
-\BOOKMARK [2][-]{subsection.3.2.8}{SOURCEFIND}{section.3.2}% 43
+\BOOKMARK [2][-]{subsection.3.2.6}{Chromopainter}{section.3.2}% 41
+\BOOKMARK [2][-]{subsection.3.2.7}{SOURCEFIND}{section.3.2}% 42
+\BOOKMARK [2][-]{subsection.3.2.8}{Imputation bias test}{section.3.2}% 43
 \BOOKMARK [1][-]{section.3.3}{Results}{chapter.3}% 44
-\BOOKMARK [2][-]{subsection.3.3.1}{4\045 of UK Biobank individuals have at least 50\045 non-European ancestry}{section.3.3}% 45
+\BOOKMARK [2][-]{subsection.3.3.1}{4\045 of U.K. Biobank individuals have at least 50\045 non-European ancestry}{section.3.3}% 45
 \BOOKMARK [2][-]{subsection.3.3.2}{To impute or not?}{section.3.3}% 46
 \BOOKMARK [2][-]{subsection.3.3.3}{The distribution of sub-continental African ancestry in the U.K. Biobank}{section.3.3}% 47
 \BOOKMARK [2][-]{subsection.3.3.4}{Verifying painting accuracy}{section.3.3}% 48

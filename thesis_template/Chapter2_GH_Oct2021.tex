@@ -74,7 +74,7 @@ Three different characteristics are desirable for an imputation algorithm to be 
 
 Two programs, Beagle 4.0 \cite{Browning2007} and GLIMPSE \cite{rubinacci2021efficient} fulfill the first and second criteria above, but only GLIMPSE runs quickly enough to analyse SNPs with sequence-level density. GLIMPSE offers up to 1000x reduction in running time compared to Beagle 4.0 \cite{rubinacci2021efficient}, so I chose to use this algorithm for the imputation and phasing steps.   
 
-Phasing and imputation ideally require a reference panel of high-coverage present-day individuals. I used the 1000 Genomes dataset (re-sequenced to 30x coverage), containing 3202 individuals from 26 worldwide populations \cite{byrska2021high}. A description of the processing of this reference dataset can be found in appendix ...
+Phasing and imputation ideally requires a reference panel of high-coverage present-day individuals. I used the 1000 Genomes dataset (re-sequenced to 30x coverage), containing 3202 individuals from 26 worldwide populations \cite{byrska2021high}. A description of the processing of this reference dataset can be found in appendix ...
 
 I next merged together i) the full coverage individuals, ii) downsampled individuals and iii) 918 ancient samples from the literature into a single bcf file using bcftools (version 1.11-60-g09dca3e) \cite{li2011statistical} to act as the samples for GLIMPSE to phase. Here, `target' refers to the individuals being imputed/phased and `reference' refers to the reference panel.  
 
@@ -86,7 +86,7 @@ It is important to note that GLIMPSE leverages information from individuals that
 
 \subsection{Estimating imputation sensitivity and specificity}
 
-I used rtg-tools-3.11 \cite{cleary2014joint} and the \texttt{vcfeval} task to estimate the sensitivity and specificity of variant discovery in the downsampled individuals. Here, I define the `baseline' (i.e.\ truth) to be the genotype calls in the full coverage individual and the `calls' as the genotype calls in the downsampled individual. Sensitivity and precision can be calculated as: 
+I used rtg-tools-3.11 \cite{cleary2014joint} and the \texttt{vcfeval} task to estimate the sensitivity and specificity of variant discovery in the downsampled individuals. Here, `baseline' (i.e. the truthset) is defined as the genotype calls in the full coverage individual and the `calls' as the genotype calls in the downsampled individual. Sensitivity and precision are defined as: 
 
 \begin{equation}
 sensitivity = \frac{TP_{baseline}}{TP_{baseline} + FN}
@@ -96,11 +96,10 @@ sensitivity = \frac{TP_{baseline}}{TP_{baseline} + FN}
 precision = \frac{TP_{call}}{TP_{call} + FP}
 \end{equation}
 
-A ``variant'' is considered to be a SNP with a genotype that is either \texttt{0/1} or \texttt{1/1}, with $V_{baseline}$ and $V_{call}$ the number of variants called in the full coverage and downsampled genomes, respectively. I consider false negatives (FN) to be cases where a variant is called in the full coverage genome but not in the downsampled genome. I consider false positives (FP) to be cases where a variant is called in the downsampled genome but not in the full-coverage genome.
+A ``variant'' is considered to be a SNP with a genotype that is either \texttt{0/1} or \texttt{1/1}, with $TP_{baseline}$ and $TP_{call}$ the number of variants called in the full coverage and downsampled genomes, respectively. False negatives (FN) are where a variant is called in the full coverage genome but not in the downsampled genome. False positives (FP) are cases where a variant is called in the downsampled genome but not in the full-coverage genome.
 
 $TP$, or true-positive, is the number of events where a variant position (i.e. a SNP with a genotype that is either \texttt{0/1} or \texttt{1/1}) is detected in either the full coverage ($TP_{baseline}$) or downsampled ($TP_{baseline}$) sample. $FN$ is the number of times that a variant position is called in the full coverage sample and not the downsampled sample. Conversely, $FP$ is the number of times a variant position is called in the downsampled sample and where the same SNP in the full coverage sample is invariant (i.e. \texttt{0/0}).
 
-\texttt{rtg-tools} also calculates the number of phased heterozygous genotypes in the calls where the phase matches that in the high coverage individual. 
 
 \subsection{ChromoPainter analysis} \label{ChromoPainter_analysis}
 
@@ -110,7 +109,7 @@ I painted each downsampled and full coverage ancient individual using a set of 1
 
 To prepare the data for ChromoPainter, I merged the .vcf containing the posterior genotype likelihoods of i) downsampled, ii) full coverage and iii) 918 ancient samples from the literature together, and did the same for the .vcfs containing the phased haplotypes.  I combined the posterior genotype likelihoods with the phased alleles to generate allele likelihoods (described in section 2.2.1.2) in ChromoPainter-uncertainty format, in addition to per-position recombination rate files. This was performed for each chromosome in turn using my own script (\url{https://github.com/sahwa/vcf_to_ChromoPainter}).
 
-I next used ChromoPainterUncertainty to perform the painting. I assigned all reference individuals as donors and all downsampled, full coverage and reference individuals as recipients. 
+I next used ChromoPainterUncertainty to perform the painting. I assigned the `standard set' individuals as donors and all downsampled, full coverage and ancient samples downloaded from the literature as recipients. 
 
 This produces a chunklengths matrix for each chromosome which were merged using chromocombine-0.0.4 (\url{https://people.maths.bris.ac.uk/~madjl/finestructure-old/chromocombine.html}). The resulting chunklengths matrix thus gives the total length of genome in centimorgans that a recipient most closely matches to each donor individual. 
 
@@ -132,7 +131,12 @@ Including the same sample, downsampled to different levels, would confound the s
 
 \subsection{SOURCEFIND}
 
-The chunklengths coancestry matrix produced by ChromoPainter contains information about the estimated length of genome a recipient most closely matches a given donor individual or population. However, incomplete lineage sorting, where alleles segregate in a way that is discordant to the `true' phylogeny reflecting the orders in which populations split from one another, means that there are regions in the genome where a recipient individual most closely matches a reference individual that is not from the population that has split most recently from according to the `true' phylogeny. This manifests itself as `noise' in the co-ancestry matrix, where, for example, an individual from France copies non-zero amounts from African donors, despite not having any recent African ancestry through admixture.  Furthermore, unequal donor population sizes may bias the aggregated amount copied to a given population. Accordingly, the values in the lengths coancestry matrix can be hard to interpret; for example, they should not be interpreted as admixture proportions. Therefore, in order to account for differences in donor group size and to improve resolution in directly estimating ancestry proportions, it is necessary to run an additional step, SOURCEFIND \cite{Chacon-Duque2018}.{\color{red}[IT'S A CONFUSING POINT, SO GOOD YOU ARE TACKLING IT. PERHAPS YOU SHOULD DEFINE WHAT YOU MEAN BY ``ANCESTRY PROPORTIONS''. I INTERPRET SF OUTPUT AS THE PROPORTION OF ANCESTRY THAT EACH IND SHARES MOST RECENTLY WITH EACH SURROGATE. THIS NEED NOT MEAN ADMIXTURE -- E.G. IF YOU YOU MIGHT EXPECT FRANCE TO HAVE ANCESTRY RECETLY RELATED TO BOTH GERMANY AND SPAIN, DUE TO ISOLATION-BY-DISTANCE.]}
+The chunklengths coancestry matrix produced by ChromoPainter contains information about the estimated length of genome a recipient most closely matches a given donor individual or population. However, incomplete lineage sorting, where alleles segregate in a way that is discordant to the `true' phylogeny reflecting the orders in which populations split from one another, means that there are regions in the genome where a recipient individual most closely matches a reference individual that is not from the population that has split most recently from according to the `true' phylogeny. This manifests itself as `noise' in the co-ancestry matrix, where, for example, an individual from France copies non-zero amounts from African donors, despite not having any recent African ancestry through admixture.  Furthermore, unequal donor population sizes may bias the aggregated amount copied to a given population. Accordingly, the values in the lengths coancestry matrix can be hard to interpret; for example, they should not be interpreted as admixture proportions. 
+
+Therefore, in order to account for differences in donor group size and to improve resolution in directly estimating ancestry proportions, it is necessary to run an additional step, SOURCEFIND \cite{Chacon-Duque2018}. Simulations have shown that SOURCEFIND ancestry proportions correspond well to simulated values. 
+
+
+{\color{red}[IT'S A CONFUSING POINT, SO GOOD YOU ARE TACKLING IT. PERHAPS YOU SHOULD DEFINE WHAT YOU MEAN BY ``ANCESTRY PROPORTIONS''. I INTERPRET SF OUTPUT AS THE PROPORTION OF ANCESTRY THAT EACH IND SHARES MOST RECENTLY WITH EACH SURROGATE. THIS NEED NOT MEAN ADMIXTURE -- E.G. IF YOU YOU MIGHT EXPECT FRANCE TO HAVE ANCESTRY RECETLY RELATED TO BOTH GERMANY AND SPAIN, DUE TO ISOLATION-BY-DISTANCE.]}
 
 SOURCEFIND takes as input i) the chunklengths matrix described in section 2.2.6 and a parameter specification file. This input file allows for the definition of `surrogate' individuals/populations. SOURCEFIND models each target copyvector as a linear mixture of copyvectors from the surrogate groups, inferring the proportion of ancestry that each surrogate group contributes to the target individual. The parameter space of surrogate ancestry proportions is explored using a Markov chain Monte Carlo algorithm, where the ancestry proportions are updated using a Metropolis-Hastings step. The output of SOURCEFIND for each target individual is therefore an $n*p$ matrix, where $n$ is the number of MCMC samples and $p$ is the total number of surrogate groups. Ancestry proportions, credible intervals and chain mixing/convergence checking for each surrogate group were estimated using the CODA R library \cite{oro22547}.
 
@@ -240,7 +244,7 @@ This can also be seen as `regressing to the prior'. In this case, the prior is c
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1.0\textwidth]{../images/chapter1/TVD_ancients_flat_prior.pdf}
-    \caption{TVD (metric of copyvector dissimilarity between two individuals) between each downsampled ancient individual and a flat copyvector. Flat copyvector equivalent to a vector of length $N$ where each element = $1/N$.{\color{red}[LBK SEEMS TO BE SIMLAR TO THE PRIOR FOR THE FULL-COVERAGE, ODDLY? WHY IS THIS -- ARE THERE NO OTHER EURO/ANATOLIA FARMERS IN THE REFERENCE? SHOULD EXPLAIN THIS BRIEFLY.]}}
+    \caption{TVD (metric of copyvector dissimilarity between two individuals) between each downsampled ancient individual and a flat copyvector. Flat copyvector equivalent to a vector of length $N$ where each element = $1/N$.}
     \label{fig:TVD_ancients_flat_prior}
 \end{figure}
 
@@ -266,7 +270,7 @@ For all levels of downsampling other than the 0.1x, the downsampled and full cov
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1.0\textwidth]{../images/chapter1/PCA_panel_allInds.allCoverage.pdf}
-    \caption{Principle component analysis (PCA) of downsampled, full coverage and reference ancient individuals generated from the linked{\color{red}[HAVE YOU DEFINED THIS?]} chunklengths matrix. Full coverage and downsampled genomes of the same individual are coloured the same. Reference individuals are grouped into populations plotted as the mean principle components for all individuals within the population. Numbers in labels correspond to the number of individuals within the reference population. 0.1x samples have red border for clariyu.}
+    \caption{Principle component analysis (PCA) of downsampled, full coverage and downloaded ancient individuals generated from the linked{\color{red}[HAVE YOU DEFINED THIS?]} chunklengths matrix. Full coverage and downsampled genomes of the same individual are coloured the same. Reference individuals are grouped into populations plotted as the mean principle components for all individuals within the population. Numbers in labels correspond to the number of individuals within the reference population. 0.1x samples have red border for clariyu.}
     \label{fig:PCA_panel_allInds_allCoverage}
 \end{figure}
 
@@ -319,31 +323,12 @@ These results suggest that imputation introduces a degree of bias into 0.1x samp
 
 \begin{figure}[htp]
     \centering
-    \includegraphics[width=1.0\textwidth]{../images/chapter1/pre_GLIMPSE_PCA.pdf}
-    \caption{Principle Component Analysis on pre-imputed genotypes of all downsampled and full coverage ancient samples projected onto a set of modern populations. White labels correspond to the midpoint of all samples from that population, grey points correspond to modern individuals.}
+    \includegraphics[width=1.0\textwidth]{../images/chapter1/CP_linked_unlinked_pre_post_GLIMPSE_PCA.pdf}
+    \caption{Principle Component Analysis. Top Left - pre-GLIMPSE genotypes. Top Right - post-GLIMPSE genotypes. Bottom Left - ChromoPainter Linked. Bottom-Right - ChromoPainter Unlinked. White labels correspond to the midpoint of all samples from that population, grey points correspond to modern individuals.}
     \label{fig:pre_GLIMPSE_PCA}
 \end{figure}
 
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../images/chapter1/post_GLIMPSE_PCA.pdf}
-    \caption{Principle Component Analysis on post-imputed genotypes of all downsampled and full coverage ancient samples projected onto a set of modern populations. White labels correspond to the midpoint of all samples from that population, grey points correspond to modern individuals.}
-    \label{fig:post_GLIMPSE_PCA}
-\end{figure}
 
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../images/chapter1/CP_linked_PCA.pdf}
-    \caption{Principle Component Analysis on post-imputed linked ChromoPainter output of all downsampled and full coverage ancient samples projected onto a set of modern populations. White labels correspond to the midpoint of all samples from that population, grey points correspond to modern individuals.}
-    \label{fig:CP_linked_PCA}
-\end{figure}
-
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../images/chapter1/CP_unlinked_PCA.pdf}
-    \caption{Principle Component Analysis on post-imputed unlinked ChromoPainter output of all downsampled and full coverage ancient samples projected onto a set of modern populations. White labels correspond to the midpoint of all samples from that population, grey points correspond to modern individuals.}
-    \label{fig:CP_unlinked_PCA}
-\end{figure}
 
 
 \subsection{Direct imputation test}
