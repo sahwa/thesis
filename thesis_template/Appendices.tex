@@ -212,7 +212,7 @@ The following steps were taken to process the data before being used as an imput
 \item Use Beagle's conform-gt utility to ensure reference alleles were consistent with the previous 1000 genomes build. This was done because all previous datasets I have compiled were also conformed to the previous 1000 genomes build. 
 \end{enumerate}
 
-\section{Human Origins dataset}
+\section{Human Origins dataset} \label{HumanOriginsAppendix}
 
 This dataset consists of 560,420 SNPS and 5998 individuals from 509 worldwide populations. It has a particularly large number of samples from West and East Africa; in particular, Cameroon, Ethiopia, Nigeria and Ghana. 
 
@@ -220,12 +220,11 @@ This dataset consists of 560,420 SNPS and 5998 individuals from 509 worldwide po
 
 Only bi-allelic SNPs were retained. To ensure that all datasets, ancient and modern, can be merged together without the confounding effects of strand flips, I then used conform-gt (\url{https://faculty.washington.edu/browning/conform-gt.html}) to align all alleles to the same strand as the 1000 genomes reference, keeping all parameters as default. Any genotypes which had a genotype likelihood of below 0.990 were set as missing.
 
-Data was phased use \texttt{shapeit4} \ref{delaneau2018integrative}, setting \texttt{--pbwt 8} and keeping all other parameters as default. The 1000 Genomes was used as as reference (section \ref{1000genomesdataset}). Sporadic low quality missing genotypes were imputed. 
+Data was phased use \texttt{shapeit4} \cite{delaneau2018integrative}, setting \texttt{--pbwt 8} and keeping all other parameters as default. The 1000 Genomes was used as as reference (section \cite{1000genomesdataset}). Sporadic low quality missing genotypes were imputed. 
 
 
 
-\section{MS POBI HellBus dataset}
-\ref{sssec:MSPOBIHellBus}
+\section{MS POBI HellBus dataset} \label{sssec:MSPOBIHellBus}
 
 
 Multiple Sclerosis (MS), People of the British Isles (POBI), Hellenthal and Busby (HB) / MS POBI HellBus contains a total of 14,795 individuals from 211 worldwide populations. 
@@ -238,7 +237,7 @@ The following steps were taken to process the data
 
 \begin{enumerate}
 \item Filtered such that SNPs with only 2 alleles were retained
-\item Phase using shapeit4 \ref{delaneau2018integrative} setting \texttt{--pbwt-depth 8}.
+\item Phase using shapeit4 \cite{delaneau2018integrative} setting \texttt{--pbwt-depth 8}.
 \item Remove duplicated SNPs using bcftools norm \cite{li2009sequence} 
 \item Use Beagle's conform-gt utility to ensure reference alleles were consistent with the previous 1000 genomes build. This was done because all previous datasets I have compiled were also conformed to the previous 1000 genomes build. 
 \end{enumerate}
@@ -265,3 +264,13 @@ This document was set in the lmodern typeface using \LaTeX\ and Bib\TeX, compose
 All figures were generated using \texttt{ggplot2} using \texttt{theme\_light()}.
 
 The final version of the thesis can be found at \url{https://github.com/sahwa/thesis}.
+
+\chapter{Supplementary figures}
+\label{appendixlabel4}
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/appendix/plink_withHG_PCA.pdf}
+    \caption{Principle component analysis of genotype matrix using plink2. Grey points indicate principle component coordiantes for each sample. Black text indicated mean principle component coordinates for all individuals within that group. Coloured labels represent newly sequenced ancient samples. }
+    \label{fig:plink_PCA_HG}
+\end{figure}

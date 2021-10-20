@@ -12,48 +12,47 @@ A level-1 auxiliary file: Conclusions.aux
 A level-1 auxiliary file: Appendices.aux
 Database file #1: /home/sam/Dropbox/Documents/PhD/PhD/papers/Humans/library.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
-Warning--I didn't find a database entry for "bycroft2018U.K."
-Warning--I didn't find a database entry for "U.K.10k2015U.K.10k"
+Warning--I didn't find a database entry for "1000genomesdataset"
 Warning--there's a number but no series in fouracre1995new
-You've used 119 entries,
+You've used 125 entries,
             1791 wiz_defined-function locations,
-            1152 strings with 66674 characters,
-and the built_in function-call counts, 53070 in all, are:
-= -- 2515
-> -- 7112
+            1184 strings with 68063 characters,
+and the built_in function-call counts, 54783 in all, are:
+= -- 2647
+> -- 7238
 < -- 7
-+ -- 2417
-- -- 2298
-* -- 6041
-:= -- 10302
-add.period$ -- 359
-call.type$ -- 119
-change.case$ -- 108
++ -- 2461
+- -- 2336
+* -- 6202
+:= -- 10596
+add.period$ -- 377
+call.type$ -- 125
+change.case$ -- 114
 chr.to.int$ -- 0
-cite$ -- 120
-duplicate$ -- 1112
-empty$ -- 2650
-format.name$ -- 2298
-if$ -- 9917
+cite$ -- 126
+duplicate$ -- 1166
+empty$ -- 2790
+format.name$ -- 2336
+if$ -- 10269
 int.to.chr$ -- 0
-int.to.str$ -- 119
-missing$ -- 128
-newline$ -- 599
-num.names$ -- 119
-pop$ -- 221
+int.to.str$ -- 125
+missing$ -- 134
+newline$ -- 629
+num.names$ -- 125
+pop$ -- 227
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 429
+skip$ -- 449
 stack$ -- 0
-substring$ -- 2197
-swap$ -- 174
+substring$ -- 2327
+swap$ -- 180
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 284
-width$ -- 122
-write$ -- 1294
-(There were 3 warnings)
+while$ -- 300
+width$ -- 128
+write$ -- 1360
+(There were 2 warnings)

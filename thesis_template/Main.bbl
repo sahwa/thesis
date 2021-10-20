@@ -417,6 +417,11 @@ James Baglama and Lothar Reichel.
 \newblock Augmented implicitly restarted lanczos bidiagonalization methods.
 \newblock {\em SIAM Journal on Scientific Computing}, 27(1):19--42, 2005.
 
+\bibitem{mathieson2020ancestry}
+Iain Mathieson and Aylwyn Scally.
+\newblock What is ancestry?
+\newblock {\em PLoS Genetics}, 16(3):e1008624, 2020.
+
 \bibitem{oro22547}
 Martyn Plummer, Nicky Best, Kate Cowles, and Karen Vines.
 \newblock Coda: convergence diagnosis and output analysis for mcmc.
@@ -527,11 +532,23 @@ Brian~L. Browning and Sharon~R. Browning.
 \newblock {Genotype Imputation with Millions of Reference Samples}.
 \newblock {\em American Journal of Human Genetics}, 98(1):116--126, 2016.
 
+\bibitem{bycroft2018UK}
+Clare Bycroft, Colin Freeman, Desislava Petkova, Gavin Band, Lloyd~T Elliott,
+  Kevin Sharp, Allan Motyer, Damjan Vukcevic, Olivier Delaneau, Jared
+  O’Connell, et~al.
+\newblock The uk biobank resource with deep phenotyping and genomic data.
+\newblock {\em Nature}, 562(7726):203--209, 2018.
+
 \bibitem{turnbull2018introducing}
 Clare Turnbull.
 \newblock Introducing whole-genome sequencing into routine cancer care: the
   genomics england 100 000 genomes project.
 \newblock {\em Annals of Oncology}, 29(4):784--787, 2018.
+
+\bibitem{UK10k2015UK10k}
+UK10K consortium et~al.
+\newblock The uk10k project identifies rare variants in health and disease.
+\newblock {\em Nature}, 526(7571):82, 2015.
 
 \bibitem{schiffels2016iron}
 Stephan Schiffels, Wolfgang Haak, Pirita Paajanen, Bastien Llamas, Elizabeth
@@ -587,6 +604,13 @@ Bjarni~J Vilhj{\'a}lmsson, Jian Yang, Hilary~K Finucane, Alexander Gusev, Sara
   scores.
 \newblock {\em The american journal of human genetics}, 97(4):576--592, 2015.
 
+\bibitem{taliun2021sequencing}
+Daniel Taliun, Daniel~N Harris, Michael~D Kessler, Jedidiah Carlson, Zachary~A
+  Szpiech, Raul Torres, Sarah A~Gagliano Taliun, Andr{\'e} Corvelo, Stephanie~M
+  Gogarten, Hyun~Min Kang, et~al.
+\newblock Sequencing of 53,831 diverse genomes from the nhlbi topmed program.
+\newblock {\em Nature}, 590(7845):290--299, 2021.
+
 \bibitem{purcell2007plink}
 Shaun Purcell, Benjamin Neale, Kathe Todd-Brown, Lori Thomas, Manuel~AR
   Ferreira, David Bender, Julian Maller, Pamela Sklar, Paul~IW De~Bakker,
@@ -620,6 +644,20 @@ Heng Li, Bob Handsaker, Alec Wysoker, Tim Fennell, Jue Ruan, Nils Homer, Gabor
   Marth, Goncalo Abecasis, and Richard Durbin.
 \newblock The sequence alignment/map format and samtools.
 \newblock {\em Bioinformatics}, 25(16):2078--2079, 2009.
+
+\bibitem{weissensteiner2016haplogrep}
+Hansi Weissensteiner, Dominic Pacher, Anita Kloss-Brandst{\"a}tter, Lukas
+  Forer, G{\"u}nther Specht, Hans-J{\"u}rgen Bandelt, Florian Kronenberg,
+  Antonio Salas, and Sebastian Sch{\"o}nherr.
+\newblock Haplogrep 2: mitochondrial haplogroup classification in the era of
+  high-throughput sequencing.
+\newblock {\em Nucleic acids research}, 44(W1):W58--W63, 2016.
+
+\bibitem{zhou2020fast}
+Ying Zhou, Sharon~R Browning, and Brian~L Browning.
+\newblock A fast and simple method for detecting identity-by-descent segments
+  in large-scale data.
+\newblock {\em The American Journal of Human Genetics}, 106(4):426--437, 2020.
 
 \bibitem{MOSAIC_2019}
 Michael Salter-Townshend and Simon Myers.
