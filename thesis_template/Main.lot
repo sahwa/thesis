@@ -1,17 +1,17 @@
 \babel@toc {english}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Table of r-squared values between the copyvectors of full coverage and downsampled individuals. `uncertainty' refers to ChromoPainterUncertainty, `standard' refers to ChromoPainterV2, RAF refers to filtering SNPs with reference allele frequency (RAF) $0.1 > RAF$ or $RAF > 0.9$ and `GP' refers to filtering $max(GP) >= 0.990$. [SAM: sorry this has gone off the edge - tried to fix it, but it was causing a lot of issues.{\color {red}[CAN USE longtable INSTEAD. OR USE ``U'' FOR ``uncertainty'', ETC.]}]\relax }}{72}{table.caption.19}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces Number of approximately 0.46cM windows which contain at least 13 SNPs above the coverage specified in min\_depth.{\color {red}[SEEMS THIS ISN'T COMPLETE? BUT WHY 0.5x RATHER THAN 0.1x?]}\relax }}{81}{table.caption.24}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Table of r-squared values between the copyvectors of full coverage and downsampled individuals. `uncertainty' refers to ChromoPainterUncertainty, `standard' refers to ChromoPainterV2, RAF refers to filtering SNPs with reference allele frequency (RAF) $0.1 > RAF$ or $RAF > 0.9$ and `GP' refers to filtering $max(GP) >= 0.990$. [SAM: sorry this has gone off the edge - tried to fix it, but it was causing a lot of issues.{\color {red}[CAN USE longtable INSTEAD. OR USE ``U'' FOR ``uncertainty'', ETC.]}]\relax }}{73}{table.caption.19}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Number of approximately 0.46cM windows which contain at least 13 SNPs above the coverage specified in min\_depth.{\color {red}[SEEMS THIS ISN'T COMPLETE? BUT WHY 0.5x RATHER THAN 0.1x?]}\relax }}{82}{table.caption.24}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Percentage of populations which had lowest TVD (TVD) or copied the most (copying) from their own population under different paintings. 70K linked used 70,000 SNPs in linked mode, 70K used 70,000 SNPs in unlinked mode, imputed used 430,000 imputed and 70,000 non-imputed SNPs in linked mode and full used 500,000 non-imputed SNPs in linked mode.\relax }}{94}{table.caption.27}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Percentage of populations which had lowest TVD (TVD) or copied the most (copying) from their own population under different paintings. 70K linked used 70,000 SNPs in linked mode, 70K used 70,000 SNPs in unlinked mode, imputed used 430,000 imputed and 70,000 non-imputed SNPs in linked mode and full used 500,000 non-imputed SNPs in linked mode.\relax }}{94}{table.caption.26}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Table providing details for the newly sequenced Bavarian samples.\relax }}{111}{table.caption.37}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Name of population and number of samples used in the present-day ChromoPainter analysis\relax }}{116}{table.caption.38}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Table providing details for the newly sequenced Bavarian samples.\relax }}{114}{table.caption.38}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Name of population and number of samples used in the present-day ChromoPainter analysis\relax }}{119}{table.caption.39}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Information on newly sequenced ancient samples. Date (AD) estimated from radiocarbon dating. `Migration' corresponds to Migration Period and `EMA' corresponds to Early Middle Ages. Coverage calculated as the mean depth across all 77,213,942 genome-wide SNPs where genotypes were called at.\relax }}{149}{table.caption.49}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Name of population and number of samples used in the present-day ChromoPainter analysis\relax }}{153}{table.caption.50}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Name of populations and number of samples used in the present-day MOSAIC analysis\relax }}{156}{table.caption.51}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Information on newly sequenced ancient samples. Date (AD) estimated from radiocarbon dating. `Migration' corresponds to Migration Period and `EMA' corresponds to Early Middle Ages. Coverage calculated as the mean depth across all 77,213,942 genome-wide SNPs where genotypes were called at.\relax }}{152}{table.caption.50}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Name of population and number of samples used in the present-day ChromoPainter analysis\relax }}{156}{table.caption.51}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Name of populations and number of samples used in the present-day MOSAIC analysis\relax }}{159}{table.caption.52}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

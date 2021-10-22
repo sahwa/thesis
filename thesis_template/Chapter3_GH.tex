@@ -11,10 +11,10 @@ Evidence is mounting that the results from GWAS, including Polygenic Risk Scores
 
 Understanding the population structure of ethnic minorities within the U.K. Biobank is an important step towards including a diversity of ancestries in GWAS. Zaidi and Mathieson (2020) \cite{zaidi2020demographic} showed that whilst it is not possible to correct for recent population stratification using principal components of common variants, correcting using a matrix of pairwise IBD sharing can. Similarly, it has been shown (S.Hu, personal communication of unpublished data) that principle components did not correct for GWAS hits on birth location, whereas using a ChromoPainter coancestry matrix could. 
 
-Aside from the medical benefits, there is intrinsic value in studying the ancestry and population history of unerstudied minorities. 
+Aside from the medical benefits, there is intrinsic value in studying the ancestry and population history of understudied minorities. 
 
 
-Recently, a large dataset, hereafter referred to as the `Human Origins', has become available. At the time of writing, it is the most detailed dataset of genotype data from African individuals in terms of the number of ethnolinguistic groups represented. Whilst the dataset contains individuals from across Africa, it contains particularly large numbers of individuals from South Africa (n=104), Cameroon (n=567) and Ghana (n=211), which are countries known to have contributed immigrants to the U.K. MOST OF WHAT YOU MENTION HERE ARE UNPUBLISHED DATA, SO YOU NEED TO DESCRIBE IT MORE FULLY. YOU SHOULD RE-WRITE THIS PARAGRAPH TO BE CLEAR ABOUT WHAT PUBLICATIONS SOME OF THE DATA CAME FROM AND WHAT THE NEW DATA ARE.] Therefore, this dataset is ideal for use as a reference panel to investigate the ancestry of ethnic minorities within the U.K. Biobank[THIS MAY BE CLEAR FOR AFRICA, BUT WHAT ABOUT E.ASIA AND S.ASIA? YOU SHOULD TALK ABOUT THESE REFERENCES AS WELL.]. In particular, given our newly acquired data come from parts of west Africa that may well represent sources of African ancestry among UK minority groups, I am interested in investigating the ancestry of individuals with recent African ancestry. 
+Recently, a large dataset, hereafter referred to as the `Human Origins', has become available. At the time of writing, it is the most detailed dataset of genotype data from African individuals in terms of the number of ethnolinguistic groups represented. Whilst the dataset contains individuals from across Africa, it contains particularly large numbers of individuals from South Africa (n=104), Cameroon (n=567) and Ghana (n=211), which are countries known to have contributed immigrants to the U.K. Therefore, this dataset is ideal for use as a reference panel to investigate the ancestry of ethnic minorities within the U.K. Biobank. In particular, given our newly acquired data come from parts of west Africa that may well represent sources of African ancestry among UK minority groups, I chose to investigate individuals with recent African ancestry. However, these results should in theory be equally applicable to other non-European populations, such as those from east and south Asia. 
 
 One potential issue is that only 70,776 SNPs overlap between the U.K. Biobank and Human Origins genotyping arrays. This is much lower than the number used in a typical ChromoPainter analysis, which is usually betweeen 500,000 and 700,000. Using a low number of SNPs in the analysis may reduce the power to infer accurate ancestry proportions, in particular for haplotype-based methods since haplotype information depends on SNP density. Therefore, one option is to impute the non-overlapping SNPs using a reference panel. However, the effect of imputation on ChromoPainter-style analyses has yet to be fully investigated. It is possible that imputing a large number of positions may introduce biases, particularly towards populations which are present in the reference panel. Studies have shown repeatedly that genotypes in non-European individuals are imputed less accurately compared to European individuals when using a primarily European reference panel \cite{delaneau2018integrative, taliun2021sequencing}. Accordingly, we can ask whether it is preferable to retain a smaller number of non-imputed SNPs or a larger number SNPs, some of which have been imputed. 
 
@@ -37,6 +37,8 @@ I therefore had two separate datasets; `imputed' and `non-imputed', containing t
 
 I am primarily interested in using ChromoPainter \cite{Lawson2012} to explore the ancestry of ethnic minorities in the U.K. Biobank{\color{red}[SHOULD JUSTIFY WHY? I.E. REALLY YOU'RE LOOKING AT WHETHER WE GAIN ANYTHING FROM USING HAPLOTYPE INFORMATION]}. However performing ChromoPainter analysis on the entire U.K. Biobank dataset (n=488,377 individuals) is computationally infeasible. Thus, I chose to analyse only those individuals with more than 50\% non-European ancestry. ADMIXTURE is a fast and accurate way to estimate continental-scale ancestry proportions \cite{alexander2009fast} and is therefore ideal for this task. 
 
+An alternative option to using ADMIXTURE would be to use PBWT (positional Burrows-Wheeler transform) paint \url{https://github.com/richarddurbin/pbwt/blob/master/pbwtPaint.c}), a fast approximation to ChromoPainter which provides approximately the same output and is scalable to large sample sizes \cite{byrne2020dutch}. However, it is not possible to provide a reference panel and each haplotype must be compared to all others in turn. This would be much less efficient and would not allow me to take full advantage of the Human Origins dataset. 
+
 I LD-pruned the non-imputed U.K. Biobank dataset using using \texttt{plink --indep-pairwise 50 10 0.02} \cite{purcell2007plink}. This left a total of 70,776 bi-allelic SNPs. I then subsetted the 1000 Genomes dataset down to the 70,776 SNPs retained in the U.K. Biobank dataset and merged the two datasets using \texttt{bcftools --merge}. Thus, I had a dataset containing all U.K. Biobank and 1000 Genomes individuals, genotyped at 70,776 SNPs.
 
 I ran ADMIXTURE in supervised mode using the argument \texttt{--supervised} and fixed the 4 reference populations as GBR British, Nigeria Yoruba, Han Chinese and Gujarati Indian from the 1000 Genomes dataset. These populations were chosen as they represent a broad division of worldwide populations into African, European, East Asian and South Asian; for the purposes of this particular piece of analysis, it was not necessary to include finer-scale populations. The rest of the arguments were left to default. I used the resulting \texttt{.Q} files to determine the ancestry proportions of each reference population in each U.K. Biobank individual. 
@@ -45,7 +47,7 @@ Individuals with at least 50\% ancestry from Nigeria Yoruba were carried into la
 
 \subsection{Data preparation - Human Origins}
 
-To determine the ancestry of U.K. Biobank individuals, I compared their SNP patterns to people from different parts of the world to infer which populations they share recent ancestry with. As I am particularly interested in studying individuals with recent African ancestry, I used the so-called ``Human Origins'' reference dataset (appendix A.20) for this purpose, as it contains individuals from XX different ethnic groups from across Africa and XX world-wide groups in total (Fig. \ref{fig:HumanOriginsMap}. Full details of processing can be found in Appendix A.20 (\nameref{HumanOriginsAppendix}).
+To determine the ancestry of U.K. Biobank individuals, I compared their SNP patterns to people from different parts of the world to infer which populations they share recent ancestry with. As I am particularly interested in studying individuals with recent African ancestry, I used the so-called ``Human Origins'' reference dataset (appendix A.20) for this purpose, as it contains individuals from 349 different ethnic groups from across Africa and 535 world-wide groups in total (Fig. \ref{fig:HumanOriginsMap}. Full details of processing can be found in Appendix A.20 (\nameref{HumanOriginsAppendix}).
 
 \begin{sidewaysfigure}[htp]
     \centering
@@ -58,17 +60,13 @@ To determine the ancestry of U.K. Biobank individuals, I compared their SNP patt
 
 I used \texttt{bcftools --merge} to merge 5,998 reference ``Human Origins dataset'' individuals with 8,476 UK Biobank participants that had $\geq$50\% African ancestry, using the gt-conform utilty from Beagle (\url{https://faculty.washington.edu/browning/conform-gt.html}) to remove any inconsistent positions. This dataset contained 65,749 non-imputed SNPs that overlap between the Human Origins and UK Biobank arrays. I phased these data with shapeit4 \cite{delaneau2018integrative} using \texttt{--pbwt-depth 8}, the b37 genetic map and otherwise default parameters.
 
-
 \subsection{Data preparation - imputed data}
 
 I similarly merged the imputed UK Biobank data with the Human Origins refernce dataset at 525,566 SNPs that were typed in Human Origins, and phased these data with shapeit4 in the same manner.
 
-
 \subsection{Chromopainter}
 
 For each of the imputed and non-imputed datasets, I used CHROMOPAINTER to infer the proportion of genome-wide DNA that each UK Biobank and Human Origins reference individual matches to individuals from each Human Origins reference population. Using this CHROMOPAINTER output, I then used SOURCEFINDv2 \cite{Chacon-Duque2018} to infer the proportion of ancestry that each UK Biobank individual shares most recently with each of the XX Human Origin reference populations
-
-
 
 \subsection{SOURCEFIND}
 
@@ -76,13 +74,13 @@ I estimated ancestry proportions for each of the selected U.K. Biobank individua
 
 \subsection{Imputation bias test}
 
-The imputed U.K. Biobank dataset was imputed using a reference panel containing the Haplotype Reference Consortium. Whilst this contains many European populations, it contains relatively few African individuals. Imputing variants in non-European individuals using a reference panel that is primarily composed of European individuals may lead to biased or inaccurate imputation. Given I am particularly interested in analysing individuals with recent African ancestry in the U.K. Biobank, it is important to determine whether this is the case. To explicitly evaluate this possibility, I performed a test of the effect of imputation using the Human Origins dataset as a `truthset'.{\color{red}[GIVEN THE LEAD UP TO THIS POINT, INTUITIVELY IT SEEMS YOU WOULD COMPARE IMPUTED VS NON-IMPUTED UK BIOBANK RESULT TO ASSESS THIS? I THINK YOU NEED A BIT MORE MOTIVATION -- I.E. THAT ONE ISSUE OF COMPARING IMPUTED VS NON-IMPUTED IS THAT LOSS OF POWER FROM THE MUCH FEWER SNPS IN NON-IMPUTED MAY OVER-RIDE ANY BIAS (OR AT LEAST MAKES IT DIFFICULT TO COMPARE). THUS YOU LOOKED AT HO DATA, WHERE YOU COULD USE THE SAME NUMBER OF SNPS FOR IMPUTED AND NON-IMPUTED.]}
- 
-I submitted the full Human Origins reference dataset (5998 individuals and 560,420 SNPs) to the Sanger Imputation Server (\url{https://imputation.sanger.ac.U.K./}), which uses the full Haplotype Reference Consortium (HRC) as a reference panel for imputation. This reference panel was chosen because it was the same one used for imputing the U.K. Biobank individuals.
+The imputed U.K. Biobank dataset was imputed using a reference panel containing the Haplotype Reference Consortium. Whilst this contains many European populations, it contains relatively few from Africa. Imputing variants in non-European individuals using a reference panel that is primarily composed of European individuals may lead to biased or inaccurate imputation. Given I am particularly interested in analysing individuals with recent African ancestry in the U.K. Biobank, it is important to determine whether this is the case. A natural test case would be to compare a painting on the U.K. Biobank individuals using imputed and non-imputed SNPs. However, this would not be possible as the imputed dataset contains approximately 500,000 SNPs, whereas the non-imputed dataset only contains 70,000 SNPs. Having an order of magnitude difference in the number of SNPs means it would not be possible to disentangle the combined effects of SNP count and imputation on the estimates of bias.   
 
-I next subsetted the imputed Human Origins dataset down to SNPs present in the U.K. Biobank array, leaving 727,325 positions present in the imputed Human Origins dataset{\color{red}[OKAY, THIS SUGGESTS YOU DIDN'T MATCH FOR SNPS?? YOU SHOULD MENTION THIS, BUT SAY THAT NUMBERS ARE SIMILAR, AND THAT THERE SHOULD BE ENOUGH INFORMATION IN 560K SNPS (OR INDEED THIS SLIGHTLY FAVORS THE IMPUTED MODEL IN TERMS OF POWER, WHICH SEEMS OKAY)]}. {\color{red}[DO YOU NEED TO SAY ``ALL-V-ALL''?]I phased the imputed and unimputed datasets separately using shapeitv4 [IS THIS TRUE?]. For each dataset, I then used CHROMOPAINTER to form each phased haploid of the XX Human Origins dataset individuals as a mosaic of all other phased Human Origins dataset haploids. [THEN DELETE THIS SENTENCE]I also performed an identical `all-v-all' painting of the same Human Origins dataset, but using the original set of SNPs where none had been imputed.}
+Thus, I used the Human Origins dataset, where I could control a) the imputation and b) the total number of SNPs used in the analysis. I submitted the full Human Origins reference dataset (5998 individuals and 560,420 SNPs) to the Sanger Imputation Server (\url{https://imputation.sanger.ac.U.K./}), which uses the full Haplotype Reference Consortium (HRC) as a reference panel for imputation. This reference panel was chosen because it was the same one used for imputing the U.K. Biobank individuals.
 
-Therefore, I had {\color{red}two co-ancestry matrices[HAVE YOU DEFINED THIS? PROBABLY GOOD TO REMIND THEM WHAT THIS IS EVEN IF YOU HAVE -- E.G. ``that contain the inferred proportion of DNA that each HO dataset individual shares most recently with each other HO dataset individual]} of identical donors and recipients, but one was generated using imputed SNPs and the other was generated using no imputed SNPs. 
+I next subsetted the imputed Human Origins dataset down to SNPs present in the U.K. Biobank array, leaving 727,325 positions present in the imputed Human Origins dataset. Although the number of SNPs still differ, my previous research (cite figure) shows that increasing the number of SNPs beyond 400,000 does not affect the ability to correctly assign individuals to populations from a painting. I phased the imputed and unimputed datasets separately using shapeitv4. For each dataset, I then used CHROMOPAINTER to form each phased haploid of the 5998 Human Origins dataset individuals as a mosaic of all other phased Human Origins dataset haploids, using the `all-v-all' approach. 
+
+Therefore, I had two co-ancestry matrices, that contain the inferred proportion of DNA that each HO dataset individual shares most recently with each other HO dataset individual of identical donors and recipients, but one was generated using imputed SNPs and the other was generated using no imputed SNPs. 
 
 
 \section{Results}
@@ -97,12 +95,12 @@ I chose to validate the ADMIXTURE results to ensure that there has not been any 
 
 However, there was substantial variation in the ancestry proportions for those self-identified as being either "Caribbean", "African" or "Black or Black British". Proportions of Yoruban and British ancestry ranged from 0.00001 to 1, Han Chinese from 0.00001 to 0.53 and Gujarati from 0.759 to 0.00001, reflecting the diverse array of genetic ancestries that can fall under a given ethnic label. This suggests that relying on self-reported ethnicity may yield variable results when e.g. used as a covariate in a GWAS. For example, there were 48 people who self identified as being either "Caribbean", "African" or "Black or Black British", but had less than 1\% African ancestry.
 
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../images/chapter3/African_Inds_proportions.pdf}
-    \caption{Ancestry proportions inferred from supervised Admixture run (k=4) for all individuals who self identified as being either "Caribbean", "African" or "Black or Black British"}
-    \label{fig:African_Inds_proportions_ADMIXTURE}
-\end{figure}
+%\begin{figure}[htp]
+%    \centering
+%    \includegraphics[width=1.0\textwidth]{../images/chapter3/African_Inds_proportions.pdf}
+%    \caption{Ancestry proportions inferred from supervised Admixture run (k=4) for all individuals who self identified as being either "Caribbean", "African" or "Black or Black British"}
+%    \label{fig:African_Inds_proportions_ADMIXTURE}
+%\end{figure}
 
 \subsection{To impute or not?}
 
@@ -166,7 +164,7 @@ Principal component analysis on this matrix reveals the general structure of the
     \label{fig:PCA_chunklengths_HumanOrigins_U.K.Biobank}
 \end{figure}
 
-Aggregating the columns of the co-ancestry matrix by reference population and taking the sum gives the total length of genome that donor population has contributed to the selected U.K. Biobank individuals. This can be visualised on a map, where each point represents a reference population and the colour corresponds to the total amount that reference population contributes towards the ancestry of all retained U.K. Biobank individuals (Fig. \ref{fig:haplotype_sharing_map_zoomed_II}). Higher values correspond to more ancestry from that population in the U.K. Biobank sample.{\color{red}[THOUGH THIS CAN BE DUE (EVEN ENTIRELY) TO DONOR SAMPLE SIZE? YOU NEED TO NOTE THIS, AND DISCUSS WHY IT'S NOT A MAJOR ISSUE HERE.]} 
+Aggregating the columns of the co-ancestry matrix by reference population and taking the sum gives the total length of genome that donor population has contributed to the selected U.K. Biobank individuals. This can be visualised on a map, where each point represents a reference population and the colour corresponds to the total amount that reference population contributes towards the ancestry of all retained U.K. Biobank individuals (Fig. \ref{fig:haplotype_sharing_map_zoomed_II}). Higher values correspond to more ancestry from that population in the U.K. Biobank sample. I will show in section 3.3.4 that this pattern is not a result of unequal donor population sizes.
 
 \begin{figure}[htp]
     \centering
@@ -179,7 +177,17 @@ The map supports the findings from the PCA in Fig. \ref{fig:PCA_chunklengths_Hum
 
 Firstly, it is known from historical and genetic studies that a majority of the individuals who were forcibly transported from Africa to the Americas during the transatlantic slave trade were from the west coast of Africa \cite{micheletti2020genetic}. Given the U.K. Biobank sample contains many individuals who were either born in, or trace their ancestry from the Caribbean, a region that had a large influx of slaves \cite{rawley2005transatlantic}, we would expect there to be a large contribution of ancestry from West Africa. Secondly and more recently, there has been a relatively large amount of historical immigration from countries in West Africa, such as Ghana and Nigeria, to the U.K. Although there are a number of immigrants from other parts of Africa, reflected in the nonzero contributions from other ethnic groups, these contributions are small compared to those from West Africa [reference needed].
 
-I used SOURCEFIND to infer the proportion of ancestry that each UK Biobank individual shares most recently with each of the 535 surrogate groups. [MAY WANT TO MENTION THIS WILL ACCOUNT FOR THE SAMPLE SIZE ISSUES IN FIG 3.5].
+I performed the visualisation using the painting using imputed SNPs and the ancestry distribution was qualitatively the same. 
+
+I used SOURCEFIND to infer the proportion of ancestry that each UK Biobank individual shares most recently with each of the 535 surrogate groups, as this accounts for uneven donor population sizes. A map of proportions is given 
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/chapter3/SF_props_map.pdf}
+    \caption{Map displaying the mean proportion of SOURCEFIND estimated ancestry of each African reference population within U.K. Biobank individuals. Each point is an African reference population with the colour corresponding to the mean ancestry proportion for that population across selected U.K. Biobank individuals. The colour-bar has been rescaled as two populations, Yoruba and Ghana\_Fante have substantially higher proportions than all other populations.} 
+    \label{fig:SF_props_map}
+\end{figure}
+
 
 Fig. \ref{fig:SF_props_distribution_top30} displays the 30 ethnic groups with the highest mean proportions of ancestry within the U.K. Biobank individuals. Yoruba was a clear standout for the most represented population; the mean proportion of Yoruba ancestry per individual was 40.0\% and 3604/8309 individuals had at least 50\% Yoruba ancestry. This is compared to the next most common ancestry, Ghana\_Fante, which had an average of 7.3\% per person and 373/8309 individuals with at least 50\% ancestry. It is not clear what the reason for the large amount of Yoruban ancestry is. Interestingly, of all the individuals for which we have country of birth data for (n=6190), more of them were born in the Caribbean (n=2263) relative to any other country; and of the individuals born in the Caribbean, over half were assigned to the Yoruban ethnicity. Therefore, one could tentatively explain the abundance of Yoruba ancestry as resulting from the transatlantic Slave Trade, where individuals from the Yoruba ethnic group were taken to the Caribbean at a higher frequency than other nearby ethnic groups in the Human Origins reference. The relatively large number of individuals from the Caribbean in the U.K. would thus have brought Yoruban ancestry to the U.K. 
 
@@ -201,9 +209,12 @@ Some other patterns can be noted. Whilst many individuals have intermediate leve
 %    \label{fig:SF_props_distribution_top30}
 %\end{figure}
 
-\subsection{Verifying painting accuracy}
+\subsection{Verifying painting accuracy} 
+ 
 
-Not all individuals within the U.K. Biobank were born in the U.K.; visualising the ancestry distribution of these individuals may reveal insights into population history. I subsetted the coancestry matrix to contain only individuals who have data on birth location (6153/8472). We would expect that individuals who were born in a particular country would copy the most from reference populations from that country. For example, we would expect individuals who were born in South Africa to copy the most from sampled Bantu and Zulu ethnic groups from South Africa. This may not always be the case, as some ethnic groups have crossed borders in their history, but it should broadly be true.
+Not all individuals within the U.K. Biobank were born in the U.K.; visualising the ancestry distribution of these individuals may reveal insights into population history. For instance, the ancestry distribution of individuals born in the Caribbean may provide evidence for the origin of slaves forcibly transported from the West Coast of Africa to the Caribbean during the transatlantic slave trade. 
+
+I subsetted the coancestry matrix to contain only U.K. Biobank individuals who provided data on birth location (6153/8472). We would expect that individuals who were born in a particular country would copy the most from reference populations from that country. For example, we would expect individuals who were born in South Africa to copy the most from sampled Bantu and Zulu ethnic groups from South Africa. This may not always be the case, as some ethnic groups have crossed borders in their history, but it should broadly be true. We also have birth place data for individuals who were not born in Africa (e.g. the Caribbean and Brazil). 
 
 \begin{figure}[htp]
     \centering
@@ -214,9 +225,9 @@ Not all individuals within the U.K. Biobank were born in the U.K.; visualising t
 
 Fig. \ref{fig:haplotype_map_SouthAfrica} shows the map of haplotype donation from reference groups to U.K. Biobank individuals born in South Africa. It is clear that reference populations from South Africa, in particular the Zulu ethnic group, contribute the most to these individuals. The pattern is qualitatively the same for all countries which had a reasonable number of donor populations, suggesting that the painting had good resolution down to at least the level of individual countries.
 
-There are several interesting results. For example, there are 2,263 individuals who were born in the Caribbean. Visualising the haplotype donation map for these individuals shows that they are primarily of West African ancestry {\color{red}[FIGURE??]}, consistent with historical evidence \cite{micheletti2020genetic}. Individuals born in Brazil have ancestry from further South, again consistent with historical evidence (citation needed). However, it should be noted that there is a relatively small sample size from individuals born in Brazil (n=9), and that these individuals may not be representative of the Brazilian population. 
+There are several interesting results. For example, there are 2,263 individuals who were born in the Caribbean. Visualising the haplotype donation map for these individuals shows that they are primarily of West African ancestry (supplementary figure x) , consistent with historical evidence \cite{micheletti2020genetic}. Individuals born in Brazil have ancestry from further South, again consistent with historical evidence (supplementary figure x). Of the 9 individuals born in Brazil, 6 of them had a majority SOURCEFIND component from an ethnic group in The Congo. However, it should be noted that there is a relatively small sample size from individuals born in Brazil (n=9), and that these individuals may not be representative of the Brazilian population. 
 
-As a formal test of the painting accuracy, I estimated SOURCEFIND ancestry proportions in each retained U.K. Biobank individual. An individual was `assigned' to a particular ethnic group if they had {\color{red}75\%[NOT CLEAR THIS IS BEST -- WORTH HAVING A PLOT OF PREDICTION ACCURACY VS \% THRESHOLD?]} or more ancestry from that group. If the country the assigned reference population is from matches the birth location of the individual, then I considered that a `success' and a `fail' otherwise. Individuals who were born in the U.K. or who had no birth country were excluded from this analysis. 
+As a formal test of the painting accuracy, I estimated SOURCEFIND ancestry proportions in each retained U.K. Biobank individual. An individual was `assigned' to a particular ethnic group if they had 75\% or more ancestry from that group. If the country the assigned reference population is from matches the birth location of the individual, then I considered that a `success' and a `fail' otherwise. Individuals who were born in the U.K. or who had no birth country were excluded from this analysis. 
 
 \begin{figure}[htp]
     \centering
@@ -225,21 +236,38 @@ As a formal test of the painting accuracy, I estimated SOURCEFIND ancestry propo
     \label{fig:country_of_origin_allInds}
 \end{figure}
 
-The overall accuracy at predicting birth location was 81.63\%, suggesting there was substantial information within the coancestry matrix. For the countries where there was {\color{red}a large number of reference populations[NOT CLEAR THIS IS RELATED -- GIVEN YOU SHOWED THAT NIGERIA MATCHES PRIMARILY TO ONLY ONE GROUP]}, such as Ghana and Nigeria, the prediction accuracy was high. For certain countries, the prediction accuracy was much lower. For example, Tanzania, which is only represented by a single reference population, had a prediction match of XX\%. Zimbabwe had by far the lowest prediction accuracy (14\%) out of countries with more than {\color{red}100 individuals[DO YOU MEAN REF INDIVIDUALS OR UK BIOBANK INDIVIDUALS?]}. Of the 266 individuals born in Zimbabwe, 194 were assigned to an ethnic group from outside Zimbabwe; 74 to Malawi\_Chewa, 71 to Mozambique\_Mozambique and 49 to Malawi\_Yao. Individuals from the ethnic groups from Malawi are found across Malawi, Zimbabwe and other countries, showing the possible weakness of this approach which aims to categorise individuals into a single country, as ethnic groups often transcend countries. 
+The overall accuracy at predicting birth location was 81.63\%, suggesting there was substantial information within the coancestry matrix. For some countries where there was large number of surrogate populations, such as Ghana and Nigeria, the prediction accuracy was high. For certain countries, the prediction accuracy was much lower. For example, Tanzania, which is only represented by a single reference population, had a prediction match of XX\%. Zimbabwe had by far the lowest prediction accuracy (14\%) out of countries with more than 100 U.K. Biobank individuals. Of the 266 individuals born in Zimbabwe, 194 were assigned to an ethnic group from outside Zimbabwe; 74 to Malawi\_Chewa, 71 to Mozambique\_Mozambique and 49 to Malawi\_Yao. Individuals from the ethnic groups from Malawi are found across Malawi, Zimbabwe and other countries, showing the possible weakness of this approach which aims to categorise individuals into a single country, as ethnic groups often transcend countries. 
 
-I also performed the same analysis but using the data which had been imputed. This stands as a practical test of whether it is preferable to impute or retain a smaller number of non-imputed SNPs. This yielded an accuracy of 81.89\%, a value almost identical to that obtained with the dataset containing approximately 70,000 non-imputed SNPs.{\color{red}[I THINK YOU WANT MORE HERE, AS THIS CONTRADICTS THE POINT YOU ARE TRYING TO MAKE ABOUT IMPUTATION BEING BAD. FOR EXAMPLE, ``Despite my earlier results indicating that SOURCEFIND results are less accurate if using imputed data due to reference bias...'' WOULD ALSO BE GOOD TO KNOW WHERE THEY DIFFER; FOR WHICH POPS IF AT ALL (E.G. MAYBE A SCATTERPLOT OF ACCURACIES UNDER THE TWO CASES)]}
+I also performed the same analysis but using the data which had been imputed. This stands as a practical test of whether it is preferable to impute or retain a smaller number of non-imputed SNPs. This yielded an accuracy of 81.89\%, a value almost identical to that obtained with the dataset containing approximately 70,000 non-imputed SNPs, despite my earlier results indicating that sub-country SOURCEFIND results are less accurate if using imputed data due to reference bias. This suggests that broad-scale ancestry assignment (i.e. assigning individuals to countries) is not affected by imputation, whereas sub-country estimates are. 
+
+{\color{red}[WOULD ALSO BE GOOD TO KNOW WHERE THEY DIFFER; FOR WHICH POPS IF AT ALL (E.G. MAYBE A SCATTERPLOT OF ACCURACIES UNDER THE TWO CASES)]}
 
 
 \subsection{Patterns of African ancestry across the U.K.}
 
 The U.K. Biobank dataset also contains data on the testing centre that each individual registered at. I used this information to see whether there was structure in how different ethnicities are distributed across the U.K. There was no apparent outliers in terms of centers and the proportion of individuals who had at least 50\% African ancestry (Fig. \ref{fig:country_of_origin_allInds}). No clear pattern was apparent, other than Yoruba ancestry dominating most centres. 
  
-I also estimated the information entropy{\color{red}[HOW DID YOU CALCULATE THIS? DOES THIS INCLUDE EUROPEAN ANCESTRY?]} of each centre based on the SOURCEFIND proportions, {\color{red}analogous to previous work done on European ancestry in UK Biobank individuals (S.Hu, personal communication)}. In this context, information entropy can be seen as analagous to the amount of diversity in different ancestries present in a particular centre. The two centres in the two largest metropolitan areas, London and Birmingham, have the largest amount of entropy{\color{red}[HOW MUCH SO? SHOULD HIGHLIGHT LONDON ON THE FIG -- IS CROYDON A MISTAKE?]}, suggesting that ethnic diversity is greater in larger cities.
+I also estimated the information entropy, $E$, of each centre based on the SOURCEFIND proportions,analogous to previous work done on European ancestry in UK Biobank individuals (S.Hu, personal communication). To calculate information entropy for each centre, I summed ancestry proportions for all 535 surrogate groups across all individuals from a centre, resulting in a vector, $V$ of length 535. Then,  
+
+
+ In this context, information entropy can be seen as analagous to the amount of diversity in different ancestries present in a particular centre. The two centres in the two largest metropolitan areas, London and Birmingham, have the largest amount of entropy{\color{red}[HOW MUCH SO? SHOULD HIGHLIGHT LONDON ON THE FIG -- IS CROYDON A MISTAKE?]}, suggesting that ethnic diversity is greater in larger cities.
 
 \begin{sidewaysfigure}[htp]
     \centering
     \includegraphics[width=1.0\textwidth]{../images/chapter3/SF_props_pie_chart.pdf}
-    \caption{Distribution of ethnicities across different testing centres. Each pie corresponds to a U.K. Biobank testing centre, with each section of the each pie corresponding to a different ethnicity.}
+    \caption{Distribution of ethnicities across different testing centres. Each pie corresponds to a U.K. Biobank testing centre, with each section of the each pie corresponding to a different ethnicity. Jitter added to points to avoid overlapping. }
     \label{fig:country_of_origin_allInds}
 \end{sidewaysfigure}
 
+\subsection{Patterns of African ancestry across the U.K.}
+
+Finally, I also had access to the birth-date of each U.K. Biobank participant. Therefore, it is possible to calculate the increase of the ancestry of a particular ethnic group over time \ref{fig:rollingaverage_time_Buganda_ancestry}. I took all U.K. Biobank individuals with more than 50\% African ancestry and split them into 50 bins according to their birth date. Using a rolling window implemented using the \texttt{rollyapply} function from the \texttt{zoo} R library, I calculated the mean age and mean proportion of Buganda\_Baganda ancestry for each bin. 
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/chapter3/rollingaverage_time_Buganda_ancestry.pdf}
+    \caption{Correspondence of true birth country with estimated birth country. Each bar corresponds to a true birth country, with the length of the bar corresponding to the total number of people in our dataset born in that country. The green section corresponds to the total number of individuals where the birth country was correctly guessed and the red section to those who were incorrectly guessed. Percentage labels give percentage correct for that country.}
+    \label{fig:rollingaverage_time_Buganda_ancestry}
+\end{figure}
+
+We can observe roughly a doubling of the mean proportion of  Buganda\_Baganda ancestry between 1950 and 1950. 
