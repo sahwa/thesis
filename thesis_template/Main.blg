@@ -6,7 +6,7 @@ A level-1 auxiliary file: Preamble.aux
 A level-1 auxiliary file: Introduction.aux
 A level-1 auxiliary file: Chapter2_GH_Oct2021.aux
 A level-1 auxiliary file: Chapter3_GH.aux
-A level-1 auxiliary file: Chapter4.aux
+A level-1 auxiliary file: Chapter4_GH.aux
 A level-1 auxiliary file: Chapter5.aux
 A level-1 auxiliary file: Conclusions.aux
 A level-1 auxiliary file: Appendices.aux
@@ -14,45 +14,45 @@ Database file #1: /home/sam/Dropbox/Documents/PhD/PhD/papers/Humans/library.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--I didn't find a database entry for "1000genomesdataset"
 Warning--there's a number but no series in fouracre1995new
-You've used 129 entries,
+You've used 130 entries,
             1791 wiz_defined-function locations,
-            1201 strings with 68926 characters,
-and the built_in function-call counts, 55732 in all, are:
-= -- 2720
-> -- 7306
+            1208 strings with 69184 characters,
+and the built_in function-call counts, 56047 in all, are:
+= -- 2743
+> -- 7329
 < -- 7
-+ -- 2485
-- -- 2356
-* -- 6277
-:= -- 10760
-add.period$ -- 389
-call.type$ -- 129
-change.case$ -- 117
++ -- 2493
+- -- 2363
+* -- 6310
+:= -- 10813
+add.period$ -- 392
+call.type$ -- 130
+change.case$ -- 118
 chr.to.int$ -- 0
-cite$ -- 130
-duplicate$ -- 1203
-empty$ -- 2872
-format.name$ -- 2356
-if$ -- 10469
+cite$ -- 131
+duplicate$ -- 1212
+empty$ -- 2898
+format.name$ -- 2363
+if$ -- 10535
 int.to.chr$ -- 0
-int.to.str$ -- 129
-missing$ -- 139
-newline$ -- 649
-num.names$ -- 129
-pop$ -- 237
+int.to.str$ -- 130
+missing$ -- 140
+newline$ -- 654
+num.names$ -- 130
+pop$ -- 238
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 462
+skip$ -- 465
 stack$ -- 0
-substring$ -- 2374
-swap$ -- 184
+substring$ -- 2401
+swap$ -- 185
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 309
-width$ -- 132
-write$ -- 1403
+while$ -- 311
+width$ -- 133
+write$ -- 1414
 (There were 2 warnings)

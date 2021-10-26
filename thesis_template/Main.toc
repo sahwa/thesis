@@ -64,15 +64,14 @@
 \contentsline {subsection}{\numberline {4.2.9}MOSAIC admixture analysis}{120}{subsection.4.2.9}%
 \contentsline {subsection}{\numberline {4.2.10}F-statistics}{121}{subsection.4.2.10}%
 \contentsline {section}{\numberline {4.3}Results}{122}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Broad overview of genetic ancestry}{122}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.1}Broad-scale ancestry changes in Bavaria reflect those found elsewhere in Europe}{122}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Early Neolithic}{123}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Hunter-gather ancestry in Neolithic farmers}{128}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Late Neolithic}{132}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}Bronze Age}{136}{subsection.4.3.5}%
-\contentsline {subsection}{\numberline {4.3.6}Iron Age}{136}{subsection.4.3.6}%
-\contentsline {subsection}{\numberline {4.3.7}Modern day legacy of the Altheim and Molzbichl samples}{137}{subsection.4.3.7}%
-\contentsline {subsection}{\numberline {4.3.8}Sample heterozygosity and homozygosity}{139}{subsection.4.3.8}%
-\contentsline {subsection}{\numberline {4.3.9}Discussion}{139}{subsection.4.3.9}%
+\contentsline {subsection}{\numberline {4.3.3}Variable amounts of local hunter-gather ancestry in Neolithic farmers indicates a structured population}{128}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Spatially and temporally close samples in Late Neolithic display highly distinct ancestries}{132}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Introduction of `southern' ancestry to Cherry-Tree Cave during the Iron Age}{136}{subsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.3.6}Present-day genomes unpick genetic differences between early Germanic and Slavic populations}{137}{subsection.4.3.6}%
+\contentsline {subsection}{\numberline {4.3.7}Sample heterozygosity and homozygosity}{139}{subsection.4.3.7}%
+\contentsline {subsection}{\numberline {4.3.8}Discussion}{139}{subsection.4.3.8}%
 \contentsline {chapter}{\numberline {5}The genomics of the Slavic migration period, Early Middle Ages and their links to the present day}{143}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Introduction}{143}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Methods}{148}{section.5.2}%

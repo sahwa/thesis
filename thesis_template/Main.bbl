@@ -684,6 +684,13 @@ Ying Zhou, Sharon~R Browning, and Brian~L Browning.
   in large-scale data.
 \newblock {\em The American Journal of Human Genetics}, 106(4):426--437, 2020.
 
+\bibitem{LohAlderAdmixture}
+Po-Ru Loh, Mark Lipson, Nick Patterson, Priya Moorjani, Joseph~K Pickrell,
+  David Reich, and Bonnie Berger.
+\newblock {Inferring Admixture Histories of Human Populations Using Linkage
+  Disequilibrium}.
+\newblock {\em Genetics}, 193(4):1233--1254, 04 2013.
+
 \bibitem{MOSAIC_2019}
 Michael Salter-Townshend and Simon Myers.
 \newblock {Fine-Scale Inference of Ancestry Segments Without Prior Knowledge of
