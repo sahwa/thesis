@@ -364,6 +364,11 @@ Broad Institute.
 \newblock {A global reference for human genetic variation.}
 \newblock {\em Nature}, 526(7571):68--74, 2015.
 
+\bibitem{nielsen2011genotype}
+Rasmus Nielsen, Joshua~S Paul, Anders Albrechtsen, and Yun~S Song.
+\newblock Genotype and snp calling from next-generation sequencing data.
+\newblock {\em Nature Reviews Genetics}, 12(6):443--451, 2011.
+
 \bibitem{delaneau2018integrative}
 Olivier Delaneau, Jean-Fran{\c{c}}ois Zagury, Matthew Robinson, Jonathan
   Marchini, and Emmanouil Dermitzakis.
@@ -416,11 +421,6 @@ John~G Cleary, Ross Braithwaite, Kurt Gaastra, Brian~S Hilbush, Stuart Inglis,
 James Baglama and Lothar Reichel.
 \newblock Augmented implicitly restarted lanczos bidiagonalization methods.
 \newblock {\em SIAM Journal on Scientific Computing}, 27(1):19--42, 2005.
-
-\bibitem{mathieson2020ancestry}
-Iain Mathieson and Aylwyn Scally.
-\newblock What is ancestry?
-\newblock {\em PLoS Genetics}, 16(3):e1008624, 2020.
 
 \bibitem{oro22547}
 Martyn Plummer, Nicky Best, Kate Cowles, and Karen Vines.
@@ -610,26 +610,24 @@ Arslan~A Zaidi and Iain Mathieson.
   polygenic scores.
 \newblock {\em Elife}, 9:e61548, 2020.
 
+\bibitem{lopez2021evidence}
+Saioa L{\'o}pez, Ayele Tarekegn, Gavin Band, Lucy van Dorp, Nancy Bird, Sam
+  Morris, Tamiru Oljira, Ephrem Mekonnen, Endashaw Bekele, Roger Blench, et~al.
+\newblock Evidence of the interplay of genetics and culture in ethiopia.
+\newblock {\em Nature communications}, 12(1):1--15, 2021.
+
+\bibitem{StructureEthiopians2021}
+Garrett Hellenthal, Nancy Bird, and Sam Morris.
+\newblock {Structure and ancestry patterns of Ethiopians in genome-wide
+  autosomal DNA}.
+\newblock {\em Human Molecular Genetics}, 30(R1):R42--R48, 02 2021.
+
 \bibitem{taliun2021sequencing}
 Daniel Taliun, Daniel~N Harris, Michael~D Kessler, Jedidiah Carlson, Zachary~A
   Szpiech, Raul Torres, Sarah A~Gagliano Taliun, Andr{\'e} Corvelo, Stephanie~M
   Gogarten, Hyun~Min Kang, et~al.
 \newblock Sequencing of 53,831 diverse genomes from the nhlbi topmed program.
 \newblock {\em Nature}, 590(7845):290--299, 2021.
-
-\bibitem{purcell2007plink}
-Shaun Purcell, Benjamin Neale, Kathe Todd-Brown, Lori Thomas, Manuel~AR
-  Ferreira, David Bender, Julian Maller, Pamela Sklar, Paul~IW De~Bakker,
-  Mark~J Daly, et~al.
-\newblock Plink: a tool set for whole-genome association and population-based
-  linkage analyses.
-\newblock {\em The American journal of human genetics}, 81(3):559--575, 2007.
-
-\bibitem{byrne2020dutch}
-Ross~P Byrne, Wouter van Rheenen, Leonard~H van~den Berg, Jan~H Veldink, and
-  Russell~L McLaughlin.
-\newblock Dutch population structure across space, time and gwas design.
-\newblock {\em Nature communications}, 11(1):1--11, 2020.
 
 \bibitem{bosch2009decay}
 Elena Bosch, Hafid Laayouni, Carlos Morcillo-Suarez, Ferran Casals, Andr{\'e}s
@@ -651,6 +649,20 @@ Steven~J Micheletti, Kasia Bryc, Samantha G~Ancona Esselmann, William~A
 James~A Rawley and Stephen~D Behrendt.
 \newblock {\em The transatlantic slave trade: a history}.
 \newblock U of Nebraska Press, 2005.
+
+\bibitem{purcell2007plink}
+Shaun Purcell, Benjamin Neale, Kathe Todd-Brown, Lori Thomas, Manuel~AR
+  Ferreira, David Bender, Julian Maller, Pamela Sklar, Paul~IW De~Bakker,
+  Mark~J Daly, et~al.
+\newblock Plink: a tool set for whole-genome association and population-based
+  linkage analyses.
+\newblock {\em The American journal of human genetics}, 81(3):559--575, 2007.
+
+\bibitem{byrne2020dutch}
+Ross~P Byrne, Wouter van Rheenen, Leonard~H van~den Berg, Jan~H Veldink, and
+  Russell~L McLaughlin.
+\newblock Dutch population structure across space, time and gwas design.
+\newblock {\em Nature communications}, 11(1):1--11, 2020.
 
 \bibitem{conard2009female}
 Nicholas~J Conard.
