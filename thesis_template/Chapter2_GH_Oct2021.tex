@@ -381,99 +381,57 @@ UstIshim & 0.848 & 0.992 & 0.848 & 0.992 & 0.930 & 0.979 & 0.969\\
 
 \subsection{Upweighting densely genotype regions of high coverage}
 
-Section \nameref{DirectImputationTest} showed that imputation error was the likely cause of coverage related bias. Thus, excluding imputed SNPs which have a low probability of being imputed correctly or restricting analysis to non-imputed SNPs above a certain coverage may mitigate coverage-related bias.
+Section \nameref{DirectImputationTest} showed that imputation error was the likely cause of coverage related bias. Thus, restricting analysis to non-imputed SNPs above a certain coverage may mitigate coverage-related bias.
 
-However, reducing the total number and or density of SNPs used in a painting may reduce the accuracy of the estimated copyvectors. All other things being equal, there is less linkage information between two SNPs with are separated by a larger genetic distance. Therefore, it is necessary to precisely determine what effect reducing the number of SNPs has in order to determine whether removing SNPs is a viable strategy. In particular, we would like to know the minimum number and density of SNPs required to retain the advantages of haplotype-based methods over unlinked methods. 
+However, reducing the total number and or density of SNPs used in a painting may reduce the accuracy of the estimated copyvectors. All other things being equal, there is less linkage information between two SNPs which are separated by a larger genetic distance. Therefore, it is necessary to precisely determine what effect reducing the number of SNPs has in order to determine whether removing SNPs is a viable strategy. In particular, it is necessary to know the minimum number and density of SNPs required to retain the advantages of haplotype-based methods over unlinked methods. Additionally, it is also important to know whether low-coverage samples have enough SNPs of adequate quality to retain haplotype-information. As haplotype-based methods work by considering contiguous chunks of SNPs, we can ask whether samples of a particular coverage have enough windows of high-quality SNPs to match the power of a high coverage sample.
 
-Previous studies showed it is possible to distinguish between individuals from Devon and Cornwall using the fineSTRUCTURE algorithm, but not unlinked methods (ADMIXTURE \cite{alexander2009fast}) \cite{Leslie2015}. fineSTRUCTURE mostly separated individuals from Devon and Cornwall into different clusters. Therefore, determining whether it is possible to distinguish between individuals from Devon and Cornwall acts as a good test case for reducing SNPs; how many SNPs can we remove before we lose the ability to distinguish between these two populations. 
+Previous studies have shown it is possible to distinguish between individuals from Devon and Cornwall using the fineSTRUCTURE clustering algorithm, but not using unlinked methods (ADMIXTURE \cite{alexander2009fast}) \cite{Leslie2015}. Therefore, determining whether it is possible to distinguish between individuals from Devon and Cornwall acts as a good test case for reducing SNPs; how many SNPs can we remove before we lose the ability to distinguish between these two populations?
 
-First, to test the effect of reducing the number of SNPS, I painted individuals from Devon and Cornwall with all other POBI populations as donors, using the full set of SNPs (n=452,592) and a reduced set of SNPs, retaining from between 0.2\% - 90\% of the original number of SNPs (a full list of reduction levels and details of the painting procedure can be found in the methods section){\color{red}[WHICH SECTION? HAVE YOU WRITTEN THIS, E.G.\ DESCRIBED LEAVE-ONE-OUT?]}. 
+To test the effect of reducing the number of SNPS, I first painted individuals from Devon and Cornwall with all other POBI populations as donors, using the full set of SNPs (n=452,592) and a reduced set of SNPs, retaining from between 0.2\% - 90\% of the original number of SNPs (a full list of the 12 reduction levels and details of the painting procedure can be found in the methods section).
 
-I counted how many individuals from either Devon or Cornwall had the lowest TVD with their own population (out of Devon and Cornwall), at each level of reducing SNPs. I also used SOURCEFIND, for at each level of reducing SNPs, to estimate the proportion of ancestry of all POBI populations in both Devon and Cornwall. Both approaches agreed that it is possible to differentiate between individuals from Devon and Cornwall at 2\% of the original number of SNPS. The SOURCEFIND results (Fig \ref{fig:Devon_Cornwall_SF_reduced}) show that overall Devon has a higher degree of self-matching than Cornwall 
+For the painting containing the full set of SNPs, I estimated the median length of haplotypes donated from POBI counties to individuals in Devon and Cornwall, yielding a value of approximately 500Kb.
 
+Next, I wanted to determine the minimum number of 500Kb windows needed to match the power of the full set of SNPs. To do this, for each level of reducing SNPs, I painted each individual from Devon and Cornwall using all other POBI individuals. Then, for each level of reducing SNPs, I used TVD to assign recipient individual from Devon or Cornwall to either Devon or Cornwall, or in other words, seeing if we could correctly identify the population of origin for the recipient individuals. Beginning with chromosome 22, for each individual, I calculated the TVD with the mean copyvectors of all other recipients from Devon and Cornwall, taking the minimum as the assigned population. I then added in chromosome 21, and assigned the individuals again. I continued to add chromosomes until the power to assign individuals was the same as when using the full set of 500,000 SNPs. Accordingly, for each level of reducing SNPs, I had the chromosomes required to match the power in the full set of SNPs. I converted this value to the total number of non-overlapping 250Kb, 500Kb or 1Mb windows.
 
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../images/chapter1/Devon_Cornwall_SF_reduced.pdf}
-    \caption{Proportion of SOURCEFIND inferred ancestry of Devon and Cornwall. Error bars is 1 standard deviation from the mean.}
-    \label{fig:Devon_Cornwall_SF_reduced}
-\end{figure}
+We can also estimate, for each level of reducing SNPs and window size, how many `good' SNPs are needed within each window. 500Kb corresponds to 6,000 windows genome-wide. 20\% density is approximately 100,000 SNPs; so 100000/6000 = 16.7 good SNPs are required per window. 
 
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../images/chapter1/Devon_Cornwall_TVD_reduced.pdf}
-    \caption{}
-    \label{fig:Devon_Cornwall_TVD_reduced}
-\end{figure}
-
-In other words, there is roughly the same information with 2\% of the original number of SNPs as there is with the full set of SNPs. Therefore, given populations of similar sizes in equivalent ancient individuals, and a starting number of approximately 450,000 SNPS, we could expect to reduce the total number of SNPs to 2\% of the original number (approximately 90,000 SNPs) and still be able to distinguish between 2 populations which are as closely related to one another or less as Devon and Cornwall. 
-
-A second related question is whether it is better to paint small regions of known high-quality SNPs or a higher number of imputed SNPs. In other words, does the density of SNPs influence the accuracy of the estimated copyvectors? To test the effect of altering the density of SNPS, I compared the copvectors estimated from different SNP densities, but roughly the same total number of SNPs. 
-
-At 2\% density there are 9,548 SNPs in total across 3000cM, giving a mean density of 1.38 SNPs/cM. On the other hand, at 90\% density, there are 6,777 SNPs across the 144.71cM long chromosome 22, giving a density of 46.83 SNPs/cM. Therefore, the SNPs on chromosome 22 are substantially more dense. Henceforth I will refer to the 0.02 density set of SNPs as the 'sparse' set and the 0.9 chromosome 22 set of SNPs as the 'dense' set. 
-
-I performed three different paintings, again, using all the POBI counties as donors and individuals from Devon and Cornwall as recipients. The first painting used all chromosomes and all SNPs at full density, to act as a `truth set'. The second painting used the `sparse' SNP set. The third painting used the `dense' SNP set. For all three paintings, the mean copyvector for Devon and Cornwall was estimated by taking the mean copyvector across all individuals within a population. The motivation here is to see whether the `dense' or `sparse' set of SNPs was closer to the `truth set'.  
-
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../images/chapter1/dense_sparse_devon_cornwall_collapsed.pdf}
-    \caption{Relationship between copyvectors using reduced (y-axis) and full (x-axis) set of SNPs. Panels indicate different levels of SNP density. Copyvectors were estimated by averaging across all individuals within each population (black points). Also shown in red are the sample sizes of each donor population.{\color{red}[MAKE R-SQUARED VALUES LARGER. AGAIN IS IT POSSIBLE TO INCORPORATE UNLINKED FOR COMPARISON -- PRESUMABLY 'SPARSE' SHOULD BE THE SAME AS UNLINKED?]}}
-    \label{fig:dense_sparse_devon_cornwall_collapsed}
-\end{figure}
-
-Fig. \ref{fig:dense_sparse_devon_cornwall_collapsed} displays the relative copyvector accuracy when using a dense and sparse set of SNPs. The r-squared value is higher using the denser set of SNPs, suggesting using denser SNPs can more accurately estimate the copy vector than the same number of more sparse SNPs. This also suggests that, if chosen well, a fraction of the original number of SNPs can recover a large amount of the original information. 
-
-However, the relationship between the `dense' copyvector and full coverage copyvector is influenced by the number of individuals in the recipient population. Reducing the number of individuals within the recipient population (i.e. the number of individuals assigned to the population 'POBI:Cornwall' reduces the overall r-squared between the 'dense' and full coverage copyvectors Fig. \ref{fig:sparse_cornwall_collapsed_random_remove_inds}. This may be because averaging across more individuals reduces the amount of noise. 
-
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../images/chapter1/Ssparse_cornwall_collapsed_random_remove_inds.pdf}
-    \caption{R-squared between the copyvectors estimated from 'dense' and full SNP sets (y-axis) using different sample sizes (x-axis). 'Dense' SNP set corresponds to the SNPs located on chromosome 22 at 0.9 density. Copyvectors were estimated by aggregating $n$ randomly selected individuals within the population, corresponding to the x axis-value. Green line is local polynomial regression line. {\color{red}[TO BE CLEAR -- FOR EACH X-AXIS VALUE, YOU ARE USING THE SAME INDIVIDUALS WHEN CALCULATING THE 'DENSE' AND FULL-COVERAGE COPY-VECTORS? ALSO SHOULD NOTE THIS IS FOR CORNWALL.]}}
-    \label{fig:sparse_cornwall_collapsed_random_remove_inds}
-\end{figure}
-
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../images/chapter1/dense_sparse_devon_cornwall_collapsed_scatterpoints.pdf}
-    \caption{Aggregated copyvector for all individuals from Cornwall. Points correspond to the mean amount copied to different different POBI donor groups. Scattered points are the individual amounts each individual within the Cornwall group copies from the Cornwall donor group (i.e. self-copying).{\color{red}[AM I RIGHT THAT THIS MEANS THERE IS EFFECTIVELY no VARIABILITY IN THE AMOUNT OF MATCHING TO CORNWALL AMONG FULL-COVERAGE INDIVIDUALS? THAT IS VERY SURPRISING. OR IS THE X-AXIS JUST JITTERED? IF IT IS TRUE, THEN WE NEED TO TAKE THIS INTO ACCOUNT, BY LOOKING AT WHICH COVERAGE THE VARIABILITY IN MATCHING TO CORNWALL BECOMES VERY LARGE.]}}
-    \label{fig:dense_sparse_devon_cornwall_collapsed_scatterpoints}
-\end{figure}
-
-With this information in mind, we can consider its use for ancient DNA. The previous section showed that imputed SNPs are the primary cause of coverage-related bias. Therefore, if we can find dense regions of non-imputed genotypes at sufficient coverage, we may be able to recover a large amount of the haplotype information from low coverage (<0.5x) samples.
-
-The previous section informed us that 2259 SNPs spaced across chromosome 22 was enough to infer structure between individuals from Devon and Cornwall. If we can calculate i) the average size of each chunk (cM) and ii) the average number of SNPs within each chunk, iii) the total number of such chunks, then we can search the genome of a downsampled individual for such chunks.
-
-{\color{red}[DON'T THINK YOU NEED TO SAY HOW YOU CALCULATED IT -- JUST SAY WHAT THE AVERAGE NUMBER OF CHUNKS ARE AND AVERAGE SNPS PER CHUNKS AND CHUNK SIZE (MAKING CLEAR WHAT SNP DENSITY YOU ARE TAKING ABOUT.) ]First, to find the average number of chunks per individual, we take \texttt{(mean(rowSums(counts)) = 158)}. Secondly, to find the mean number of SNPs within each chunk, we calculate \texttt{(chr22 nsnps / mean chunks per ind = 14.3)}. Finally, to find the mean chunk size, we must calculate \texttt{(chr22 length cm / mean chunks per ind = 0.46cM)}.}
-
-Thus, we must search the genome of a downsampled individual for windows of size 0.46cM which contain at least 14.3 `good' SNPs. Ideally, we should find at least 158 of such windows. Table 2.1 displays the results of this search using the 5 genomes downsampled to 0.5x coverage.
-
-% latex table generated in R 4.1.1 by xtable 1.8-4 passkage
-% Wed Sep 22 11:34:20 2021
-\begin{table}[ht]
+\begin{table}
 \centering
-\begin{tabular}{rrlr}
-  \hline
- min\_depth & name & windows \\ 
-  \hline
-    1 & a & 371722 \\ 
-     1 & b & 363921 \\ 
-     1 & c & 370084 \\ 
-     1 & d & 369058 \\ 
-     1 & e & 377874 \\ 
-     2 & a & 531 \\ 
-     2 & b & 428 \\ 
-    2 & c & 206 \\ 
-     2 & d & 794 \\ 
-     2 & e & 3235 \\ 
-     3 & a &   0 \\ 
-     3 & b &   0 \\ 
-     3 & c &   0 \\ 
-     3 & d &   0 \\ 
-     3 & e &   0 \\ 
-   \hline
+\begin{tabular}[t]{lrrr}
+\toprule
+n\_snps & 250Kb & 500Kb & 1Mb\\
+\midrule
+40,000 & 7691 & 3879 & 1967\\
+45,000 & 6272 & 3166 & 1607\\
+50,000 & 5659 & 2858 & 1452\\
+100,000 & 3602 & 1820 & 925\\
+150,000 & 4083 & 2064 & 1049\\
+200,000 & 4083 & 2064 & 1049\\
+250,000 & 4083 & 2064 & 1049\\
+300,000 & 5659 & 2858 & 1452\\
+350,000 & 4507 & 2278 & 1158\\
+400,000 & 4083 & 2064 & 1049\\
+450,000 & 4083 & 2064 & 1049\\
+\bottomrule
 \end{tabular}
-\caption{\label{tab:table-name}Number of approximately 0.46cM windows which contain at least 13 SNPs above the coverage specified in min\_depth.{\color{red}[SEEMS THIS ISN'T COMPLETE? BUT WHY 0.5x RATHER THAN 0.1x?]}}
+\caption{Number of 250Kb, 500Kb or 1Mb windows required at different levels of SNP reduction to match the TVD assignment power of 500K fully genotyped SNPs}
+\label{table:windows_power_table}
 \end{table}
+
+Once I knew the number of windows needed, I searched the genome of each (n=x) ancient individuals for windows of sizes 250Kb, 500Kb or 1Mb for $Y$ SNPs above $Z$ coverage. Then, for each ancient individual in my dataset, I searched in non-overlapping 500Kb windows for Y good SNPs of at least Z coverage (Fig. \ref{fig:avg_good_windows}).
+
+Table \ref{table:windows_power_table} shows that, assuming 100,000 SNPs in total, 2065 windows containing enough at least 16.7 `good' SNPs are required to match the power of full coverage. Fig \ref{fig:avg_good_windows} shows the mean number of good windows per individual at different thresholds of coverage. Circles coloured yellow are above the meet the minimum number of windows requirement. It can be observed that samples less than 0.5x do not have enought windows unless the threshold for `good' SNPs is above 1x coverage. A SNP at 1x coverage has a high probability of missing heterozygous positions. Therefore, these can be excluded. 
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/chapter1/avg_good_windows.pdf}
+    \caption{Number of windows (y-axis) within the genome each ancient individuals within a given range of coverages (rows) with at least $Y$ SNPs (x-axis) above a particular coverage $Z$ (columns)}
+    \label{fig:avg_good_windows}
+\end{figure}
+
+
+
+
 
 \section{Discussion}
 
