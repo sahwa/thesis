@@ -16,11 +16,13 @@ William Bateson and Edith~Rebecca Saunders.
 \newblock {\em Experiments [in the Physiology of Heredity]}.
 \newblock Harrison, 1902.
 
-\bibitem{slatkin2008linkage}
-Montgomery Slatkin.
-\newblock Linkage disequilibrium—understanding the evolutionary past and
-  mapping the medical future.
-\newblock {\em Nature Reviews Genetics}, 9(6):477--485, 2008.
+\bibitem{tishkoff1996global}
+Sarah~A Tishkoff, Erin Dietzsch, William Speed, Andrew~J Pakstis, Judith~R
+  Kidd, K~Cheung, Batsheva Bonne-Tamir, A~Silvana Santachiara-Benerecetti,
+  Pedro Moral, Matthias Krings, et~al.
+\newblock Global patterns of linkage disequilibrium at the cd4 locus and modern
+  human origins.
+\newblock {\em Science}, 271(5254):1380--1387, 1996.
 
 \bibitem{conrad2006worldwide}
 Donald~F Conrad, Mattias Jakobsson, Graham Coop, Xiaoquan Wen, Jeffrey~D Wall,
@@ -485,6 +487,12 @@ Kay Pr{\"{u}}fer, Fernando Racimo, Nick Patterson, Flora Jay, Sriram
 \newblock {The complete genome sequence of a Neanderthal from the Altai
   Mountains}.
 \newblock {\em Nature}, 505(7481):43--49, 2014.
+
+\bibitem{browning2015accurate}
+Sharon~R Browning and Brian~L Browning.
+\newblock Accurate non-parametric estimation of recent effective population
+  size from segments of identity by descent.
+\newblock {\em The American Journal of Human Genetics}, 97(3):404--418, 2015.
 
 \bibitem{kong2008detection}
 Augustine Kong, Gisli Masson, Michael~L Frigge, Arnaldur Gylfason, Pasha

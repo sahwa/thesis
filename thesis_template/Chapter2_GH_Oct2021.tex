@@ -158,7 +158,7 @@ For both the imputed dataset and original Human Origins dataset, I performed an 
 
 \subsection{Imputation accuracy}
 
-To gauge how accurately genotypes can be imputed in ancient samples of differing coverages, I estimated the sensitivity (Fig. \ref{fig:Sensitivity_downsampled_rtgtools}) and precision (Fig.  \ref{fig:precision_downsampled_rtgtools}) of genotype imputation using rtg-tools \cite{cleary2014joint}. This compares genotype calls at each position in each downsampled individual after imputation to the same individual at full coverage without imputation.
+To estimate how accurately genotypes can be imputed in ancient samples of differing coverages, I estimated the sensitivity (Fig. \ref{fig:Sensitivity_downsampled_rtgtools}) and precision (Fig.  \ref{fig:precision_downsampled_rtgtools}) of genotype imputation using rtg-tools \cite{cleary2014joint}. This approach compares genotype calls at each position in each downsampled individual after imputation to the same individual at full coverage without imputation.
 
 \begin{figure}[htp]
     \centering
@@ -174,11 +174,11 @@ To gauge how accurately genotypes can be imputed in ancient samples of differing
     \label{fig:precision_downsampled_rtgtools}
 \end{figure}
 
-As expected, both the overall sensitivity and precision of imputation fell with coverage, with a particularly sharp drop-off in both metrics observed at between 0.5x and 0.1x coverage.
+As expected, both the overall sensitivity and precision of imputation fell with coverage, with a particularly sharp drop-off in both metrics between 0.5x and 0.1x coverage.
 
 Different downsampled individuals differed in the precision and sensitivity of genotype imputation. At all coverages, Yamnaya had the both the highest sensitivity and precision. This may be because the imputation reference panel contained more individuals who are genetically closer to Yamnaya relative to the other ancient individuals. This is consistent with present-day Europeans containing a high proportion of Yamnaya-like ancestry, relative to e.g. Hunter Gatherer ancestry \cite{Haak2005}. Many studies in present-day individuals have shown that imputation accuracy increases when more haplotypes which are close to the target individual are found in the reference panel \cite{HUANG2009235, delaneau2018integrative}. On the other hand, the sample Ust'Ishim is known to have contributed very little genetic ancestry to present-day populations \cite{Prufer2014} and may therefore have fewer closely matching haplotypes in the reference panel, and a correspondingly lower imputation accuracy. 
 
-Imputation accuracy may also be related to demographic history. Populations which are known to have smaller effective population size, such as Western-Hunter Gathers, also contain longer tracts between individuals which are identical by descent (IBD) and fewer heterozygous positions. As imputation relies on matching IBD tracts between individuals, imputation accuracy increases where individuals share more IBD \cite{kong2008detection}. Additionally, switch-errors during the pre-phasing step of imputation may harm imputation accuracy, so a reduced density of heterozygous positions can improve accuracy. 
+Imputation accuracy may also be related to demographic history. Populations which are known to have smaller effective population size, such as Western-Hunter Gathers, also contain longer tracts between individuals which are identical by descent (IBD) \cite{browning2015accurate} and fewer heterozygous positions. As imputation relies on matching IBD tracts between individuals, imputation accuracy increases where individuals share more IBD \cite{kong2008detection}. Additionally, switch-errors during the pre-phasing step of imputation may harm imputation accuracy, so a reduced density of heterozygous positions may result in increased accuracy. 
 
 \subsection{Phasing accuracy}
 
@@ -193,9 +193,9 @@ I also used rtg-tools to calculate the number of phased heterozygous genotypes w
 
 \subsection{Validating posterior probability calibration}
 
-When imputing a sample using GLIMPSE, genotype probabilities are emitted. These correspond to the posterior probability that a given genotype within a single individual is correctly called. I assessed how well-calibrated these probabilities are in the Yamnaya 0.1x downsampled individual, using the maximum genotype likelihood at each of the approximately 77 million positions which were processed by GLIMPSE. A high $max(GL)$ for a particular genotype (i.e.\ 0.99) corresponds to a high confidence in the genotype. Alternatively a flat $max(GL)$ (i.e.\ 0.33) corresponds to no information about the genotype. 
+GLIMPSE estimates genotype probabilities at each genotype within each individual analysed. Genotype probabilities provide information on the posterior probability that a given genotype within a single individual is correctly called. I assessed how well-calibrated these probabilities are in the Yamnaya 0.1x downsampled individual, using the maximum genotype likelihood at each of the approximately 77 million positions which were processed by GLIMPSE. A high $max(GL)$ for a particular genotype (i.e.\ 0.99) corresponds to a high confidence in the genotype. Alternatively a flat $max(GL)$ (i.e.\ 0.33) corresponds to no information about the genotype. 
 
-I split the genome into 10,000 bins according to $max(GL)$. For each bin, I calculated both the proportion of SNPs which were correctly imputed (i.e. that matched the same high coverage individual) and the mean $max(GL)$ (Fig. \ref{fig:Yamnaya_0.1x_GL_calibration}). If the genotype probabilities are well calibrated, we would expect to see a clear positive linear relationship between $max(GL)$ probability and the probability that genotype matches the full-coverage sample, as we do.
+I split the genome into 10,000 bins according to $max(GL)$. For each bin, I calculated both the proportion of SNPs which were correctly imputed (i.e. that matched the same high coverage individual) and the mean $max(GL)$ (Fig. \ref{fig:Yamnaya_0.1x_GL_calibration}). If the genotype probabilities are well calibrated, we would expect to see a clear positive linear relationship between $max(GL)$ probability and the probability that genotype matches the full-coverage sample.
 
 \begin{figure}[htp]
     \centering
@@ -204,7 +204,7 @@ I split the genome into 10,000 bins according to $max(GL)$. For each bin, I calc
     \label{fig:Yamnaya_0.1x_GL_calibration}
 \end{figure}
 
-The probabilities are slightly conservative, in that a majority of the points in Fig. \ref{fig:Yamnaya_0.1x_GL_calibration} are above the $y=x$ line. For example, the mean proportion of correct genotypes within all bins where $0.73 < max(GL) < 0.76$ was 82\%. I performed the same analysis using different samples at different levels of coverage and the results were qualitatively similar (result omitted).
+The probabilities are well calibrated (r-squared = 0.981) and could therefore be used for downstream analysis. It should be noted that they are slightly conservative, in that a majority of the points in Fig. \ref{fig:Yamnaya_0.1x_GL_calibration} are above the line of equality. For example, the mean proportion of correct genotypes within all bins where $0.73 < max(GL) < 0.76$ was 82\%. I performed the same analysis using different samples at different levels of coverage and the results were qualitatively similar (result omitted).
 
 \subsection{ChromoPainter analysis}
 
@@ -217,7 +217,7 @@ Fig. \ref{fig:CP_correlation_allSamples_0.1x_0.5x_30x} displays the relationship
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1.0\textwidth]{../images/chapter1/CP_correlation_allSamples_0.1x_0.5x_30x.pdf}
-    \caption{For five different samples (columns), the proportion of DNA that each downsampled (y-axis) or full coverage (x-axis) genome matches to each of 125 ancient individuals (dots). Results are shown for 0.1x (top row) and 0.5x (bottom row) downsampled genomes. Points coloured by manual assignment to broad-scale populations. Red line is line of equality ($y=x$).}
+    \caption{For five different samples (columns), the proportion of DNA that each downsampled (y-axis) or full coverage (x-axis) genome matches to each of 125 ancient individuals (dots). Results are shown for 0.1x (top row) and 0.5x (bottom row) downsampled genomes. Points coloured by manual assignment to broad-scale populations. Red line is line of equality ($y=x$). x and y units are normalised copying values and thus removed for clarity.}
     \label{fig:CP_correlation_allSamples_0.1x_0.5x_30x}
 \end{figure}
 
@@ -239,15 +239,13 @@ It should be noted that utility of painting different ancient individuals with a
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1.0\textwidth]{../images/chapter1/CP_correlation_allSamples_0.1x_0.5x_30x_moderns.pdf}
-    \caption{For five different samples (columns), the proportion of DNA that each downsampled (y-axis) or full coverage (x-axis) genome matches to individuals from each of 26 present-day populations (dots). Red line is $y=x$.}
+    \caption{For five different samples (columns), the proportion of DNA that each downsampled (y-axis) or full coverage (x-axis) genome matches to individuals from each of 26 present-day populations (dots). Red line is $y=x$. x and y units are normalised copying values and thus removed for clarity.}
     \label{fig:CP_correlation_allSamples_0.1x_0.5x_30x_moderns}
 \end{figure}
 
 Principle component analysis (PCA) is a widely used technique to visualise the relative genetic diversity of different individuals. PCA can be performed on the chunklengths matrix in a similar way to a PCA on the genotype dosage matrix, which is often employed in ancient DNA studies. Visualising whether downsampled individuals cluster close to the same sample at full-coverage is a useful way of determining whether the copyvectors of the downsampled individual reflect those of the full-coverage individual.
 
-To avoid the confounding effect of having two almost identical individuals on a PCA (e.g.\ the 1x and 0.5x downsamples of the same individual), I performed PCA separately for each ancient individual (see methods section x for full details) (Fig. \ref{fig:PCA_panel_allInds_allCoverage}). 
-
-The position of the full coverage individuals are consistent with prior knowledge about their ancestry. For example, Loschbour is positioned alongside other Hunter Gatherers, who are highly differentiated from the later Neolithic farmers and Bronze Age Europeans. sf12 clusters with the other Scandinavian Hunter Gatherers in the dataset. Yamnaya is differentiated from the group of Bronze Age individuals and situated close to individuals from the Poltavka and Srubnaya culture. LBK is located with other individuals from the early to middle Neolithic in central Europe. Consistent with sharing little ancestry with any group over another, UstIshim is positioned close to the central Bronze Age mass, where most of the individuals in the PCA are located. 
+The position of the full coverage individuals are consistent with prior knowledge about their ancestry (Fig. \ref{fig:PCA_panel_allInds_allCoverage}). For example, Loschbour is positioned alongside other Hunter Gatherers, who are highly differentiated from the later Neolithic farmers and Bronze Age Europeans. sf12 clusters with the other Scandinavian Hunter Gatherers in the dataset. Yamnaya is differentiated from the group of Bronze Age individuals and situated close to individuals from the Poltavka and Srubnaya culture. LBK is located with other individuals from the early to middle Neolithic in central Europe. Consistent with sharing little ancestry with any group over another, UstIshim is positioned close to the central Bronze Age mass, where most of the individuals in the PCA are located. 
 
 For all levels of downsampling other than the 0.1x, the downsampled and full coverage genomes were positioned very closely to one another on the PCA. When considering all downsampled individuals, a pattern emerges whereby the genome downsampled to 0.1x for each individual is `pulled' towards the origin of the PCA. This may reflect a `homogenisation' of low coverage genomes when many genotypes are imputed.
 
@@ -258,7 +256,7 @@ For all levels of downsampling other than the 0.1x, the downsampled and full cov
     \label{fig:PCA_panel_allInds_allCoverage}
 \end{figure}
 
-Taken together, these data suggest minimal effect of coverage down to and including 0.5x.
+Taken together, these data suggest minimal effect of coverage down to and including 0.5x mean depth.
 
 \subsection{SOURCEFIND}
 
@@ -275,12 +273,12 @@ I began by considering three ancestral sources, or `surrogates', fixed as Anatol
 
 The results suggest that SOURCEFIND estimates are robust down to 0.5-0.8x coverage. At 0.1x coverage, there is an increase in ancestry components that are not present in higher coverage samples, suggesting they are artifacts caused by low coverage. For example, small components of Anatolia Neolithic and Yamnaya ancestry appear in Loschbour at 0.1x coverage, which are not present at any higher coverages. Above 0.5x coverage, the effect of coverage on estimated ancestry proportions appears to be marginal. For example, in sf12, the difference in the minor ancestry component of Anatolia Neolithic is, at most, 2.369\%.
 
-However, more than three surrogates are often used, as SOURCEFIND is meant to infer the most important contributors without a priori knowledge of the samples' ancestry. Therefore, I re-ran SOURCEFIND using 39 surrogate populations. A strength of SOURCEFIND is that many surrogate populations can be used; unlike qpAdm or ADMIXTURE, {\color{red}where a reduced set must be used (reword this and get some evidence)[YES -- I THINK IN THEORY qpAdm CAN USE MULTIPLE SURROGATES]} (Fig. \ref{fig:SOURCEFIND_AllPSop_downsampled}). 
+However, more than three surrogates are often used, as SOURCEFIND is meant to infer the most important contributors without a priori knowledge of the samples' ancestry. Therefore, I re-ran SOURCEFIND using 39 surrogate populations. 
 
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1.0\textwidth]{../images/chapter1/Allpops_SF_downsampled.pdf}
-    \caption{Each panel gives information for a different downsampled genome. Bars represent proportion of ancestry, coloured by different surrogates. Different coverages for the same individual are given within each panel. All 39 ancient surrogates were used. Only surrogates with more than 5\% are shown. {\color{red}[ONE OPTION MIGHT BE TO COLOR ONLY \{Ana\_Neo,WHG,Yamnaya\} AS IN FIG 2.9, THOUGH SF12 WILL BE ODD. CAN YOU SOMEHOW CATEGORISE THE SURROGATES INTO HOW THEY FALL INTO THOSE THREE FIG 2.9 CATEGORIES?]}}
+    \caption{Each panel gives information for a different downsampled genome. Bars represent proportion of ancestry, coloured by different surrogates. Different coverages for the same individual are given within each panel. All 39 ancient surrogates were used. Only surrogates with more than 5\% are shown. Surrogate populations coloured by }
     \label{fig:SOURCEFIND_AllPSop_downsampled}
 \end{figure}
 
@@ -314,14 +312,11 @@ These results suggest that imputation introduces a degree of bias into 0.1x samp
 
 \subsection{Direct imputation test} \label{DirectImputationTest}
 
-The previous section suggested that imputation plays a role in the introduction of coverage-related bias. However, it is not clear whether it is `bias', i.e.\ towards the reference population used to assist imputation, or `noise' due to random incorrect imputation. To directly test whether the effect of imputation is noise or bias, I used the Human Origins dataset (described in appendix A.19), containing the genotypes of 5998 present-day individuals from across the world, genotyped at 560,442 SNPs. I chose to use present-day samples because there is a larger total number of individuals and larger number of individuals per population. Additionally, the populations in present-day samples are more homogenous and well-defined. compared to ancient groups. I set all but 70,000 SNPs as missing and imputed missing positions using the HRC as a reference, in order to simulate a dataset where the majority of SNPs are imputed. I then performed an all-v-all painting of i) the original Human Origins dataset where none of the 560,442 SNPs had been imputed and ii) the simulated dataset where 430,000 SNPs had been imputed. 
+The previous section suggested that imputation plays a role in the introduction of coverage-related bias. However, it is not clear whether it is `bias', i.e.\ towards the reference population used to assist imputation, or `noise' due to random incorrect imputation. To directly test whether the effect of imputation is noise or bias, I used the Human Origins dataset (described in appendix A.19), containing the genotypes of 5998 present-day individuals from across the world, genotyped at 560,442 SNPs. I chose to use present-day samples because there is a larger total number of individuals and larger number of individuals per population, giving more power to detect any potential bias. Additionally, the populations in present-day samples are more homogenous and well-defined. compared to ancient groups. I set all but 70,000 SNPs as missing and imputed missing positions using the HRC as a reference, in order to simulate a dataset where the majority of SNPs are imputed. I then performed an all-v-all painting of i) the original Human Origins dataset where none of the 560,442 SNPs had been imputed and ii) the simulated dataset where 430,000 SNPs had been imputed. 
 
 Bias occurs when missing genotypes are incorrectly imputed with variants from certain populations more frequently than others. We might expect these populations to be those which are more prevalent in the reference panel, or from populations closest to the target population. We would correspondingly expect bias to mean that, when painted, some donor populations would donate more than others, relative to if no imputation had taken place. On the other hand, if `noise' is dominating results, we would expect the incorrectly imputed genotypes to be randomly distributed across populations and similarly, we would not expect to see any populations donating more than others relative to if no imputation had taken place. 
 
-Therefore, we can compare the amount different donor groups donate under the imputed and non-imputed SNP set by plotting the mean amount donated by each population using imputed SNPs and non-imputed SNPs (Fig. \ref{fig:imputed_nonimputed_donation}){\color{red}[THIS IS ACROSS ALL RECIPIENTS? ASSUMING THERE ARE SIMILAR NUMBER OF SNPS IN BOTH ANALYSES, IT SEEMS UNCLEAR WHETHER THIS IS B/C HAPLOTYPES ARE CAPTURING MORE (CORRECT) INFORMATION WHEN USING IMPUTATION (E.G.\ B/C IMPUTATION FIXES INCORRECT CALLS). CAN YOU REDO WHILE EXCLUDING ALL EUROPEAN RECIPIENTS? YOU CAN JUST ADD A SENTENCE NOTING RESULTS DON'T CHANGE IF YOU DO SO]}. The 20 populations that contribute most are either European or Jewish. Notably, the Haplotype Reference Consortium panel which was used to imputed the data consists primarily of individuals of European descent. The two populations which are over-copied the most after imputation are two English populations from Kent and Cornwall. 
-
-This suggests that there is a clear bias towards copying more from European populations when the data has been imputed using the HRC. 
-
+Therefore, we can compare the amount different donor groups donate under the imputed and non-imputed SNP set by plotting the mean amount donated by each population using imputed SNPs and non-imputed SNPs (Fig. \ref{fig:imputed_nonimputed_donation}). The 20 populations that contribute most are either European or Jewish. Notably, the Haplotype Reference Consortium panel which was used to imputed the data consists primarily of individuals of European descent. The two populations which are over-copied the most after imputation are two English populations from Kent and Cornwall. This suggests that there is a clear bias towards copying more from European populations when the data has been imputed using the HRC. 
 
 \begin{figure}[htp]
     \centering
@@ -357,7 +352,7 @@ The frequency of a particular variant in the reference panel (RAF - reference al
 
 For each individual, I took the 428,425 SNPs in the HellBus set and removed SNPs with $0.1 > RAF$ or $RAF > 0.9$, removing an average of 50,187 SNPs per individual. $RAF$ refers to the frequency of the allele in the 1000 genomes reference panel used to phase and impute the HellBus I then painted individuals downsampled to 0.1x and 0.5x using the standard set of 125 ancient donor individuals.  
 
-Comparing the r-squared and visually inspecting the relationship between the copvectors showed that this did not improve the 0.5x copyvectors (Fig. \ref{fig:CP_correlation_allSamples_0.1x_0.5x_30x.RAF_filter}{\color{red}[FIGURE MISSING?]}.
+Comparing the r-squared values between the copvectors showed that this did not improve the 0.5x copyvectors (Table 1.1). 
 
 I then chose to filter SNPs based on $max(GP)$ at each position. $max(GP)$ correspond to the accuracy with which a SNP has been imputed, with higher values reflecting a higher chance of that genotype being imputed correctly. For each individual downsampled to 0.5x, I only retained positions where the $max(GP) >= 0.990$. This resulted in a total of 348,852 SNPs for LBK, 339,949 for Loschbour, 315,075 for sf12, 308,961 for UstIshim and 386,484 for Yamnaya. Because different SNPs were removed from different individuals, each individual was painted separately. The same standard set of 124 ancient donors was used. Again, this did not improve the accuracy of the copyvectors. 
 
@@ -365,7 +360,7 @@ I then chose to filter SNPs based on $max(GP)$ at each position. $max(GP)$ corre
 \centering
 \begin{tabular}[t]{lrrrrrrr}
 \toprule
-sample & uncertainty\_01x & uncertainty\_05x & standard\_01x & standard\_05x & raf\_01x & raf\_05x & gp\_05x\\
+sample & u\_01x & u\_05x & s\_01x & s\_05x & r\_01x & r\_05x & gp\_05x\\
 \midrule
 LBK & 0.989 & 0.996 & 0.989 & 0.996 & 0.979 & 0.997 & 0.992\\
 Loschbour & 0.998 & 0.999 & 0.998 & 0.999 & 0.992 & 0.999 & 0.994\\
@@ -374,26 +369,26 @@ Yamnaya & 0.990 & 0.999 & 0.990 & 0.999 & 0.972 & 0.998 & 0.995\\
 UstIshim & 0.848 & 0.992 & 0.848 & 0.992 & 0.930 & 0.979 & 0.969\\
 \bottomrule
 \end{tabular}
-\caption{Table of r-squared values between the copyvectors of full coverage and downsampled individuals. `uncertainty' refers to ChromoPainterUncertainty, `standard' refers to ChromoPainterV2, RAF refers to filtering SNPs with reference allele frequency (RAF) $0.1 > RAF$ or $RAF > 0.9$ and `GP' refers to filtering $max(GP) >= 0.990$. [SAM: sorry this has gone off the edge - tried to fix it, but it was causing a lot of issues.{\color{red}[CAN USE longtable INSTEAD. OR USE ``U'' FOR ``uncertainty'', ETC.]}]}
+\caption{Table of r-squared values between the copyvectors of full coverage and downsampled individuals. `u' refers to ChromoPainterUncertainty, `s' refers to ChromoPainterV2, `r' refers to filtering SNPs with reference allele frequency (RAF) $0.1 > RAF$ or $RAF > 0.9$ and `gp' refers to filtering $max(GP) >= 0.990$.}
 \end{table}
 
+\subsection{Restricting analysis to non-imputed SNPs}
 
+Section 1.6.1 showed that imputation was the likely cause of coverage related bias. Thus, restricting ChromoPainter analysis to non-imputed SNPs above a certain coverage may mitigate such bias.
 
-\subsection{Upweighting densely genotype regions of high coverage}
+However, removing SNPs from the analysis may have side-effects. Linkage information increases when the genetic distance between SNPs is reduced. Similarly, increasing the genetic distance between SNPs reduces linkage information and therefore may reduce the overall power of haplotype-based methods distinguish between closely related haplotypes. At the most extreme case, retaining only a small number of SNPs may effectively reduce the method to unlinked and lose the advantage given by haplotype-based methods. This may be important if we decide to restrict analysis to non-imputed SNPs, as low coverage samples may only have a small number of high enough coverage, non-imputed SNPs. Therefore, it is important to determine whether samples of a particular coverage have enough regions containing enough high-coverage SNPs to retain the advantages of haplotype-based methods over unlinked ones. 
 
-Section \nameref{DirectImputationTest} showed that imputation error was the likely cause of coverage related bias. Thus, restricting analysis to non-imputed SNPs above a certain coverage may mitigate coverage-related bias.
+One case study to test whether a set of SNPs has enough linkage information is to determine whether it is possible to distinguish individuals born in Devon from those born in Cornwall. This has previously been achieved using the fineSTRUCTURE clustering algorithm (linked), but not using unlinked methods (ADMIXTURE \cite{alexander2009fast}) \cite{Leslie2015}. Therefore, determining whether it is possible to distinguish between individuals from Devon and Cornwall acts as a test case for reducing SNPs; do low coverage samples have enough SNPs of enough coverage to distinguish between these two populations?
 
-However, reducing the total number and or density of SNPs used in a painting may reduce the accuracy of the estimated copyvectors. All other things being equal, there is less linkage information between two SNPs which are separated by a larger genetic distance. Therefore, it is necessary to precisely determine what effect reducing the number of SNPs has in order to determine whether removing SNPs is a viable strategy. In particular, it is necessary to know the minimum number and density of SNPs required to retain the advantages of haplotype-based methods over unlinked methods. Additionally, it is also important to know whether low-coverage samples have enough SNPs of adequate quality to retain haplotype-information. As haplotype-based methods work by considering contiguous chunks of SNPs, we can ask whether samples of a particular coverage have enough windows of high-quality SNPs to match the power of a high coverage sample.
+To do this, I first needed to determine the average size of chunks copied in individuals from Devon and Cornwall when painted by other all POBI populations and the average number of SNPs within each chunk. I could then search the genomes of ancient individuals to determine whether they have enough chunks with enough SNPs with an adequate level of coverage.  
 
-Previous studies have shown it is possible to distinguish between individuals from Devon and Cornwall using the fineSTRUCTURE clustering algorithm, but not using unlinked methods (ADMIXTURE \cite{alexander2009fast}) \cite{Leslie2015}. Therefore, determining whether it is possible to distinguish between individuals from Devon and Cornwall acts as a good test case for reducing SNPs; how many SNPs can we remove before we lose the ability to distinguish between these two populations?
+I first painted individuals from Devon (n=73) and Cornwall (n=89) with all other POBI individuals as donors (n=2039), using the full set of SNPs (n=452,592) and a reduced set of SNPs, retaining 12 levels of reduction between 0.2\% - 90\% of the original number of SNPs (a full list of the reduction levels and details of the painting procedure can be found in the methods section). Painting using a reduced set of SNPs is intended to simulate an ancient genome where there only a subset of the total number of SNPs have been covered by at least one read. 
 
-To test the effect of reducing the number of SNPS, I first painted individuals from Devon and Cornwall with all other POBI populations as donors, using the full set of SNPs (n=452,592) and a reduced set of SNPs, retaining from between 0.2\% - 90\% of the original number of SNPs (a full list of the 12 reduction levels and details of the painting procedure can be found in the methods section).
+Using the painting containing the full set of SNPs, I estimated the median length of haplotypes donated from POBI counties to individuals in Devon and Cornwall. This yielded a value of approximately 500Kb. This serves as an estimate for the size of regions of good coverage SNPs in ancient individuals needed to be able to distinguish between two closely related populations. I also estimated, for each level of reducing SNPs and window size, how many `good' SNPs are needed within each window. 500Kb corresponds to 6,000 windows genome-wide, and for example, 20\% density is approximately 100,000 SNPs; so 100000/6000 = 16.7 good SNPs are required per window.  
 
-For the painting containing the full set of SNPs, I estimated the median length of haplotypes donated from POBI counties to individuals in Devon and Cornwall, yielding a value of approximately 500Kb.
+Next, I wanted to determine, for each of the levels of SNP reduction, the minimum number of 500Kb windows needed to match the power of the full set of SNPs. In this context, `power' means the ability to correctly assign individuals to either Devon or Cornwall based on which they have the lowest TVD with. To do this, for each level of SNP reduction, I painted each individual from Devon and Cornwall using all other POBI individuals. I then used TVD to assign each recipient individual from Devon or Cornwall in turn to either Devon or Cornwall. Specifically, I started with chromosome 22 and for each individual, calculated the TVD with the mean copyvectors of all other recipients from Devon and Cornwall, taking the minimum as the assigned population. I then added in chromosome 21 to chromosome 22, and assigned the individuals again. I continued to add chromosomes until the power to assign individuals was the same as when using the full set of 500,000 SNPs (i.e. the same proportion of individuals could be correctly assigned). Accordingly, for each level of reducing SNPs, I had the chromosomes required to match the power in the full set of SNPs. I converted this value to the total number of non-overlapping 250Kb, 500Kb or 1Mb windows (Table \ref{table:windows_power_table}). 
 
-Next, I wanted to determine the minimum number of 500Kb windows needed to match the power of the full set of SNPs. To do this, for each level of reducing SNPs, I painted each individual from Devon and Cornwall using all other POBI individuals. Then, for each level of reducing SNPs, I used TVD to assign recipient individual from Devon or Cornwall to either Devon or Cornwall, or in other words, seeing if we could correctly identify the population of origin for the recipient individuals. Beginning with chromosome 22, for each individual, I calculated the TVD with the mean copyvectors of all other recipients from Devon and Cornwall, taking the minimum as the assigned population. I then added in chromosome 21, and assigned the individuals again. I continued to add chromosomes until the power to assign individuals was the same as when using the full set of 500,000 SNPs. Accordingly, for each level of reducing SNPs, I had the chromosomes required to match the power in the full set of SNPs. I converted this value to the total number of non-overlapping 250Kb, 500Kb or 1Mb windows.
-
-We can also estimate, for each level of reducing SNPs and window size, how many `good' SNPs are needed within each window. 500Kb corresponds to 6,000 windows genome-wide. 20\% density is approximately 100,000 SNPs; so 100000/6000 = 16.7 good SNPs are required per window. 
+I repeated an identical analysis, including reducing the total number of SNPS, using individuals from the Mandenka and Yoruba ethnic groups rather than Devon and Cornwall.  
 
 \begin{table}
 \centering
@@ -414,27 +409,49 @@ n\_snps & 250Kb & 500Kb & 1Mb\\
 450,000 & 4083 & 2064 & 1049\\
 \bottomrule
 \end{tabular}
-\caption{Number of 250Kb, 500Kb or 1Mb windows required at different levels of SNP reduction to match the TVD assignment power of 500K fully genotyped SNPs}
-\label{table:windows_power_table}
+\caption{Number of 250Kb, 500Kb or 1Mb windows required at different levels of SNP reduction to match the TVD assignment power of 500K fully genotyped SNPs for individuals in Devon and Cornwall.}
+\label{table:windows_power_table_DevCorn}
 \end{table}
 
-Once I knew the number of windows needed, I searched the genome of each (n=x) ancient individuals for windows of sizes 250Kb, 500Kb or 1Mb for $Y$ SNPs above $Z$ coverage. Then, for each ancient individual in my dataset, I searched in non-overlapping 500Kb windows for Y good SNPs of at least Z coverage (Fig. \ref{fig:avg_good_windows}).
+\begin{table}[!h]
+\centering
+\begin{tabular}[t]{lrrr}
+\toprule
+n\_snps & 250Kb & 500Kb & 1Mb\\
+\midrule
+30,000 & 6272 & 3166 & 1607\\
+35,000 & 3099 & 1565 & 796\\
+40,000 & 3099 & 1565 & 796\\
+45,000 & 2612 & 1321 & 673\\
+50,000 & 3099 & 1565 & 796\\
+100,000 & 1886 & 956 & 489\\
+150,000 & 1304 & 661 & 338\\
+200,000 & 506 & 255 & 130\\
+250,000 & 267 & 135 & 69\\
+300,000 & 506 & 255 & 130\\
+350,000 & 506 & 255 & 130\\
+400,000 & 506 & 255 & 130\\
+450,000 & 267 & 135 & 69\\
+\bottomrule
+\end{tabular}
+\caption{Number of 250Kb, 500Kb or 1Mb windows required at different levels of SNP reduction to match the TVD assignment power of 500K fully genotyped SNPs for individuals in from Mandenka and Yoruba ethnic groups.}
+\end{table}
 
-Table \ref{table:windows_power_table} shows that, assuming 100,000 SNPs in total, 2065 windows containing enough at least 16.7 `good' SNPs are required to match the power of full coverage. Fig \ref{fig:avg_good_windows} shows the mean number of good windows per individual at different thresholds of coverage. Circles coloured yellow are above the meet the minimum number of windows requirement. It can be observed that samples less than 0.5x do not have enought windows unless the threshold for `good' SNPs is above 1x coverage. A SNP at 1x coverage has a high probability of missing heterozygous positions. Therefore, these can be excluded. 
+Once I knew the minimum number of windows needed at each level of SNP reduction, I searched the genome of each (n=587, median coverage=1.1x) ancient individual for non-overlapping windows of sizes 250Kb, 500Kb or 1Mb for $Y$ SNPs above $Z$ coverage, varying both Y and Z. 
+
+Fig \ref{fig:avg_good_windows} shows the mean number of windows per individual with at least $Y$ SNPs above $Z$ coverage, with individuals being grouped into bins based on their mean coverage. Points are coloured yellow if, within the bin of coverage, samples have at least 2000 windows. Samples less than 0.5x do not have enough windows if the threshold for a `good' SNPs is being covered by a single read. As it not possible to call a heterozygous position with only a single read, this suggests that there are not enough non-imputed SNPs with enough coverage to match the power seen in full coverage individuals. Indeed, even when there are 3 reads covering a site, there is still a 25\% chance of not identifying a heterozygous position. Only the samples in the 2-5x coverage bin had enough windows when using a coverage threshold of 4 and 5 reads. 
+
+This analysis therefore suggests that there are not enough regions with enough high quality SNPs at mean coverages less than 2x to reliably analyse using ChromoPainter.
 
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1.0\textwidth]{../images/chapter1/avg_good_windows.pdf}
-    \caption{Number of windows (y-axis) within the genome each ancient individuals within a given range of coverages (rows) with at least $Y$ SNPs (x-axis) above a particular coverage $Z$ (columns)}
+    \caption{Mean number of windows (y-axis) within the genome of each ancient individuals within a given range of coverages (rows) with at least $Y$ SNPs (x-axis) above a particular coverage $Z$ (columns).}
     \label{fig:avg_good_windows}
 \end{figure}
 
-
-
-
-
 \section{Discussion}
 
-We only had a single downsampled sample - this isn't necessarily realistic and I think we would gain a lot of power if we had e.g. 10 0.5x samples from a population. 
+Many of the analyses performed in this section only used a single target sample, as I did not identify a way to generate multiple downsampled individuals from the same population. For example, the SOURCEFIND analysis I performed  used a single target downsample when estimating ancestry proportions. This differs from a typical ancient DNA analysis, such as those of Margaryan et al \cite{margaryan2020population}, where there may be up to 20 low coverage samples per population. This number may increase in the future as the technology to generate ancient DNA improves. Leveraging information across multiple samples from the same population  would improve the accuracy of population-wide ancestry or admixture estimates, for example. Thus, he results presented in this section which used a single target individual may underestimate the ability to analyse low-coverage samples. It may be possible to accurately analyse 0.1x samples if there are multiple samples per population. 
 
-Using moderns to estimate imputation accuracy - why, and why might it give different results to using ancients. 
+In this section I used present-day individuals to estimate the number and size of chunks needed to retain haplotype information. This was because present-day individuals are simpler to analyse; the populations are better defined than in ancient samples (i.e. it is possible to only include individuals whose grandparents were born within 100kM of a target location), are of uniform coverage and contain many more individuals per population. Thus, using present-day individuals removes potentially confounding factors that may be present when analysing ancient samples. However, using present-day samples to draw conclusions about ancient samples may lead to underestimating the number of SNPs per window required. As the present-day samples had been genotyped high-quality DNA samples and a genotpying array, each genotype can be called with a high confidence. This is not the case with ancient samples, where each SNP may be covered by a small number (<3) of reads.

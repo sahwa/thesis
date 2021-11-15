@@ -14,45 +14,45 @@ Database file #1: /home/sam/Dropbox/Documents/PhD/PhD/papers/Humans/library.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--I didn't find a database entry for "1000genomesdataset"
 Warning--there's a number but no series in fouracre1995new
-You've used 132 entries,
+You've used 133 entries,
             1791 wiz_defined-function locations,
-            1220 strings with 69705 characters,
-and the built_in function-call counts, 56651 in all, are:
-= -- 2788
-> -- 7381
+            1227 strings with 70090 characters,
+and the built_in function-call counts, 57043 in all, are:
+= -- 2815
+> -- 7420
 < -- 7
-+ -- 2511
-- -- 2379
-* -- 6372
-:= -- 10919
-add.period$ -- 398
-call.type$ -- 132
-change.case$ -- 120
++ -- 2524
+- -- 2391
+* -- 6413
+:= -- 10988
+add.period$ -- 401
+call.type$ -- 133
+change.case$ -- 121
 chr.to.int$ -- 0
-cite$ -- 133
-duplicate$ -- 1230
-empty$ -- 2942
-format.name$ -- 2379
-if$ -- 10657
+cite$ -- 134
+duplicate$ -- 1239
+empty$ -- 2968
+format.name$ -- 2391
+if$ -- 10735
 int.to.chr$ -- 0
-int.to.str$ -- 132
-missing$ -- 142
-newline$ -- 664
-num.names$ -- 132
-pop$ -- 240
+int.to.str$ -- 133
+missing$ -- 143
+newline$ -- 669
+num.names$ -- 133
+pop$ -- 241
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 470
+skip$ -- 474
 stack$ -- 0
-substring$ -- 2439
-swap$ -- 187
+substring$ -- 2470
+swap$ -- 188
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 317
-width$ -- 135
-write$ -- 1436
+while$ -- 320
+width$ -- 136
+write$ -- 1447
 (There were 2 warnings)
