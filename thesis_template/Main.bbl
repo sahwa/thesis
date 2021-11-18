@@ -16,6 +16,12 @@ William Bateson and Edith~Rebecca Saunders.
 \newblock {\em Experiments [in the Physiology of Heredity]}.
 \newblock Harrison, 1902.
 
+\bibitem{amos1993social}
+Bill Amos, Christian Schlotterer, and Diethard Tautz.
+\newblock Social structure of pilot whales revealed by analytical dna
+  profiling.
+\newblock {\em Science}, 260(5108):670--672, 1993.
+
 \bibitem{tishkoff1996global}
 Sarah~A Tishkoff, Erin Dietzsch, William Speed, Andrew~J Pakstis, Judith~R
   Kidd, K~Cheung, Batsheva Bonne-Tamir, A~Silvana Santachiara-Benerecetti,
@@ -30,6 +36,11 @@ Donald~F Conrad, Mattias Jakobsson, Graham Coop, Xiaoquan Wen, Jeffrey~D Wall,
 \newblock A worldwide survey of haplotype variation and linkage disequilibrium
   in the human genome.
 \newblock {\em Nature genetics}, 38(11):1251--1260, 2006.
+
+\bibitem{cann1987mitochondrial}
+Rebecca~L Cann, Mark Stoneking, and Allan~C Wilson.
+\newblock Mitochondrial dna and human evolution.
+\newblock {\em Nature}, 325(6099):31--36, 1987.
 
 \bibitem{Li2003}
 Na~Li and Matthew Stephens.
@@ -76,6 +87,12 @@ Juan~C. Chacon-Duque, Kaustubh Adhikari, Macarena Fuentes-Guajardo, Javier
 \newblock {Latin Americans show wide-spread Converso ancestry and the imprint
   of local Native ancestry on physical appearance}.
 \newblock {\em Nature Communications}, page 252155, 2018.
+
+\bibitem{JakobssonCombiningMarkers}
+Lucie~M Gattepaille and Mattias Jakobsson.
+\newblock {Combining Markers into Haplotypes Can Improve Population Structure
+  Inference}.
+\newblock {\em Genetics}, 190(1):159--174, 01 2012.
 
 \bibitem{Green2010}
 H.A. {Green, R.E., Krause, J., Briggs, A., W., Maricic, T., Stenzel, U.,
@@ -572,6 +589,11 @@ Xiaoming Liu.
   cpg transitions.
 \newblock {\em Molecular biology and evolution}, 37(9):2691--2698, 2020.
 
+\bibitem{nasta2005voyaging}
+Susheila Nasta.
+\newblock {\em 'Voyaging in': colonialism and migration}.
+\newblock Cambridge University Press, 2005.
+
 \bibitem{manolio2019using}
 Teri~A Manolio.
 \newblock Using the data we have: improving diversity in genomic research.
@@ -630,6 +652,14 @@ Garrett Hellenthal, Nancy Bird, and Sam Morris.
   autosomal DNA}.
 \newblock {\em Human Molecular Genetics}, 30(R1):R42--R48, 02 2021.
 
+\bibitem{gurdasani2019uganda}
+Deepti Gurdasani, Tommy Carstensen, Segun Fatumo, Guanjie Chen, Chris~S
+  Franklin, Javier Prado-Martinez, Heleen Bouman, Federico Abascal, Marc Haber,
+  Ioanna Tachmazidou, et~al.
+\newblock Uganda genome resource enables insights into population history and
+  genomic discovery in africa.
+\newblock {\em Cell}, 179(4):984--1002, 2019.
+
 \bibitem{taliun2021sequencing}
 Daniel Taliun, Daniel~N Harris, Michael~D Kessler, Jedidiah Carlson, Zachary~A
   Szpiech, Raul Torres, Sarah A~Gagliano Taliun, Andr{\'e} Corvelo, Stephanie~M
@@ -645,6 +675,12 @@ Elena Bosch, Hafid Laayouni, Carlos Morcillo-Suarez, Ferran Casals, Andr{\'e}s
   samples: most population isolates do not show increased ld.
 \newblock {\em BMC genomics}, 10(1):1--9, 2009.
 
+\bibitem{banton1953recent}
+Michael Banton.
+\newblock Recent migration from west africa and the west indies to the united
+  kingdom.
+\newblock {\em Population Studies}, 7(1):2--13, 1953.
+
 \bibitem{micheletti2020genetic}
 Steven~J Micheletti, Kasia Bryc, Samantha G~Ancona Esselmann, William~A
   Freyman, Meghan~E Moreno, G~David Poznik, Anjali~J Shastri, M~Agee,
@@ -657,6 +693,20 @@ Steven~J Micheletti, Kasia Bryc, Samantha G~Ancona Esselmann, William~A
 James~A Rawley and Stephen~D Behrendt.
 \newblock {\em The transatlantic slave trade: a history}.
 \newblock U of Nebraska Press, 2005.
+
+\bibitem{van2019genetic}
+Lucy Van~Dorp, Sara Lowes, Jonathan~L Weigel, Naser Ansari-Pour, Saioa
+  L{\'o}pez, Javier Mendoza-Revilla, James~A Robinson, Joseph Henrich, Mark~G
+  Thomas, Nathan Nunn, et~al.
+\newblock Genetic legacy of state centralization in the kuba kingdom of the
+  democratic republic of the congo.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  116(2):593--598, 2019.
+
+\bibitem{schutze2008introduction}
+Hinrich Sch{\"u}tze, Christopher~D Manning, and Prabhakar Raghavan.
+\newblock {\em Introduction to information retrieval}, volume~39.
+\newblock Cambridge University Press Cambridge, 2008.
 
 \bibitem{purcell2007plink}
 Shaun Purcell, Benjamin Neale, Kathe Todd-Brown, Lori Thomas, Manuel~AR
@@ -671,6 +721,13 @@ Ross~P Byrne, Wouter van Rheenen, Leonard~H van~den Berg, Jan~H Veldink, and
   Russell~L McLaughlin.
 \newblock Dutch population structure across space, time and gwas design.
 \newblock {\em Nature communications}, 11(1):1--11, 2020.
+
+\bibitem{huang2011haplotype}
+Lucy Huang, Mattias Jakobsson, Trevor~J Pemberton, Muntaser Ibrahim, Thomas
+  Nyambo, Sabah Omar, Jonathan~K Pritchard, Sarah~A Tishkoff, and Noah~A
+  Rosenberg.
+\newblock Haplotype variation and genotype imputation in african populations.
+\newblock {\em Genetic epidemiology}, 35(8):766--780, 2011.
 
 \bibitem{conard2009female}
 Nicholas~J Conard.
