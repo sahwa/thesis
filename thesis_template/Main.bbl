@@ -53,10 +53,30 @@ Yun~S Song.
 \newblock Na li and matthew stephens on modeling linkage disequilibrium.
 \newblock {\em Genetics}, 203(3):1005--1006, 2016.
 
+\bibitem{stephens2003comparison}
+Matthew Stephens and Peter Donnelly.
+\newblock A comparison of bayesian methods for haplotype reconstruction from
+  population genotype data.
+\newblock {\em The American Journal of Human Genetics}, 73(5):1162--1169, 2003.
+
+\bibitem{stephens2005accounting}
+Matthew Stephens and Paul Scheet.
+\newblock Accounting for decay of linkage disequilibrium in haplotype inference
+  and missing-data imputation.
+\newblock {\em The American Journal of Human Genetics}, 76(3):449--462, 2005.
+
 \bibitem{hellenthal2008inferring}
 Garrett Hellenthal, Adam Auton, and Daniel Falush.
 \newblock Inferring human colonization history using a copying model.
 \newblock {\em PLoS genetics}, 4(5):e1000078, 2008.
+
+\bibitem{jakobsson2008genotype}
+Mattias Jakobsson, Sonja~W Scholz, Paul Scheet, J~Raphael Gibbs, Jenna~M
+  VanLiere, Hon-Chung Fung, Zachary~A Szpiech, James~H Degnan, Kai Wang, Rita
+  Guerreiro, et~al.
+\newblock Genotype, haplotype and copy-number variation in worldwide human
+  populations.
+\newblock {\em Nature}, 451(7181):998--1003, 2008.
 
 \bibitem{Lawson2012}
 Daniel~John Lawson, Garrett Hellenthal, Simon Myers, and Daniel Falush.
@@ -88,11 +108,78 @@ Juan~C. Chacon-Duque, Kaustubh Adhikari, Macarena Fuentes-Guajardo, Javier
   of local Native ancestry on physical appearance}.
 \newblock {\em Nature Communications}, page 252155, 2018.
 
+\bibitem{burrows1994block}
+Michael Burrows and David Wheeler.
+\newblock A block-sorting lossless data compression algorithm.
+\newblock In {\em Digital SRC Research Report}. Citeseer, 1994.
+
+\bibitem{DurbinPBWT}
+Richard Durbin.
+\newblock {Efficient haplotype matching and storage using the positional
+  Burrows–Wheeler transform (PBWT)}.
+\newblock {\em Bioinformatics}, 30(9):1266--1272, 01 2014.
+
 \bibitem{JakobssonCombiningMarkers}
 Lucie~M Gattepaille and Mattias Jakobsson.
 \newblock {Combining Markers into Haplotypes Can Improve Population Structure
   Inference}.
 \newblock {\em Genetics}, 190(1):159--174, 01 2012.
+
+\bibitem{BergstromHGDP}
+Anders Bergström, Shane~A. McCarthy, Ruoyun Hui, Mohamed~A. Almarri, Qasim
+  Ayub, Petr Danecek, Yuan Chen, Sabine Felkel, Pille Hallast, Jack Kamm,
+  Hélène Blanché, Jean-François Deleuze, Howard Cann, Swapan Mallick, David
+  Reich, Manjinder~S. Sandhu, Pontus Skoglund, Aylwyn Scally, Yali Xue, Richard
+  Durbin, and Chris Tyler-Smith.
+\newblock Insights into human genetic variation and population history from 929
+  diverse genomes.
+\newblock {\em Science}, 367(6484):eaay5012, 2020.
+
+\bibitem{rosenberg2002genetic}
+Noah~A Rosenberg, Jonathan~K Pritchard, James~L Weber, Howard~M Cann, Kenneth~K
+  Kidd, Lev~A Zhivotovsky, and Marcus~W Feldman.
+\newblock Genetic structure of human populations.
+\newblock {\em science}, 298(5602):2381--2385, 2002.
+
+\bibitem{ramachandran2005support}
+Sohini Ramachandran, Omkar Deshpande, Charles~C Roseman, Noah~A Rosenberg,
+  Marcus~W Feldman, and L~Luca Cavalli-Sforza.
+\newblock Support from the relationship of genetic and geographic distance in
+  human populations for a serial founder effect originating in africa.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  102(44):15942--15947, 2005.
+
+\bibitem{bowcock1994high}
+Anne~M Bowcock, Andres Ruiz-Linares, James Tomfohrde, Eric Minch, Judith~R
+  Kidd, and L~Luca Cavalli-Sforza.
+\newblock High resolution of human evolutionary trees with polymorphic
+  microsatellites.
+\newblock {\em Nature}, 368(6470):455--457, 1994.
+
+\bibitem{schiffels2016iron}
+Stephan Schiffels, Wolfgang Haak, Pirita Paajanen, Bastien Llamas, Elizabeth
+  Popescu, Louise Loe, Rachel Clarke, Alice Lyons, Richard Mortimer, Duncan
+  Sayer, et~al.
+\newblock Iron age and anglo-saxon genomes from east england reveal british
+  migration history.
+\newblock {\em Nature communications}, 7(1):1--9, 2016.
+
+\bibitem{gravel2011demographic}
+Simon Gravel, Brenna~M Henn, Ryan~N Gutenkunst, Amit~R Indap, Gabor~T Marth,
+  Andrew~G Clark, Fuli Yu, Richard~A Gibbs, Carlos~D Bustamante, 1000~Genomes
+  Project, et~al.
+\newblock Demographic history and rare allele sharing among human populations.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  108(29):11983--11988, 2011.
+
+\bibitem{o2015rare}
+Timothy~D O’Connor, Wenqing Fu, NHLBI GO Exome~Sequencing Project,
+  ESP~Population Genetics, Emily~Turner Statistical Analysis Working~Group,
+  Josyf~C Mychaleckyj, Benjamin Logsdon, Paul Auer, Christopher~S Carlson,
+  Suzanne~M Leal, Joshua~D Smith, et~al.
+\newblock Rare variation facilitates inferences of fine-scale population
+  structure in humans.
+\newblock {\em Molecular biology and evolution}, 32(3):653--660, 2015.
 
 \bibitem{Green2010}
 H.A. {Green, R.E., Krause, J., Briggs, A., W., Maricic, T., Stenzel, U.,
@@ -113,12 +200,27 @@ Benjamin~M Peter.
 \newblock Admixture, population structure, and f-statistics.
 \newblock {\em Genetics}, 202(4):1485--1501, 2016.
 
+\bibitem{AssessingqpAdm}
+Éadaoin Harney, Nick Patterson, David Reich, and John Wakeley.
+\newblock {Assessing the performance of qpAdm: a statistical tool for studying
+  population admixture}.
+\newblock {\em Genetics}, 217(4), 01 2021.
+\newblock iyaa045.
+
 \bibitem{price2006principal}
 Alkes~L Price, Nick~J Patterson, Robert~M Plenge, Michael~E Weinblatt, Nancy~A
   Shadick, and David Reich.
 \newblock Principal components analysis corrects for stratification in
   genome-wide association studies.
 \newblock {\em Nature genetics}, 38(8):904--909, 2006.
+
+\bibitem{sirak2021social}
+Kendra~A Sirak, Daniel~M Fernandes, Mark Lipson, Swapan Mallick, Matthew Mah,
+  I{\~n}igo Olalde, Harald Ringbauer, Nadin Rohland, Carla~S Hadden,
+  {\'E}adaoin Harney, et~al.
+\newblock Social stratification without genetic differentiation at the site of
+  kulubnarti in christian period nubia.
+\newblock {\em bioRxiv}, 2021.
 
 \bibitem{Lazaridis2014}
 Iosif Lazaridis, Nick Patterson, Alissa Mittnik, Gabriel Renaud, Swapan
@@ -153,6 +255,11 @@ Iosif Lazaridis, Nick Patterson, Alissa Mittnik, Gabriel Renaud, Swapan
 \newblock {Ancient human genomes suggest three ancestral populations for
   present-day Europeans}.
 \newblock {\em Nature}, 513(7518):409--413, 2014.
+
+\bibitem{wright1949genetical}
+Sewall Wright.
+\newblock The genetical structure of populations.
+\newblock {\em Annals of eugenics}, 15(1):323--354, 1949.
 
 \bibitem{Martiniano2017}
 Rui Martiniano, Lara~M. Cassidy, Ros {\'{O}}'Maold{\'{u}}in, Russell
@@ -575,14 +682,6 @@ UK10K consortium et~al.
 \newblock The uk10k project identifies rare variants in health and disease.
 \newblock {\em Nature}, 526(7571):82, 2015.
 
-\bibitem{schiffels2016iron}
-Stephan Schiffels, Wolfgang Haak, Pirita Paajanen, Bastien Llamas, Elizabeth
-  Popescu, Louise Loe, Rachel Clarke, Alice Lyons, Richard Mortimer, Duncan
-  Sayer, et~al.
-\newblock Iron age and anglo-saxon genomes from east england reveal british
-  migration history.
-\newblock {\em Nature communications}, 7(1):1--9, 2016.
-
 \bibitem{liu2020human}
 Xiaoming Liu.
 \newblock Human prehistoric demography revealed by the polymorphic pattern of
@@ -773,13 +872,6 @@ Michael Salter-Townshend and Simon Myers.
 \newblock {Fine-Scale Inference of Ancestry Segments Without Prior Knowledge of
   Admixing Groups}.
 \newblock {\em Genetics}, 212(3):869--889, 05 2019.
-
-\bibitem{AssessingqpAdm}
-Éadaoin Harney, Nick Patterson, David Reich, and John Wakeley.
-\newblock {Assessing the performance of qpAdm: a statistical tool for studying
-  population admixture}.
-\newblock {\em Genetics}, 217(4), 01 2021.
-\newblock iyaa045.
 
 \bibitem{rivollat2020france}
 Ma{\"\i}t{\'e} Rivollat, Choongwon Jeong, Stephan Schiffels, {\.I}{\c s}il
