@@ -13,46 +13,47 @@ A level-1 auxiliary file: Appendices.aux
 Database file #1: /home/sam/Dropbox/Documents/PhD/PhD/papers/Humans/library.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--I didn't find a database entry for "1000genomesdataset"
+Warning--empty journal in gibbs2003international
 Warning--there's a number but no series in fouracre1995new
-You've used 155 entries,
+You've used 176 entries,
             1791 wiz_defined-function locations,
-            1344 strings with 75259 characters,
-and the built_in function-call counts, 63304 in all, are:
-= -- 3301
-> -- 7871
+            1439 strings with 80128 characters,
+and the built_in function-call counts, 68484 in all, are:
+= -- 3656
+> -- 8335
 < -- 8
-+ -- 2683
-- -- 2528
-* -- 6987
-:= -- 12052
-add.period$ -- 468
-call.type$ -- 155
-change.case$ -- 141
++ -- 2845
+- -- 2669
+* -- 7439
+:= -- 13002
+add.period$ -- 531
+call.type$ -- 176
+change.case$ -- 162
 chr.to.int$ -- 0
-cite$ -- 156
-duplicate$ -- 1441
-empty$ -- 3489
-format.name$ -- 2528
-if$ -- 12031
+cite$ -- 178
+duplicate$ -- 1619
+empty$ -- 3871
+format.name$ -- 2669
+if$ -- 13074
 int.to.chr$ -- 0
-int.to.str$ -- 155
-missing$ -- 167
-newline$ -- 779
-num.names$ -- 155
-pop$ -- 282
+int.to.str$ -- 176
+missing$ -- 188
+newline$ -- 884
+num.names$ -- 176
+pop$ -- 325
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 541
+skip$ -- 606
 stack$ -- 0
-substring$ -- 2944
-swap$ -- 212
+substring$ -- 3151
+swap$ -- 232
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 375
-width$ -- 158
-write$ -- 1687
-(There were 2 warnings)
+warning$ -- 2
+while$ -- 415
+width$ -- 179
+write$ -- 1907
+(There were 3 warnings)

@@ -30,6 +30,12 @@ Sarah~A Tishkoff, Erin Dietzsch, William Speed, Andrew~J Pakstis, Judith~R
   human origins.
 \newblock {\em Science}, 271(5254):1380--1387, 1996.
 
+\bibitem{gibbs2003international}
+Richard~A Gibbs, John~W Belmont, Paul Hardenbol, Thomas~D Willis, FL~Yu,
+  HM~Yang, Lan-Yang Ch'ang, Wei Huang, Bin Liu, Yan Shen, et~al.
+\newblock The international hapmap project.
+\newblock 2003.
+
 \bibitem{conrad2006worldwide}
 Donald~F Conrad, Mattias Jakobsson, Graham Coop, Xiaoquan Wen, Jeffrey~D Wall,
   Noah~A Rosenberg, and Jonathan~K Pritchard.
@@ -222,6 +228,37 @@ Kendra~A Sirak, Daniel~M Fernandes, Mark Lipson, Swapan Mallick, Matthew Mah,
   kulubnarti in christian period nubia.
 \newblock {\em bioRxiv}, 2021.
 
+\bibitem{GuntherRefBias}
+Torsten Günther and Carl Nettelblad.
+\newblock The presence and impact of reference bias on population genomic
+  studies of prehistoric human populations.
+\newblock {\em PLOS Genetics}, 15(7):1--20, 07 2019.
+
+\bibitem{Martiniano2017}
+Rui Martiniano, Lara~M. Cassidy, Ros {\'{O}}'Maold{\'{u}}in, Russell
+  McLaughlin, Nuno~M. Silva, Licinio Manco, Daniel Fidalgo, Tania Pereira,
+  Maria~J. Coelho, Miguel Serra, Joachim Burger, Rui Parreira, Elena Moran,
+  Antonio~C. Valera, Eduardo Porfirio, Rui Boaventura, Ana~M. Silva, Daniel~G.
+  Bradley, Maold{\'{u}} In, Russell McLaughlin, Nuno~M. Silva, Licinio Manco,
+  Daniel Fidalgo, Tania Pereira, Maria~J. Coelho, Miguel Serra, Joachim Burger,
+  Rui Parreira, Elena Moran, Antonio~C. Valera, Eduardo Porfirio, Rui
+  Boaventura, Ana~M. Silva, Daniel~G. Bradley, Ros {\'{O}}'Maold{\'{u}}in,
+  Russell McLaughlin, Nuno~M. Silva, Licinio Manco, Daniel Fidalgo, Tania
+  Pereira, Maria~J. Coelho, Miguel Serra, Joachim Burger, Rui Parreira, Elena
+  Moran, Antonio~C. Valera, Eduardo Porfirio, Rui Boaventura, Ana~M. Silva, and
+  Daniel~G. Bradley.
+\newblock {The population genomics of archaeological transition in west Iberia:
+  Investigation of ancient substructure using imputation and haplotype-based
+  methods}.
+\newblock {\em PLoS Genetics}, 13(7):1--24, 2017.
+
+\bibitem{martiniano2020removing}
+Rui Martiniano, Erik Garrison, Eppie~R Jones, Andrea Manica, and Richard
+  Durbin.
+\newblock Removing reference bias and improving indel calling in ancient dna
+  data analysis by mapping to a sequence variation graph.
+\newblock {\em Genome biology}, 21(1):1--18, 2020.
+
 \bibitem{Lazaridis2014}
 Iosif Lazaridis, Nick Patterson, Alissa Mittnik, Gabriel Renaud, Swapan
   Mallick, Karola Kirsanow, Peter~H. Sudmant, Joshua~G. Schraiber, Sergi
@@ -261,37 +298,18 @@ Sewall Wright.
 \newblock The genetical structure of populations.
 \newblock {\em Annals of eugenics}, 15(1):323--354, 1949.
 
-\bibitem{Martiniano2017}
-Rui Martiniano, Lara~M. Cassidy, Ros {\'{O}}'Maold{\'{u}}in, Russell
-  McLaughlin, Nuno~M. Silva, Licinio Manco, Daniel Fidalgo, Tania Pereira,
-  Maria~J. Coelho, Miguel Serra, Joachim Burger, Rui Parreira, Elena Moran,
-  Antonio~C. Valera, Eduardo Porfirio, Rui Boaventura, Ana~M. Silva, Daniel~G.
-  Bradley, Maold{\'{u}} In, Russell McLaughlin, Nuno~M. Silva, Licinio Manco,
-  Daniel Fidalgo, Tania Pereira, Maria~J. Coelho, Miguel Serra, Joachim Burger,
-  Rui Parreira, Elena Moran, Antonio~C. Valera, Eduardo Porfirio, Rui
-  Boaventura, Ana~M. Silva, Daniel~G. Bradley, Ros {\'{O}}'Maold{\'{u}}in,
-  Russell McLaughlin, Nuno~M. Silva, Licinio Manco, Daniel Fidalgo, Tania
-  Pereira, Maria~J. Coelho, Miguel Serra, Joachim Burger, Rui Parreira, Elena
-  Moran, Antonio~C. Valera, Eduardo Porfirio, Rui Boaventura, Ana~M. Silva, and
-  Daniel~G. Bradley.
-\newblock {The population genomics of archaeological transition in west Iberia:
-  Investigation of ancient substructure using imputation and haplotype-based
-  methods}.
-\newblock {\em PLoS Genetics}, 13(7):1--24, 2017.
+\bibitem{reich2009reconstructing}
+David Reich, Kumarasamy Thangaraj, Nick Patterson, Alkes~L Price, and Lalji
+  Singh.
+\newblock Reconstructing indian population history.
+\newblock {\em Nature}, 461(7263):489--494, 2009.
 
-\bibitem{hui2020evaluating}
-Ruoyun Hui, Eugenia D’Atanasio, Lara~M Cassidy, Christiana~L Scheib, and
-  Toomas Kivisild.
-\newblock Evaluating genotype imputation pipeline for ultra-low coverage
-  ancient genomes.
-\newblock {\em Scientific reports}, 10(1):1--8, 2020.
-
-\bibitem{antonio2019ancient}
-Margaret~L Antonio, Ziyue Gao, Hannah~M Moots, Michaela Lucci, Francesca
-  Candilio, Susanna Sawyer, Victoria Oberreiter, Diego Calderon, Katharina
-  Devitofranceschi, Rachael~C Aikens, et~al.
-\newblock Ancient rome: a genetic crossroads of europe and the mediterranean.
-\newblock {\em Science}, 366(6466):708--714, 2019.
+\bibitem{jeong2019genetic}
+Choongwon Jeong, Oleg Balanovsky, Elena Lukianova, Nurzhibek Kahbatkyzy, Pavel
+  Flegontov, Valery Zaporozhchenko, Alexander Immel, Chuan-Chao Wang, Olzhas
+  Ixan, Elmira Khussainova, et~al.
+\newblock The genetic history of admixture across inner eurasia.
+\newblock {\em Nature ecology \& evolution}, 3(6):966--976, 2019.
 
 \bibitem{margaryan2020population}
 Ashot Margaryan, Daniel~J Lawson, Martin Sikora, Fernando Racimo, Simon
@@ -299,6 +317,13 @@ Ashot Margaryan, Daniel~J Lawson, Martin Sikora, Fernando Racimo, Simon
   Mikkel~W Pedersen, et~al.
 \newblock Population genomics of the viking world.
 \newblock {\em Nature}, 585(7825):390--396, 2020.
+
+\bibitem{antonio2019ancient}
+Margaret~L Antonio, Ziyue Gao, Hannah~M Moots, Michaela Lucci, Francesca
+  Candilio, Susanna Sawyer, Victoria Oberreiter, Diego Calderon, Katharina
+  Devitofranceschi, Rachael~C Aikens, et~al.
+\newblock Ancient rome: a genetic crossroads of europe and the mediterranean.
+\newblock {\em Science}, 366(6466):708--714, 2019.
 
 \bibitem{JACOBS20191010}
 Guy~S. Jacobs, Georgi Hudjashov, Lauri Saag, Pradiptajati Kusuma, Chelzie~C.
@@ -316,11 +341,121 @@ Jo{\~a}o~C Teixeira, Guy~S Jacobs, Chris Stringer, Jonathan Tuke, Georgi
   evidence of substantial super-archaic hominin admixture.
 \newblock {\em Nature Ecology \& Evolution}, 5(5):616--624, 2021.
 
+\bibitem{Moodleye2015523118}
+Yoshan Moodley, Andrea Brunelli, Silvia Ghirotto, Andrey Klyubin, Ayas~S.
+  Maady, William Tyne, Zilia~Y. Mu{\~n}oz-Ramirez, Zhemin Zhou, Andrea Manica,
+  Bodo Linz, and Mark Achtman.
+\newblock Helicobacter pylori{\textquoteright}s historical journey through
+  siberia and the americas.
+\newblock {\em Proceedings of the National Academy of Sciences}, 118(25), 2021.
+
+\bibitem{hui2020evaluating}
+Ruoyun Hui, Eugenia D’Atanasio, Lara~M Cassidy, Christiana~L Scheib, and
+  Toomas Kivisild.
+\newblock Evaluating genotype imputation pipeline for ultra-low coverage
+  ancient genomes.
+\newblock {\em Scientific reports}, 10(1):1--8, 2020.
+
+\bibitem{McKenna2010}
+Aaron McKenna, Matthew Hanna, Eric Banks, Andrey Sivachenko, Kristian
+  Cibulskis, Andrew Kernytsky, Kiran Garimella, David Altshuler, Stacey
+  Gabriel, Mark Daly, and Mark~A DePristo.
+\newblock {The Genome Analysis Toolkit: a MapReduce framework for analyzing
+  next-generation DNA sequencing data.}
+\newblock {\em Genome research}, 2010.
+
+\bibitem{VanderAuwera2013}
+Geraldine~A. {Van der Auwera}, Mauricio~O. Carneiro, Christopher Hartl, Ryan
+  Poplin, Guillermo del Angel, Ami Levy-Moonshine, Tadeusz Jordan, Khalid
+  Shakir, David Roazen, Joel Thibault, Eric Banks, Kiran~V. Garimella, David
+  Altshuler, Stacey Gabriel, and Mark~A. DePristo.
+\newblock {From fastQ data to high-confidence variant calls: The genome
+  analysis toolkit best practices pipeline}.
+\newblock {\em Current Protocols in Bioinformatics}, 2013.
+
+\bibitem{Li2009}
+Heng Li, Bob Handsaker, Alec Wysoker, Tim Fennell, Jue Ruan, Nils Homer, Gabor
+  Marth, Goncalo Abecasis, and Richard Durbin.
+\newblock {The Sequence Alignment/Map format and SAMtools}.
+\newblock {\em Bioinformatics}, 2009.
+
+\bibitem{Li2009a}
+Ruiqiang Li, Yingrui Li, Xiaodong Fang, Huanming Yang, Jian Wang, Karsten
+  Kristiansen, and Jun Wang.
+\newblock {SNP detection for massively parallel whole-genome resequencing}.
+\newblock {\em Genome Research}, 2009.
+
+\bibitem{Kim2011}
+Su~Y. Kim, Kirk~E. Lohmueller, Anders Albrechtsen, Yingrui Li, Thorfinn
+  Korneliussen, Geng Tian, Niels Grarup, Tao Jiang, Gitte Andersen, Daniel
+  Witte, Torben Jorgensen, Torben Hansen, Oluf Pedersen, Jun Wang, and Rasmus
+  Nielsen.
+\newblock {Estimation of allele frequency and association mapping using
+  next-generation sequencing data}.
+\newblock {\em BMC Bioinformatics}, 2011.
+
+\bibitem{Korneliussen2014}
+Thorfinn~Sand Korneliussen, Anders Albrechtsen, and Rasmus Nielsen.
+\newblock {ANGSD: Analysis of Next Generation Sequencing Data}.
+\newblock {\em BMC Bioinformatics}, 15(1):1--13, 2014.
+
 \bibitem{Link2017}
 Vivian Link, Athanasios Kousathanas, Krishna Veeramah, Christian Sell, Amelie
   Scheu, and Daniel Wegmann.
 \newblock {ATLAS: Analysis Tools for Low-depth and Ancient Samples}.
 \newblock {\em bioRxiv}, page 105346, 2017.
+
+\bibitem{Davies2016}
+Robert~W. Davies, Jonathan Flint, Simon Myers, and Richard Mott.
+\newblock {Rapid genotype imputation from sequence without reference panels}.
+\newblock {\em Nature Genetics}, 48(8):965--969, 2016.
+
+\bibitem{Alexander2009}
+David~H. Alexander, John Novembre, and Kenneth Lange.
+\newblock {Fast model-based estimation of ancestry in unrelated individuals}.
+\newblock {\em Genome Research}, 19(9):1655--1664, 2009.
+
+\bibitem{skotte2013estimating}
+Line Skotte, Thorfinn~Sand Korneliussen, and Anders Albrechtsen.
+\newblock Estimating individual admixture proportions from next generation
+  sequencing data.
+\newblock {\em Genetics}, 195(3):693--702, 2013.
+
+\bibitem{zhang2021novel}
+Miao Zhang, Yiwen Liu, Hua Zhou, Joseph Watkins, and Jin Zhou.
+\newblock A novel nonlinear dimension reduction approach to infer population
+  structure for low-coverage sequencing data.
+\newblock {\em BMC bioinformatics}, 22(1):1--13, 2021.
+
+\bibitem{fernandes2017identification}
+Daniel Fernandes, Kendra Sirak, Mario Novak, John~A Finarelli, John Byrne,
+  Edward Connolly, Jeanette~EL Carlsson, Edmondo Ferretti, Ron Pinhasi, and
+  Jens Carlsson.
+\newblock The identification of a 1916 irish rebel: new approach for estimating
+  relatedness from low coverage homozygous genomes.
+\newblock {\em Scientific reports}, 7(1):1--10, 2017.
+
+\bibitem{fernandes2021tkgwv2}
+Daniel~M Fernandes, Olivia Cheronet, Pere Gelabert, and Ron Pinhasi.
+\newblock Tkgwv2: An ancient dna relatedness pipeline for ultra-low coverage
+  whole genome shotgun data.
+\newblock {\em Nature Communications}, 2021.
+
+\bibitem{Racimo2016}
+Fernando Racimo, Gabriel Renaud, and Montgomery Slatkin.
+\newblock {Joint Estimation of Contamination, Error and Demography for Nuclear
+  DNA from Ancient Humans}.
+\newblock {\em PLoS Genetics}, 2016.
+
+\bibitem{Schraiber2018}
+Joshua~G. Schraiber.
+\newblock {Assessing the relationship of ancient and modern populations}.
+\newblock {\em Genetics}, 2018.
+
+\bibitem{Vieira2016}
+Filipe~G. Vieira, Anders Albrechtsen, and Rasmus Nielsen.
+\newblock {Estimating IBD tracts from low coverage NGS data}.
+\newblock {\em Bioinformatics}, 2016.
 
 \bibitem{rubinacci2021efficient}
 Simone Rubinacci, Diogo~M Ribeiro, Robin~J Hofmeister, and Olivier Delaneau.
