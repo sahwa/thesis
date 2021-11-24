@@ -7,7 +7,9 @@ This chapter is related to the use of ChromoPainter on low coverage ancient DNA 
 
 First, I will describe the existing methodology, ChromoPainterV2, and then two new versions, ChromoPainterUncertainty and ChromoPainterUncertaintyRemoveRegions, which are designed to to attempt to mitigate bias related to sequencing coverage. 
 
-Next I will perform benchmarking tests on all the steps necessary to analyse low-coverage ancient DNA with ChromoPainter. This includes genotype calling and genotype likelihood estimation with atlas \cite{Link2017}, phasing and genotype imputation with GLIMPSE \cite{rubinacci2021efficient}, ChromoPainter \cite{Lawson2012} analysis (copy-vector estimation and PCA) and SOURCEFIND ancestry component estimation \cite{Chacon-Duque2018}. Lastly, I will describe some of the existing issues pertaining to low coverage ancient DNA and several considered mitigation strategies. {\color{red}[WHAT ABOUT THE DEVON/CORNWALL STUFF -- IT'S NOT JUST ABOUT aDNA?]}
+Next I will perform benchmarking tests on all the steps necessary to analyse low-coverage ancient DNA with ChromoPainter. This includes genotype calling and genotype likelihood estimation with atlas \cite{Link2017}, phasing and genotype imputation with GLIMPSE \cite{rubinacci2021efficient}, ChromoPainter \cite{Lawson2012} analysis (copy-vector estimation and PCA) and SOURCEFIND ancestry component estimation \cite{Chacon-Duque2018}. I will also describe some of the existing issues pertaining to low coverage ancient DNA and several considered mitigation strategies. Finally, I will simulate, using present-day samples, ancient samples with variable degrees of missing SNPs in order to determine at  
+
+{\color{red}[WHAT ABOUT THE DEVON/CORNWALL STUFF -- IT'S NOT JUST ABOUT aDNA?]}
 
 \section{Methods}
 
@@ -32,7 +34,7 @@ In ChromoPainterV2, the input genetic data comes in the form of genotype calls (
 
 In this work, 'copyvector' is used to refer to the vector of chunklengths that a single recipient individuals copies from all donors. Throughout, I often define donors as populations, so that each element of the copy vector is the total amount of DNA that the recipient matches to all individuals from a given donor population.
 
-\subsubsection{Description of ChromoPainterV2Uncertainty}
+\subsubsection{Description of ChromoPainterV2Uncertainty} \label{sec:DescriptionChromoPainterV2Uncertainty}
 
 ChromoPainterUncertainty works in a very similar way to ChromoPainterV2, bar two differences. Firstly, the input data is in the form of an allele probability $0 \leq x \leq 1$, which is given as the probability of observing the alternate allele at that SNP. This value is calculated from the posterior likelihood that an allele has been imputed correctly. This is different to ChromoPainterV2, which uses `hard' allele calls that only take a value of 0 or 1.
 
@@ -77,17 +79,17 @@ For each full coverage and downsampled \texttt{.bam} file, I estimated post-mort
 
 I also generated a set of ancient samples to use as donors in the ChromoPainter analysis (Appendix table 1).
 
-This dataset consists of 918 other ancient samples from the literature {\color{red}(REFs)}. These samples were of variable coverage, {\color{red}ranging from 0.002-72x}, and chosen because of their previously reported relevance to understanding past ancestry patterns in European populations like those analysed in chapters 4 and 5. These 918 consist of all samples from appendices A1, A2, A3, A4, and they were processed in an identical way to the downsampled target individuals described in the previous section, other than they were not downsampled.  
+This dataset consists of 124 other ancient samples from the literature given in appendix section \ref{section:AncientReferenceDataset}. These samples were of variable coverage, ranging from 0.002-72x coverage, and chosen because of their previously reported relevance to understanding past ancestry patterns in European populations like those analysed in chapters 4 and 5. These 918 consist of all samples from appendices A1, A2, A3, A4, and they were processed in an identical way to the downsampled target individuals described in the previous section, other than they were not downsampled.  
 
 \subsection{Imputation and phasing - GLIMPSE}
 
 Genotype imputation and phasing are two important steps for processing low-coverage ancient DNA. Low coverage ($<$1x) samples typically lack enough read information to make accurate genotype calls at most positions in the genome, often not containing any reads at several sites \cite{nielsen2011genotype}. Therefore, it can be helpful to use external information from a high-coverage reference panel in order to improve the accuracy of genotype calls and phasing, and reduce the impact of errors on downstream analyses \cite{rubinacci2021efficient}. 
 
-Three different characteristics are desirable for an imputation algorithm in this context. Firstly, it should take genotype likelihoods as input. This is because genotype likelihoods allow for flexible representation of the possible genotypes at a particular position, particularly when there may not be enough coverage to make a hard genotype call. Secondly, it should emit posterior genotype-probabilities which, when accurately calibrated, give the probability that a particular genotype call is correct. This is crucial for our previous step {\color{red}2.2.1.2[NOT CLEAR THIS SECTION EXISTS? YOU SHOULD USE THE ``label'' COMMAND UNDER EACH SECTION HEADING, SO YOU CAN REFERENCE IT CORRECTLY AND IT WILL AUTOMATICALLY UPDATE. ALSO, A RULE OF THUMB IS THAT EACH SUB-SECTION SHOULD COME IN (AT LEAST) PAIRS. E.G.\ IF YOU HAVE A SECTION 2.2.1.1, YOU SHOULD ALSO HAVE A 2.2.1.2.]} for including these genotype probabilities into the painting process. Thirdly, the algorithm must be able to complete in a reasonable running time when using a large number of samples and high number of SNPs. Using a large number of densely positioned SNPs (e.g. such as the approximately 77 million identified in the 1000 Genomes Project) increases the useful linkage-disequilibrium information between each SNP, and it is well-established that increasing the number of individuals used in imputation/phasing reference panels improves accuracy \cite{delaneau2018integrative, HUANG2009235, mccarthy2016reference, rubinacci2021efficient}. 
+Three different characteristics are desirable for an imputation algorithm in this context. Firstly, it should take genotype likelihoods as input. This is because genotype likelihoods allow for flexible representation of the possible genotypes at a particular position, particularly when there may not be enough coverage to make a hard genotype call. Secondly, it should emit posterior genotype-probabilities which, when accurately calibrated, give the probability that a particular genotype call is correct. This is crucial for estimating uncertainty values, described in section  1.2.11, for including these genotype probabilities into the painting process. Thirdly, the algorithm must be able to complete in a reasonable running time when using a large number of samples and high number of SNPs. Using a large number of densely positioned SNPs (e.g. such as the approximately 77 million identified in the 1000 Genomes Project) increases the useful linkage-disequilibrium information between each SNP, and it is well-established that increasing the number of individuals used in imputation/phasing reference panels improves accuracy \cite{delaneau2018integrative, HUANG2009235, mccarthy2016reference, rubinacci2021efficient}. 
 
 Two programs, Beagle 4.0 \cite{Browning2007} and GLIMPSE \cite{rubinacci2021efficient} fulfill the first and second criteria above, but only GLIMPSE runs quickly enough to analyse SNPs with sequence-level density. GLIMPSE offers up to 1000x reduction in running time compared to Beagle 4.0 \cite{rubinacci2021efficient}, so I chose to use this algorithm for the imputation and phasing steps.   
 
-Phasing and imputation ideally requires a reference panel of high-coverage present-day individuals. I used the 1000 Genomes Project dataset re-sequenced to 30x average coverage, which contains 3202 individuals from 26 worldwide populations \cite{byrska2021high}. A description of the processing of this reference dataset can be found in {\color{red}appendix ...}
+Phasing and imputation ideally requires a reference panel of high-coverage present-day individuals. I used the 1000 Genomes Project dataset re-sequenced to 30x average coverage, which contains 3202 individuals from 26 worldwide populations \cite{byrska2021high}. A description of the processing of this reference dataset can be found in appendix \ref{section:1000genomes}.
 
 I next merged together i) the full coverage individuals, ii) downsampled individuals and iii) 918 ancient samples from the literature into a single bcf file using bcftools (version 1.11-60-g09dca3e) \cite{li2011statistical} to act as the samples for GLIMPSE to phase. Here, `target' refers to the individuals being imputed/phased and `reference' refers to the reference panel.  
 
@@ -103,17 +105,16 @@ GLIMPSE then imputed each chunk separately, using \texttt{GLIMPSE\_phase} using 
 I used rtg-tools-3.11 \cite{cleary2014joint} and the \texttt{vcfeval} task to estimate the sensitivity and specificity of variant discovery in the downsampled individuals. Here, `baseline' (i.e. the truthset) is defined as the genotype calls in the full coverage individual and the `calls' as the genotype calls in the downsampled individual. Sensitivity and precision are defined as: 
 
 \begin{equation}
-sensitivity = \frac{TP_{baseline}}{TP_{baseline} + FN}
+sensitivity = \frac{V_{call}-FP}{V_{call}}
 \end{equation}
 
 \begin{equation}
-precision = \frac{TP_{call}}{TP_{call} + FP}
+precision = \frac{V_{baseline}-FN}{V_{baseline}}
 \end{equation}
 
-{\color{red}[IT DOESN'T LOOK AS IF YOU'VE CHANGED THIS SINCE OUR LONG DISCUSSION ABOUT IT IN OCTOBER?? I'VE COPIED OVER WHAT I WROTE THEN (WHICH STILL SEEMS RIGHT): SHOULD YOU CHANGE $TP$ TO $V$? I DON'T UNDERSTAND WHY YOU WOULD CONSIDER THESE ``TRUE POSITIVES'', ESPECIALLY IN THE DOWN-SAMPLED GENOME?? ALSO, I'M STILL QUITE CERTAIN precision=$\frac{TP_{call}-FP}{TP_{call}}$ AND sensitivity=$\frac{TP_{baseline}-FN}{TP_{baseline}}$ -- https://en.wikipedia.org/wiki/Precision\_and\_recall]}
-A ``variant'' is considered to be a SNP with a genotype that is either \texttt{0/1} or \texttt{1/1}, with $TP_{baseline}$ and $TP_{call}$ the number of variants called in the full coverage and downsampled genomes, respectively. False negatives (FN) are where a variant is called in the full coverage genome but not in the downsampled genome. False positives (FP) are cases where a variant is called in the downsampled genome but not in the full-coverage genome.
+A ``variant'' is considered to be a SNP with a genotype that is either \texttt{0/1} or \texttt{1/1}, with $V_{baseline}$ and $V_{call}$ the number of variants called in the full coverage and downsampled genomes, respectively. False negatives (FN) are where a variant is called in the full coverage genome but not in the downsampled genome. False positives (FP) are cases where a variant is called in the downsampled genome but not in the full-coverage genome.
 
-$TP$, or true-positive{\color{red}[STILL DEFINITELY WOULD NOT USE THIS TERMINOLOGY (I'M PRETTY SURE THIS IS WHY YOU ARE GETTING THE EQUATIONS WRONG)]}, is the number of events where a variant position (i.e. a SNP with a genotype that is either \texttt{0/1} or \texttt{1/1}) is detected in either the full coverage ($TP_{baseline}$) or downsampled ($TP_{baseline}${\color{red}[PRESUMABLY YOU MEAN $TP_{call}$, BUT I WOULD NOT CALL IT THAT, GIVEN WE EXPLICITLY DO NOT BELIEVE THEM TO ALL BE TRUE POSITIVES]}) sample. $FN$ is the number of times that a variant position is called in the full coverage sample and not the downsampled sample. Conversely, $FP$ is the number of times a variant position is called in the downsampled sample and where the same SNP in the full coverage sample is invariant (i.e. \texttt{0/0}).
+$V$, or true-positive, is the number of events where a variant position (i.e. a SNP with a genotype that is either \texttt{0/1} or \texttt{1/1}) is detected in either the full coverage ($V_{baseline}$) or downsampled ($V_{baseline}$) sample. $FN$ is the number of times that a variant position is called in the full coverage sample and not the downsampled sample. Conversely, $FP$ is the number of times a variant position is called in the downsampled sample and where the same SNP in the full coverage sample is invariant (i.e. \texttt{0/0}).
 
 
 \subsection{ChromoPainter analysis} \label{ChromoPainter_analysis}
@@ -122,7 +123,7 @@ It is important to understand the effect of sequencing coverage on the accuracy 
 
 I painted each downsampled and full coverage ancient individual using a set of 124 ancient individuals, hereafter referred to as the `standard set', selected because they had a sequencing depth greater than 2x. I compared the copyvectors for the same individual at each level of downsampling. For example, I compared the copyvector of Yamnaya at 0.1x to the copyvector of the same Yamnaya sample at full coverage. A high correspondence, measured by r-squared for example, between the copyvectors of the full coverage and downsampled individual suggests less effect of coverage. 
 
-To prepare the data for ChromoPainter, I merged the .vcf containing the posterior genotype likelihoods of i) downsampled, ii) full coverage and iii) 124 ancient samples from the literature together, and did the same for the .vcfs containing the phased haplotypes.  I combined the posterior genotype likelihoods with the phased alleles to generate allele likelihoods (described in section {\color{red}2.2.1.2[DOESN'T EXIST?? BUT YOU PROBABLY MEAN 2.2.1.1?]}) in ChromoPainter-uncertainty format, in addition to per-position recombination rate files. This was performed for each chromosome in turn using my own script (\url{https://github.com/sahwa/vcf_to_ChromoPainter}).
+To prepare the data for ChromoPainter, I merged the .vcf containing the posterior genotype likelihoods of i) downsampled, ii) full coverage and iii) 124 ancient samples from the literature together, and did the same for the .vcfs containing the phased haplotypes.  I combined the posterior genotype likelihoods with the phased alleles to generate allele likelihoods (described in section 1.2.1.1 in ChromoPainter-uncertainty format, in addition to per-position recombination rate files. This was performed for each chromosome in turn using my own script (\url{https://github.com/sahwa/vcf_to_ChromoPainter}).
 
 I next used ChromoPainterUncertainty to perform the painting. I assigned the `standard set' individuals as donors and all downsampled, full coverage and 124 ancient samples downloaded from the literature as recipients. The 124 ancient samples from the literature were included in order so that they can be used a surrogates in later SOURCEFIND analysis.
 
@@ -143,7 +144,7 @@ SOURCEFIND models each target copyvector as a linear mixture of copyvectors from
 
 To test for the effect of coverage on the proportions estimated by SOURCEFIND, I performed two separate analyses, both using the downsampled and full coverage individuals as targets. The first uses three surrogate populations (Yamnaya, Western Hunter-Gatherer and Anatolia Neolithic Farmer), and the second uses an expanded list of 37 surrogate populations (individuals and population labels in Appendix B.x). I chose the first set of three surrogates, as these are typically used in ancient DNA analysis to obtain a 'broad' overview of the ancestry of a European individual, as it has been shown that central Europeans within the last 10,000 years can be well modeled as a mixture of those three groups \cite{Lazaridis2014, Haak2015}. Note, this does not mean that there was not admixture from other sources, but that a majority of ancestry of ancient central Europeans can be derived from these sources. This stands to act as a relatively 'easy' test case, since the three populations are highly genetically differentiated from one another.
 
-For all runs of SOURCEFIND, I used 2,000,000 iterations, of which 50,000 were designated as burn-ins, and then samples were taken every 50 iterations. 2,000,000 iterations were chosen because my previous tests show that is the minimum necessary to provide reasonably confidence of convergence within reasonably running time (reference to appendix?{\color{red}[YES, YOU SHOULD SHOW THIS.]}). The rest of the parameters were left as default. Ancestry proportions, credible intervals and chain mixing/convergence checking for each surrogate group were estimated using the CODA R library \cite{oro22547}.
+For all runs of SOURCEFIND, I used 1,000,000 iterations, of which 50,000 were designated as burn-ins, and then samples were taken every 50 iterations. 2,000,000 iterations were chosen because my previous tests show that is the minimum necessary to provide reasonably confidence of convergence within reasonably running time (Appendix D.5). The rest of the parameters were left as default. Ancestry proportions, credible intervals and chain mixing/convergence checking for each surrogate group were estimated using the CODA R library \cite{oro22547}.
 
 
 \section{Reducing SNP count}
@@ -155,19 +156,21 @@ However, reducing the total number and or density of SNPs used in a painting may
 Using data from the People of the British Isles (POBI) project, previous work showed it is possible to distinguish between British individuals from neighboring counties Devon and Cornwall using the fineSTRUCTURE algorithm, but not using unlinked methods (ADMIXTURE \cite{alexander2009fast}) \cite{Leslie2015}. Therefore, determining whether it is possible to distinguish between individuals from Devon and Cornwall acts as a good test case for reducing SNPs. In particular I tested how many SNPs can we remove before we lose the ability to distinguish between these two populations.
 
 
-The original POBI dataset contains 2039 individuals from 33 populations from across England, Northern Ireland, Wales and Scotland, genotyped at 452 592 SNPs. Details of the data preparation for this dataset can be found in {\color{red}appendix xx}.
+The original POBI dataset contains 2039 individuals from 33 populations from across England, Northern Ireland, Wales and Scotland, genotyped at 452 592 SNPs. Details of the data preparation for this dataset can be found in appendix section \ref{section:MSPOBIHellBus}.
 
 Using the \texttt{shuf} unix command, I randomly reduced the total number of SNPs down to only the following percentages: 0.2\%, 1\%, 2\%, 3\%, 4\%, 5\%, 6\%, 7\%, 8\%, 9\%, 10\%, 20\%, 30\%, 40\%, 50\%, 60\%, 70\%, 80\%, 90\%. SNPs were removed from the .vcf files using \texttt{bcftools --view}.
 
-For each target level of reduced SNPs, I painted all individuals from Devon and Cornwall using a `leave-one-out' approach. I then combined the resulting chunklengths matrices across all chromosomes and combined copyvectors columns {\color{red}by donor group, so that each individual was represented by a $K$-vector of values, with element $k$ denoting the proportion of DNA that person matched to any haploid in donor group $k$. UPDATE THIS SECTION}.
+For each target level of reduced SNPs, I painted all individuals from Devon and Cornwall using a `leave-one-out' approach. I then combined the resulting chunklengths matrices across all chromosomes and combined copyvectors columns by donor group, so that each individual was represented by a $K$-vector of values, with element $k$ denoting the proportion of DNA that person matched to any haploid in donor group $k$.
 
 \section{Direct imputation test}
 
-To explicitly test the effect of imputation on the copyvectors estimated by ChromoPainter, I created a dataset which simulated a typical imputation scenario: imputing SNPs after merging two datasets with a low SNP overlap. {\color{red}In particular I did this in a way to mimic a real analyses I perform in Chapter 3.[I  SAY THIS, BUT ACTUALLY (HOPEFULLY) THIS ISN'T QUITE TRUE -- FOR UK BIOBANK, PRESUMABLY YOU IMPUTED SUBMITTED UKBIOBANK TO HRC USING ALL GENOTYPED SNPS, THEN REDUCED TO THE SNPS THAT OVERLAP HUMAN ORIGINS? IN THAT CASE, WE COULD PHRASE THIS AS BEING MOTIVATED BY THAT ANALYSIS BUT EXPECTED TO PERFORM (PERHAPS CONSIDERABLY) WORSE -- E.G.\ WE ARE ASSUMING WE ONLY HAD 70K GENOTYPES PRIOR TO IMPUTATION, RATHER THAN A FULL SET OF ~1M OR SO SNPS (WHATEVER THE UK BIOBANK ARRAY HAS). IN THIS WAY, IT PROBABLY DOES MIMIC aDNA MORE -- CAN WE PHRASE THIS IN A WAY TO SHOW THIS? E.G. DOES AN aDNA SAMPLE OF AVERAGE COVERAGE X HAVE ~70K SNPS WITH >2-3x COVERAGE? I.E. WHAT IS ``X'' HERE?]}.
+To explicitly test the effect of imputation on the copyvectors estimated by ChromoPainter, I created a dataset which simulated a typical imputation scenario: imputing SNPs after merging two datasets with a low SNP overlap. {\color{red}In particular I did this in a way to mimic a real analyses I perform in Chapter 3. 
+
+[I  SAY THIS, BUT ACTUALLY (HOPEFULLY) THIS ISN'T QUITE TRUE -- FOR UK BIOBANK, PRESUMABLY YOU  SUBMITTED UKBIOBANK TO HRC USING ALL GENOTYPED SNPS, THEN REDUCED TO THE SNPS THAT OVERLAP HUMAN ORIGINS? IN THAT CASE, WE COULD PHRASE THIS AS BEING MOTIVATED BY THAT ANALYSIS BUT EXPECTED TO PERFORM (PERHAPS CONSIDERABLY) WORSE -- E.G.\ WE ARE ASSUMING WE ONLY HAD 70K GENOTYPES PRIOR TO IMPUTATION, RATHER THAN A FULL SET OF ~1M OR SO SNPS (WHATEVER THE UK BIOBANK ARRAY HAS). IN THIS WAY, IT PROBABLY DOES MIMIC aDNA MORE -- CAN WE PHRASE THIS IN A WAY TO SHOW THIS? E.G. DOES AN aDNA SAMPLE OF AVERAGE COVERAGE X HAVE ~70K SNPS WITH >2-3x COVERAGE? I.E. WHAT IS ``X'' HERE?]}.
 
 DONT EXPLAIN IN TERMS OF CHAPTER 3 
 
-I took the Human Origins dataset (appendix A.19), containing 560,240 bi-allelic SNPs and selected 70,000 random SNPs to retain, removing all others using \texttt{bcftools}. I then submitted the reduced dataset to the Sanger Imputation Service (\url{https://www.sanger.ac.uk/tool/sanger-imputation-service/}). The Sanger Imputation Service uses Eagle2 \cite{loh2016reference} and the Haplotype Reference Consortium as a reference to impute missing variants. Once the data had been imputed, I subsetted the data back to the original set of 560,240 SNPs. I therefore had a dataset which contained 70,000 non-imputed SNPs and 490,240 imputed SNPs. This is hereafter referred to as the `imputed dataset'. 70,000 non-imputed SNPs was chosen because that is the number of SNPs which overlap between two datasets in Chapter 3 and thus represents a realistic case-study. 
+I took the Human Origins dataset (appendix A.19), containing 560,240 bi-allelic SNPs and submitted the reduced dataset to the Sanger Imputation Service (\url{https://www.sanger.ac.uk/tool/sanger-imputation-service/}). The Sanger Imputation Service uses Eagle2 \cite{loh2016reference} and the Haplotype Reference Consortium as a reference to impute missing variants. Once the data had been imputed, I subsetted the data back to the original set of 560,240 SNPs. I therefore had a dataset which contained 70,000 non-imputed SNPs and 490,240 imputed SNPs. This is hereafter referred to as the `imputed dataset'. 70,000 non-imputed SNPs was chosen because that is the number of SNPs which overlap between two datasets in Chapter 3 and thus represents a realistic case-study. 
 
 For both the imputed dataset and original Human Origins dataset, I performed an all-v-all painting and combined data across chromosomes. An `all-v-all' painting is where each individual is painted in turn by all other individuals, resulting in an $n$-by-$n$ coancestry matrix, where $n$ is the number of individuals analysed.
 
@@ -192,7 +195,7 @@ To estimate how accurately GLIMPSE imputes genotypes in ancient samples of diffe
     \label{fig:precision_downsampled_rtgtools}
 \end{figure}
 
-As expected, both the overall sensitivity and precision of imputation fell with coverage, with a particularly sharp drop-off in both metrics between 0.5x and 0.1x coverage.{\color{red}[LIKELY THIS DEPENDS A LOT ON THE PARTICULAR SNP -- E.G.\ IF RARE IN THE REFERENCE PANEL. WORTH REFERENING (TOOMAS'S?) WORK THAT HAS ALREADY LOOKED AT THIS, E.G. While we did not investigate this here, others have shown that imputation accuracy varies substantially across SNPs, e.g.\ with SNPs that are common in the reference panel better imputed on average.]}
+As expected, both the overall sensitivity and precision of imputation fell with coverage, with a particularly sharp drop-off in both metrics between 0.5x and 0.1x coverage. Whilst I did not investigate this, other studies have shown the probability of any one SNP in an sample being correctly imputed depends strongly on the frequency in the reference panel \cite{hui2020evaluating, rubinacci2021efficient}. In particular, alleles which are rare in the reference panel are less likely to be imputed correctly.
 
 Different downsampled individuals differed in the precision and sensitivity of genotype imputation. At all coverages, Yamnaya had the both the highest sensitivity and precision. This may be because the imputation reference panel contains a high proportion of present-day Europeans, who have a relatively higher porportion of recent Yamnaya-like ancestry relative to e.g. Hunter Gatherer-like ancestry \cite{Haak2005}. Many studies in present-day individuals have shown that imputation accuracy increases when more haplotypes which are close to the target individual are found in the reference panel \cite{HUANG2009235, delaneau2018integrative}. On the other hand, the sample Ust'Ishim is known to have contributed very little genetic ancestry to present-day populations \cite{Prufer2014} and may therefore have fewer closely matching haplotypes in the reference panel, and a correspondingly lower imputation accuracy. 
 
@@ -205,7 +208,7 @@ I also used rtg-tools to calculate the number of phased heterozygous genotypes w
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1.0\textwidth]{../images/chapter1/phasing_performance_downsampled.pdf}
-    \caption{Percentage of phased genotypes which agree with the {\color{red}reference[full-coverage sample?]} for each individual and each level of downsampling. Genotypes with phase deemed unresolvable by rtg-tools were excluded from the calculations. Note that these numbers are given as incorrect / (incorrect + correct - unresolved) and so values are in part driven by the relative heterozygosity of each sample.{\color{red}[WAS THIS WHAT USED IN GLIMPSE? IF SO, SHOULD SAY TO JUSTIFY USING THIS.]}}
+    \caption{Percentage of phased genotypes which agree with the same full-coverage sample? for each individual and each level of downsampling. Genotypes with phase deemed unresolvable by rtg-tools were excluded from the calculations. Note that these numbers are given as incorrect / (incorrect + correct - unresolved) and so values are in part driven by the relative heterozygosity of each sample.}
     \label{fig:phasing_performance_downsampled}
 \end{figure}
 
@@ -241,7 +244,7 @@ Fig. \ref{fig:CP_correlation_allSamples_0.1x_0.5x_30x} displays the relationship
 
 As expected, the TVD between the full-coverage and downsampled copyvectors decreased with coverage. The 0.1x genome had a substantially increased TVD, similar to the much reduced imputation accuracy. For each of the genomes downsampled to 0.1x, a particular difference to the 0.5x downsampled genomes is that the lowest contributing donors contribute more to the 0.1x downsampled genome than to the full coverage genome and that the highest contributing donors contribute less to the 0.1x genome than they do the full coverage genome. Put in other words, the copyvectors at 0.1x are tending towards becoming more `flat', or copying the same amount from each donor individual. 
 
-This can also be seen as `regressing to the prior'. In this case, the prior is copying an equal amount to each donor individual. This can be visualised explicitly by calculating TVD between each downsampled genome and a flat prior, a vector of length $D$, where $D$ is the total number of donor individuals and each element of $D$ is equal to 1 / $D$ (Fig. \ref{fig:TVD_ancients_flat_prior}). This clearly shows the reduced TVD to the flat copyvector for the 0.1x individual relative to other coverages. In later sections, I will discuss whether this is `noise' or `bias' induced by imputation {\color{red}, i.e.\ whether copying is regressing to the prior in a similar manner for all samples[OTHERWISE IT SEEMS IT WOULD BE 'NOISE'?]}. 
+This can also be seen as `regressing to the prior'. In this case, the prior is copying an equal amount to each donor individual. This can be visualised explicitly by calculating TVD between each downsampled genome and a flat prior, a vector of length $D$, where $D$ is the total number of donor individuals and each element of $D$ is equal to 1 / $D$ (Fig. \ref{fig:TVD_ancients_flat_prior}). This clearly shows the reduced TVD to the flat copyvector for the 0.1x individual relative to other coverages. In later sections, I will discuss whether this is `noise' or `bias' induced by imputation, i.e.  whether copying is regressing to the prior in a similar manner for all samples. 
 
 \begin{figure}[htp]
     \centering
@@ -250,7 +253,7 @@ This can also be seen as `regressing to the prior'. In this case, the prior is c
     \label{fig:TVD_ancients_flat_prior}
 \end{figure}
 
-I also considered the effect of coverage on the copyvectors estimated when using present-day individuals from the 1000 genomes project as donors (Fig. \ref{fig:CP_correlation_allSamples_0.1x_0.5x_30x_moderns}). Painting ancient samples using present-day donors is often useful, particularly with more recent ancient samples, as there may not be enough relevant ancient samples to paint the ancients with. I merged the downsampled and full coverage ancient individuals with the thousand genomes dataset (described in detail in appendix A.5). As was the case with the all-v-all ancients painting, the TVD between copyvectors was highest for the 0.1x individuals. However, the copyvectors show a strong correlation {\color{red}(low TVD)} for 0.5x individuals. 
+I also considered the effect of coverage on the copyvectors estimated when using present-day individuals from the 1000 genomes project as donors (Fig. \ref{fig:CP_correlation_allSamples_0.1x_0.5x_30x_moderns}). Painting ancient samples using present-day donors is often useful, particularly with more recent ancient samples, as there may not be enough relevant ancient samples to paint the ancients with. I merged the downsampled and full coverage ancient individuals with the thousand genomes dataset (described in detail in appendix A.5). As was the case with the all-v-all ancients painting, the TVD between copyvectors was highest for the 0.1x individuals. However, the copyvectors show a strong correlation / low TVD for 0.5x individuals. 
 
 It should be noted that utility of painting different ancient individuals with a modern reference panel depends on the ancestry and age of the ancient sample. The spread of points along the $y=x$ line in Fig. \ref{fig:CP_correlation_allSamples_0.1x_0.5x_30x_moderns} shows how much a particular ancient recipient preferentially copies more from particular modern population over others. LBK, for example, has points which are spread evenly across $y=x$, showing that they copy much more from some populations than others, suggesting modern populations are good for distinguishing this particular ancient sample. On the other hand, the points for Ust'Ishim are shrunk towards lower values of $y=x$, showing that the copyvector is relatively flat and that it does not preferentially copy from some populations to the same degree that LBK does. This is consistent with findings that UstIshim did not contribute ancestry towards present-day populations \cite{Fu2014}. Accordingly, relatively less useful information is obtained from painting Ust'Ishim with a modern reference panel than LBK.
 
@@ -270,11 +273,13 @@ For all levels of downsampling other than the 0.1x, the downsampled and full cov
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1.0\textwidth]{../images/chapter1/PCA_panel_allInds.allCoverage.pdf}
-    \caption{Principle component analysis (PCA) of downsampled, full coverage and downloaded ancient individuals generated from the linked chunklengths matrix. Full coverage and downsampled genomes of the same individual are coloured the same. Reference individuals are grouped into populations plotted as the mean principle components for all individuals within the population. Numbers in labels correspond to the number of individuals within the reference population. 0.1x samples have {\color{red}red border for clarity[STILL HARD TO SEE -- MAYBE TRY MAROONO?? OR -- BETTER -- CAN YOU MAKE THE BORDER THICKER WITH lwd?]}.}
+    \caption{Principle component analysis (PCA) of downsampled, full coverage and downloaded ancient individuals generated from the linked chunklengths matrix. Full coverage and downsampled genomes of the same individual are coloured the same. Reference individuals are grouped into populations plotted as the mean principle components for all individuals within the population. Numbers in labels correspond to the number of individuals within the reference population. 0.1x samples have red border for clarity.}
     \label{fig:PCA_panel_allInds_allCoverage}
 \end{figure}
 
-Taken together, these data suggest minimal effect of coverage down to and including 0.5x mean depth.{\color{red}[CAN WE SAY THIS HAS BEEN REPORTED PREVIOUSLY (E.G. RUI'S WORK? MAYBE DAN LAWSON'S WORK IN THE ESTONIAN GENOME BIOBANK SAMPLES?]}
+Taken together, these data suggest minimal effect of coverage down to and including 0.5x mean depth. To my knowledge, no other study has evaluated the effect of coverage on ChromoPainter analysis down to a coverage of 0.5x. Margaryan et al (2020) showed a minimal effect of coverage at 1x and that fineSTRUCTURE groupings, containing individuals as low as 0.1x coverage, were not driven by coverage \cite{margaryan2020population}. 
+
+
 
 \subsection{SOURCEFIND}
 
@@ -296,7 +301,7 @@ However, more than three surrogates are often used, as SOURCEFIND is meant to in
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1.0\textwidth]{../images/chapter1/Allpops_SF_downsampled.pdf}
-    \caption{Each panel gives information for a different downsampled genome. Bars represent proportion of ancestry, coloured by different surrogates. Different coverages for the same individual are given within each panel. All 39 ancient surrogates were used. Only surrogates with more than 5\% are shown. {\color{red}[DELETE? -- YOU HAVE A LEGEND. THOUGH THE LEGEND SHOULD BE MORE SPECIFIC (OR EXPLAINED SOMEWHERE) -- E.G. IT SEEMS YOU'RE MATCHING YAMNAYA TO ITSELF? - ADD TABLE INTO SUPPINFO]Surrogate populations coloured by} }
+    \caption{Each panel gives information for a different downsampled genome. Bars represent proportion of ancestry, coloured by different surrogates. Different coverages for the same individual are given within each panel. All 39 ancient surrogates were used. Only surrogates with more than 5\% are shown. Ancient surrogates grouped into hand-assigned `meta-populations' for visual clarity. }
     \label{fig:SOURCEFIND_AllPSop_downsampled}
 \end{figure}
 
@@ -323,8 +328,15 @@ These results suggest that imputation introduces a degree of bias into 0.1x samp
 
 \begin{figure}[htp]
     \centering
-    \includegraphics[width=1.0\textwidth]{../images/chapter1/CP_linked_unlinked_pre_post_GLIMPSE_PCA.pdf}
-    \caption{Principle Component Analysis. Top Left - pre-GLIMPSE genotypes. Top Right - post-GLIMPSE genotypes. Bottom Left - ChromoPainter Linked. Bottom-Right - ChromoPainter Unlinked. White labels correspond to the midpoint of all samples from that population, grey points correspond to modern individuals.{\color{red}[HARD TO READ LABELS HERE -- CAN YOU ADD A LEGEND SOMEWHERE (E.G. AT BOTTOM) THAT GIVES THE COLORS FOR EACH aDNA SAMPLE? IDEAL ALSO IF YOU CAN PUT e.g. ``pre-GLIMPSE genotypes'' IN A TITLE ABOVE THE PLOT; SAME FOR OTHERS?]} TAKE TVD INSTEAD }
+    \includegraphics[width=1.0\textwidth]{../images/chapter1/pre_post_GLIMPSE_PCA.pdf}
+    \caption{Principle Component Analysis. Left - pre-GLIMPSE genotypes. Right - post-GLIMPSE genotypes. White labels correspond to the midpoint of all samples from that population, grey points correspond to modern individuals.}
+    \label{fig:pre_GLIMPSE_PCA}
+\end{figure}
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/chapter1/CP_linked_unlinked.pdf}
+    \caption{Left - ChromoPainter Linked. Right - ChromoPainter Unlinked. White labels correspond to the midpoint of all samples from that population, grey points correspond to modern individuals.}
     \label{fig:pre_GLIMPSE_PCA}
 \end{figure}
 
@@ -376,18 +388,18 @@ I then chose to filter SNPs based on $max(GP)$ at each position. $max(GP)$ corre
 
 \begin{table}
 \centering
-\begin{tabular}[t]{lrrrrrrr}
+\begin{tabular}[t]{lrrrrrrrr}
 \toprule
-sample & u\_01x & u\_05x & s\_01x & s\_05x & r\_01x & r\_05x & gp\_05x\\
+sample & u\_01x & s\_01x & r\_01x & gp\_01x & u\_05x & s\_05x & r\_05x & gp\_05x\\
 \midrule
-LBK & 0.989 & 0.996 & 0.989 & 0.996 & 0.979 & 0.997 & 0.992\\
-Loschbour & 0.998 & 0.999 & 0.998 & 0.999 & 0.992 & 0.999 & 0.994\\
-sf12 & 0.989 & 0.995 & 0.989 & 0.995 & 0.974 & 0.995 & 0.982\\
-Yamnaya & 0.990 & 0.999 & 0.990 & 0.999 & 0.972 & 0.998 & 0.995\\
-UstIshim & 0.848 & 0.992 & 0.848 & 0.992 & 0.930 & 0.979 & 0.969\\
+LBK & 0.989 & 0.989 & 0.979 & 0.819 & 0.996 & 0.996 & 0.997 & 0.992\\
+Loschbour & 0.998 & 0.998 & 0.992 & 0.844 & 0.999 & 0.999 & 0.999 & 0.994\\
+sf12 & 0.989 & 0.989 & 0.974 & 0.761 & 0.995 & 0.995 & 0.995 & 0.982\\
+Yamnaya & 0.990 & 0.990 & 0.972 & 0.772 & 0.999 & 0.999 & 0.998 & 0.995\\
+UstIshim & 0.848 & 0.848 & 0.930 & 0.773 & 0.992 & 0.992 & 0.979 & 0.969\\
 \bottomrule
 \end{tabular}
-\caption{Table of r-squared values between the copyvectors of full coverage and downsampled individuals. `u' refers to ChromoPainterUncertainty, `s' refers to ChromoPainterV2, `r' refers to filtering SNPs with reference allele frequency (RAF) $0.1 > RAF$ or $RAF > 0.9$ and `gp' refers to filtering by $max(GP) >= 0.990$.{\color{red}[CAN YOU PUT THE 0.1x COLUMNS NEXT TO EACH OTHER, AND 0.5x NEXT TO EACH OTHER? ALSO SEEMS THE u01x AND s01x COLUMNS ARE IDENTICAL (SAME FOR 05x)? PLUS NO gp\_01x?]} redo 0.1x and also do TVD rather than r-sqaured }
+\caption{Table of r-squared values between the copyvectors of full coverage and downsampled individuals. `u' refers to ChromoPainterUncertainty, `s' refers to ChromoPainterV2, `r' refers to filtering SNPs with reference allele frequency (RAF) $0.1 > RAF$ or $RAF > 0.9$ and `gp' refers to filtering by $max(GP) >= 0.990$.}
 \end{table}
 
 \subsection{Restricting analysis to non-imputed SNPs}
@@ -398,9 +410,9 @@ However, removing SNPs from the analysis may have side-effects. Increasing the g
 
 One case study to test whether a set of SNPs has enough linkage information is to determine whether it is possible to distinguish individuals born in Devon from those born in Cornwall. This has previously been achieved using the fineSTRUCTURE clustering algorithm using linkage information, but not using unlinked methods (ADMIXTURE \cite{alexander2009fast}) \cite{Leslie2015}. Therefore, determining whether it is possible to distinguish between individuals from Devon and Cornwall acts as a test case for determining how many high-coverage SNPs would give sufficient SNP density to distinguish between these two populations.
 
-{\color{red}[CHECK MY REWRITE:]To assess this, I painted individuals from Devon (n=73) and Cornwall (n=89) with all other POBI individuals as donors (n=2039), using the full set of SNPs (n=452,592). For a classification score, I found the proportion of Cornwall individuals whose copy vector had a lower TVD with the mean copy vector of all other Cornwall individuals than with the mean copy vector of all Devon individuals. I repeated the analogous procedure to find a classification score for Devon individuals. [WHAT WERE THE CLASSIFICATION PROBABILITIES?] I then painted the same individuals using a reduced set of SNPs, in particular reducing the set of SNPs to 12 different percentages ranging from 0.2\% - 90\% of the total original number of SNPs. (A full list of the reduction levels and details of the painting procedure can be found in the methods section.) Painting using a reduced set of SNPs is intended to simulate an ancient genome where only a subset of the total number of SNPs have been covered by a sufficient number of reads (e.g.\ X reads)[WE'VE DISCUSSED THIS AT SOME POINT, BUT SOMEWHERE YOU SHOULD PUT WHAT THE PROBABILITIES OF OBSERVING A HET ARE GIVEN Y READS, I.E. Pr(BOTH ALLELES ARE OBSERVED $\mid$ HET, Y READS) FOR VARIOUS Y. THIS IS EQUAL TO 1-Pr(one allele is observed $\mid$ HET, Y READS) = $1-2*0.5^Y$. THUS YOU WANT 3 READS TO HAVE A 75\% CHANGE OF OBSERVING A HET].
+To assess this, I painted individuals from Devon (n=73) and Cornwall (n=89) with all other POBI individuals as donors (n=2039), using the full set of SNPs (n=452,592). For a classification score, I found the proportion of Cornwall individuals whose copy vector had a lower TVD with the mean copy vector of all other Cornwall individuals than with the mean copy vector of all Devon individuals. I repeated the analogous procedure to find a classification score for Devon individuals. [WHAT WERE THE CLASSIFICATION PROBABILITIES?] I then painted the same individuals using a reduced set of SNPs, in particular reducing the set of SNPs to 12 different percentages ranging from 0.2\% - 90\% of the total original number of SNPs. (A full list of the reduction levels and details of the painting procedure can be found in the methods section.) Painting using a reduced set of SNPs is intended to simulate an ancient genome where only a subset of the total number of SNPs have been covered by a sufficient number of reads (e.g.\ X reads)[WE'VE DISCUSSED THIS AT SOME POINT, BUT SOMEWHERE YOU SHOULD PUT WHAT THE PROBABILITIES OF OBSERVING A HET ARE GIVEN Y READS, I.E. Pr(BOTH ALLELES ARE OBSERVED $\mid$ HET, Y READS) FOR VARIOUS Y. THIS IS EQUAL TO 1-Pr(one allele is observed $\mid$ HET, Y READS) = $1-2*0.5^Y$. THUS YOU WANT 3 READS TO HAVE A 75\% CHANGE OF OBSERVING A HET].
 
-In my painting of XX world-wide samples on the Human Origins array (section XX), the average number of segments that forms a recipient genome is Y (range: XX-XX). Given a genome-wide size of $\approx$3000Mb, this implies that an average ``chunk'' size (in Mb) is 3000/Y = Z $\approx$500kb, where a ``chunk'' is a set of contiguous SNPs matched to a single donor. Therfore, for each of the 12 different numbers of genome-wide total SNPs used in my Devon/Cornwall analysis, I can calculate the average number of SNPs per 500kb chunk, and determine how many of these 500kb chunks are necessary to accurately distinguish individuals from Devon and Cornwall. To do so, for each reduced SNP percentage, I found the Cornwall/Devon classification score using only data from chromosome 22 (which has only W 500kb chunks), and using only chromsomes 21 and 22 (which has V 500kb chunks), etc, continuing until the classification scores were equivalent to that when analysing all 22 autosomes at all 452,592 SNPs. In this way, for each reduced SNP percentage, I found the number of 500kb chunks necessary to as accurately distinguish between Devon and Cornwall as in the case where we had analysed a full data set of 452,592 SNPs (Table \ref{table:windows_power_table}). I found results to be very similar to if chunk-size were instead defined as 250kb or 1Mb (Table \ref{table:windows_power_table}).}
+In my painting of XX world-wide samples on the Human Origins array (section XX), the average number of segments that forms a recipient genome is Y (range: XX-XX). Given a genome-wide size of $\approx$3000Mb, this implies that an average ``chunk'' size (in Mb) is 3000/Y = Z $\approx$500kb, where a ``chunk'' is a set of contiguous SNPs matched to a single donor. Therfore, for each of the 12 different numbers of genome-wide total SNPs used in my Devon/Cornwall analysis, I can calculate the average number of SNPs per 500kb chunk, and determine how many of these 500kb chunks are necessary to accurately distinguish individuals from Devon and Cornwall. To do so, for each reduced SNP percentage, I found the Cornwall/Devon classification score using only data from chromosome 22 (which has only W 500kb chunks), and using only chromsomes 21 and 22 (which has V 500kb chunks), etc, continuing until the classification scores were equivalent to that when analysing all 22 autosomes at all 452,592 SNPs. In this way, for each reduced SNP percentage, I found the number of 500kb chunks necessary to as accurately distinguish between Devon and Cornwall as in the case where we had analysed a full data set of 452,592 SNPs (Table \ref{table:windows_power_table}). I found results to be very similar to if chunk-size were instead defined as 250kb or 1Mb (Table \ref{table:windows_power_table}).
 
 
 I repeated an identical analysis, including reducing the total number of SNPS, using individuals from the Mandenka and Yoruba ethnic groups rather than Devon and Cornwall.  
@@ -424,7 +436,7 @@ n\_snps & 250Kb & 500Kb & 1Mb\\
 450,000 & 4083 & 2064 & 1049\\
 \bottomrule
 \end{tabular}
-\caption{Number of 250Kb, 500Kb or 1Mb windows required at different levels of SNP reduction to match the TVD assignment power of 500K fully genotyped SNPs for individuals in Devon and Cornwall. {\color{red}Note that the number of necessary 250kb and 500kb windows is roughly four and two times, respectively, the number of 1Mb windows, indicating the definition of window size makes little difference.} ADD IN COLUMNS AFTER N\_SNPS TO SAY WHATS THE NUMBER OF SNPS PER 500KB WINDOW}
+\caption{Number of 250Kb, 500Kb or 1Mb windows required at different levels of SNP reduction to match the TVD assignment power of 500K fully genotyped SNPs for individuals in Devon and Cornwall. Note that the number of necessary 250kb and 500kb windows is roughly four and two times, respectively, the number of 1Mb windows, indicating the definition of window size makes little difference. ADD IN COLUMNS AFTER N\_SNPS TO SAY WHATS THE NUMBER OF SNPS PER 500KB WINDOW}
 \label{table:windows_power_table_DevCorn}
 \end{table}
 

@@ -2,46 +2,58 @@ This is BibTeX, Version 0.99d (TeX Live 2020/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Main.aux
 The style file: unsrt.bst
+A level-1 auxiliary file: Preamble.aux
+A level-1 auxiliary file: Introduction.aux
 A level-1 auxiliary file: Chapter2_GH_Nov2021.aux
+A level-1 auxiliary file: Chapter3_GH.aux
+A level-1 auxiliary file: Chapter4_GH.aux
+A level-1 auxiliary file: Chapter5.aux
+A level-1 auxiliary file: Conclusions.aux
+A level-1 auxiliary file: Appendices.aux
 Database file #1: /home/sam/Dropbox/Documents/PhD/PhD/papers/Humans/library.bib
-You've used 36 entries,
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+Warning--I didn't find a database entry for "1000genomesdataset"
+Warning--empty journal in gibbs2003international
+Warning--there's a number but no series in fouracre1995new
+You've used 176 entries,
             1791 wiz_defined-function locations,
-            691 strings with 30571 characters,
-and the built_in function-call counts, 21293 in all, are:
-= -- 808
-> -- 3294
-< -- 3
-+ -- 1111
-- -- 1075
-* -- 2600
-:= -- 4288
-add.period$ -- 109
-call.type$ -- 36
-change.case$ -- 36
+            1439 strings with 80118 characters,
+and the built_in function-call counts, 68391 in all, are:
+= -- 3645
+> -- 8331
+< -- 8
++ -- 2844
+- -- 2668
+* -- 7425
+:= -- 12991
+add.period$ -- 531
+call.type$ -- 176
+change.case$ -- 162
 chr.to.int$ -- 0
-cite$ -- 36
-duplicate$ -- 354
-empty$ -- 809
-format.name$ -- 1075
-if$ -- 3834
+cite$ -- 178
+duplicate$ -- 1618
+empty$ -- 3863
+format.name$ -- 2668
+if$ -- 13054
 int.to.chr$ -- 0
-int.to.str$ -- 36
-missing$ -- 35
-newline$ -- 184
-num.names$ -- 36
-pop$ -- 58
+int.to.str$ -- 176
+missing$ -- 188
+newline$ -- 884
+num.names$ -- 176
+pop$ -- 327
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 164
+skip$ -- 605
 stack$ -- 0
-substring$ -- 709
-swap$ -- 75
-text.length$ -- 3
+substring$ -- 3132
+swap$ -- 232
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 91
-width$ -- 38
-write$ -- 395
+warning$ -- 2
+while$ -- 413
+width$ -- 179
+write$ -- 1906
+(There were 3 warnings)

@@ -1,21 +1,22 @@
 \babel@toc {english}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Table of r-squared values between the copyvectors of full coverage and downsampled individuals. `u' refers to ChromoPainterUncertainty, `s' refers to ChromoPainterV2, `r' refers to filtering SNPs with reference allele frequency (RAF) $0.1 > RAF$ or $RAF > 0.9$ and `gp' refers to filtering by $max(GP) >= 0.990$.{\color {red}[CAN YOU PUT THE 0.1x COLUMNS NEXT TO EACH OTHER, AND 0.5x NEXT TO EACH OTHER? ALSO SEEMS THE u01x AND s01x COLUMNS ARE IDENTICAL (SAME FOR 05x)? PLUS NO gp\_01x?]}\relax }}{67}{table.caption.19}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces Number of 250Kb, 500Kb or 1Mb windows required at different levels of SNP reduction to match the TVD assignment power of 500K fully genotyped SNPs for individuals in Devon and Cornwall. {\color {red}Note that the number of necessary 250kb and 500kb windows is roughly four and two times, respectively, the number of 1Mb windows, indicating the definition of window size makes little difference.}\relax }}{69}{table.caption.20}%
-\contentsline {table}{\numberline {2.3}{\ignorespaces Number of 250Kb, 500Kb or 1Mb windows required at different levels of SNP reduction to match the TVD assignment power of 500K fully genotyped SNPs for individuals in from Mandenka and Yoruba ethnic groups.\relax }}{70}{table.caption.21}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Table of r-squared values between the copyvectors of full coverage and downsampled individuals. `u' refers to ChromoPainterUncertainty, `s' refers to ChromoPainterV2, `r' refers to filtering SNPs with reference allele frequency (RAF) $0.1 > RAF$ or $RAF > 0.9$ and `gp' refers to filtering by $max(GP) >= 0.990$.\relax }}{82}{table.caption.20}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Number of 250Kb, 500Kb or 1Mb windows required at different levels of SNP reduction to match the TVD assignment power of 500K fully genotyped SNPs for individuals in Devon and Cornwall. Note that the number of necessary 250kb and 500kb windows is roughly four and two times, respectively, the number of 1Mb windows, indicating the definition of window size makes little difference. ADD IN COLUMNS AFTER N\_SNPS TO SAY WHATS THE NUMBER OF SNPS PER 500KB WINDOW\relax }}{85}{table.caption.21}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Number of 250Kb, 500Kb or 1Mb windows required at different levels of SNP reduction to match the TVD assignment power of 500K fully genotyped SNPs for individuals in from Mandenka and Yoruba ethnic groups.\relax }}{85}{table.caption.22}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Percentage of populations which had lowest TVD (TVD) or copied the most (copying) from their own population under different paintings. 70K linked used 70,000 SNPs in linked mode, 70K used 70,000 SNPs in unlinked mode, imputed used 430,000 imputed and 70,000 non-imputed SNPs in linked mode and full used 500,000 non-imputed SNPs in linked mode.\relax }}{79}{table.caption.24}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Percentage of populations which had lowest TVD (TVD) or copied the most (copying) from their own population under different paintings. 70K linked used 70,000 SNPs in linked mode, 70K used 70,000 SNPs in unlinked mode, imputed used 430,000 imputed and 70,000 non-imputed SNPs in linked mode and full used 500,000 non-imputed SNPs in linked mode.\relax }}{97}{table.caption.25}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Table providing details for the newly sequenced Bavarian samples.\relax }}{101}{table.caption.38}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Name of population and number of samples used in the present-day ChromoPainter analysis\relax }}{105}{table.caption.39}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Table providing details for the newly sequenced Bavarian samples.\relax }}{127}{table.caption.39}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Name of population and number of samples used in the present-day ChromoPainter analysis\relax }}{130}{table.caption.40}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Information on newly sequenced ancient samples. Date (AD) estimated from radiocarbon dating. `Migration' corresponds to Migration Period and `EMA' corresponds to Early Middle Ages. Coverage calculated as the mean depth across all 77,213,942 genome-wide SNPs where genotypes were called at.\relax }}{128}{table.caption.49}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Name of population and number of samples used in the present-day ChromoPainter analysis\relax }}{131}{table.caption.50}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Name of populations and number of samples used in the present-day MOSAIC analysis\relax }}{133}{table.caption.51}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Information on newly sequenced ancient samples. Date (AD) estimated from radiocarbon dating. `Migration' corresponds to Migration Period and `EMA' corresponds to Early Middle Ages. Coverage calculated as the mean depth across all 77,213,942 genome-wide SNPs where genotypes were called at.\relax }}{161}{table.caption.50}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Name of population and number of samples used in the present-day ChromoPainter analysis\relax }}{165}{table.caption.51}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Name of populations and number of samples used in the present-day MOSAIC analysis\relax }}{167}{table.caption.52}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Continent, Country, ethnicity, published study and number of individuals in each Human Origins population. \relax }}{165}{table.A.1}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Continent, Country, ethnicity, published study and number of individuals in each Human Origins population. \relax }}{204}{table.A.2}%
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
