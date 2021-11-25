@@ -15,45 +15,45 @@ Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--I didn't find a database entry for "1000genomesdataset"
 Warning--empty journal in gibbs2003international
 Warning--there's a number but no series in fouracre1995new
-You've used 176 entries,
+You've used 177 entries,
             1791 wiz_defined-function locations,
-            1439 strings with 80118 characters,
-and the built_in function-call counts, 68391 in all, are:
-= -- 3645
-> -- 8331
+            1443 strings with 80355 characters,
+and the built_in function-call counts, 68683 in all, are:
+= -- 3669
+> -- 8351
 < -- 8
-+ -- 2844
-- -- 2668
-* -- 7425
-:= -- 12991
-add.period$ -- 531
-call.type$ -- 176
-change.case$ -- 162
++ -- 2851
+- -- 2674
+* -- 7453
+:= -- 13040
+add.period$ -- 534
+call.type$ -- 177
+change.case$ -- 163
 chr.to.int$ -- 0
-cite$ -- 178
-duplicate$ -- 1618
-empty$ -- 3863
-format.name$ -- 2668
-if$ -- 13054
+cite$ -- 179
+duplicate$ -- 1627
+empty$ -- 3887
+format.name$ -- 2674
+if$ -- 13114
 int.to.chr$ -- 0
-int.to.str$ -- 176
-missing$ -- 188
-newline$ -- 884
-num.names$ -- 176
-pop$ -- 327
+int.to.str$ -- 177
+missing$ -- 189
+newline$ -- 889
+num.names$ -- 177
+pop$ -- 328
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 605
+skip$ -- 608
 stack$ -- 0
-substring$ -- 3132
-swap$ -- 232
+substring$ -- 3157
+swap$ -- 233
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 413
-width$ -- 179
-write$ -- 1906
+while$ -- 416
+width$ -- 180
+write$ -- 1917
 (There were 3 warnings)

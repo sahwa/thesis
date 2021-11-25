@@ -704,6 +704,13 @@ Martyn Plummer, Nicky Best, Kate Cowles, and Karen Vines.
 \newblock Coda: convergence diagnosis and output analysis for mcmc.
 \newblock {\em R News}, 6(1):7--11, March 2006.
 
+\bibitem{Price2006}
+Alkes~L. Price, Nick~J. Patterson, Robert~M. Plenge, Michael~E. Weinblatt,
+  Nancy~A. Shadick, and David Reich.
+\newblock {Principal components analysis corrects for stratification in
+  genome-wide association studies}.
+\newblock {\em Nature Genetics}, 38(8):904--909, 2006.
+
 \bibitem{alexander2009fast}
 David~H Alexander, John Novembre, and Kenneth Lange.
 \newblock Fast model-based estimation of ancestry in unrelated individuals.
