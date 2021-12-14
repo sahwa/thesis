@@ -4,13 +4,18 @@
 %\chapter{Appendices}
 \appendix
 \chapter{Datasets used}
-\label{appendixlabel1}
 
 This appendix described the different datasets used in analyses performed in this thesis. It includes datasets of both modern and ancient genomes 
 
+\section{Ancient reference dataset} \label{section:AncientReferenceDataset}
+
+This section describes the generation of the dataset of reference ancient individuals used in Chapters 2, 4 and 5. 
+
+\begin{table}
+\centering
 \begin{tabular}[t]{lcl}
 \toprule
-Paper & number of samples & Reference\\
+Paper & \thead{Number of\\ Samples} & Reference\\
 \midrule
 Allentoft 2015 & 20 & \cite{Allentoft2015}\\
 Antonio 2019 & 134 & \cite{antonio2019ancient}\\
@@ -35,16 +40,11 @@ Veeramah 2018 & 1 & \cite{Veeramah2018}\\
 Hofmanova unpublished & 37 & NA\\
 \bottomrule
 \end{tabular}
+\caption{Name of paper, number of samples and reference for all literature ancient samples used in analyses}.
+\label{tab:AncientReferenceDataset}
+\end{table}
 
-
-
-
-
-\section{Ancient reference dataset} \label{section:AncientReferenceDataset}
-
-This section describes the generation of the dataset of reference ancient individuals used in Chapters 2, 4 and 5. 
-
-The following steps were used to generate the data:
+For each of the samples in Table \ref{tab:AncientReferenceDataset}, the following steps were taken to produce ChromoPainter input.
 
 \begin{enumerate}
 \item Each \texttt{.bam} was processed with \texttt{PicardTools ValidateBam} \cite{Picard2018toolkit} task to ensure no files were corrupted or contained incorrect read group information.
@@ -84,16 +84,16 @@ This dataset consists of 3,202 modern individuals from 172 worldwide populations
 \item Use Beagle's conform-gt utility to ensure reference alleles were consistent with the previous 1000 genomes build. This was done because all previous datasets I have compiled were also conformed to the previous 1000 genomes build. 
 \end{enumerate}
 
-\begingroup\fontsize{8}{10}\selectfont
+\begingroup\fontsize{10}{10}\selectfont
 
-\begin{longtable}[t]{lrl}
+\begin{longtable}[t]{lcl}
 \toprule
-population\_name & number of inds & data\_collections\\
+Population Name & Number of Individuals & Data Collection\\
 \midrule
 \endfirsthead
 \multicolumn{3}{@{}l}{\textit{(continued)}}\\
 \toprule
-population\_name & number of inds & data\_collections\\
+Population Name & Number of Individuals & Data Collection\\
 \midrule
 \endhead
 
@@ -105,205 +105,171 @@ Adygei & 17 & Simons Genome Diversity Project\\
 African Ancestry SW & 112 & 1000 Genomes\\
 African Caribbean & 123 & 1000 Genomes\\
 Albanian & 1 & Simons Genome Diversity Project\\
-\addlinespace
 Aleut & 2 & Simons Genome Diversity Project\\
 Altaian & 1 & Simons Genome Diversity Project\\
 Ami & 2 & Simons Genome Diversity Project\\
 Armenian & 2 & Simons Genome Diversity Project\\
 Atayal & 1 & Simons Genome Diversity Project\\
-\addlinespace
 Australian & 2 & Simons Genome Diversity Project\\
 Balochi & 24 & Human Genome Diversity Project\\
 Bantu Herero & 2 & Simons Genome Diversity Project\\
 Bantu Kenya & 12 & Human Genome Diversity Project\\
 Bantu South Africa & 4 & Human Genome Diversity Project\\
-\addlinespace
 Bantu Tswana & 2 & Simons Genome Diversity Project\\
 Basque & 24 & Human Genome Diversity Project\\
 Bedouin & 44 & Human Genome Diversity Project\\
 Bedouin B & 2 & Simons Genome Diversity Project\\
 Bengali & 142 & 1000 Genomes\\
-\addlinespace
 Bengali,Bengali & 2 & 1000 Genomes\\
 Bergamo & 2 & Simons Genome Diversity Project\\
 Bergamo Italian & 10 & Human Genome Diversity Project\\
 Biaka & 26 & Human Genome Diversity Project\\
 Bougainville & 13 & Human Genome Diversity Project\\
-\addlinespace
 Brahmin & 2 & Simons Genome Diversity Project\\
 Brahui & 25 & Human Genome Diversity Project\\
 British & 105 & 1000 Genomes\\
 British,English & 2 & 1000 Genomes\\
 Bulgarian & 2 & Simons Genome Diversity Project\\
-\addlinespace
 Burmese & 2 & Simons Genome Diversity Project\\
 Burusho & 24 & Human Genome Diversity Project\\
 Cambodian & 9 & Human Genome Diversity Project\\
-Cambodian,Cambodian & 1 & Simons Genome Diversity Project,HGDP Transcriptome\\
+Cambodian,Cambodian & 1 & Simons Genome Diversity Project\\
 CEPH & 184 & 1000 Genomes\\
-\addlinespace
 Chane & 1 & Simons Genome Diversity Project\\
 Chechen & 1 & Simons Genome Diversity Project\\
 Chukchi & 1 & Simons Genome Diversity Project\\
 Colombian & 153 & 1000 Genomes\\
 Crete & 2 & Simons Genome Diversity Project\\
-\addlinespace
 Czech & 1 & Simons Genome Diversity Project\\
 Dai & 9 & Human Genome Diversity Project\\
 Dai Chinese & 109 & 1000 Genomes\\
 Daur & 10 & Human Genome Diversity Project\\
 Dinka & 3 & Simons Genome Diversity Project\\
-\addlinespace
 Druze & 42 & Human Genome Diversity Project\\
 Dusun & 2 & Simons Genome Diversity Project\\
 Esan & 171 & 1000 Genomes\\
 Esan,Esan & 2 & 1000 Genomes\\
 Eskimo Chaplin & 1 & Simons Genome Diversity Project\\
-\addlinespace
 Eskimo Naukan & 2 & Simons Genome Diversity Project\\
 Eskimo Sireniki & 2 & Simons Genome Diversity Project\\
 Estonian & 2 & Simons Genome Diversity Project\\
 Even & 3 & Simons Genome Diversity Project\\
 Finnish & 102 & 1000 Genomes\\
-\addlinespace
 Finnish,Finnish & 3 & 1000 Genomes\\
 French & 27 & Human Genome Diversity Project\\
-Gambian Fula & 100 & Gambian Genome Variation Project (GRCh37),Gambian Genome Variation Project (GRCh38)\\
-Gambian Jola & 100 & Gambian Genome Variation Project (GRCh37),Gambian Genome Variation Project (GRCh38)\\
+Gambian Fula & 100 & Gambian Genome Variation Project\\
+Gambian Jola & 100 & Gambian Genome Variation Project\\
 Gambian Mandinka & 278 & 1000 Genomes\\
-\addlinespace
 Gambian Mandinka,Gambian & 2 & 1000 Genomes\\
-Gambian Wolof & 100 & Gambian Genome Variation Project (GRCh37),Gambian Genome Variation Project (GRCh38)\\
+Gambian Wolof & 100 & Gambian Genome Variation Project\\
 Georgian & 2 & Simons Genome Diversity Project\\
 Greek & 2 & Simons Genome Diversity Project\\
 Gujarati & 113 & 1000 Genomes\\
-\addlinespace
 Han & 33 & Human Genome Diversity Project\\
 Han Chinese & 112 & 1000 Genomes\\
 Hawaiian & 1 & Simons Genome Diversity Project\\
 Hazara & 20 & Human Genome Diversity Project\\
 Hezhen & 9 & Human Genome Diversity Project\\
-\addlinespace
 Hungarian & 2 & Simons Genome Diversity Project\\
 Iberian & 160 & 1000 Genomes\\
 Iberian,Spanish & 2 & 1000 Genomes\\
 Icelandic & 2 & Simons Genome Diversity Project\\
 Igorot & 2 & Simons Genome Diversity Project\\
-\addlinespace
 Iranian & 2 & Simons Genome Diversity Project\\
 Iraqi Jew & 2 & Simons Genome Diversity Project\\
 Irula & 2 & Simons Genome Diversity Project\\
 Itelman & 1 & Simons Genome Diversity Project\\
 Japanese & 133 & 1000 Genomes\\
-\addlinespace
 Japanese,Japanese & 1 & 1000 Genomes\\
 Jordanian & 3 & Simons Genome Diversity Project\\
 Ju|'hoan North & 2 & Simons Genome Diversity Project\\
-Ju|'hoan North,San & 2 & Simons Genome Diversity Project,HGDP Transcriptome\\
+Ju|'hoan North,San & 2 & Simons Genome Diversity Project\\
 Kalash & 23 & Human Genome Diversity Project\\
-\addlinespace
 Kapu & 2 & Simons Genome Diversity Project\\
 Karitiana & 12 & Human Genome Diversity Project\\
 Khomani San & 2 & Simons Genome Diversity Project\\
 Khonda Dora & 1 & Simons Genome Diversity Project\\
 Kinh Vietnamese & 122 & 1000 Genomes\\
-\addlinespace
 Kinh,Kinh Vietnamese & 2 & 1000 Genomes\\
 Korean & 2 & Simons Genome Diversity Project\\
 Kusunda & 2 & Simons Genome Diversity Project\\
 Kyrgyz & 2 & Simons Genome Diversity Project\\
 Lahu & 8 & Human Genome Diversity Project\\
-\addlinespace
 Lezgin & 2 & Simons Genome Diversity Project\\
 Luhya & 114 & 1000 Genomes\\
 Luhya,Luhya & 2 & 1000 Genomes\\
 Luo & 2 & Simons Genome Diversity Project\\
 Madiga & 1 & Simons Genome Diversity Project\\
-\addlinespace
 Makrani & 25 & Human Genome Diversity Project\\
 Mandenka & 23 & Human Genome Diversity Project\\
 Mansi & 2 & Simons Genome Diversity Project\\
 Maori & 1 & Simons Genome Diversity Project\\
 Masai & 2 & Simons Genome Diversity Project\\
-\addlinespace
-Maya & 19 & HGDP Transcriptome,Human Genome Diversity Project\\
-Mayan,Maya & 2 & Simons Genome Diversity Project,HGDP Transcriptome\\
+Maya & 19 & HGDP Transcriptome\\
+Mayan,Maya & 2 & Simons Genome Diversity Project\\
 Mbuti & 13 & Human Genome Diversity Project\\
-Mbuti,Mbuti & 2 & Simons Genome Diversity Project,HGDP Transcriptome\\
+Mbuti,Mbuti & 2 & Simons Genome Diversity Project\\
 Mende & 126 & 1000 Genomes\\
-\addlinespace
 Mende,Mende & 2 & 1000 Genomes\\
 Mexican Ancestry & 107 & 1000 Genomes\\
 Miao & 10 & Human Genome Diversity Project\\
 Mixe & 3 & Simons Genome Diversity Project\\
 Mixtec & 2 & Simons Genome Diversity Project\\
-\addlinespace
 Mongola & 2 & Simons Genome Diversity Project\\
 Mongolian & 8 & Human Genome Diversity Project\\
 Mozabite & 27 & Human Genome Diversity Project\\
-Mozabite,Mozabite & 1 & Simons Genome Diversity Project,HGDP Transcriptome\\
+Mozabite,Mozabite & 1 & Simons Genome Diversity Project\\
 Naxi & 9 & Simons Genome Diversity Project\\
-\addlinespace
 North Ossetian & 2 & Simons Genome Diversity Project\\
 Northern Han & 10 & Human Genome Diversity Project\\
 Norwegian & 1 & Simons Genome Diversity Project\\
 Orcadian & 15 & Human Genome Diversity Project\\
 Oroqen & 9 & Human Genome Diversity Project\\
-\addlinespace
 Palestinian & 46 & Human Genome Diversity Project\\
 Papuan & 3 & Simons Genome Diversity Project\\
 Papuan Sepik & 2 & Human Genome Diversity Project\\
-Papuan,Papuan Highlands & 6 & Simons Genome Diversity Project,Human Genome Diversity Project\\
-Papuan,Papuan Sepik & 6 & Simons Genome Diversity Project,Human Genome Diversity Project\\
-\addlinespace
+Papuan,Papuan Highlands & 6 & Simons Genome Diversity Project\\
+Papuan,Papuan Sepik & 6 & Simons Genome Diversity Project\\
 Pathan & 23 & Human Genome Diversity Project\\
-Pathan,Pathan & 1 & Simons Genome Diversity Project,HGDP Transcriptome\\
+Pathan,Pathan & 1 & Simons Genome Diversity Project\\
 Peruvian & 130 & 1000 Genomes\\
 Piapoco & 2 & Simons Genome Diversity Project\\
 Pima & 14 & Human Genome Diversity Project\\
-\addlinespace
 Polish & 1 & Simons Genome Diversity Project\\
 Puerto Rican & 150 & 1000 Genomes\\
 Punjabi & 154 & 1000 Genomes\\
 Punjabi,Punjabi & 4 & 1000 Genomes\\
 Quechua & 3 & Simons Genome Diversity Project\\
-\addlinespace
 Relli & 2 & Simons Genome Diversity Project\\
 Russian & 25 & Human Genome Diversity Project\\
 Saami & 2 & Simons Genome Diversity Project\\
 Saharawi & 2 & Simons Genome Diversity Project\\
 Samaritan & 1 & Simons Genome Diversity Project\\
-\addlinespace
-San & 2 & HGDP Transcriptome,Human Genome Diversity Project\\
+San & 2 & Human Genome Diversity Project\\
 Sardinian & 27 & Human Genome Diversity Project\\
 She & 10 & Human Genome Diversity Project\\
 Sindhi & 24 & Human Genome Diversity Project\\
 Somali & 1 & Simons Genome Diversity Project\\
-\addlinespace
 Southern Han Chinese & 171 & 1000 Genomes\\
 Surui & 8 & Human Genome Diversity Project\\
 Tajik & 2 & Simons Genome Diversity Project\\
 Tamil & 128 & 1000 Genomes\\
 Telugu & 118 & 1000 Genomes\\
-\addlinespace
 Thai & 2 & Simons Genome Diversity Project\\
 Tlingit & 2 & Simons Genome Diversity Project\\
 Toscani & 112 & 1000 Genomes\\
 Tu & 10 & Human Genome Diversity Project\\
 Tubalar & 2 & Simons Genome Diversity Project\\
-\addlinespace
 Tujia & 10 & Human Genome Diversity Project\\
 Turkish & 2 & Simons Genome Diversity Project\\
 Tuscan & 8 & Human Genome Diversity Project\\
 Ulchi & 2 & Simons Genome Diversity Project\\
 Uygur & 10 & Human Genome Diversity Project\\
-\addlinespace
 Xibo & 9 & Human Genome Diversity Project\\
 Yadava & 2 & Simons Genome Diversity Project\\
 Yakut & 25 & Human Genome Diversity Project\\
 Yemenite Jew & 2 & Simons Genome Diversity Project\\
 Yi & 10 & Human Genome Diversity Project\\
-\addlinespace
 Yoruba & 207 & 1000 Genomes\\
 Zapotec & 2 & Simons Genome Diversity Project\\*
 \end{longtable}
@@ -325,109 +291,91 @@ Africa & Algeria & Mozabite & Lazaridis et al 2014 & 21\\
 Africa & Botswana & Gana & Lazaridis et al 2014 & 7\\
 Africa & Botswana & Gui & Lazaridis et al 2014 & 7\\
 Africa & Botswana & Hoan & Lazaridis et al 2014 & 6\\
-\addlinespace
 Africa & Botswana & Ju hoan South & Lazaridis et al 2014 & 5\\
 Africa & Botswana & Kgalagadi & Lazaridis et al 2014 & 5\\
 Africa & Botswana & Khwe & Lazaridis et al 2014 & 8\\
 Africa & Botswana & Naro & Lazaridis et al 2014 & 8\\
 Africa & Botswana & Shua & Lazaridis et al 2014 & 9\\
-\addlinespace
 Africa & Botswana & Taa East & Lazaridis et al 2014 & 6\\
 Africa & Botswana & Taa North & Lazaridis et al 2014 & 9\\
 Africa & Botswana & Taa West & Lazaridis et al 2014 & 15\\
 Africa & Botswana & Tshwa & Lazaridis et al 2014 & 4\\
 Africa & Botswana & Tswana & Lazaridis et al 2014 & 5\\
-\addlinespace
 Africa & BotswanaorNamibia & Bantu SA & Lazaridis et al 2014 & 8\\
 Africa & Cameroon & Cameroon Baka & Fan 2019 & 2\\
 Africa & Cameroon & Cameroon Bakola & Fan 2019 & 2\\
 Africa & Cameroon & Cameroon Bedzan & Fan 2019 & 2\\
 Africa & Cameroon & Cameroon Foulbe & Fan 2019 & 2\\
-\addlinespace
 Africa & Cameroon & Cameroon Mada & Fan 2019 & 2\\
 Africa & Cameroon & Cameroon Ngoumba & Fan 2019 & 2\\
 Africa & Cameroon & Cameroon Tikar & Fan 2019 & 2\\
 Africa & Cameroon & Cameroon Aghem & Lipson 2020 & 28\\
 Africa & Cameroon & Cameroon Bafut & Lipson 2020 & 11\\
-\addlinespace
 Africa & Cameroon & Cameroon Bakoko & Lipson 2020 & 1\\
 Africa & Cameroon & Cameroon Bangwa & Lipson 2020 & 2\\
 Africa & Cameroon & Cameroon Mbo & Lipson 2020 & 21\\
 Africa & Cameroon & Cameroon Kotoko & Lopez 2021 & 7\\
 Africa & CentralAfricanRepublic & BiakaPygmy & Lazaridis et al 2014 & 20\\
-\addlinespace
 Africa & CentralAfricanRepublic & Kaba & Fan 2019 & 2\\
 Africa & Chad & Bulala & Fan 2019 & 2\\
 Africa & Chad & Laka & Fan 2019 & 2\\
 Africa & Congo & MbutiPygmy & Lazaridis et al 2014 & 10\\
 Africa & Egypt & Egyptian Comas & Lazaridis et al 2014 & 11\\
-\addlinespace
 Africa & Egypt & Egyptian Metspalu & Lazaridis et al 2014 & 7\\
 Africa & Ethiopia & Aari & Fan 2019 & 2\\
 Africa & Ethiopia & Agaw & Fan 2019 & 2\\
 Africa & Ethiopia & Amhara & Fan 2019 & 2\\
 Africa & Ethiopia & Ethiopia Afar & Lopez 2021 & 10\\
-\addlinespace
 Africa & Ethiopia & Ethiopia Agew & Lopez 2021 & 30\\
 Africa & Ethiopia & Ethiopia Alaba & Lopez 2021 & 14\\
 Africa & Ethiopia & Ethiopia Alae & Lopez 2021 & 46\\
 Africa & Ethiopia & Ethiopia Amhara & Gurdasani et al 2015 & 24\\
 Africa & Ethiopia & Ethiopia Amhara & Lopez 2021 & 28\\
-\addlinespace
 Africa & Ethiopia & Ethiopia Anuak & Lopez 2021 & 9\\
 Africa & Ethiopia & Ethiopia Arbore & Lopez 2021 & 14\\
 Africa & Ethiopia & Ethiopia Ari Cultivator & Lopez 2021 & 14\\
 Africa & Ethiopia & Ethiopia Ari Potter & Lopez 2021 & 24\\
 Africa & Ethiopia & Ethiopia Ari Smith & Lopez 2021 & 14\\
-\addlinespace
 Africa & Ethiopia & Ethiopia Basket & Lopez 2021 & 14\\
 Africa & Ethiopia & Ethiopia Bena & Lopez 2021 & 28\\
 Africa & Ethiopia & Ethiopia Bench & Lopez 2021 & 12\\
 Africa & Ethiopia & Ethiopia Berta & Lopez 2021 & 13\\
 Africa & Ethiopia & Ethiopia BetaIsrael & Lazaridis et al 2014 & 7\\
-\addlinespace
 Africa & Ethiopia & Ethiopia BetaIsrael & Lopez 2021 & 6\\
 Africa & Ethiopia & Ethiopia Bodi & Lopez 2021 & 14\\
 Africa & Ethiopia & Ethiopia Burji & Lopez 2021 & 24\\
 Africa & Ethiopia & Ethiopia Chara & Lopez 2021 & 17\\
 Africa & Ethiopia & Ethiopia Dasanech & Lopez 2021 & 15\\
-\addlinespace
 Africa & Ethiopia & Ethiopia Dawro & Lopez 2021 & 14\\
 Africa & Ethiopia & Ethiopia DawroManja & Lopez 2021 & 11\\
 Africa & Ethiopia & Ethiopia Dhime & Lopez 2021 & 21\\
 Africa & Ethiopia & Ethiopia Dirasha & Lopez 2021 & 17\\
 Africa & Ethiopia & Ethiopia Dizi & Lopez 2021 & 14\\
-\addlinespace
 Africa & Ethiopia & Ethiopia Dorze & Lopez 2021 & 15\\
 Africa & Ethiopia & Ethiopia Gedeo & Lopez 2021 & 21\\
 Africa & Ethiopia & Ethiopia GentaGamo & Lopez 2021 & 15\\
 Africa & Ethiopia & Ethiopia Gidicho & Lopez 2021 & 11\\
 Africa & Ethiopia & Ethiopia Gofa & Lopez 2021 & 15\\
-\addlinespace
 Africa & Ethiopia & Ethiopia Gumuz & Gurdasani et al 2015 & 20\\
 Africa & Ethiopia & Ethiopia Gumuz & Lopez 2021 & 2\\
 Africa & Ethiopia & Ethiopia Gurage & Lopez 2021 & 16\\
 Africa & Ethiopia & Ethiopia Hadiya & Lopez 2021 & 14\\
 Africa & Ethiopia & Ethiopia Hamer & Lopez 2021 & 14\\
-\addlinespace
 Africa & Ethiopia & Ethiopia Honsita & Lopez 2021 & 17\\
 Africa & Ethiopia & Ethiopia Kafacho & Lopez 2021 & 16\\
 Africa & Ethiopia & Ethiopia Kambata & Lopez 2021 & 13\\
 Africa & Ethiopia & Ethiopia Karo & Lopez 2021 & 14\\
 Africa & Ethiopia & Ethiopia KefaShekaManjo & Lopez 2021 & 14\\
-\addlinespace
 Africa & Ethiopia & Ethiopia Komo & Lopez 2021 & 8\\
 Africa & Ethiopia & Ethiopia Konta & Lopez 2021 & 16\\
 Africa & Ethiopia & Ethiopia Kore & Lopez 2021 & 16\\
 Africa & Ethiopia & Ethiopia Kuwegu & Lopez 2021 & 10\\
 Africa & Ethiopia & Ethiopia Maale & Lopez 2021 & 11\\
-\addlinespace
 Africa & Ethiopia & Ethiopia Mao & Lopez 2021 & 9\\
 Africa & Ethiopia & Ethiopia Masholae & Lopez 2021 & 19\\
 Africa & Ethiopia & Ethiopia Menit & Lopez 2021 & 15\\
 Africa & Ethiopia & Ethiopia Mezhenger & Lopez 2021 & 14\\
 Africa & Ethiopia & Ethiopia Mossiye & Lopez 2021 & 10\\
-\addlinespace
 Africa & Ethiopia & Ethiopia Murle & Lopez 2021 & 13\\
 Africa & Ethiopia & Ethiopia Mursi & Lopez 2021 & 10\\
 Africa & Ethiopia & Ethiopia Nao & Lopez 2021 & 17\\
@@ -535,127 +483,106 @@ SouthAsia & Bangladesh & Bengali Bangladesh BEB & Lazaridis et al 2014 & 7\\
 SouthAsia & India & Cochin Jew & Lazaridis et al 2014 & 5\\
 SouthAsia & India & GujaratiA GIH & Lazaridis et al 2014 & 5\\
 SouthAsia & India & GujaratiB GIH & Lazaridis et al 2014 & 5\\
-\addlinespace
 SouthAsia & India & GujaratiC GIH & Lazaridis et al 2014 & 5\\
 SouthAsia & India & GujaratiD GIH & Lazaridis et al 2014 & 5\\
 SouthAsia & India & India Hindu & Lopez et al 2017 & 12\\
 SouthAsia & India & India Zoroastrian & Lopez et al 2017 & 13\\
 SouthAsia & India & Kharia & Lazaridis et al 2014 & 8\\
-\addlinespace
 SouthAsia & India & Lodhi & Lazaridis et al 2014 & 13\\
 SouthAsia & India & Mala & Lazaridis et al 2014 & 13\\
 SouthAsia & India & Punjabi Lahore PJL & Lazaridis et al 2014 & 8\\
 SouthAsia & India & Tiwari & Lazaridis et al 2014 & 14\\
 SouthAsia & India & Vishwabrahmin & Lazaridis et al 2014 & 13\\
-\addlinespace
 SouthAsia & Pakistan & Balochi & Lazaridis et al 2014 & 5\\
 SouthAsia & Pakistan & Brahui & Lazaridis et al 2014 & 20\\
 SouthAsia & Pakistan & Burusho & Lazaridis et al 2014 & 23\\
 SouthAsia & Pakistan & Hazara & Lazaridis et al 2014 & 13\\
 SouthAsia & Pakistan & Kalash & Lazaridis et al 2014 & 16\\
-\addlinespace
 SouthAsia & Pakistan & Makrani & Lazaridis et al 2014 & 8\\
 SouthAsia & Pakistan & Pathan & Lazaridis et al 2014 & 19\\
 SouthAsia & Pakistan & Sindhi & Lazaridis et al 2014 & 18\\
 WestEurasia & Albania & Albanian & Lazaridis et al 2014 & 6\\
 WestEurasia & Armenia & Armenian & Lazaridis et al 2014 & 10\\
-\addlinespace
 WestEurasia & Ashkenazi & Ashkenazi Jew & Lazaridis et al 2014 & 7\\
 WestEurasia & Belarus & Belarusian & Lazaridis et al 2014 & 10\\
 WestEurasia & Bulgaria & Bulgarian & Lazaridis et al 2014 & 9\\
 WestEurasia & Croatia & Croatian & Lazaridis et al 2014 & 10\\
 WestEurasia & Cyprus & Cypriot & Lazaridis et al 2014 & 8\\
-\addlinespace
 WestEurasia & Czechoslovia & Czech & Lazaridis et al 2014 & 10\\
 WestEurasia & England & English Cornwall GBR & Lazaridis et al 2014 & 5\\
 WestEurasia & England & English Kent GBR & Lazaridis et al 2014 & 5\\
 WestEurasia & Estonia & Estonian & Lazaridis et al 2014 & 10\\
 WestEurasia & Finland & Finnish FIN & Lazaridis et al 2014 & 7\\
-\addlinespace
 WestEurasia & France & French & Lazaridis et al 2014 & 25\\
 WestEurasia & France & French South & Lazaridis et al 2014 & 7\\
 WestEurasia & Georgia & Abkhasian & Lazaridis et al 2014 & 9\\
 WestEurasia & Georgia & Georgian Jew & Lazaridis et al 2014 & 7\\
 WestEurasia & Georgia & Georgian Megrels & Lazaridis et al 2014 & 10\\
-\addlinespace
 WestEurasia & Greece & Greek Comas & Lazaridis et al 2014 & 14\\
 WestEurasia & Greece & Greek Coriell & Lazaridis et al 2014 & 6\\
 WestEurasia & Hungary & Hungarian Coriell & Lazaridis et al 2014 & 10\\
 WestEurasia & Hungary & Hungarian Metspalu & Lazaridis et al 2014 & 10\\
 WestEurasia & Iceland & Icelandic & Lazaridis et al 2014 & 12\\
-\addlinespace
 WestEurasia & Iran & Iran Fars & Broushaki et al 2016 & 17\\
 WestEurasia & Iran & Iran Zoroastrian & Broushaki et al 2016 & 27\\
 WestEurasia & Iran & Iranian & Lazaridis et al 2014 & 8\\
 WestEurasia & Iran & Iranian Jew & Lazaridis et al 2014 & 9\\
 WestEurasia & Iraq & Iraqi Jew & Lazaridis et al 2014 & 6\\
-\addlinespace
 WestEurasia & Israel & BedouinA & Lazaridis et al 2014 & 25\\
 WestEurasia & Israel & BedouinB & Lazaridis et al 2014 & 19\\
 WestEurasia & Israel & Druze & Lazaridis et al 2014 & 35\\
 WestEurasia & Israel & Israeli Arabs & Lopez 2021 & 23\\
 WestEurasia & Israel & IsraeliBedouins & Lopez 2021 & 6\\
-\addlinespace
 WestEurasia & Israel & Palestinian & Lazaridis et al 2014 & 33\\
 WestEurasia & Italy & Italian Bergamo & Lazaridis et al 2014 & 12\\
 WestEurasia & Italy & Italian EastSicilian & Lazaridis et al 2014 & 5\\
 WestEurasia & Italy & Italian Tuscan & Lazaridis et al 2014 & 8\\
 WestEurasia & Italy & Italian WestSicilian & Lazaridis et al 2014 & 6\\
-\addlinespace
 WestEurasia & Italy & Sardinian & Lazaridis et al 2014 & 27\\
 WestEurasia & Jordan & Jordanian & Lazaridis et al 2014 & 4\\
 WestEurasia & Lebanon & Lebanese & Lazaridis et al 2014 & 8\\
 WestEurasia & Lithuania & Lithuanian & Lazaridis et al 2014 & 10\\
 WestEurasia & Malta & Maltese & Lazaridis et al 2014 & 8\\
-\addlinespace
 WestEurasia & Norway & Norway & Lazaridis et al 2014 & 11\\
 WestEurasia & OrkneyIslands & Orcadian & Lazaridis et al 2014 & 12\\
 WestEurasia & Palestine & PalestinianArabs & Lopez 2021 & 13\\
 WestEurasia & Russia & Adygei & Lazaridis et al 2014 & 16\\
 WestEurasia & Russia & Balkar & Lazaridis et al 2014 & 10\\
-\addlinespace
 WestEurasia & Russia & Chechen & Lazaridis et al 2014 & 9\\
 WestEurasia & Russia & Chuvash & Lazaridis et al 2014 & 10\\
 WestEurasia & Russia & Kumyk & Lazaridis et al 2014 & 8\\
 WestEurasia & Russia & Lezgin & Lazaridis et al 2014 & 9\\
 WestEurasia & Russia & Mordovian & Lazaridis et al 2014 & 10\\
-\addlinespace
 WestEurasia & Russia & Nogai & Lazaridis et al 2014 & 9\\
 WestEurasia & Russia & North Ossetian & Lazaridis et al 2014 & 10\\
 WestEurasia & Saudi Arabia & Saudi & Lazaridis et al 2014 & 8\\
 WestEurasia & Scotland & Scottish Argyll Bute GBR & Lazaridis et al 2014 & 4\\
 WestEurasia & Spain & Basque French & Lazaridis et al 2014 & 20\\
-\addlinespace
 WestEurasia & Spain & Basque Spanish & Lazaridis et al 2014 & 9\\
 WestEurasia & Spain & Spanish Andalucia IBS & Lazaridis et al 2014 & 4\\
 WestEurasia & Spain & Spanish Aragon IBS & Lazaridis et al 2014 & 6\\
 WestEurasia & Spain & Spanish Baleares IBS & Lazaridis et al 2014 & 4\\
 WestEurasia & Spain & Spanish Cantabria IBS & Lazaridis et al 2014 & 5\\
-\addlinespace
 WestEurasia & Spain & Spanish Castilla la Mancha IBS & Lazaridis et al 2014 & 5\\
 WestEurasia & Spain & Spanish Castilla y Leon IBS & Lazaridis et al 2014 & 5\\
 WestEurasia & Spain & Spanish Cataluna IBS & Lazaridis et al 2014 & 5\\
 WestEurasia & Spain & Spanish Extremadura IBS & Lazaridis et al 2014 & 5\\
 WestEurasia & Spain & Spanish Galicia IBS & Lazaridis et al 2014 & 5\\
-\addlinespace
 WestEurasia & Spain & Spanish Murcia IBS & Lazaridis et al 2014 & 4\\
 WestEurasia & Spain & Spanish Pais Vasco IBS & Lazaridis et al 2014 & 5\\
 WestEurasia & Spain & Spanish Valencia IBS & Lazaridis et al 2014 & 5\\
 WestEurasia & Syria & Syria & Lopez 2021 & 12\\
 WestEurasia & Syria & Syrian & Lazaridis et al 2014 & 2\\
-\addlinespace
 WestEurasia & Turkey & Turkish & Lazaridis et al 2014 & 4\\
 WestEurasia & Turkey & Turkish Adana & Lazaridis et al 2014 & 10\\
 WestEurasia & Turkey & Turkish Aydin & Lazaridis et al 2014 & 7\\
 WestEurasia & Turkey & Turkish Balikesir & Lazaridis et al 2014 & 6\\
 WestEurasia & Turkey & Turkish Istanbul & Lazaridis et al 2014 & 10\\
-\addlinespace
 WestEurasia & Turkey & Turkish Jew & Lazaridis et al 2014 & 8\\
 WestEurasia & Turkey & Turkish Kayseri & Lazaridis et al 2014 & 10\\
 WestEurasia & Turkey & Turkish Trabzon & Lazaridis et al 2014 & 9\\
 WestEurasia & Ukraine & Ukrainian East & Lazaridis et al 2014 & 6\\
 WestEurasia & Ukraine & Ukrainian West & Lazaridis et al 2014 & 3\\
-\addlinespace
 WestEurasia & Uzbekistan & Uzbek & Lazaridis et al 2014 & 10\\
 WestEurasia & Yemen & Yemen & Lazaridis et al 2014 & 6\\
 WestEurasia & Yemen & Yemenite Jew & Lazaridis et al 2014 & 8\\
@@ -671,14 +598,14 @@ WestEurasia & Yemen & Yemenite Jew & Lazaridis et al 2014 & 8\\
 
 Only bi-allelic SNPs were retained. To ensure that all datasets, ancient and modern, can be merged together without the confounding effects of strand flips, I then used conform-gt (\url{https://faculty.washington.edu/browning/conform-gt.html}) to align all alleles to the same strand as the 1000 genomes reference, keeping all parameters as default. Any genotypes which had a genotype likelihood of below 0.990 were set as missing.
 
-Data was phased use \texttt{shapeit4} \cite{delaneau2018integrative}, setting \texttt{--pbwt 8} and keeping all other parameters as default. The 1000 Genomes was used as as reference (section \cite{1000genomesdataset}). Sporadic low quality missing genotypes were imputed. 
+Data was phased use \texttt{shapeit4} \cite{delaneau2018integrative}, setting \texttt{--pbwt 8} and keeping all other parameters as default. The 1000 Genomes was used as as reference (section \ref{section:1000genomes}). Sporadic low quality missing genotypes were imputed. 
 
 
 
 \section{MS POBI HellBus dataset} \label{section:MSPOBIHellBus}
 
 
-Multiple Sclerosis (MS), People of the British Isles (POBI), Hellenthal and Busby (HB) / MS POBI HellBus contains a total of 14,795 individuals from 211 worldwide populations. 
+Multiple Sclerosis (MS), People of the British Isles (POBI), Hellenthal and Busby (HB) / MS POBI HellBus contains a total of 14,795 individuals from 211 worldwide populations and genotyped at 477,417 autosomal bi-allelic SNPs. 
 
 Samples from Sawcer et al (2011) \cite{Sawcer2011} (10299 individuals from 15 pops), Leslie et al 2015 \cite{Leslie2015} (2039 individuals from 35 pops) and Busby et al (2457 individuals from  161 pops). 
 
@@ -693,17 +620,17 @@ The following steps were taken to process the data
 \item Use Beagle's conform-gt utility to ensure reference alleles were consistent with the previous 1000 genomes build. This was done because all previous datasets I have compiled were also conformed to the previous 1000 genomes build. 
 \end{enumerate}
 
+\begingroup\fontsize{9}{10}\selectfont
 
-\begingroup\fontsize{10}{12}\selectfont
-
-\begin{longtable}[l]{llr}
+\begin{longtable}[t]{llr}
+\caption{Populations and corresponding number of individuals for all populations in the `MS POBI HellBus' dataset}\\
 \toprule
-Study & Population & n\_inds\\
+Dataset & Population & Number of Individuals\\
 \midrule
 \endfirsthead
-\multicolumn{3}{@{}l}{\textit{(continued)}}\\
+\caption[]{Populations and corresponding number of individuals for all populations in the `MS POBI HellBus' dataset \textit{(continued)}}\\
 \toprule
-Study & Population & n\_inds\\
+Dataset & Population & Number of Individuals\\
 \midrule
 \endhead
 
@@ -715,205 +642,171 @@ HB & adygei & 17\\
 HB & altai & 13\\
 HB & armenian & 35\\
 HB & balkar & 19\\
-\addlinespace
 HB & balochi & 24\\
 HB & bantukenya & 11\\
 HB & bantusouthafrica & 8\\
 HB & basque & 24\\
 HB & bedouin & 45\\
-\addlinespace
 HB & belorussian & 9\\
 HB & bengali & 1\\
 HB & bhunjia & 1\\
 HB & biakapygmy & 21\\
 HB & brahmin & 11\\
-\addlinespace
 HB & brahui & 25\\
 HB & bulgarian & 31\\
 HB & burusho & 25\\
 HB & burya & 2\\
 HB & buryat & 15\\
-\addlinespace
 HB & cambodian & 10\\
 HB & ceu & 59\\
 HB & chamar & 10\\
 HB & chechen & 20\\
 HB & chenchu & 4\\
-\addlinespace
 HB & chukchi & 5\\
 HB & chuvash & 17\\
 HB & colombian & 7\\
 HB & croatian & 19\\
 HB & cypriot & 12\\
-\addlinespace
 HB & dai & 10\\
 HB & daur & 9\\
 HB & dharkar & 8\\
 HB & dhurwa & 1\\
 HB & dolgan & 7\\
-\addlinespace
 HB & druze & 42\\
 HB & dusadh & 7\\
 HB & egyptian & 12\\
 HB & english & 8\\
 HB & ethiopiana & 7\\
-\addlinespace
 HB & ethiopianjew & 11\\
 HB & ethiopiano & 7\\
 HB & ethiopiant & 5\\
 HB & evenk & 12\\
 HB & finnish & 2\\
-\addlinespace
 HB & french & 28\\
 HB & georgian & 20\\
 HB & german & 30\\
 HB & germanyaustria & 4\\
 HB & gond & 4\\
-\addlinespace
 HB & greek & 20\\
 HB & hadza & 3\\
 HB & hakkipikki & 3\\
 HB & han & 34\\
 HB & hannchina & 10\\
-\addlinespace
 HB & hazara & 22\\
 HB & hezhen & 8\\
 HB & hungarian & 19\\
 HB & indian & 1\\
 HB & indianjew & 8\\
-\addlinespace
 HB & iranian & 20\\
 HB & irish & 7\\
 HB & japanese & 28\\
 HB & jordanian & 20\\
 HB & kalash & 23\\
-\addlinespace
 HB & kanjar & 5\\
 HB & karitiana & 11\\
 HB & karnataka & 8\\
 HB & ket & 2\\
 HB & kol & 16\\
-\addlinespace
 HB & koryake & 5\\
 HB & kshatriya & 7\\
 HB & kumyk & 14\\
 HB & kurd & 6\\
 HB & kurmi & 1\\
-\addlinespace
 HB & kurumba & 4\\
 HB & kyrgyz & 16\\
 HB & lahu & 8\\
 HB & lambadi & 1\\
 HB & lebanese & 5\\
-\addlinespace
 HB & lezgin & 18\\
 HB & lithuanian & 10\\
 HB & luhya & 94\\
 HB & maasai & 97\\
 HB & makrani & 25\\
-\addlinespace
 HB & malayan & 1\\
 HB & mandenka & 22\\
 HB & mawasi & 1\\
 HB & maya & 21\\
 HB & mbutipygmy & 13\\
-\addlinespace
 HB & meena & 1\\
 HB & meghawal & 1\\
 HB & melanesian & 10\\
 HB & miao & 10\\
 HB & mongolian & 19\\
-\addlinespace
 HB & mordovian & 15\\
 HB & moroccan & 25\\
 HB & mozabite & 29\\
 HB & muslim & 5\\
 HB & myanmar & 3\\
-\addlinespace
 HB & naga & 4\\
 HB & naxi & 8\\
 HB & nganassan & 10\\
 HB & nihali & 2\\
 HB & nogay & 16\\
-\addlinespace
 HB & northitalian & 12\\
 HB & northossetian & 15\\
 HB & norwegian & 18\\
 HB & orcadian & 15\\
 HB & oroqen & 9\\
-\addlinespace
 HB & palestinian & 46\\
 HB & papuan & 17\\
 HB & pathan & 22\\
 HB & pima & 14\\
 HB & piramalaikallar & 8\\
-\addlinespace
 HB & polish & 17\\
 HB & romanian & 16\\
 HB & russian & 25\\
 HB & sakd & 4\\
 HB & sandawe & 28\\
-\addlinespace
 HB & sankhomani & 30\\
 HB & sannamibia & 5\\
 HB & sardinian & 28\\
 HB & saudi & 19\\
 HB & scottish & 6\\
-\addlinespace
 HB & selkup & 10\\
 HB & she & 10\\
 HB & siciliane & 10\\
 HB & sindhi & 24\\
 HB & southitalian & 18\\
-\addlinespace
 HB & spanish & 34\\
 HB & surui & 5\\
 HB & syrian & 16\\
 HB & tajik & 15\\
 HB & tamilnadu & 2\\
-\addlinespace
 HB & tharus & 2\\
 HB & tsi & 98\\
 HB & tu & 10\\
 HB & tujia & 10\\
 HB & tunisian & 12\\
-\addlinespace
 HB & turkish & 19\\
 HB & turkishe & 23\\
 HB & turkishn & 20\\
 HB & turkishs & 20\\
 HB & turkmen & 10\\
-\addlinespace
 HB & tuscan & 8\\
 HB & tuva & 13\\
 HB & uae & 14\\
 HB & ukrainian & 20\\
 HB & upcaste & 5\\
-\addlinespace
 HB & uygur & 10\\
 HB & uzbekistani & 15\\
 HB & velamas & 9\\
 HB & welsh & 4\\
 HB & westsicilian & 10\\
-\addlinespace
 HB & xibo & 9\\
 HB & yakut & 25\\
 HB & yemeni & 9\\
 HB & yi & 10\\
 HB & yoruba & 21\\
-\addlinespace
 HB & yukagir & 4\\
 MS & Belgium & 544\\
 MS & Denmark & 332\\
 MS & Finland & 581\\
 MS & France & 479\\
-\addlinespace
 MS & Germany & 1100\\
 MS & Italy & 745\\
 MS & NIreland & 61\\
 MS & Norway & 953\\
 MS & Poland & 58\\
-\addlinespace
 MS & Spain & 205\\
 MS & Sweden & 1212\\
 MS & UK & 1854\\
@@ -923,80 +816,81 @@ POBI & UK & 2039\\*
 
 A breakdown of the POBI populations:
 
-\begingroup\fontsize{10}{12}\selectfont
+\begingroup\fontsize{9}{11}\selectfont
 
-\begin{longtable}[l]{lr}
+\begin{longtable}[t]{lr}
+\caption{Counties and corresponding number of individuals for all counties in the POBI dataset}\\
 \toprule
-V1 & n\_inds\\
+County & Number of Individuals\\
 \midrule
 \endfirsthead
-\multicolumn{2}{@{}l}{\textit{(continued)}}\\
+\caption[]{Counties and corresponding number of individuals for all counties in the POBI dataset \textit{(continued)}}\\
 \toprule
-V1 & n\_inds\\
+County & Number of Individuals\\
 \midrule
 \endhead
 
 \endfoot
 \bottomrule
 \endlastfoot
-UK\_Cheshire & 33\\
-UK\_Cornwall\_and\_Isles\_of\_Scilly & 90\\
-UK\_Cumbria & 195\\
-UK\_Devon & 73\\
-UK\_Dorset & 37\\
-\addlinespace
-UK\_Dumfries\_and\_Galloway & 42\\
-UK\_Durham & 54\\
-UK\_Dyfed & 55\\
-UK\_East\_Riding\_of\_Yorkshire\_Unitary\_Authority & 32\\
-UK\_East\_Sussex & 34\\
-\addlinespace
-UK\_Fife & 59\\
-UK\_Gloucestershire & 70\\
-UK\_Gwent & 31\\
-UK\_Gwynedd & 76\\
-UK\_Hampshire & 26\\
-\addlinespace
-UK\_Kent & 50\\
-UK\_Leicestershire & 66\\
-UK\_Lincolnshire & 104\\
-UK\_Merseyside & 47\\
-UK\_Norfolk & 98\\
-\addlinespace
-UK\_North\_Yorkshire & 64\\
-UK\_Northamptonshire & 37\\
-UK\_Northern\_Ireland & 44\\
-UK\_Northumberland & 50\\
-UK\_Nottinghamshire & 57\\
-\addlinespace
-UK\_Orkney\_Islands & 96\\
-UK\_Oxfordshire & 77\\
-UK\_Somerset & 17\\
-UK\_South\_Yorkshire & 77\\
-UK\_Staffordshire & 28\\
-\addlinespace
-UK\_Suffolk & 82\\
-UK\_Surrey & 24\\
-UK\_Tyne\_and\_Wear & 54\\
-UK\_West\_Sussex & 26\\
-UK\_Worcestershire & 34\\*
+Cheshire & 33\\
+Cornwall and Isles of Scilly & 90\\
+Cumbria & 195\\
+Devon & 73\\
+Dorset & 37\\
+Dumfries and Galloway & 42\\
+Durham & 54\\
+Dyfed & 55\\
+East Riding of Yorkshire Unitary Authority & 32\\
+East Sussex & 34\\
+Fife & 59\\
+Gloucestershire & 70\\
+Gwent & 31\\
+Gwynedd & 76\\
+Hampshire & 26\\
+Kent & 50\\
+Leicestershire & 66\\
+Lincolnshire & 104\\
+Merseyside & 47\\
+Norfolk & 98\\
+North Yorkshire & 64\\
+Northamptonshire & 37\\
+Northern Ireland & 44\\
+Northumberland & 50\\
+Nottinghamshire & 57\\
+Orkney Islands & 96\\
+Oxfordshire & 77\\
+Somerset & 17\\
+South Yorkshire & 77\\
+Staffordshire & 28\\
+Suffolk & 82\\
+Surrey & 24\\
+Tyne and Wear & 54\\
+West Sussex & 26\\
+Worcestershire & 34\\*
 \end{longtable}
 \endgroup{}
-
 
 \chapter{Some commonly used terms and their motivation for use}
 \label{appendixlabel2}
 
 Here are some terms I commonly use.
 
-\section{`all-v-all'}
+\section{`all-v-all'} \label{sec:allvall}
 
 I use this term when painting each individual in turn is painted using all other individuals as donors. If there are $N$ individuals, the result is an $N$x$N$ coancestry matrix.
 
 
-\section{`Leave-one-out'}
+\section{`Leave-one-out'} \label{sec:leave_one_out}
 
-Consider a situation where an all-v-all painting is performed on a set of individuals grouped into populations, where 2 of the populations are \textit{Devon} and \textit{Cornwall}. We would like to estimate the proportion of genome each recipient individual matches to both \textit{Devon} and \textit{Cornwall}, so we take the sums across columns, aggregating them by population. However, this means that each individual from, for example, Cornwall, can match to one less individual from Cornwall than other populations, as they cannot paint themselves. This may confound results, becase.... [sam: not clear how to word this]. To avoid this effect, we may perform a `leave-one-out' painting, where each population is painted seperately, and a single individual from each other population is removed from the set of donors. 
+Consider a situation where an all-v-all painting is performed on a set of individuals grouped into populations, where 2 of the populations are \textit{Devon} and \textit{Cornwall}. We would like to estimate the proportion of genome each recipient individual matches to both \textit{Devon} and \textit{Cornwall}, so we take the sums across columns, aggregating them by population. However, this means that each individual from, for example, Cornwall, can match to one less individual from Cornwall than other populations, as they cannot paint themselves. To avoid this, we may perform a `leave-one-out' painting, where each population is painted separately, and a single individual from each other population is removed from the set of donors. 
+
+\section{Total Variation Distance} \label{sec:appendixTVD}
+
+Often we would like to estimate how similar the copyvectors, $C_{x}$ and $C_{y}$ of two individuals or populations (average) are to one another. Given copvectors are the same length, one way would be to simply estimate Pearsons' correlation. However, this can lead to misleading results because Pearson's r-squared is often over-sensitive to outlying values.  
+
+An alternative is to estimate TVD, where $TVD_{x,y}$ between two copyvectors $C_{x}$ and $C_{y}$ is given as $TVD = \sum |C_{x} - C_{y}|$. 
+
 
 
 
@@ -1018,6 +912,13 @@ The final version of the thesis can be found at \url{https://github.com/sahwa/th
 
 \begin{figure}[htp]
     \centering
+    \includegraphics[width=1.0\textwidth]{../images/appendix/UstIshim_0.1x_bin.pdf}
+    \caption{Relationship between genotype likelihood and probability of genotype call being correct for UstIshim downsampled to 0.1x coverage. Genome binned by maximum posterior genotype likelihood and mean maximum posterior genotype likelihood (x-axis) and proportion of correct calls per bin (y-axis). Rugs on each margin show the distribution of x and y values. Black line is $y=x$.}
+    \label{fig:UstIshim_0.1x_bin}
+\end{figure}
+
+\begin{figure}[htp]
+    \centering
     \includegraphics[width=1.0\textwidth]{../images/appendix/plink_withHG_PCA.pdf}
     \caption{Principle component analysis of genotype matrix using plink2. Grey points indicate principle component coordiantes for each sample. Black text indicated mean principle component coordinates for all individuals within that group. Coloured labels represent newly sequenced ancient samples. }
     \label{fig:plink_PCA_HG}
@@ -1033,21 +934,41 @@ The final version of the thesis can be found at \url{https://github.com/sahwa/th
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1.0\textwidth]{../images/appendix/haplotype_map_Caribbean.pdf}
-    \caption{PrMap of haplotype donation to U.K. Biobank individuals born in the Caribbean. Each point represents one Human Origins population, coloured according to the summed amount of chunklengths that population donates to all U.K. Biobank individuals born in the Caribbean.}
+    \caption{Map of haplotype donation to U.K. Biobank individuals born in the Caribbean. Each point represents one Human Origins population, coloured according to the summed amount of chunklengths that population donates to all U.K. Biobank individuals born in the Caribbean.}
     \label{fig:haplotype_map_Caribbean}
 \end{figure}
 
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1.0\textwidth]{../images/appendix/testing_centre_afr_prop.pdf}
-    \caption{Number of total individuals and proportion of total individuals who have at least 50\% African ancestry by different testing centers. Centers ordered by proportion of individuals who have at least 50\% African ancestry.}
-    \label{fig:haplotype_map_Caribbean}
+    \caption{Number of individuals who have (purple) and have not (yellow) at least 50\% African ancestry (purple) by different testing centers. Centers ordered by proportion of individuals who have at least 50\% African ancestry.}
+    \label{fig:testing_centre_afr_prop}
 \end{figure}
 
-\chapter{SOURCEFIND iteration test}
-\label{appendixlabel5}
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/appendix/chromopainter_PCA_ancients_Bavaria.pdf}
+    \caption{Principle Component Analysis on chunklengths matrix of newly sequenced ancient Bavarian samples and selected ancient literature samples.}
+    \label{fig:chromopainter_PCA_ancients_Bavaria}
+\end{figure}
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/appendix/SF_heatmap_slavs.pdf}
+    \caption{Heatmap of SOURCEFIND proportions for all clusters in the ancient Slav analysis.}
+    \label{fig:SF_heatmap_slavs}
+\end{figure}
 
 
+\chapter{Supplementary results} \label{appendixlabel5}
+
+Auxiliary results.
+
+\subsection{Determining the number of MCMC iterations required in SOURCEFIND analysis} \label{sec:SF_test_iterations}
+
+SOURCEFIND is a haplotype-based method for inferring ancestry. At its heart, SOURCEFIND uses Markov chain Monte Carlo sampling to explore the parameter space of ancestry proportions. As is the case with any method that uses MCMC sampling, it is important to ensure that enough iterations have been performed; if this is not the case, the algorithm may not converge.
+
+To determine what is the minimum number of iterations, I ran SOURCEFIND for 7 different numbers of iterations and 10 runs for each number. Results are presented in Figure \ref{fig:iterations}. Visually inspecting the results shows that using 50,000 iterations or less leads to variable results. 500,000 iterations appears to be the best balance between running time and accuracy. 
 
 \begin{figure}[htp]
     \centering
@@ -1056,3 +977,15 @@ The final version of the thesis can be found at \url{https://github.com/sahwa/th
     \label{fig:iterations}
 \end{figure}
 
+\subsection{Determining the number of SNPs required to separate individuals from Devon and Cornwall} 
+\label{sec:SNP_Count_Assignment_DevCorn}
+
+This figure shows the how TVD assignment accuracy varies with the total number of SNPs included.
+
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/appendix/Devon_Cornwall_TVD_reduced.pdf}
+    \caption{Proportion of individuals correctly assigned (via TVD) to their correct population (y-axis) using different number of SNPs (x-axis).}
+    \label{fig:Devon_Cornwall_TVD_reduced_assignment}
+\end{figure}

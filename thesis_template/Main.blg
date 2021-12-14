@@ -1,59 +1,59 @@
 This is BibTeX, Version 0.99d (TeX Live 2020/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Main.aux
-The style file: unsrt.bst
+The style file: unsrt85.bst
 A level-1 auxiliary file: Preamble.aux
-A level-1 auxiliary file: Introduction.aux
+A level-1 auxiliary file: Introduction_GHII.aux
 A level-1 auxiliary file: Chapter2_GH_Nov2021.aux
-A level-1 auxiliary file: Chapter3_GH.aux
-A level-1 auxiliary file: Chapter4_GH.aux
-A level-1 auxiliary file: Chapter5.aux
-A level-1 auxiliary file: Conclusions.aux
+A level-1 auxiliary file: Chapter3_GH_Nov2021.aux
+A level-1 auxiliary file: Chapter4_GH_Dec2021.aux
+A level-1 auxiliary file: Chapter5_GH.aux
+A level-1 auxiliary file: Conclusions_GH.aux
 A level-1 auxiliary file: Appendices.aux
 Database file #1: /home/sam/Dropbox/Documents/PhD/PhD/papers/Humans/library.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
-Warning--I didn't find a database entry for "1000genomesdataset"
 Warning--empty journal in gibbs2003international
+Warning--empty journal in furholt2003absolutchronologische
 Warning--there's a number but no series in fouracre1995new
-You've used 177 entries,
-            1791 wiz_defined-function locations,
-            1443 strings with 80355 characters,
-and the built_in function-call counts, 68683 in all, are:
-= -- 3669
-> -- 8351
+You've used 212 entries,
+            1820 wiz_defined-function locations,
+            1611 strings with 88076 characters,
+and the built_in function-call counts, 53553 in all, are:
+= -- 5077
+> -- 2969
 < -- 8
-+ -- 2851
-- -- 2674
-* -- 7453
-:= -- 13040
-add.period$ -- 534
-call.type$ -- 177
-change.case$ -- 163
++ -- 1392
+- -- 696
+* -- 3895
+:= -- 8373
+add.period$ -- 640
+call.type$ -- 212
+change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 179
-duplicate$ -- 1627
-empty$ -- 3887
-format.name$ -- 2674
-if$ -- 13114
+cite$ -- 215
+duplicate$ -- 2106
+empty$ -- 4484
+format.name$ -- 881
+if$ -- 11654
 int.to.chr$ -- 0
-int.to.str$ -- 177
-missing$ -- 189
-newline$ -- 889
-num.names$ -- 177
-pop$ -- 328
+int.to.str$ -- 212
+missing$ -- 223
+newline$ -- 1064
+num.names$ -- 212
+pop$ -- 674
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 608
+skip$ -- 1427
 stack$ -- 0
-substring$ -- 3157
-swap$ -- 233
+substring$ -- 3860
+swap$ -- 250
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 416
-width$ -- 180
-write$ -- 1917
+warning$ -- 3
+while$ -- 505
+width$ -- 215
+write$ -- 2297
 (There were 3 warnings)

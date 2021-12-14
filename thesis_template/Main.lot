@@ -1,24 +1,29 @@
 \babel@toc {english}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Population labels and sample sizes of populations included in the Pre-post GLIMPSE and linked/unlinked PCA test. All samples are from the Hellenthal and Busby dataset, described in \ref {section:MSPOBIHellBus}.\relax }}{44}{table.caption.6}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces Table of r-squared values between the copyvectors of full coverage and downsampled individuals. `u' refers to ChromoPainterUncertainty, `s' refers to ChromoPainterV2, `r' refers to filtering SNPs with reference allele frequency (RAF) $0.1 > RAF$ or $RAF > 0.9$ and `gp' refers to filtering by $max(GP) >= 0.990$.\relax }}{65}{table.caption.21}%
-\contentsline {table}{\numberline {2.3}{\ignorespaces Percentage of individuals correctly assigned to their population at different percentages of SNPs retained.\relax }}{67}{table.caption.23}%
-\contentsline {table}{\numberline {2.4}{\ignorespaces Number of 250Kb, 500Kb or 1Mb windows required at different levels of SNP reduction to match the TVD assignment power of 500K fully genotyped SNPs for individuals in Devon and Cornwall. Note that the number of necessary 250kb and 500kb windows is roughly four and two times, respectively, the number of 1Mb windows, indicating the definition of window size makes little difference. ADD IN COLUMNS AFTER N\_SNPS TO SAY WHATS THE NUMBER OF SNPS PER 500KB WINDOW\relax }}{68}{table.caption.24}%
-\contentsline {table}{\numberline {2.5}{\ignorespaces Number of 250Kb, 500Kb or 1Mb windows required at different levels of SNP reduction to match the TVD assignment power of 500K fully genotyped SNPs for individuals in from Mandenka and Yoruba ethnic groups.\relax }}{69}{table.caption.25}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Population labels and sample sizes of populations included in the Pre-post GLIMPSE and linked/unlinked PCA test. All samples are from the Hellenthal and Busby dataset, described in \ref {section:MSPOBIHellBus}.\relax }}{62}{table.caption.7}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces For each downsampled individual (`Downsample') at each level of coverage (`Coverage;), `Closest Sample' gives the closest Cartesian neighbour based upon the PCA in Fig \ref {fig:PCA_panel_allInds_allCoverage}, not including other downsamples.\relax }}{76}{table.caption.15}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Table of $1-TVD$ values between the copyvectors of full coverage and downsampled individuals. `u' refers to ChromoPainterUncertainty, `s' refers to ChromoPainterV2, `r' refers to filtering SNPs with reference allele frequency (RAF) $0.1 > RAF$ or $RAF > 0.9$ and `gp' refers to filtering by $max(GP) >= 0.990$.\relax }}{90}{table.caption.23}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces Percentage of individuals correctly assigned to their population at different percentages of SNPs retained.\relax }}{93}{table.caption.25}%
+\contentsline {table}{\numberline {2.5}{\ignorespaces Number of 250Kb, 500Kb or 1Mb windows required at different levels of SNP reduction to match the TVD assignment power of 500K fully genotyped SNPs for individuals in Devon and Cornwall. Note that the number of necessary 250kb and 500kb windows is roughly four and two times, respectively, the number of 1Mb windows, indicating the definition of window size makes little difference.\relax }}{94}{table.caption.26}%
+\contentsline {table}{\numberline {2.6}{\ignorespaces Number of 250Kb, 500Kb or 1Mb windows required at different levels of SNP reduction to match the TVD assignment power of 500K fully genotyped SNPs for individuals in from Mandenka and Yoruba ethnic groups.\relax }}{95}{table.caption.27}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Percentage of populations which had lowest TVD (TVD) or copied the most (copying) from their own population under different paintings. 70K linked used 70,000 SNPs in linked mode, 70K used 70,000 SNPs in unlinked mode, imputed used 430,000 imputed and 70,000 non-imputed SNPs in linked mode and full used 500,000 non-imputed SNPs in linked mode.\relax }}{78}{table.caption.28}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Percentage of populations which had lowest TVD (TVD) or copied the most (copying) from their own population under different paintings. 70K linked used 70,000 SNPs in linked mode, 70K used 70,000 SNPs in unlinked mode, imputed used 430,000 imputed and 70,000 non-imputed SNPs in linked mode and full used 500,000 non-imputed SNPs in linked mode.\relax }}{115}{table.caption.31}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Table providing details for the newly sequenced Bavarian samples.\relax }}{100}{table.caption.42}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Name of population and number of samples used in the present-day ChromoPainter analysis\relax }}{104}{table.caption.43}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Table providing details for the newly sequenced Bavarian samples.\relax }}{139}{table.caption.45}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Name of population and number of samples used in the present-day ChromoPainter analysis\relax }}{144}{table.caption.46}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Information on newly sequenced ancient samples. Date (AD) estimated from radiocarbon dating. `Migration' corresponds to Migration Period and `EMA' corresponds to Early Middle Ages. Coverage calculated as the mean depth across all 77,213,942 genome-wide SNPs where genotypes were called at.\relax }}{127}{table.caption.53}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Name of population and number of samples used in the present-day ChromoPainter analysis\relax }}{130}{table.caption.54}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Name of populations and number of samples used in the present-day MOSAIC analysis\relax }}{132}{table.caption.55}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {A.2}{\ignorespaces Continent, Country, ethnicity, published study and number of individuals in each Human Origins population. \relax }}{165}{table.A.2}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Information on newly sequenced ancient samples. Date (AD) estimated from radiocarbon dating. `Migration' corresponds to Migration Period and `EMA' corresponds to Early Middle Ages. Coverage calculated as the mean depth across all 77,213,942 genome-wide SNPs where genotypes were called at.\relax }}{173}{table.caption.55}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Name of population and number of samples used in the present-day ChromoPainter analysis\relax }}{177}{table.caption.56}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Name of populations and number of samples used in the present-day MOSAIC analysis\relax }}{179}{table.caption.57}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {A.2}{\ignorespaces Continent, Country, ethnicity, published study and number of individuals in each Human Origins population. \relax }}{216}{table.A.2}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces Populations and corresponding number of individuals for all populations in the `MS POBI HellBus' dataset\relax }}{217}{table.A.3}%
+\contentsline {table}{\numberline {A.4}{\ignorespaces Counties and corresponding number of individuals for all counties in the POBI dataset\relax }}{222}{table.A.4}%
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {E.1}{\ignorespaces Sample name and fineSTRUCTURE cluster name for ancient samples in Chapter 5\relax }}{234}{table.E.1}%
 \addvspace {10\p@ }

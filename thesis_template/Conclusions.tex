@@ -1,5 +1,43 @@
 \chapter{General Conclusions}
 \label{chapterlabelConclusions}
 
-% This just dumps some pseudolatin in so you can see some text in place.
-\blindtext
+\section{General summary}
+
+In this thesis, I have explored the use of ChromoPainter on ancient DNA samples and present-day samples which contain sparsely genotyped markers. I evaluated the impact of coverage on all steps of the analysis pipeline, from imputation and phasing to ChromoPainter and SOURCEFIND analysis. I then applied my findings to two novel and one publicly available dataset(s). 
+
+In Chapter 2, I showed that the copyvectors of $\geq$0.5x downsamples show a high correspondence with the same sample at full coverage (Fig. \ref{fig:CP_correlation_allSamples_0.1x_0.5x_30x}), when painted using both ancient and present-day donors. Accordingly, when plotted on the same PCA, of the samples $\geq$0.5x, three out of the four downsamples were always closest to their own full coverage sample (Table \ref{tab:ClosestNeighbour}), showing that the relative position of low coverage samples can be reliably used as an indication of ancestry. Similarly, whilst individual SOURCEFIND estimates showed a degree of noise, the overall correspondence in proportions and ordering of surrogate populations was high (Fig. \ref{fig:SOURCEFIND_AllPSop_downsampled}), and the same conclusions would be drawn from analysing the downsamples as full coverage one. 
+
+Disappointingly, my several attempts to improve the performance of ChromoPainter on 0.1x and 0.5x samples were not successful, including filtering the SNPs used using different criteria (Section \ref{sec:Solutions}). This was surprising, as my work and that of others \cite{hui2020evaluating} showed that filtering SNPs on e.g. genotype probabilities could substantially reduce the overall fraction of incorrectly imputed genotypes. 
+
+In my second chapter, I explored African ancestry in U.K. Biobank samples. I showed that it is possible to recover substantial haplotype information with only a fraction of the total number of SNPs usually used. Being able to use fewer SNPs in an analysis will allow different datasets to be merged and jointly analysed, opening up a larger array of questions to be answered, whilst also significantly reducing the computational footprint of an analysis. I found that in terms of population assignment, performing imputation on non-European samples using a predominantly European reference panel substantially harms ChromoPainter performance, as does performing analysis in unlinked mode (Table \ref{table:TVD_copying}). 
+
+This work also showed that approximately 4\% of U.K. Biobank participants had at least 50\% African ancestry. Within this set of individuals, genetic ancestry from West Africa was very prevalent, consistent with historical events (Fig \ref{fig:haplotype_sharing_map_zoomed_II}). In particular, I found that there was over ten times the number of individuals with at least 50\% ancestry from Yoruba than there was the next most common ancestry. 
+
+In my empirical work, I analysed novel ancient DNA datasets from Bavaria and Poland, with the samples spanning almost 7000 years of history. The analysis of ancient Bavarian samples recapitulated previous research which identified admixture events between early farmers and local hunter-gatherers, and the presence of steppe-related ancestry in the Late Neolithic. However, it also provided some less expected results, showing that samples with extremely different ancestries cohabited the same cave and the same time period. 
+
+I found that incorporating densely sampled present-day genomes revealed many novel insights that would not have been obtained through only analysing ancient genomes, such as structure within the Migration Period Slavs (Fig. \ref{fig:tree_with_ancients}) and the differentiation between early Slavic and Germanic samples (Fig. \ref{fig:germanic_slavic_HB_sharing}).
+
+\section{Recommendations}
+
+My recommendations for analysing low coverage data are as follows:
+
+\begin{enumerate}
+\item Inlcude samples with at least 0.5x mean coverage. Samples below this coverage (0.1x) show effects of coverage-related bias in copyvector estimation, SOURCEFIND analysis and positions on a PCA. 
+\item 
+\end{enumerate}
+
+\section{Limitations of work and future avenues of research}
+
+
+Firstly, I did not consider ancient samples from Africa. This is in part because of a lack of high coverage samples from Africa (Mota being the highest coverage at ~10x) and the vast majority of ancient DNA samples from western Eurasia. I expect results to differ when considering African samples. Africans harbour more diversity and have lower levels of background LD \cite{bosch2009decay} and thus would be expected to match shorter segments to other individuals. Imputation accuracy would likely be lower, in part because of less LD and higher genetic diversity, but also because less of the total proportion of genetic diversity is present in reference panels. Finally, the large population turnovers in Africa (e.g. the Bantu expansions) mean that many pre-Bantu ancient samples may harbour diversity that does not exist in present-day individuals. 
+
+I did not evaluate the effect of coverage on either fineSTRUCTURE or GLOBETROTTER analysis. This is because GLOBETROTTER struggles to identify admixture events in single samples and I only had a single downsample for each individual and level of coverage. GLOBETROTTER may be affected by coverage. To accurately estimate admixture events, segments of DNA within an individual copied from different populations need to be identified. Such segments may be particularly hard to identify in low coverage samples, as the segment boundaries may contain low-coverage SNPs.   
+
+I didn't use the largest reference panel (HRC) due to technical challenges in obtaining access to the data and so likely underestimate the potential accuracy of imputation on low coverage samples. Thus, future work should examine the scale of improvements in imputation accuracy when using extremely large reference panels. For example, plans to sequence the whole-genomes of 200,000 U.K. Biobank participants would provide an unparalleled resource to impute variants in ancient samples of western European ancestry. 
+
+Whilst my attempt at incorporating genotype likelihoods into the ChromoPainter process only provided very modest improvements, the fact that this approach has been successful in other methods \cite{ngsLD, vieira2016estimating, Meisner719, Lipatov023374} suggests that in theory it should also be applicable to Chromosome painting. Future work on ChromoPainter could explore the reason why this did not work and suggest alternate ways in which to account for the uncertainty associated with low coverage data. Studies could also interrogate the performance of ChromoPainter on the range of coverages between 0.1-0.5x. 
+
+On the other hand, methodological advances in laboratory DNA extraction techniques, DNA enrichment and sequencing technologies and library preparation for ancient samples may mean that all samples can be sequenced to a high enough coverage that coverage-related effects are inconsequential. 
+
+
+
