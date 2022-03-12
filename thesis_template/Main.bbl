@@ -451,6 +451,57 @@ Filipe~G. Vieira, Anders Albrechtsen, and Rasmus Nielsen.
 \newblock {Estimating IBD tracts from low coverage NGS data}.
 \newblock {\em Bioinformatics}, 2016.
 
+\bibitem{peyregne2020present}
+St{\'e}phane Peyr{\'e}gne and Kay Pr{\"u}fer.
+\newblock Present-Day DNA Contamination in Ancient DNA Datasets.
+\newblock {\em BioEssays}, 42(9):2000081, 2020.
+
+\bibitem{wall2007inconsistencies}
+Jeffrey~D Wall and Sung~K Kim.
+\newblock Inconsistencies in Neanderthal genomic DNA sequences.
+\newblock {\em PLoS Genetics}, 3(10):e175, 2007.
+
+\bibitem{green2009neandertal}
+Richard~E Green, Adrian~W Briggs, Johannes Krause, et~al.
+\newblock The Neandertal genome and ancient DNA authenticity.
+\newblock {\em The EMBO journal}, 28(17):2494--2502, 2009.
+
+\bibitem{nakatsuka2020contamld}
+Nathan Nakatsuka, {\'E}adaoin Harney, Swapan Mallick, et~al.
+\newblock ContamLD: estimation of ancient nuclear DNA contamination using
+  breakdown of linkage disequilibrium.
+\newblock {\em Genome biology}, 21(1):1--22, 2020.
+
+\bibitem{Meyer2012}
+Matthias Meyer, Martin Kircher, Marie-theres Gansauge, et~al.
+\newblock {A High-Coverage Genome Sequence from an Archaic Denisovan Individual
+  A High-Coverage Genome Sequence from an Archaic Denisovan Individual A
+  High-Coverage Genome Sequence from an Archaic Denisovan Individual}.
+\newblock {\em Science (New York, NY)}, 222(2012):1--14, 2012.
+
+\bibitem{paabo1989ancient}
+Svante P{\"a}{\"a}bo.
+\newblock Ancient DNA: extraction, characterization, molecular cloning, and
+  enzymatic amplification.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  86(6):1939--1943, 1989.
+
+\bibitem{paabo1991miocene}
+S~Paabo.
+\newblock Miocene DNA sequence-a dream come true?
+\newblock {\em Curr. Biol.}, 1:45--46, 1991.
+
+\bibitem{de2018quantifying}
+Cesare de~Filippo, Matthias Meyer, and Kay Pr{\"u}fer.
+\newblock Quantifying and reducing spurious alignments for the analysis of
+  ultra-short ancient DNA sequences.
+\newblock {\em BMC biology}, 16(1):1--11, 2018.
+
+\bibitem{dabney2013ancient}
+Jesse Dabney, Matthias Meyer, and Svante P{\"a}{\"a}bo.
+\newblock Ancient DNA damage.
+\newblock {\em Cold Spring Harbor perspectives in biology}, 5(7):a012567, 2013.
+
 \bibitem{Browning2016}
 Brian~L. Browning and Sharon~R. Browning.
 \newblock {Genotype Imputation with Millions of Reference Samples}.
