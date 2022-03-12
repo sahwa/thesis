@@ -51,17 +51,10 @@ Individuals with at least 50\% ancestry from Nigeria Yoruba were carried into la
 
 To determine the ancestry of U.K. Biobank individuals, I compared their SNP patterns to populations/ethnic groups from different parts of the world to infer which populations they share recent ancestry with. As I am particularly interested in studying individuals with recent African ancestry, I used the so-called `Human Origins' reference dataset for this purpose, as it contains individuals from 349 different ethnic groups from across Africa and 535 world-wide groups in total (Fig. \ref{fig:HumanOriginsMap}). Full details of processing can be found in Appendix section \ref{HumanOriginsAppendix} .
 
-%\begin{sidewaysfigure}
-%    \centering
-%    \includegraphics[width=1.0\textwidth]{../images/chapter3/HumanOriginsMap.pdf}
-%    \caption{adfdsfsdg.}
-%    \label{fig:HumanOriginsMap}
-%\end{sidewaysfigure}
-
 \begin{sidewaysfigure}
 	    \centering
 	    \includegraphics[width=1.0\textwidth]{../images/chapter3/HumanOriginsMap.pdf}
-	    \caption{Differences in the amount donated by populations when using imputed and non-imputed data. Each vertical bar corresponds to a single population (N=395), with the height of the bar corresponding to the difference in haplotype donation, with positive values indicating increased donation and negative values indicating reduced donation. Bars coloured in green are also present in the 1000 genomes imputation panel and black bars are not present in the 1000 genomes.}
+	    \caption{Map of Human Origins populations.}
 	    \label{fig:HumanOriginsMap}
 \end{sidewaysfigure}
 
@@ -215,7 +208,7 @@ There are other instances of an over and under-representation of one ethnic grou
     \label{fig:all_countries_SF_props_pie_chart}
 \end{figure}
 
-Some other patterns can be noted. Whilst many individuals have intermediate levels of ancestry from West African populations (e.g. Ghana\_Fante or Yoruba\_Yoruba), much fewer individuals have intermediate levels of Ethiopia\_Somali ancestry (Fig. \ref{fig:SF_props_distribution_top30}). This may be because Somalis are more recent immigrants to the UK [cite] and therefore tend to be less admixed with Europeans relative to other immigrant populations which have been in the U.K. longer and hence can be modelled as a mixture of almost entirely Ethiopia\_Somali ancestry. 
+Some other patterns can be noted. Whilst many individuals have intermediate levels of ancestry from West African populations (e.g. Ghana\_Fante or Yoruba\_Yoruba), much fewer individuals have intermediate levels of Ethiopia\_Somali ancestry (Fig. \ref{fig:SF_props_distribution_top30}). This may be because Somalis are more recent immigrants to the UK and therefore tend to be less admixed with Europeans relative to other immigrant populations which have been in the U.K. longer and hence can be modelled as a mixture of almost entirely Ethiopia\_Somali ancestry. 
 
 To test whether this was the case, I selected individuals assigned to either Ethiopia\_Somali, Yoruba or Ghana\_Fante and estimated their proportions of total African, European and Asian ancestry using SOURCEFIND. Individuals from Yoruba and Ghana\_Fante had, on average, 6.2\% and 5.2\% European ancestry respectively, whereas individuals from Ethiopia\_Somali had 0.21\% on average, suggesting they are indeed less mixed than other populations, which is consistent with them being more recent migrants. 
 
@@ -270,9 +263,10 @@ I estimated the information entropy, $E$, of each assessment centre based on the
 To evaluate the extent to which individuals assigned to each ethnic group registered at different testing centers, I calculated entropy given by Schutze et al (2008) as $\sum_{i=1}^{L} [p_{i,j} \cdot log(p_{i,j})]$ \cite{schutze2008introduction}, where $p_{i,j} = \frac{m_{i,j}}{m_{j}}$, $m_{j}$ is the number of individuals from testing center $j$ assigned to ethnic group $i$ and $m_{ij}$ is the number of ethnic groups to which individuals from center $j$ are assigned. Testing centres in large cities such as London and Birmingham had the highest information entropy, consistent with prior expectations that large cities would contain a higher diversity of ancestries (Fig. \ref{fig:SF_props_pie_chart_entropy_map}). 
 
 
-\begin{sidewaysfigure}[htp]
+\begin{sidewaysfigure}
     \centering
     \includegraphics[width=1.0\textwidth]{../images/chapter3/SF_props_pie_chart.pdf}
+    \vspace{-1mm}
     \caption{Distribution of ethnicities across different testing centres. Each pie corresponds to a U.K. Biobank testing centre, with each section of the each pie corresponding to a different ethnicity. Jitter added to points to avoid overlapping. }
     \label{fig:SF_props_pie_chart_entropy_map}
 \end{sidewaysfigure}

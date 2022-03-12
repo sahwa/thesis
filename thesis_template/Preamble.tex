@@ -14,22 +14,45 @@
 \makedeclaration
 
 \begin{abstract} % 300 word limit
-Accounting for linkage information has been shown to enhance power to detect fine-scale population structure, particularly when considering recent relationships. In particular, ChromoPainter has been shown to be a successful method at identifying shared haplotypes between samples. It has also been used widely on ancient DNA samples. However, coverage is an issue and it is possible that analysing low-coverage samples may provide biased results. Whilst a small number of studies have performed tests, none have tested a range of samples across different coverages, at all steps of the analysis pipeline. Therefore, in Chapter 2, I will assess the impact of coverage on each step of the ChromoPainter analysis pipeline. I will also investigate the possible causes of `coverage-related bias' and investigate a series of modifications to and strategies to reduce the extent of the bias. In Chapter 3, I will work on the related problem of low-density genotypes data in the context of exploring African ancestry within the U.K. Biobank and show that performing imputation can substantially harm the estimation of sub-continental ancestry. In Chapter 4, I will apply my findings from Chapter 2 to analyse a novel ancient DNA dataset from Bavaria in order to determine the extent of continuity between the Late Neolithic and Iron Ages, as well as the age of east-west structure in Europe. Similarly, Chapter 5 will also explore a novel ancient DNA dataset, this time from Slavic regions. By co-analysing the ancient samples with a set of ancient genomes from the literature, I will analyse the relationship between the Migration Era and Early Middle Ages, in addition to their relationship to present-day Slavic speaking populations. Finally, I will summarise my findings from the four chapters and recommend approaches for future work on haplotype-based studies using low-coverage or sparsely genotyped data. 
 
+Accounting for linkage information has been shown to enhance power to detect fine-scale population structure, particularly when considering recent shared ancestry. In particular, ChromoPainter has been shown to be a successful method at identifying shared haplotypes between samples. It has also been used widely on ancient DNA samples. However, coverage is an issue, and it is possible that analysing low-coverage samples may provide biased results, for example if using phasing and imputation algorithms to pre-process data. Whilst a small number of studies have tested the utility of using ChromoPainter on ancient DNA, none have tested a range of samples across different coverages, at all steps of the analysis pipeline. In this work, I assess the impact of coverage on each step of the ChromoPainter analysis pipeline. I show that bias can exist when exploring (e.g.) population structure using low-coverage samples, and I investigate a series of modifications and strategies to reduce the extent of this bias. I also address a related challenge of analysing haplotype information in sparsely genotyped data in present-day individuals, e.g. when analysing only variants that overlap multiple genotyping arrays. Using these findings, I infer fine-scale African ancestry in U.K. Biobank participants using a new reference panel of data from 349 African ethnolinguistic groups, demonstrating how imputation of sparsely genotyped samples can substantially harm the estimation of sub-continental ancestry. Furthermore, I analyse a novel ancient DNA dataset from Bavaria in order to determine the extent of continuity between the Late Neolithic and Iron Ages, as well as the age of east-west structure in Europe. I also analyse novel ancient DNA samples from Slavic-speaking regions, exploring the genetic relationship between samples from the Migration Era to the Early Middle Ages, and the signatures of these ancient populations in present-day Slavic speaking populations. Finally, I summarise my findings and recommend approaches for future work on haplotype-based studies using low-coverage or sparsely genotyped data. 
 
 \end{abstract}
 
 \begin{acknowledgements}
-Thanks to all the good folk at UCL Computer Science cluster, particular Ed and David.
+\noindent
+I would like to thank the following people.
 
-Thanks to my Mum and Dad. 
+\noindent
+First, my supervisor Garrett for his dedication and skill, not only in helping me through my PhD, but with all of the other small things along the way. 
 
-Thanks to all the gang in office 212, Mislav, Lucy, Nancy, Arturo, Dave, Mike, Chris, Camus. 
+\noindent
+My Mum, Dad and sister for always supporting me and their voluntary proof-reading efforts.
 
-Thanks to Nadine. 
+\noindent
+All gang in office 212 who I had a lot of fun with; Mislav, Lucy, Nancy, Magnifica, Arturo, Dave, Mike, Chris, Camus and all the others who came by, even for a bit. It was sad to be cut short, but I hope to see you all in the future. All of the LIDo guys as well, too many to name, who made being at UCL so enjoyable. 
 
-Thank you to Jay and Pascal for  
+
+\noindent
+All the good folk at UCL Computer Science cluster, particularly Ed and David, for putting up with my poor cluster etiquette over the years. 
+
+\noindent
+Nadine for being the best administrator ever.
+
+\noindent
+Thank you to Pascal and Jay for looking after me when times were tough. 
 \end{acknowledgements}
+
+
+\section{Impact statement}
+
+I intend that the work presented in this thesis will provide a foundation for other researchers who apply haplotype-based methods for the analysis of low coverage ancient DNA and sparsely genotyped. Specifically, the benchmarks I provide in Chapter 2 can be followed by scientists in order to perform reliable ancient DNA analyses. This is important, as many studies are now using the aforementioned techniques. I also hope that others will take over up work into adapting ChromoPainter for ancient DNA and make further improvements to the algorithm.Similarly, other researchers can use my results to make decisions on whether to retain a smaller number of SNPs, or impute missing ones, when merging datasets across multiple genotyping arrays. Given previous research has outlined the utility of accounting for haplotypes when accounting for population stratification in GWAS, my findings may be useful looking forward when such approaches become more common. 
+
+My empirical work on ancient DNA in chapters 4 and 5 should a grounding for future work, much like the work I referenced in those sections aided me in understanding the historical and genetic context of the current research. For example, future studies may use these results to inform how they sample new ancient DNA samples. 
+
+Outside of academia, I believe there is a fundamental benefit to learning about our history as a species, something which the study of ancient DNA has provided tools for in the past decade. Ancient DNA analysis remains a field with popular reach, so I hope my work will go a small way towards providing the public with interesting and scientifically valid findings.
+
+I believe that exploring the ancestry of ethnic minorities within the U.K. Biobank can be of value to those individuals communities, particularly when they have been excluded from many similar kinds of analyses. Lastly, my work should also play a part in the inclusion of a more diverse array of ethnicities in association studies.  
 
 \setcounter{tocdepth}{2} 
 % Setting this higher means you get contents entries for
@@ -38,4 +61,5 @@ Thank you to Jay and Pascal for
 \tableofcontents
 %\listoffigures
 %\listoftables
+
 
