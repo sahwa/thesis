@@ -406,6 +406,11 @@ Robert~W. Davies, Jonathan Flint, Simon Myers, and Richard Mott.
 \newblock {Rapid genotype imputation from sequence without reference panels}.
 \newblock {\em Nature Genetics}, 48(8):965--969, 2016.
 
+\bibitem{davies2021rapid}
+Robert~W Davies, Marek Kucka, Dingwen Su, et~al.
+\newblock Rapid genotype imputation from sequence with reference panels.
+\newblock {\em Nature Genetics}, 53(7):1104--1111, 2021.
+
 \bibitem{Alexander2009}
 David~H. Alexander, John Novembre, and Kenneth Lange.
 \newblock {Fast model-based estimation of ancestry in unrelated individuals}.

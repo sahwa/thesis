@@ -7,7 +7,7 @@
 \contentsline {subsubsection}{\numberline {1.1.1.2}Advantages of accounting for haplotypes}{19}{subsubsection.1.1.1.2}%
 \contentsline {section}{\numberline {1.2}Methods used to analyse ancient DNA}{21}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Unlinked methods}{21}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}ChromoPainter ancient DNA}{24}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.2}The use of ChromoPainter in ancient DNA studies}{24}{subsection.1.2.2}%
 \contentsline {subsubsection}{\numberline {1.2.2.1}History}{24}{subsubsection.1.2.2.1}%
 \contentsline {subsubsection}{\numberline {1.2.2.2}Benchmarking ChromoPainter and imputation}{26}{subsubsection.1.2.2.2}%
 \contentsline {section}{\numberline {1.3}Issues and solution to low coverage data}{28}{section.1.3}%
