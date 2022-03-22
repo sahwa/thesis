@@ -10,51 +10,51 @@ A level-1 auxiliary file: Chapter4_GH_Dec2021.aux
 A level-1 auxiliary file: Chapter5_GH.aux
 A level-1 auxiliary file: Conclusions_GH.aux
 A level-1 auxiliary file: Appendices.aux
-Reallocated field_info (elt_size=4) to 10106 items from 5000.
+Reallocated field_info (elt_size=4) to 10083 items from 5000.
 Database file #1: ../bibliography/library.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--empty journal in gibbs2003international
 Warning--empty journal in furholt2003absolutchronologische
 Warning--there's a number but no series in fouracre1995new
-You've used 222 entries,
+You've used 221 entries,
             1820 wiz_defined-function locations,
-            1661 strings with 90166 characters,
-and the built_in function-call counts, 56067 in all, are:
-= -- 5321
-> -- 3089
+            1655 strings with 90012 characters,
+and the built_in function-call counts, 55941 in all, are:
+= -- 5310
+> -- 3085
 < -- 8
-+ -- 1448
-- -- 724
-* -- 4089
-:= -- 8764
-add.period$ -- 670
-call.type$ -- 222
++ -- 1446
+- -- 723
+* -- 4086
+:= -- 8740
+add.period$ -- 667
+call.type$ -- 221
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 225
-duplicate$ -- 2204
-empty$ -- 4705
-format.name$ -- 917
-if$ -- 12197
+cite$ -- 224
+duplicate$ -- 2196
+empty$ -- 4692
+format.name$ -- 916
+if$ -- 12170
 int.to.chr$ -- 0
-int.to.str$ -- 222
-missing$ -- 233
-newline$ -- 1114
-num.names$ -- 222
-pop$ -- 698
+int.to.str$ -- 221
+missing$ -- 232
+newline$ -- 1109
+num.names$ -- 221
+pop$ -- 695
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1485
+skip$ -- 1482
 stack$ -- 0
 substring$ -- 4074
-swap$ -- 260
+swap$ -- 259
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 532
-width$ -- 225
-write$ -- 2407
+while$ -- 531
+width$ -- 224
+write$ -- 2397
 (There were 3 warnings)

@@ -19,8 +19,12 @@ In ChromoPainter, sampled individuals are split into `donor' and `recipient' hap
 
 Consider a donor haplotype $d$ and recipient haplotype $r$, carrying alleles $x$ and $y$, respectively, at position (e.g.\ a SNP) $p$. There are two possibilities - either the alleles match between the donor and recipient at $p$, or they do not. The probability of $r$ copying from $d$ is: 
 
-\begin{equation}
-\Pr(r = x \mid d = y) = [(1-\theta) * z_{dr}] + [\theta * z_{!dr}],
+\begin{equation} \label{eq:cp}
+\Pr(h_{l} = a \mid Y_{l} = y_{l}) =     
+	\begin{cases}
+		1.0 - \theta & h_{yl} = a \\
+		\theta & h_{yl} \neq a 
+	\end{cases}       
 \end{equation}
 
 %where $z_{dr} = 1$ if $x=y$ and $z_{!dr} = 0$ if $x \ne y$, and $\theta$ is the probability of a mutation occurring. The mutation probability $\theta$ can be estimated using Watterson's estimator \cite{Watterson1975}, or estimated using an iterative EM algorithm.
@@ -29,7 +33,7 @@ The transition probabilities of the HMM, which are the probabilities of a change
 
 In ChromoPainterV2, the input genetic data comes in the form of phased genotype calls (i.e. \texttt{1|0}). ChromoPainterV2 produces several different output files. The two which most used in this work are those appended with .chunklengths and .chunkcounts. These matrices are also referred to as `coancestry matrices'. In the chunklengths matrix, $cl$, the entry $cl_{d,r}$ gives the total expected proportion of haplotype segments (defined as a contiguous set of SNPs copied from a single donor) that recipient $r$ copies from donor $d$. Thus, higher values of $cl_{d,r}$ indicate that recipient $r$ and donor $d$ share more recent ancestry. The .chunkcounts matrix instead gives the total number of haplotype segments that recipient $r$ copies from donor $d$.
 
-In this work, `copyvector' is used to refer to the vector of chunklengths that a single recipient individual copies from all donors, or a single row of the coancestry matrix. Throughout, I often define donors as populations, so that each element of the copy vector is the total amount of DNA that the recipient matches to all individuals from a given donor population.
+In this work, `copyvector' is used to refer to the vector of chunklengths that a single recipient individual copies from all donors, or a single row of the coancestry matrix. Throughout, I often define donors as populations, so that{ each element of the copy vector is the total amount of DNA that the recipient matches to all individuals from a given donor population.
 
 \subsubsection{Description of ChromoPainterV2Uncertainty} \label{sec:DescriptionChromoPainterV2Uncertainty}
 
@@ -41,13 +45,13 @@ We also have a posterior genotype likelihood, in the form $GL(p_{0}, p_{1}, p_{2
                  
 The second difference is the incorporation of the allele probability into the emission probability of the HMM. As before, consider a donor $d$ and recipient $r$ at SNP $p$. Now we let $r_x$ be the probability that the recipient haploid $r$ carries the alternative allele, with $d_x$ the probability the donor haploid carries the alternative allele.
 
-\begin{equation}
+\begin{equation} \label{eq:cp_uncertainty}
 \begin{split}
 p(r_{x} | d_{x}) = (1-\theta)*[r_{x}*d_{x} + (1-r_{x}) * (1-d_{x})] \\ + \theta * [r_{x}*(1-d_{x}) + (1-r_{x})*d_{x}]
 \end{split}
 \end{equation}
 
-Note that above (3) reduces (1) if $d_{x} = \{0,1\}$ and if $r_{x} = \{0,1\}$, i.e\ there is no uncertainty in the calls.
+Note that \ref{eq:cp_uncertainty} reduces \ref{eq:cp} if $d_{x} = \{0,1\}$ and if $r_{x} = \{0,1\}$, i.e\ there is no uncertainty in the calls.
 
 
 \subsection{Generation of downsampled genomes}
@@ -70,7 +74,7 @@ Each original full-coverage \texttt{.bam} file was processed using the atlas (ve
 
 I then downsampled each full-coverage genome using the \texttt{atlas downsample} task, resulting in a \texttt{.bam} file with coverages 0.1x, 0.5x, 0.8x, 1x, 2x, 3.5x, 5x, 10x and 20x per individual. 
 
-For each full coverage and downsampled \texttt{.bam} file, I estimated post-mortem damage (PMD) patterns using the \texttt{atlas estimatePMD} task. Recalibration parameters were then estimated using the atlas \texttt{atlas recal} task. Finally, both the recalibration and PMD parameters were given to the \texttt{atlas callNEW} task which produces genotype calls and genotype likelihood estimates for each downsampled and full coverage \texttt{.bam}. For this stage, I made calls at the 77,818,345 genome-wide positions present in the phase 3 thousand genomes project \cite{1000GenomesProjectConsortium2015}. This was done to reduce the risk of calling false-positive (i.e.\ falsely polymorphic) genotypes in the aDNA samples.
+For each full coverage and downsampled \texttt{.bam} file, I estimated post-mortem damage (PMD) patterns using the \texttt{atlas estimatePMD} task. Recalibration parameters were then estimated using the atlas \texttt{atlas recal} task. Finally, both the recalibration and PMD parameters were given to the \texttt{atlas callNEW} task which produces genotype calls and genotype likelihood estimates for each downsampled and full coverage \texttt{.bam}. For this stage, I made calls at the 77,818,345 genome-wide positions present in the phase 3 thousand genomes project \cite{1000GenomesProjectConsortium2015}. This was done to reduce the risk of calling false-positive (i.e.\ falsely polymorphic) genotypes in the aDNA samples. No minimum read-depth filter was applied when calling genotypes. 
 
 \subsection{Generation of ancient literature samples} \label{AncientReferenceSamples}
 

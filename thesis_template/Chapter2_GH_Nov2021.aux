@@ -14,7 +14,7 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2.2}Methods}{36}{section.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Description of the ChromoPainter algorithm}{36}{subsection.2.2.1}\protected@file@percent }
 \newlabel{sec:ChromopainterDescription}{{2.2.1}{36}{Description of the ChromoPainter algorithm}{subsection.2.2.1}{}}
-\citation{Watterson1975}
+\newlabel{eq:cp}{{2.1}{37}{Description of the ChromoPainter algorithm}{equation.2.2.1}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1.1}Description of ChromoPainterV2Uncertainty}{38}{subsubsection.2.2.1.1}\protected@file@percent }
 \newlabel{sec:DescriptionChromoPainterV2Uncertainty}{{2.2.1.1}{38}{Description of ChromoPainterV2Uncertainty}{subsubsection.2.2.1.1}{}}
 \citation{deBarrosDamgaardeaar7711}
@@ -22,6 +22,7 @@
 \citation{Gunther2018a}
 \citation{Lazaridis2014}
 \citation{Lazaridis2014}
+\newlabel{eq:cp_uncertainty}{{2.2}{39}{Description of ChromoPainterV2Uncertainty}{equation.2.2.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Generation of downsampled genomes}{39}{subsection.2.2.2}\protected@file@percent }
 \citation{Link2017}
 \citation{Picard2018toolkit}
@@ -75,7 +76,7 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.6.2}Phasing accuracy}{54}{subsection.2.6.2}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Percentage of phased genotypes which agree with the same full-coverage sample for each individual and each level of downsampling. Genotypes with phase deemed unresolvable by rtg-tools were excluded from the calculations. Note that these numbers are given as incorrect / (incorrect + correct - unresolved) and so values are in part driven by the relative heterozygosity of each sample.\relax }}{55}{figure.caption.8}\protected@file@percent }
 \newlabel{fig:phasing_performance_downsampled}{{2.3}{55}{Percentage of phased genotypes which agree with the same full-coverage sample for each individual and each level of downsampling. Genotypes with phase deemed unresolvable by rtg-tools were excluded from the calculations. Note that these numbers are given as incorrect / (incorrect + correct - unresolved) and so values are in part driven by the relative heterozygosity of each sample.\relax }{figure.caption.8}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.3}Validating posterior probability calibration}{56}{subsection.2.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.3}Validating posterior probability calibration}{55}{subsection.2.6.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.6.4}ChromoPainter analysis}{56}{subsection.2.6.4}\protected@file@percent }
 \newlabel{sec:ChromoPainterChap2}{{2.6.4}{56}{ChromoPainter analysis}{subsection.2.6.4}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Relationship between genotype likelihood and probability of genotype call being correct for Yamnaya downsampled to 0.1x coverage. Genome binned by maximum posterior genotype likelihood and mean maximum posterior genotype likelihood (x-axis) and proportion of correct calls calculated per bin (y-axis). Rugs on each margin show the distribution of x and y values. Black line is $y=x$.\relax }}{57}{figure.caption.9}\protected@file@percent }
@@ -88,10 +89,10 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces For five different samples (columns), the proportion of DNA that each downsampled (y-axis) or full coverage (x-axis) genome matches to individuals from each of 26 present-day populations (dots). Red line is $y=x$. x and y units are normalised copying values and thus removed for clarity. Points coloured by meta-population.\relax }}{62}{figure.caption.12}\protected@file@percent }
 \newlabel{fig:CP_correlation_allSamples_0.1x_0.5x_30x_moderns}{{2.7}{62}{For five different samples (columns), the proportion of DNA that each downsampled (y-axis) or full coverage (x-axis) genome matches to individuals from each of 26 present-day populations (dots). Red line is $y=x$. x and y units are normalised copying values and thus removed for clarity. Points coloured by meta-population.\relax }{figure.caption.12}{}}
 \citation{margaryan2020population}
-\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces For each downsampled individual at each level of coverage, each entry gives the closest Cartesian neighbour based upon the PCA in Fig \ref  {fig:PCA_panel_allInds_allCoverage}, not including other downsamples.\relax }}{63}{table.caption.14}\protected@file@percent }
-\newlabel{tab:ClosestNeighbour}{{2.2}{63}{For each downsampled individual at each level of coverage, each entry gives the closest Cartesian neighbour based upon the PCA in Fig \ref {fig:PCA_panel_allInds_allCoverage}, not including other downsamples.\relax }{table.caption.14}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Principle component analysis (PCA) of downsampled, full coverage and downloaded ancient individuals generated from the linked chunklengths matrix. Full coverage and downsampled genomes of the same individual are coloured the same. Reference individuals are grouped into populations plotted as the mean principle components for all individuals within the population. Numbers in labels correspond to the number of individuals within the reference population. 0.1x samples have red border for clarity.\relax }}{64}{figure.caption.13}\protected@file@percent }
 \newlabel{fig:PCA_panel_allInds_allCoverage}{{2.8}{64}{Principle component analysis (PCA) of downsampled, full coverage and downloaded ancient individuals generated from the linked chunklengths matrix. Full coverage and downsampled genomes of the same individual are coloured the same. Reference individuals are grouped into populations plotted as the mean principle components for all individuals within the population. Numbers in labels correspond to the number of individuals within the reference population. 0.1x samples have red border for clarity.\relax }{figure.caption.13}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces For each downsampled individual at each level of coverage, each entry gives the closest Cartesian neighbour based upon the PCA in Fig \ref  {fig:PCA_panel_allInds_allCoverage}, not including other downsamples.\relax }}{65}{table.caption.14}\protected@file@percent }
+\newlabel{tab:ClosestNeighbour}{{2.2}{65}{For each downsampled individual at each level of coverage, each entry gives the closest Cartesian neighbour based upon the PCA in Fig \ref {fig:PCA_panel_allInds_allCoverage}, not including other downsamples.\relax }{table.caption.14}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.6.5}SOURCEFIND}{65}{subsection.2.6.5}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Each panel gives SOURCEFIND inferred recent ancestry sharing proportions for a different downsampled genome. Bars represent proportion of ancestry, coloured by different surrogates. Different coverages for the same individual are given within each panel. Three surrogates were used. LBK excluded because of anomalously poor results.\relax }}{66}{figure.caption.15}\protected@file@percent }
 \newlabel{fig:3pop_SF_downsampled}{{2.9}{66}{Each panel gives SOURCEFIND inferred recent ancestry sharing proportions for a different downsampled genome. Bars represent proportion of ancestry, coloured by different surrogates. Different coverages for the same individual are given within each panel. Three surrogates were used. LBK excluded because of anomalously poor results.\relax }{figure.caption.15}{}}
@@ -103,20 +104,20 @@
 \newlabel{sec:PCAImputationTest}{{2.7.1}{68}{PCA imputation test}{subsection.2.7.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces Principle Component Analysis. Left - pre-GLIMPSE genotypes. Right - post-GLIMPSE (imputed) genotypes. White labels correspond to the midpoint of all samples from that population, grey points correspond to modern individuals. 0.1x samples highlighted in red for clarity.\relax }}{70}{figure.caption.17}\protected@file@percent }
 \newlabel{fig:pre_GLIMPSE_PCA}{{2.11}{70}{Principle Component Analysis. Left - pre-GLIMPSE genotypes. Right - post-GLIMPSE (imputed) genotypes. White labels correspond to the midpoint of all samples from that population, grey points correspond to modern individuals. 0.1x samples highlighted in red for clarity.\relax }{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.7.2}Direct imputation test}{70}{subsection.2.7.2}\protected@file@percent }
+\newlabel{DirectImputationTest}{{2.7.2}{70}{Direct imputation test}{subsection.2.7.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces Left - ChromoPainter Linked. Right - ChromoPainter Unlinked. White labels correspond to the midpoint of all samples from that population, grey points correspond to modern individuals. 0.1x samples highlighted in red for clarity.\relax }}{71}{figure.caption.18}\protected@file@percent }
 \newlabel{fig:CP_linked_unlinked}{{2.12}{71}{Left - ChromoPainter Linked. Right - ChromoPainter Unlinked. White labels correspond to the midpoint of all samples from that population, grey points correspond to modern individuals. 0.1x samples highlighted in red for clarity.\relax }{figure.caption.18}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.7.2}Direct imputation test}{72}{subsection.2.7.2}\protected@file@percent }
-\newlabel{DirectImputationTest}{{2.7.2}{72}{Direct imputation test}{subsection.2.7.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.13}{\ignorespaces Comparison of the mean normalised cM donated by each donor population using the imputed and non-imputed SNP sets. The 20 populations with the largest different between imputed and non-imputed donation are highlighted. Red line is line of equality.\relax }}{73}{figure.caption.19}\protected@file@percent }
-\newlabel{fig:imputed_nonimputed_donation}{{2.13}{73}{Comparison of the mean normalised cM donated by each donor population using the imputed and non-imputed SNP sets. The 20 populations with the largest different between imputed and non-imputed donation are highlighted. Red line is line of equality.\relax }{figure.caption.19}{}}
 \citation{vieira2016estimating}
-\@writefile{toc}{\contentsline {section}{\numberline {2.8}Solutions}{74}{section.2.8}\protected@file@percent }
-\newlabel{sec:Solutions}{{2.8}{74}{Solutions}{section.2.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.13}{\ignorespaces Comparison of the mean normalised cM donated by each donor population using the imputed and non-imputed SNP sets. The 20 populations with the largest difference between imputed and non-imputed donation are highlighted. Red line is line of equality.\relax }}{73}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:imputed_nonimputed_donation}{{2.13}{73}{Comparison of the mean normalised cM donated by each donor population using the imputed and non-imputed SNP sets. The 20 populations with the largest difference between imputed and non-imputed donation are highlighted. Red line is line of equality.\relax }{figure.caption.19}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.8}Solutions}{73}{section.2.8}\protected@file@percent }
+\newlabel{sec:Solutions}{{2.8}{73}{Solutions}{section.2.8}{}}
+\citation{rubinacci2021efficient,delaneau2018integrative,Browning2016,hui2020evaluating}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.8.1}Accounting for allele likelihoods}{74}{subsection.2.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.8.2}Filtering SNPs}{74}{subsection.2.8.2}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2.14}{\ignorespaces Comparison of performance of ChromoPainterV2 and ChromoPainterV2Uncertainty. Panels correspond to samples downsampled to 0.1x (left) and 0.5x (right). Points correspond to the r-squared between the downsampled individual and the same individual at full coverage. Red points are values obtained from ChromoPainterV2 and blue points are those obtained from ChromoPainterV2Uncertainty.\relax }}{75}{figure.caption.20}\protected@file@percent }
 \newlabel{fig:uncertainty_v_noUncertainty_0.5x_0.1x}{{2.14}{75}{Comparison of performance of ChromoPainterV2 and ChromoPainterV2Uncertainty. Panels correspond to samples downsampled to 0.1x (left) and 0.5x (right). Points correspond to the r-squared between the downsampled individual and the same individual at full coverage. Red points are values obtained from ChromoPainterV2 and blue points are those obtained from ChromoPainterV2Uncertainty.\relax }{figure.caption.20}{}}
-\citation{rubinacci2021efficient,delaneau2018integrative,Browning2016,hui2020evaluating}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.8.2}Filtering SNPs}{76}{subsection.2.8.2}\protected@file@percent }
 \citation{alexander2009fast}
 \citation{Leslie2015}
 \@writefile{lot}{\contentsline {table}{\numberline {2.3}{\ignorespaces Table of $1-TVD$ values between the copyvectors of full coverage and downsampled individuals. `u' refers to ChromoPainterUncertainty, `s' refers to ChromoPainterV2, `r' refers to filtering SNPs with reference allele frequency (RAF) $0.1 > RAF$ or $RAF > 0.9$ and `gp' refers to filtering by $max(GP) >= 0.990$.\relax }}{77}{table.caption.21}\protected@file@percent }
@@ -141,12 +142,12 @@
 \citation{margaryan2020population}
 \citation{rubinacci2021efficient}
 \@setckpt{Chapter2_GH_Nov2021}{
-\setcounter{page}{88}
+\setcounter{page}{87}
 \setcounter{equation}{4}
 \setcounter{enumi}{4}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
-\setcounter{enumiv}{222}
+\setcounter{enumiv}{221}
 \setcounter{footnote}{0}
 \setcounter{mpfootnote}{0}
 \setcounter{nag@c}{49}
