@@ -73,7 +73,7 @@ Consequently, the output of GLIMPSE is i) unphased genotype calls with posterior
 
 Samples from \cite{byrska2021high}.
 
-This dataset consists of 3,202 modern individuals from 172 worldwide populations, sequenced to a targeted depth of 30x coverage. The downloaded dataset was aligned to the gr38 reference genome. Samples were downloaded to the UCL Computer Science cluster by myself from the ftp mirror. The following steps were taken to process the data before being used as an imputation reference. 
+This dataset consists of 3,202 modern individuals from 26 worldwide populations, sequenced to a targeted depth of 30x coverage. The downloaded dataset was aligned to the gr38 reference genome. Samples were downloaded to the UCL Computer Science cluster by myself from the ftp mirror. The following steps were taken to process the data before being used as an imputation reference. 
 
 \begin{enumerate}
 \item Filtered such that SNPs with only 2 alleles were retained
@@ -84,196 +84,49 @@ This dataset consists of 3,202 modern individuals from 172 worldwide populations
 \item Use Beagle's conform-gt utility to ensure reference alleles were consistent with the previous 1000 genomes build. This was done because all previous datasets I have compiled were also conformed to the previous 1000 genomes build. 
 \end{enumerate}
 
-\begingroup\fontsize{10}{10}\selectfont
+\begin{table}
+\centering\begingroup\fontsize{9}{11}\selectfont
 
-\begin{longtable}[t]{lcl}
+\begin{tabular}[t]{cc}
 \toprule
-Population Name & Number of Individuals & Data Collection\\
+Population Code & Number of individuals\\
 \midrule
-\endfirsthead
-\multicolumn{3}{@{}l}{\textit{(continued)}}\\
-\toprule
-Population Name & Number of Individuals & Data Collection\\
-\midrule
-\endhead
-
-\endfoot
+ACB & 116\\
+ASW & 74\\
+BEB & 131\\
+CDX & 93\\
+CEU & 179\\
+CHB & 103\\
+CHS & 163\\
+CLM & 132\\
+ESN & 149\\
+FIN & 99\\
+GBR & 91\\
+GIH & 103\\
+GWD & 178\\
+IBS & 157\\
+ITU & 107\\
+JPT & 104\\
+KHV & 122\\
+LWK & 99\\
+MSL & 99\\
+MXL & 97\\
+PEL & 122\\
+PJL & 146\\
+PUR & 139\\
+STU & 114\\
+TSI & 107\\
+YRI & 178\\
 \bottomrule
-\endlastfoot
-Abkhasian & 2 & Simons Genome Diversity Project\\
-Adygei & 17 & Simons Genome Diversity Project\\
-African Ancestry SW & 112 & 1000 Genomes\\
-African Caribbean & 123 & 1000 Genomes\\
-Albanian & 1 & Simons Genome Diversity Project\\
-Aleut & 2 & Simons Genome Diversity Project\\
-Altaian & 1 & Simons Genome Diversity Project\\
-Ami & 2 & Simons Genome Diversity Project\\
-Armenian & 2 & Simons Genome Diversity Project\\
-Atayal & 1 & Simons Genome Diversity Project\\
-Australian & 2 & Simons Genome Diversity Project\\
-Balochi & 24 & Human Genome Diversity Project\\
-Bantu Herero & 2 & Simons Genome Diversity Project\\
-Bantu Kenya & 12 & Human Genome Diversity Project\\
-Bantu South Africa & 4 & Human Genome Diversity Project\\
-Bantu Tswana & 2 & Simons Genome Diversity Project\\
-Basque & 24 & Human Genome Diversity Project\\
-Bedouin & 44 & Human Genome Diversity Project\\
-Bedouin B & 2 & Simons Genome Diversity Project\\
-Bengali & 142 & 1000 Genomes\\
-Bengali,Bengali & 2 & 1000 Genomes\\
-Bergamo & 2 & Simons Genome Diversity Project\\
-Bergamo Italian & 10 & Human Genome Diversity Project\\
-Biaka & 26 & Human Genome Diversity Project\\
-Bougainville & 13 & Human Genome Diversity Project\\
-Brahmin & 2 & Simons Genome Diversity Project\\
-Brahui & 25 & Human Genome Diversity Project\\
-British & 105 & 1000 Genomes\\
-British,English & 2 & 1000 Genomes\\
-Bulgarian & 2 & Simons Genome Diversity Project\\
-Burmese & 2 & Simons Genome Diversity Project\\
-Burusho & 24 & Human Genome Diversity Project\\
-Cambodian & 9 & Human Genome Diversity Project\\
-Cambodian,Cambodian & 1 & Simons Genome Diversity Project\\
-CEPH & 184 & 1000 Genomes\\
-Chane & 1 & Simons Genome Diversity Project\\
-Chechen & 1 & Simons Genome Diversity Project\\
-Chukchi & 1 & Simons Genome Diversity Project\\
-Colombian & 153 & 1000 Genomes\\
-Crete & 2 & Simons Genome Diversity Project\\
-Czech & 1 & Simons Genome Diversity Project\\
-Dai & 9 & Human Genome Diversity Project\\
-Dai Chinese & 109 & 1000 Genomes\\
-Daur & 10 & Human Genome Diversity Project\\
-Dinka & 3 & Simons Genome Diversity Project\\
-Druze & 42 & Human Genome Diversity Project\\
-Dusun & 2 & Simons Genome Diversity Project\\
-Esan & 171 & 1000 Genomes\\
-Esan,Esan & 2 & 1000 Genomes\\
-Eskimo Chaplin & 1 & Simons Genome Diversity Project\\
-Eskimo Naukan & 2 & Simons Genome Diversity Project\\
-Eskimo Sireniki & 2 & Simons Genome Diversity Project\\
-Estonian & 2 & Simons Genome Diversity Project\\
-Even & 3 & Simons Genome Diversity Project\\
-Finnish & 102 & 1000 Genomes\\
-Finnish,Finnish & 3 & 1000 Genomes\\
-French & 27 & Human Genome Diversity Project\\
-Gambian Fula & 100 & Gambian Genome Variation Project\\
-Gambian Jola & 100 & Gambian Genome Variation Project\\
-Gambian Mandinka & 278 & 1000 Genomes\\
-Gambian Mandinka,Gambian & 2 & 1000 Genomes\\
-Gambian Wolof & 100 & Gambian Genome Variation Project\\
-Georgian & 2 & Simons Genome Diversity Project\\
-Greek & 2 & Simons Genome Diversity Project\\
-Gujarati & 113 & 1000 Genomes\\
-Han & 33 & Human Genome Diversity Project\\
-Han Chinese & 112 & 1000 Genomes\\
-Hawaiian & 1 & Simons Genome Diversity Project\\
-Hazara & 20 & Human Genome Diversity Project\\
-Hezhen & 9 & Human Genome Diversity Project\\
-Hungarian & 2 & Simons Genome Diversity Project\\
-Iberian & 160 & 1000 Genomes\\
-Iberian,Spanish & 2 & 1000 Genomes\\
-Icelandic & 2 & Simons Genome Diversity Project\\
-Igorot & 2 & Simons Genome Diversity Project\\
-Iranian & 2 & Simons Genome Diversity Project\\
-Iraqi Jew & 2 & Simons Genome Diversity Project\\
-Irula & 2 & Simons Genome Diversity Project\\
-Itelman & 1 & Simons Genome Diversity Project\\
-Japanese & 133 & 1000 Genomes\\
-Japanese,Japanese & 1 & 1000 Genomes\\
-Jordanian & 3 & Simons Genome Diversity Project\\
-Ju|'hoan North & 2 & Simons Genome Diversity Project\\
-Ju|'hoan North,San & 2 & Simons Genome Diversity Project\\
-Kalash & 23 & Human Genome Diversity Project\\
-Kapu & 2 & Simons Genome Diversity Project\\
-Karitiana & 12 & Human Genome Diversity Project\\
-Khomani San & 2 & Simons Genome Diversity Project\\
-Khonda Dora & 1 & Simons Genome Diversity Project\\
-Kinh Vietnamese & 122 & 1000 Genomes\\
-Kinh,Kinh Vietnamese & 2 & 1000 Genomes\\
-Korean & 2 & Simons Genome Diversity Project\\
-Kusunda & 2 & Simons Genome Diversity Project\\
-Kyrgyz & 2 & Simons Genome Diversity Project\\
-Lahu & 8 & Human Genome Diversity Project\\
-Lezgin & 2 & Simons Genome Diversity Project\\
-Luhya & 114 & 1000 Genomes\\
-Luhya,Luhya & 2 & 1000 Genomes\\
-Luo & 2 & Simons Genome Diversity Project\\
-Madiga & 1 & Simons Genome Diversity Project\\
-Makrani & 25 & Human Genome Diversity Project\\
-Mandenka & 23 & Human Genome Diversity Project\\
-Mansi & 2 & Simons Genome Diversity Project\\
-Maori & 1 & Simons Genome Diversity Project\\
-Masai & 2 & Simons Genome Diversity Project\\
-Maya & 19 & HGDP Transcriptome\\
-Mayan,Maya & 2 & Simons Genome Diversity Project\\
-Mbuti & 13 & Human Genome Diversity Project\\
-Mbuti,Mbuti & 2 & Simons Genome Diversity Project\\
-Mende & 126 & 1000 Genomes\\
-Mende,Mende & 2 & 1000 Genomes\\
-Mexican Ancestry & 107 & 1000 Genomes\\
-Miao & 10 & Human Genome Diversity Project\\
-Mixe & 3 & Simons Genome Diversity Project\\
-Mixtec & 2 & Simons Genome Diversity Project\\
-Mongola & 2 & Simons Genome Diversity Project\\
-Mongolian & 8 & Human Genome Diversity Project\\
-Mozabite & 27 & Human Genome Diversity Project\\
-Mozabite,Mozabite & 1 & Simons Genome Diversity Project\\
-Naxi & 9 & Simons Genome Diversity Project\\
-North Ossetian & 2 & Simons Genome Diversity Project\\
-Northern Han & 10 & Human Genome Diversity Project\\
-Norwegian & 1 & Simons Genome Diversity Project\\
-Orcadian & 15 & Human Genome Diversity Project\\
-Oroqen & 9 & Human Genome Diversity Project\\
-Palestinian & 46 & Human Genome Diversity Project\\
-Papuan & 3 & Simons Genome Diversity Project\\
-Papuan Sepik & 2 & Human Genome Diversity Project\\
-Papuan,Papuan Highlands & 6 & Simons Genome Diversity Project\\
-Papuan,Papuan Sepik & 6 & Simons Genome Diversity Project\\
-Pathan & 23 & Human Genome Diversity Project\\
-Pathan,Pathan & 1 & Simons Genome Diversity Project\\
-Peruvian & 130 & 1000 Genomes\\
-Piapoco & 2 & Simons Genome Diversity Project\\
-Pima & 14 & Human Genome Diversity Project\\
-Polish & 1 & Simons Genome Diversity Project\\
-Puerto Rican & 150 & 1000 Genomes\\
-Punjabi & 154 & 1000 Genomes\\
-Punjabi,Punjabi & 4 & 1000 Genomes\\
-Quechua & 3 & Simons Genome Diversity Project\\
-Relli & 2 & Simons Genome Diversity Project\\
-Russian & 25 & Human Genome Diversity Project\\
-Saami & 2 & Simons Genome Diversity Project\\
-Saharawi & 2 & Simons Genome Diversity Project\\
-Samaritan & 1 & Simons Genome Diversity Project\\
-San & 2 & Human Genome Diversity Project\\
-Sardinian & 27 & Human Genome Diversity Project\\
-She & 10 & Human Genome Diversity Project\\
-Sindhi & 24 & Human Genome Diversity Project\\
-Somali & 1 & Simons Genome Diversity Project\\
-Southern Han Chinese & 171 & 1000 Genomes\\
-Surui & 8 & Human Genome Diversity Project\\
-Tajik & 2 & Simons Genome Diversity Project\\
-Tamil & 128 & 1000 Genomes\\
-Telugu & 118 & 1000 Genomes\\
-Thai & 2 & Simons Genome Diversity Project\\
-Tlingit & 2 & Simons Genome Diversity Project\\
-Toscani & 112 & 1000 Genomes\\
-Tu & 10 & Human Genome Diversity Project\\
-Tubalar & 2 & Simons Genome Diversity Project\\
-Tujia & 10 & Human Genome Diversity Project\\
-Turkish & 2 & Simons Genome Diversity Project\\
-Tuscan & 8 & Human Genome Diversity Project\\
-Ulchi & 2 & Simons Genome Diversity Project\\
-Uygur & 10 & Human Genome Diversity Project\\
-Xibo & 9 & Human Genome Diversity Project\\
-Yadava & 2 & Simons Genome Diversity Project\\
-Yakut & 25 & Human Genome Diversity Project\\
-Yemenite Jew & 2 & Simons Genome Diversity Project\\
-Yi & 10 & Human Genome Diversity Project\\
-Yoruba & 207 & 1000 Genomes\\
-Zapotec & 2 & Simons Genome Diversity Project\\*
-\end{longtable}
+\end{tabular}
 \endgroup{}
+\caption{Population codes and number of individuals for each 1000 genomes populations.}
+\end{table}
+
+Population codes and populations can be found at \url{https://www.coriell.org/0/Sections/Collections/NHGRI/1000genome.aspx?PgId=664&coll=HG}.
+
+
+
 
 
 \section{Human Origins dataset} \label{HumanOriginsAppendix}
@@ -870,6 +723,974 @@ West Sussex & 26\\
 Worcestershire & 34\\*
 \end{longtable}
 \endgroup{}
+
+\section{Reference ancient samples}
+
+\begingroup\fontsize{9}{11}\selectfont
+
+\begin{longtable}[t]{lllr}
+\toprule
+sample\_ID & country & paper & coverage\\
+\midrule
+\endfirsthead
+\multicolumn{4}{@{}l}{\textit{(continued)}}\\
+\toprule
+sample\_ID & country & paper & coverage\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
+NE4 & Bukk & Gamba\_2014 & 0.10\\
+LIB11 & Czechia & zuzana\_new & 5.34\\
+LIB12 & Czechia & zuzana\_new & 6.75\\
+LIB2 & Czechia & zuzana\_new & 6.39\\
+LIB3 & Czechia & zuzana\_new & 5.30\\
+LIB4 & Czechia & zuzana\_new & 6.46\\
+LIB5 & Czechia & zuzana\_new & 7.33\\
+LIB7 & Czechia & zuzana\_new & 5.64\\
+POH11 & Czechia & zuzana\_new & 4.99\\
+POH13 & Czechia & zuzana\_new & 5.95\\
+POH27 & Czechia & zuzana\_new & 5.87\\
+POH28 & Czechia & zuzana\_new & 5.59\\
+POH3 & Czechia & zuzana\_new & 5.48\\
+POH36 & Czechia & zuzana\_new & 5.31\\
+POH39 & Czechia & zuzana\_new & 5.39\\
+POH40 & Czechia & zuzana\_new & 5.47\\
+POH41 & Czechia & zuzana\_new & 5.22\\
+POH44 & Czechia & zuzana\_new & 5.34\\
+VK133 & Denmark & Margaryan\_20 & 0.04\\
+VK134 & Denmark & Margaryan\_20 & 0.64\\
+VK135 & Denmark & Margaryan\_20 & 0.01\\
+VK138 & Denmark & Margaryan\_20 & 0.39\\
+VK139 & Denmark & Margaryan\_20 & 0.56\\
+VK140 & Denmark & Margaryan\_20 & 0.02\\
+VK141 & Denmark & Margaryan\_20 & 1.91\\
+VK213 & Denmark & Margaryan\_20 & 0.12\\
+VK214 & Denmark & Margaryan\_20 & 0.13\\
+VK215 & Denmark & Margaryan\_20 & 0.07\\
+VK216 & Denmark & Margaryan\_20 & 0.03\\
+VK247 & Denmark & Margaryan\_20 & 0.05\\
+VK274 & Denmark & Margaryan\_20 & 1.72\\
+VK275 & Denmark & Margaryan\_20 & 0.45\\
+VK276 & Denmark & Margaryan\_20 & 0.12\\
+VK278 & Denmark & Margaryan\_20 & 0.66\\
+VK279 & Denmark & Margaryan\_20 & 2.39\\
+VK280 & Denmark & Margaryan\_20 & 0.34\\
+VK281 & Denmark & Margaryan\_20 & 2.05\\
+VK282 & Denmark & Margaryan\_20 & 0.44\\
+VK284 & Denmark & Margaryan\_20 & 1.11\\
+VK285 & Denmark & Margaryan\_20 & 0.66\\
+VK286 & Denmark & Margaryan\_20 & 0.81\\
+VK287 & Denmark & Margaryan\_20 & 0.50\\
+VK288 & Denmark & Margaryan\_20 & 0.83\\
+VK289 & Denmark & Margaryan\_20 & 0.81\\
+VK290 & Denmark & Margaryan\_20 & 1.42\\
+VK291 & Denmark & Margaryan\_20 & 1.11\\
+VK292 & Denmark & Margaryan\_20 & 0.10\\
+VK294 & Denmark & Margaryan\_20 & 1.13\\
+VK295 & Denmark & Margaryan\_20 & 0.57\\
+VK296 & Denmark & Margaryan\_20 & 0.46\\
+VK297 & Denmark & Margaryan\_20 & 0.67\\
+VK298 & Denmark & Margaryan\_20 & 0.40\\
+VK300 & Denmark & Margaryan\_20 & 0.51\\
+VK301 & Denmark & Margaryan\_20 & 0.73\\
+VK312 & Denmark & Margaryan\_20 & 0.36\\
+VK313 & Denmark & Margaryan\_20 & 0.32\\
+VK314 & Denmark & Margaryan\_20 & 0.30\\
+VK315 & Denmark & Margaryan\_20 & 0.58\\
+VK316 & Denmark & Margaryan\_20 & 1.46\\
+VK317 & Denmark & Margaryan\_20 & 1.23\\
+VK318 & Denmark & Margaryan\_20 & 0.00\\
+VK319 & Denmark & Margaryan\_20 & 0.56\\
+VK320 & Denmark & Margaryan\_20 & 1.37\\
+VK322 & Denmark & Margaryan\_20 & 1.26\\
+VK323 & Denmark & Margaryan\_20 & 1.35\\
+VK324 & Denmark & Margaryan\_20 & 1.35\\
+VK325 & Denmark & Margaryan\_20 & 0.59\\
+VK326 & Denmark & Margaryan\_20 & 1.26\\
+VK327 & Denmark & Margaryan\_20 & 1.16\\
+VK328 & Denmark & Margaryan\_20 & 1.14\\
+VK329 & Denmark & Margaryan\_20 & 1.20\\
+VK330 & Denmark & Margaryan\_20 & 1.06\\
+VK338 & Denmark & Margaryan\_20 & 0.57\\
+VK339 & Denmark & Margaryan\_20 & 0.01\\
+VK340 & Denmark & Margaryan\_20 & 0.63\\
+VK361 & Denmark & Margaryan\_20 & 1.26\\
+VK362 & Denmark & Margaryan\_20 & 0.64\\
+VK363 & Denmark & Margaryan\_20 & 1.34\\
+VK364 & Denmark & Margaryan\_20 & 1.58\\
+VK365 & Denmark & Margaryan\_20 & 0.76\\
+VK366 & Denmark & Margaryan\_20 & 0.67\\
+VK367 & Denmark & Margaryan\_20 & 1.05\\
+VK368 & Denmark & Margaryan\_20 & 1.26\\
+VK369 & Denmark & Margaryan\_20 & 1.14\\
+VK370 & Denmark & Margaryan\_20 & 1.31\\
+VK371 & Denmark & Margaryan\_20 & 0.66\\
+VK372 & Denmark & Margaryan\_20 & 1.35\\
+VK373 & Denmark & Margaryan\_20 & 1.09\\
+VK383 & Denmark & Margaryan\_20 & 0.04\\
+VK384 & Denmark & Margaryan\_20 & 1.21\\
+VK385 & Denmark & Margaryan\_20 & 1.53\\
+VK411 & Denmark & Margaryan\_20 & 0.02\\
+VK445 & Denmark & Margaryan\_20 & 1.36\\
+VK446 & Denmark & Margaryan\_20 & 1.53\\
+VK521 & Denmark & Margaryan\_20 & 4.54\\
+VK532 & Denmark & Margaryan\_20 & 4.01\\
+VK582 & Denmark & Margaryan\_20 & 0.10\\
+VK65 & Denmark & Margaryan\_20 & 0.51\\
+VK69 & Denmark & Margaryan\_20 & 0.78\\
+VK70 & Denmark & Margaryan\_20 & 6.68\\
+VK71 & Denmark & Margaryan\_20 & 0.17\\
+VK84 & Denmark & Margaryan\_20 & 1.17\\
+VK86 & Denmark & Margaryan\_20 & 0.01\\
+VK87 & Denmark & Margaryan\_20 & 3.02\\
+VK90 & Denmark & Margaryan\_20 & 0.32\\
+VK92 & Denmark & Margaryan\_20 & 0.34\\
+VK94 & Denmark & Margaryan\_20 & 0.14\\
+VK480 & Estonia & Margaryan\_20 & 0.87\\
+VK481 & Estonia & Margaryan\_20 & 1.42\\
+VK482 & Estonia & Margaryan\_20 & 1.09\\
+VK483 & Estonia & Margaryan\_20 & 1.78\\
+VK484 & Estonia & Margaryan\_20 & 1.21\\
+VK485 & Estonia & Margaryan\_20 & 0.71\\
+VK486 & Estonia & Margaryan\_20 & 1.78\\
+VK487 & Estonia & Margaryan\_20 & 1.93\\
+VK488 & Estonia & Margaryan\_20 & 0.90\\
+VK489 & Estonia & Margaryan\_20 & 1.60\\
+VK490 & Estonia & Margaryan\_20 & 0.95\\
+VK491 & Estonia & Margaryan\_20 & 1.43\\
+VK492 & Estonia & Margaryan\_20 & 1.02\\
+VK493 & Estonia & Margaryan\_20 & 1.83\\
+VK495 & Estonia & Margaryan\_20 & 1.14\\
+VK496 & Estonia & Margaryan\_20 & 1.98\\
+VK497 & Estonia & Margaryan\_20 & 1.45\\
+VK498 & Estonia & Margaryan\_20 & 1.22\\
+VK504 & Estonia & Margaryan\_20 & 0.86\\
+VK505 & Estonia & Margaryan\_20 & 1.14\\
+VK506 & Estonia & Margaryan\_20 & 1.23\\
+VK507 & Estonia & Margaryan\_20 & 0.82\\
+VK508 & Estonia & Margaryan\_20 & 1.72\\
+VK509 & Estonia & Margaryan\_20 & 1.33\\
+VK510 & Estonia & Margaryan\_20 & 1.53\\
+VK511 & Estonia & Margaryan\_20 & 1.70\\
+VK512 & Estonia & Margaryan\_20 & 1.80\\
+VK549 & Estonia & Margaryan\_20 & 1.68\\
+VK550 & Estonia & Margaryan\_20 & 1.78\\
+VK551 & Estonia & Margaryan\_20 & 2.31\\
+VK552 & Estonia & Margaryan\_20 & 1.38\\
+VK553 & Estonia & Margaryan\_20 & 1.26\\
+VK554 & Estonia & Margaryan\_20 & 0.93\\
+VK555 & Estonia & Margaryan\_20 & 1.10\\
+VK234 & Faroes & Margaryan\_20 & 0.71\\
+VK236 & Faroes & Margaryan\_20 & 1.45\\
+VK237 & Faroes & Margaryan\_20 & 1.64\\
+VK238 & Faroes & Margaryan\_20 & 1.36\\
+VK239 & Faroes & Margaryan\_20 & 0.03\\
+VK24 & Faroes & Margaryan\_20 & 0.19\\
+VK240 & Faroes & Margaryan\_20 & 0.73\\
+VK241 & Faroes & Margaryan\_20 & 0.77\\
+VK242 & Faroes & Margaryan\_20 & 0.60\\
+VK244 & Faroes & Margaryan\_20 & 0.54\\
+VK245 & Faroes & Margaryan\_20 & 1.08\\
+VK248 & Faroes & Margaryan\_20 & 0.08\\
+VK25 & Faroes & Margaryan\_20 & 1.89\\
+VK27 & Faroes & Margaryan\_20 & 0.25\\
+VK44 & Faroes & Margaryan\_20 & 0.45\\
+VK45 & Faroes & Margaryan\_20 & 0.11\\
+VK46 & Faroes & Margaryan\_20 & 4.33\\
+FLR001 & France & Rivollat\_20 & 0.00\\
+FLR002 & France & Rivollat\_20 & 0.00\\
+FLR003 & France & Rivollat\_20 & 0.00\\
+FLR004 & France & Rivollat\_20 & 0.00\\
+FLR005 & France & Rivollat\_20 & 0.00\\
+FLR007 & France & Rivollat\_20 & 0.00\\
+FLR010 & France & Rivollat\_20 & 0.00\\
+FLR013 & France & Rivollat\_20 & 0.00\\
+FLR014 & France & Rivollat\_20 & 0.00\\
+GRG003 & France & Rivollat\_20 & 0.00\\
+GRG008 & France & Rivollat\_20 & 0.00\\
+GRG015 & France & Rivollat\_20 & 0.00\\
+GRG016 & France & Rivollat\_20 & 0.00\\
+GRG018 & France & Rivollat\_20 & 0.00\\
+GRG019 & France & Rivollat\_20 & 0.00\\
+GRG021 & France & Rivollat\_20 & 0.00\\
+GRG022 & France & Rivollat\_20 & 0.00\\
+GRG023 & France & Rivollat\_20 & 0.00\\
+GRG025 & France & Rivollat\_20 & 0.00\\
+GRG027 & France & Rivollat\_20 & 0.00\\
+GRG028 & France & Rivollat\_20 & 0.00\\
+GRG032 & France & Rivollat\_20 & 0.00\\
+GRG035 & France & Rivollat\_20 & 0.00\\
+GRG041 & France & Rivollat\_20 & 0.00\\
+GRG043 & France & Rivollat\_20 & 0.00\\
+GRG047 & France & Rivollat\_20 & 0.00\\
+GRG049 & France & Rivollat\_20 & 0.00\\
+GRG050 & France & Rivollat\_20 & 0.00\\
+GRG052 & France & Rivollat\_20 & 0.00\\
+GRG056 & France & Rivollat\_20 & 0.00\\
+GRG057 & France & Rivollat\_20 & 0.00\\
+LBR001 & France & Rivollat\_20 & 0.00\\
+LBR002 & France & Rivollat\_20 & 0.00\\
+LBR003 & France & Rivollat\_20 & 0.00\\
+LBR004 & France & Rivollat\_20 & 0.00\\
+LBR005 & France & Rivollat\_20 & 0.00\\
+OBN001 & France & Rivollat\_20 & 0.00\\
+OBN002 & France & Rivollat\_20 & 0.00\\
+OBN003 & France & Rivollat\_20 & 0.00\\
+OBN004 & France & Rivollat\_20 & 0.00\\
+OBN005 & France & Rivollat\_20 & 0.00\\
+OBN006 & France & Rivollat\_20 & 0.00\\
+OBN007 & France & Rivollat\_20 & 0.00\\
+OBN008 & France & Rivollat\_20 & 0.00\\
+OBN009 & France & Rivollat\_20 & 0.00\\
+OBN010 & France & Rivollat\_20 & 0.00\\
+OBN011 & France & Rivollat\_20 & 0.00\\
+PEN001\_real1 & France & Rivollat\_20 & 0.00\\
+PEN001\_real2 & France & Rivollat\_20 & 0.00\\
+PEN003 & France & Rivollat\_20 & 0.00\\
+PRI001 & France & Rivollat\_20 & 0.00\\
+PRI005 & France & Rivollat\_20 & 0.00\\
+PRI006 & France & Rivollat\_20 & 0.00\\
+BDB001 & Germany & Rivollat\_20 & 0.00\\
+BOT004 & Germany & Rivollat\_20 & 0.00\\
+BOT005 & Germany & Rivollat\_20 & 0.00\\
+Dill16 & Germany & Marchi\_2020 & 10.60\\
+Ess7 & Germany & Marchi\_2020 & 12.34\\
+FN2 & Germany & Veeramah\_2018 & 11.08\\
+HBS002 & Germany & Rivollat\_20 & 0.00\\
+HBS004 & Germany & Rivollat\_20 & 0.00\\
+HBS005 & Germany & Rivollat\_20 & 0.00\\
+HBS006 & Germany & Rivollat\_20 & 0.00\\
+HBS007 & Germany & Rivollat\_20 & 0.00\\
+HBS008 & Germany & Rivollat\_20 & 0.00\\
+HBS009 & Germany & Rivollat\_20 & 0.00\\
+SCH001 & Germany & Rivollat\_20 & 0.00\\
+SCH004 & Germany & Rivollat\_20 & 0.00\\
+SCH007 & Germany & Rivollat\_20 & 0.00\\
+SCH009 & Germany & Rivollat\_20 & 0.00\\
+SCH010 & Germany & Rivollat\_20 & 0.00\\
+SCH011 & Germany & Rivollat\_20 & 0.00\\
+SCH014 & Germany & Rivollat\_20 & 0.00\\
+SCH015 & Germany & Rivollat\_20 & 0.00\\
+SCH016 & Germany & Rivollat\_20 & 0.00\\
+SCH018 & Germany & Rivollat\_20 & 0.00\\
+SMH004 & Germany & Rivollat\_20 & 0.00\\
+TGM008 & Germany & Rivollat\_20 & 0.00\\
+TGM009 & Germany & Rivollat\_20 & 0.00\\
+XN164 & Germany & Rivollat\_20 & 0.00\\
+XN165 & Germany & Rivollat\_20 & 0.00\\
+XN166 & Germany & Rivollat\_20 & 0.00\\
+XN167 & Germany & Rivollat\_20 & 0.00\\
+XN168 & Germany & Rivollat\_20 & 0.00\\
+XN169 & Germany & Rivollat\_20 & 0.00\\
+XN170 & Germany & Rivollat\_20 & 0.00\\
+XN171 & Germany & Rivollat\_20 & 0.00\\
+XN172 & Germany & Rivollat\_20 & 0.00\\
+XN173 & Germany & Rivollat\_20 & 0.00\\
+XN174 & Germany & Rivollat\_20 & 0.00\\
+XN175 & Germany & Rivollat\_20 & 0.00\\
+XN178 & Germany & Rivollat\_20 & 0.00\\
+XN180 & Germany & Rivollat\_20 & 0.00\\
+XN182 & Germany & Rivollat\_20 & 0.00\\
+XN183 & Germany & Rivollat\_20 & 0.00\\
+XN188 & Germany & Rivollat\_20 & 0.00\\
+XN191 & Germany & Rivollat\_20 & 0.00\\
+XN205 & Germany & Rivollat\_20 & 0.00\\
+XN206 & Germany & Rivollat\_20 & 0.00\\
+XN207 & Germany & Rivollat\_20 & 0.00\\
+XN211 & Germany & Rivollat\_20 & 0.00\\
+XN215 & Germany & Rivollat\_20 & 0.00\\
+XN224 & Germany & Rivollat\_20 & 0.00\\
+XN225 & Germany & Rivollat\_20 & 0.00\\
+VK1 & Greenland & Margaryan\_20 & 11.77\\
+VK11 & Greenland & Margaryan\_20 & 0.08\\
+VK179 & Greenland & Margaryan\_20 & 1.84\\
+VK180 & Greenland & Margaryan\_20 & 0.01\\
+VK182 & Greenland & Margaryan\_20 & 0.01\\
+VK183 & Greenland & Margaryan\_20 & 0.54\\
+VK184 & Greenland & Margaryan\_20 & 1.31\\
+VK185 & Greenland & Margaryan\_20 & 0.00\\
+VK186 & Greenland & Margaryan\_20 & 0.81\\
+VK187 & Greenland & Margaryan\_20 & 0.91\\
+VK189 & Greenland & Margaryan\_20 & 0.06\\
+VK190 & Greenland & Margaryan\_20 & 6.50\\
+VK191 & Greenland & Margaryan\_20 & 0.03\\
+VK193 & Greenland & Margaryan\_20 & 0.05\\
+VK196 & Greenland & Margaryan\_20 & 0.05\\
+VK513 & Greenland & Margaryan\_20 & 2.26\\
+VK6 & Greenland & Margaryan\_20 & 2.97\\
+VK74 & Greenland & Margaryan\_20 & 0.00\\
+VK75 & Greenland & Margaryan\_20 & 0.27\\
+VK76 & Greenland & Margaryan\_20 & 0.00\\
+VK77 & Greenland & Margaryan\_20 & 0.01\\
+VK78 & Greenland & Margaryan\_20 & 0.03\\
+VK9 & Greenland & Margaryan\_20 & 0.10\\
+VK101 & Iceland & Margaryan\_20 & 1.93\\
+VK102 & Iceland & Margaryan\_20 & 4.16\\
+VK110 & Iceland & Margaryan\_20 & 1.79\\
+VK111 & Iceland & Margaryan\_20 & 1.08\\
+VK122 & Iceland & Margaryan\_20 & 1.31\\
+VK123 & Iceland & Margaryan\_20 & 1.15\\
+VK127 & Iceland & Margaryan\_20 & 1.06\\
+VK128 & Iceland & Margaryan\_20 & 1.49\\
+VK129 & Iceland & Margaryan\_20 & 3.62\\
+VK225 & Iceland & Margaryan\_20 & 0.59\\
+VK226 & Iceland & Margaryan\_20 & 0.04\\
+VK227 & Iceland & Margaryan\_20 & 0.54\\
+VK228 & Iceland & Margaryan\_20 & 0.05\\
+VK230 & Iceland & Margaryan\_20 & 2.51\\
+VK95 & Iceland & Margaryan\_20 & 1.32\\
+VK98 & Iceland & Margaryan\_20 & 2.49\\
+VK99 & Iceland & Margaryan\_20 & 0.74\\
+Rathlin1 & Ireland & Cassidy\_2015 & 10.50\\
+Rathlin2 & Ireland & Cassidy\_2015 & 1.49\\
+Rathlin3 & Ireland & Cassidy\_2015 & 0.75\\
+VK543 & Ireland & Margaryan\_20 & 1.00\\
+VK544 & Ireland & Margaryan\_20 & 1.61\\
+VK545 & Ireland & Margaryan\_20 & 1.85\\
+VK546 & Ireland & Margaryan\_20 & 0.09\\
+VK170 & IsleOfMan & Margaryan\_20 & 1.22\\
+VK534 & Italy & Margaryan\_20 & 1.16\\
+VK535 & Italy & Margaryan\_20 & 1.24\\
+VK536 & Italy & Margaryan\_20 & 1.04\\
+VK537 & Italy & Margaryan\_20 & 1.39\\
+VK538 & Italy & Margaryan\_20 & 1.20\\
+BOT14 & Kazakhstan & deBarrosDamgaard\_2018a\_FirstHorse & 3.70\\
+BOT15 & Kazakhstan & deBarrosDamgaard\_2018a\_FirstHorse & 3.00\\
+BOT2016 & Kazakhstan & deBarrosDamgaard\_2018a\_FirstHorse & 13.60\\
+Loschbour & Luxembourg & Lazaridis\_2014 & 22.00\\
+VK113 & Norway & Margaryan\_20 & 0.12\\
+VK114 & Norway & Margaryan\_20 & 0.16\\
+VK116 & Norway & Margaryan\_20 & 0.01\\
+VK117 & Norway & Margaryan\_20 & 0.23\\
+VK118 & Norway & Margaryan\_20 & 6.08\\
+VK124 & Norway & Margaryan\_20 & 0.20\\
+VK125 & Norway & Margaryan\_20 & 0.00\\
+VK386 & Norway & Margaryan\_20 & 1.22\\
+VK387 & Norway & Margaryan\_20 & 1.09\\
+VK388 & Norway & Margaryan\_20 & 0.98\\
+VK389 & Norway & Margaryan\_20 & 1.11\\
+VK390 & Norway & Margaryan\_20 & 1.45\\
+VK391 & Norway & Margaryan\_20 & 0.42\\
+VK392 & Norway & Margaryan\_20 & 1.05\\
+VK393 & Norway & Margaryan\_20 & 1.20\\
+VK394 & Norway & Margaryan\_20 & 0.74\\
+VK414 & Norway & Margaryan\_20 & 1.23\\
+VK415 & Norway & Margaryan\_20 & 1.22\\
+VK417 & Norway & Margaryan\_20 & 1.15\\
+VK418 & Norway & Margaryan\_20 & 0.93\\
+VK419 & Norway & Margaryan\_20 & 1.23\\
+VK420 & Norway & Margaryan\_20 & 1.53\\
+VK421 & Norway & Margaryan\_20 & 0.01\\
+VK422 & Norway & Margaryan\_20 & 1.07\\
+VK448 & Norway & Margaryan\_20 & 2.23\\
+VK514 & Norway & Margaryan\_20 & 1.03\\
+VK515 & Norway & Margaryan\_20 & 0.64\\
+VK516 & Norway & Margaryan\_20 & 1.43\\
+VK518 & Norway & Margaryan\_20 & 0.44\\
+VK519 & Norway & Margaryan\_20 & 0.22\\
+VK520 & Norway & Margaryan\_20 & 1.77\\
+VK523 & Norway & Margaryan\_20 & 1.01\\
+VK524 & Norway & Margaryan\_20 & 1.61\\
+VK525 & Norway & Margaryan\_20 & 1.11\\
+VK526 & Norway & Margaryan\_20 & 2.03\\
+VK528 & Norway & Margaryan\_20 & 1.60\\
+VK529 & Norway & Margaryan\_20 & 1.81\\
+VK530 & Norway & Margaryan\_20 & 0.97\\
+VK531 & Norway & Margaryan\_20 & 1.40\\
+VK547 & Norway & Margaryan\_20 & 4.73\\
+VK548 & Norway & Margaryan\_20 & 3.41\\
+RISE150 & Poland & Allentoft\_2015 & 2.63\\
+VK153 & Poland & Margaryan\_20 & 0.07\\
+VK154 & Poland & Margaryan\_20 & 2.94\\
+VK155 & Poland & Margaryan\_20 & 0.27\\
+VK156 & Poland & Margaryan\_20 & 0.96\\
+VK157 & Poland & Margaryan\_20 & 0.98\\
+VK200 & Poland & Margaryan\_20 & 0.02\\
+VK210 & Poland & Margaryan\_20 & 0.05\\
+VK211 & Poland & Margaryan\_20 & 0.10\\
+VK212 & Poland & Margaryan\_20 & 0.34\\
+VK494 & Poland & Margaryan\_20 & 0.16\\
+DA245 & Russia & deBarrosDamgaard\_2018a\_FirstHorse & 2.20\\
+DA246 & Russia & deBarrosDamgaard\_2018a\_FirstHorse & 2.90\\
+DA247 & Russia & deBarrosDamgaard\_2018a\_FirstHorse & 2.40\\
+DA248 & Russia & deBarrosDamgaard\_2018a\_FirstHorse & 2.30\\
+DA249 & Russia & deBarrosDamgaard\_2018a\_FirstHorse & 4.50\\
+DA250 & Russia & deBarrosDamgaard\_2018a\_FirstHorse & 0.90\\
+DA252 & Russia & deBarrosDamgaard\_2018a\_FirstHorse & 2.40\\
+DA253 & Russia & deBarrosDamgaard\_2018a\_FirstHorse & 2.70\\
+DA337 & Russia & deBarrosDamgaard\_2018a\_FirstHorse & 1.10\\
+DA341 & Russia & deBarrosDamgaard\_2018a\_FirstHorse & 1.20\\
+DA342 & Russia & deBarrosDamgaard\_2018a\_FirstHorse & 1.70\\
+DA345 & Russia & deBarrosDamgaard\_2018a\_FirstHorse & 1.00\\
+VK14 & Russia & Margaryan\_20 & 0.16\\
+VK15 & Russia & Margaryan\_20 & 1.22\\
+VK158 & Russia & Margaryan\_20 & 0.04\\
+VK159 & Russia & Margaryan\_20 & 0.36\\
+VK16 & Russia & Margaryan\_20 & 0.23\\
+VK160 & Russia & Margaryan\_20 & 1.78\\
+VK161 & Russia & Margaryan\_20 & 0.02\\
+VK17 & Russia & Margaryan\_20 & 0.52\\
+VK18 & Russia & Margaryan\_20 & 0.77\\
+VK19 & Russia & Margaryan\_20 & 0.63\\
+VK20 & Russia & Margaryan\_20 & 0.50\\
+VK21 & Russia & Margaryan\_20 & 0.18\\
+VK218 & Russia & Margaryan\_20 & 0.58\\
+VK219 & Russia & Margaryan\_20 & 1.58\\
+VK22 & Russia & Margaryan\_20 & 0.12\\
+VK220 & Russia & Margaryan\_20 & 1.82\\
+VK221 & Russia & Margaryan\_20 & 1.95\\
+VK222 & Russia & Margaryan\_20 & 0.00\\
+VK223 & Russia & Margaryan\_20 & 0.35\\
+VK224 & Russia & Margaryan\_20 & 0.22\\
+VK23 & Russia & Margaryan\_20 & 0.33\\
+VK252 & Russia & Margaryan\_20 & 0.00\\
+VK253 & Russia & Margaryan\_20 & 0.01\\
+VK254 & Russia & Margaryan\_20 & 0.52\\
+VK255 & Russia & Margaryan\_20 & 0.07\\
+VK272 & Russia & Margaryan\_20 & 0.20\\
+VK273 & Russia & Margaryan\_20 & 1.09\\
+VK408 & Russia & Margaryan\_20 & 0.17\\
+VK409 & Russia & Margaryan\_20 & 0.17\\
+VK410 & Russia & Margaryan\_20 & 0.13\\
+VK413 & Russia & Margaryan\_20 & 0.03\\
+VK466 & Russia & Margaryan\_20 & 0.12\\
+VK470 & Russia & Margaryan\_20 & 0.03\\
+VLASAC32 & Serbia & Marchi\_2020 & 12.65\\
+VLASAC7 & Serbia & Marchi\_2020 & 15.21\\
+ans008 & Sweden & Sannchez-Quinto\_2019 & 1.94\\
+ans014 & Sweden & Sannchez-Quinto\_2019 & 2.58\\
+ans017 & Sweden & Sannchez-Quinto\_2019 & 2.58\\
+VK108 & Sweden & Margaryan\_20 & 0.87\\
+VK217 & Sweden & Margaryan\_20 & 0.14\\
+VK232 & Sweden & Margaryan\_20 & 0.32\\
+VK251 & Sweden & Margaryan\_20 & 0.04\\
+VK265 & Sweden & Margaryan\_20 & 1.15\\
+VK266 & Sweden & Margaryan\_20 & 0.75\\
+VK267 & Sweden & Margaryan\_20 & 0.06\\
+VK268 & Sweden & Margaryan\_20 & 0.16\\
+VK269 & Sweden & Margaryan\_20 & 0.07\\
+VK270 & Sweden & Margaryan\_20 & 0.04\\
+VK29 & Sweden & Margaryan\_20 & 3.21\\
+VK30 & Sweden & Margaryan\_20 & 0.57\\
+VK303 & Sweden & Margaryan\_20 & 2.50\\
+VK304 & Sweden & Margaryan\_20 & 0.01\\
+VK306 & Sweden & Margaryan\_20 & 1.05\\
+VK308 & Sweden & Margaryan\_20 & 1.46\\
+VK309 & Sweden & Margaryan\_20 & 0.31\\
+VK31 & Sweden & Margaryan\_20 & 0.38\\
+VK33 & Sweden & Margaryan\_20 & 0.94\\
+VK332 & Sweden & Margaryan\_20 & 1.46\\
+VK333 & Sweden & Margaryan\_20 & 1.17\\
+VK334 & Sweden & Margaryan\_20 & 0.55\\
+VK335 & Sweden & Margaryan\_20 & 1.06\\
+VK336 & Sweden & Margaryan\_20 & 1.21\\
+VK337 & Sweden & Margaryan\_20 & 2.04\\
+VK34 & Sweden & Margaryan\_20 & 1.19\\
+VK342 & Sweden & Margaryan\_20 & 1.40\\
+VK343 & Sweden & Margaryan\_20 & 1.26\\
+VK344 & Sweden & Margaryan\_20 & 0.98\\
+VK345 & Sweden & Margaryan\_20 & 1.09\\
+VK346 & Sweden & Margaryan\_20 & 1.26\\
+VK347 & Sweden & Margaryan\_20 & 0.02\\
+VK348 & Sweden & Margaryan\_20 & 1.03\\
+VK349 & Sweden & Margaryan\_20 & 1.25\\
+VK35 & Sweden & Margaryan\_20 & 1.11\\
+VK350 & Sweden & Margaryan\_20 & 1.56\\
+VK352 & Sweden & Margaryan\_20 & 1.15\\
+VK353 & Sweden & Margaryan\_20 & 1.30\\
+VK354 & Sweden & Margaryan\_20 & 0.67\\
+VK355 & Sweden & Margaryan\_20 & 1.13\\
+VK357 & Sweden & Margaryan\_20 & 1.39\\
+VK358 & Sweden & Margaryan\_20 & 1.03\\
+VK359 & Sweden & Margaryan\_20 & 0.01\\
+VK379 & Sweden & Margaryan\_20 & 0.07\\
+VK380 & Sweden & Margaryan\_20 & 0.11\\
+VK382 & Sweden & Margaryan\_20 & 0.06\\
+VK39 & Sweden & Margaryan\_20 & 0.16\\
+VK395 & Sweden & Margaryan\_20 & 1.44\\
+VK396 & Sweden & Margaryan\_20 & 1.19\\
+VK397 & Sweden & Margaryan\_20 & 1.37\\
+VK398 & Sweden & Margaryan\_20 & 1.29\\
+VK399 & Sweden & Margaryan\_20 & 1.71\\
+VK40 & Sweden & Margaryan\_20 & 1.87\\
+VK400 & Sweden & Margaryan\_20 & 1.07\\
+VK401 & Sweden & Margaryan\_20 & 1.26\\
+VK402 & Sweden & Margaryan\_20 & 1.53\\
+VK403 & Sweden & Margaryan\_20 & 1.49\\
+VK404 & Sweden & Margaryan\_20 & 1.43\\
+VK405 & Sweden & Margaryan\_20 & 1.03\\
+VK406 & Sweden & Margaryan\_20 & 1.30\\
+VK407 & Sweden & Margaryan\_20 & 0.23\\
+VK42 & Sweden & Margaryan\_20 & 9.25\\
+VK424 & Sweden & Margaryan\_20 & 0.14\\
+VK425 & Sweden & Margaryan\_20 & 0.12\\
+VK426 & Sweden & Margaryan\_20 & 0.12\\
+VK427 & Sweden & Margaryan\_20 & 0.11\\
+VK428 & Sweden & Margaryan\_20 & 0.18\\
+VK429 & Sweden & Margaryan\_20 & 2.73\\
+VK430 & Sweden & Margaryan\_20 & 0.18\\
+VK431 & Sweden & Margaryan\_20 & 0.25\\
+VK432 & Sweden & Margaryan\_20 & 0.30\\
+VK433 & Sweden & Margaryan\_20 & 2.21\\
+VK434 & Sweden & Margaryan\_20 & 0.26\\
+VK435 & Sweden & Margaryan\_20 & 0.06\\
+VK437 & Sweden & Margaryan\_20 & 0.02\\
+VK438 & Sweden & Margaryan\_20 & 0.22\\
+VK439 & Sweden & Margaryan\_20 & 0.16\\
+VK440 & Sweden & Margaryan\_20 & 0.07\\
+VK441 & Sweden & Margaryan\_20 & 0.03\\
+VK442 & Sweden & Margaryan\_20 & 1.24\\
+VK443 & Sweden & Margaryan\_20 & 2.11\\
+VK444 & Sweden & Margaryan\_20 & 0.79\\
+VK450 & Sweden & Margaryan\_20 & 0.12\\
+VK452 & Sweden & Margaryan\_20 & 0.23\\
+VK453 & Sweden & Margaryan\_20 & 0.17\\
+VK454 & Sweden & Margaryan\_20 & 0.25\\
+VK455 & Sweden & Margaryan\_20 & 1.60\\
+VK456 & Sweden & Margaryan\_20 & 1.39\\
+VK457 & Sweden & Margaryan\_20 & 0.19\\
+VK458 & Sweden & Margaryan\_20 & 0.18\\
+VK459 & Sweden & Margaryan\_20 & 0.19\\
+VK460 & Sweden & Margaryan\_20 & 0.29\\
+VK461 & Sweden & Margaryan\_20 & 0.27\\
+VK462 & Sweden & Margaryan\_20 & 0.09\\
+VK463 & Sweden & Margaryan\_20 & 0.27\\
+VK464 & Sweden & Margaryan\_20 & 0.08\\
+VK467 & Sweden & Margaryan\_20 & 0.01\\
+VK468 & Sweden & Margaryan\_20 & 2.83\\
+VK469 & Sweden & Margaryan\_20 & 0.23\\
+VK471 & Sweden & Margaryan\_20 & 0.22\\
+VK472 & Sweden & Margaryan\_20 & 0.06\\
+VK473 & Sweden & Margaryan\_20 & 1.40\\
+VK474 & Sweden & Margaryan\_20 & 1.59\\
+VK475 & Sweden & Margaryan\_20 & 4.49\\
+VK476 & Sweden & Margaryan\_20 & 0.12\\
+VK477 & Sweden & Margaryan\_20 & 1.17\\
+VK478 & Sweden & Margaryan\_20 & 1.58\\
+VK479 & Sweden & Margaryan\_20 & 1.82\\
+VK48 & Sweden & Margaryan\_20 & 0.49\\
+VK50 & Sweden & Margaryan\_20 & 6.23\\
+VK51 & Sweden & Margaryan\_20 & 0.62\\
+VK517 & Sweden & Margaryan\_20 & 1.04\\
+VK522 & Sweden & Margaryan\_20 & 7.14\\
+VK527 & Sweden & Margaryan\_20 & 1.12\\
+VK53 & Sweden & Margaryan\_20 & 0.80\\
+VK533 & Sweden & Margaryan\_20 & 4.83\\
+VK56 & Sweden & Margaryan\_20 & 1.06\\
+VK57 & Sweden & Margaryan\_20 & 0.21\\
+VK579 & Sweden & Margaryan\_20 & 0.13\\
+VK58 & Sweden & Margaryan\_20 & 4.51\\
+VK60 & Sweden & Margaryan\_20 & 0.79\\
+VK63 & Sweden & Margaryan\_20 & 0.19\\
+VK64 & Sweden & Margaryan\_20 & 0.87\\
+VK143 & UK & Margaryan\_20 & 1.04\\
+VK144 & UK & Margaryan\_20 & 0.16\\
+VK145 & UK & Margaryan\_20 & 1.11\\
+VK146 & UK & Margaryan\_20 & 1.18\\
+VK147 & UK & Margaryan\_20 & 0.82\\
+VK148 & UK & Margaryan\_20 & 0.04\\
+VK149 & UK & Margaryan\_20 & 0.01\\
+VK150 & UK & Margaryan\_20 & 1.03\\
+VK151 & UK & Margaryan\_20 & 1.14\\
+VK163 & UK & Margaryan\_20 & 0.02\\
+VK164 & UK & Margaryan\_20 & 0.00\\
+VK165 & UK & Margaryan\_20 & 1.11\\
+VK166 & UK & Margaryan\_20 & 4.50\\
+VK167 & UK & Margaryan\_20 & 0.90\\
+VK168 & UK & Margaryan\_20 & 1.19\\
+VK171 & UK & Margaryan\_20 & 0.11\\
+VK172 & UK & Margaryan\_20 & 1.19\\
+VK173 & UK & Margaryan\_20 & 1.23\\
+VK174 & UK & Margaryan\_20 & 0.94\\
+VK175 & UK & Margaryan\_20 & 0.91\\
+VK176 & UK & Margaryan\_20 & 2.42\\
+VK177 & UK & Margaryan\_20 & 1.06\\
+VK178 & UK & Margaryan\_20 & 0.89\\
+VK201 & UK & Margaryan\_20 & 1.40\\
+VK202 & UK & Margaryan\_20 & 1.13\\
+VK203 & UK & Margaryan\_20 & 1.31\\
+VK204 & UK & Margaryan\_20 & 1.03\\
+VK205 & UK & Margaryan\_20 & 1.19\\
+VK206 & UK & Margaryan\_20 & 0.01\\
+VK207 & UK & Margaryan\_20 & 0.70\\
+VK208 & UK & Margaryan\_20 & 0.07\\
+VK256 & UK & Margaryan\_20 & 1.36\\
+VK257 & UK & Margaryan\_20 & 1.02\\
+VK258 & UK & Margaryan\_20 & 1.02\\
+VK259 & UK & Margaryan\_20 & 1.18\\
+VK260 & UK & Margaryan\_20 & 0.90\\
+VK261 & UK & Margaryan\_20 & 1.05\\
+VK262 & UK & Margaryan\_20 & 1.22\\
+VK263 & UK & Margaryan\_20 & 1.37\\
+VK264 & UK & Margaryan\_20 & 0.99\\
+VK449 & UK & Margaryan\_20 & 1.43\\
+VK539 & Ukraine & Margaryan\_20 & 1.57\\
+VK540 & Ukraine & Margaryan\_20 & 0.88\\
+VK541 & Ukraine & Margaryan\_20 & 2.56\\
+VK542 & Ukraine & Margaryan\_20 & 1.20\\
+Alh1 &  & new\_bavaria & 11.34\\
+Alh10 &  & new\_bavaria & 10.43\\
+atp002 &  & Gunther\_2015 & 4.08\\
+atp016 &  & Gunther\_2015 & 1.11\\
+ATT26 &  & Brunel\_2020 & 0.00\\
+Ballynahatty &  & Cassidy\_2015 & 10.27\\
+Bar1 &  &  & 2.00\\
+Bar31 &  & Hofmanova\_2016 & 3.66\\
+Bar8 &  & Hofmanova\_2016 & 7.13\\
+BERG02-2 &  & Brunel\_2020 & 0.00\\
+BERG157-2 &  & Brunel\_2020 & 0.00\\
+BERG157-7 &  & Brunel\_2020 & 0.00\\
+BES1248 &  & Brunel\_2020 & 0.00\\
+BFM265 &  & Brunel\_2020 & 0.00\\
+Bichon &  & Jones\_2015 & 9.50\\
+BIS130 &  & Brunel\_2020 & 0.00\\
+BIS385 &  & Brunel\_2020 & 0.00\\
+BLP10 &  & Brunel\_2020 & 0.00\\
+BRU1 &  & new\_bavaria & 11.54\\
+BUCH2 &  & Brunel\_2020 & 0.00\\
+CBV95 &  & Brunel\_2020 & 0.00\\
+CO1 &  & Gamba\_2014 & 1.13\\
+COL11 &  & Brunel\_2020 & 0.00\\
+COL153A &  & Brunel\_2020 & 0.00\\
+COL153i &  & Brunel\_2020 & 0.00\\
+CRE20D &  & Brunel\_2020 & 0.00\\
+DA100 &  & deBarrosDamgaard\_2018b\_137 & 3.42\\
+DA104 &  & deBarrosDamgaard\_2018b\_137 & 1.11\\
+DA111 &  & deBarrosDamgaard\_2018b\_137 & 0.86\\
+DA116 &  & deBarrosDamgaard\_2018b\_137 & 1.00\\
+DA117 &  & deBarrosDamgaard\_2018b\_137 & 1.17\\
+DA118 &  & deBarrosDamgaard\_2018b\_137 & 1.49\\
+DA129 &  & deBarrosDamgaard\_2018b\_137 & 1.10\\
+DA13 &  & deBarrosDamgaard\_2018b\_137 & 1.54\\
+DA142 &  & deBarrosDamgaard\_2018b\_137 & 1.18\\
+DA16 &  & deBarrosDamgaard\_2018b\_137 & 1.05\\
+DA162 &  & deBarrosDamgaard\_2018b\_137 & 2.09\\
+DA164 &  & deBarrosDamgaard\_2018b\_137 & 1.08\\
+DA177 &  & deBarrosDamgaard\_2018b\_137 & 2.60\\
+DA179 &  & deBarrosDamgaard\_2018b\_137 & 1.52\\
+DA191 &  & deBarrosDamgaard\_2018b\_137 & 0.89\\
+DA195 &  & deBarrosDamgaard\_2018b\_137 & 0.87\\
+DA2 &  & deBarrosDamgaard\_2018b\_137 & 1.06\\
+DA204 &  & deBarrosDamgaard\_2018b\_137 & 1.03\\
+DA206 &  & deBarrosDamgaard\_2018b\_137 & 2.00\\
+DA221 &  & deBarrosDamgaard\_2018b\_137 & 2.98\\
+DA222 &  & deBarrosDamgaard\_2018b\_137 & 3.40\\
+DA223 &  & deBarrosDamgaard\_2018b\_137 & 2.76\\
+DA224 &  & deBarrosDamgaard\_2018b\_137 & 0.96\\
+DA227 &  & deBarrosDamgaard\_2018b\_137 & 1.18\\
+DA228 &  & deBarrosDamgaard\_2018b\_137 & 2.64\\
+DA23 &  & deBarrosDamgaard\_2018b\_137 & 2.05\\
+DA230 &  & deBarrosDamgaard\_2018b\_137 & 1.28\\
+DA243 &  & deBarrosDamgaard\_2018b\_137 & 3.11\\
+DA26 &  & deBarrosDamgaard\_2018b\_137 & 0.96\\
+DA27 &  & deBarrosDamgaard\_2018b\_137 & 2.00\\
+DA28 &  & deBarrosDamgaard\_2018b\_137 & 3.96\\
+DA29 &  & deBarrosDamgaard\_2018b\_137 & 1.12\\
+DA30 &  & deBarrosDamgaard\_2018b\_137 & 1.18\\
+DA35 &  & deBarrosDamgaard\_2018b\_137 & 1.58\\
+DA358 &  & deBarrosDamgaard\_2018a\_FirstHorse & 0.90\\
+DA362 &  & deBarrosDamgaard\_2018a\_FirstHorse & 1.10\\
+DA38 &  & deBarrosDamgaard\_2018b\_137 & 2.80\\
+DA382 &  & deBarrosDamgaard\_2018a\_FirstHorse & 2.50\\
+DA385 &  & deBarrosDamgaard\_2018b\_137 & 2.23\\
+DA39 &  & deBarrosDamgaard\_2018b\_137 & 2.00\\
+DA43 &  & deBarrosDamgaard\_2018b\_137 & 1.61\\
+DA45 &  & deBarrosDamgaard\_2018b\_137 & 8.67\\
+DA47 &  & deBarrosDamgaard\_2018b\_137 & 1.50\\
+DA50 &  & deBarrosDamgaard\_2018b\_137 & 0.92\\
+DA55 &  & deBarrosDamgaard\_2018b\_137 & 0.87\\
+DA56 &  & deBarrosDamgaard\_2018b\_137 & 1.49\\
+DA57 &  & deBarrosDamgaard\_2018b\_137 & 1.01\\
+DA58 &  & deBarrosDamgaard\_2018b\_137 & 0.86\\
+DA6 &  & deBarrosDamgaard\_2018b\_137 & 1.04\\
+DA69 &  & deBarrosDamgaard\_2018b\_137 & 0.89\\
+DA72 &  & deBarrosDamgaard\_2018b\_137 & 1.27\\
+DA74 &  & deBarrosDamgaard\_2018b\_137 & 0.92\\
+DA8 &  & deBarrosDamgaard\_2018b\_137 & 1.83\\
+DA80 &  & deBarrosDamgaard\_2018b\_137 & 1.04\\
+DA81 &  & deBarrosDamgaard\_2018b\_137 & 2.10\\
+DA85 &  & deBarrosDamgaard\_2018b\_137 & 1.85\\
+DA9 &  & deBarrosDamgaard\_2018b\_137 & 1.00\\
+DA93 &  & deBarrosDamgaard\_2018b\_137 & 1.46\\
+DA95 &  & deBarrosDamgaard\_2018b\_137 & 2.00\\
+DA96 &  & deBarrosDamgaard\_2018b\_137 & 0.94\\
+DA99 &  & deBarrosDamgaard\_2018b\_137 & 1.39\\
+DIN2 &  &  & 1.71\\
+EBA1 &  & deBarrosDamgaard\_2018a\_FirstHorse & 4.50\\
+EBA2 &  & deBarrosDamgaard\_2018a\_FirstHorse & 9.10\\
+Erg1 &  & new\_bavaria & 4.52\\
+Erg2 &  & new\_bavaria & 0.71\\
+ERS1164 &  & Brunel\_2020 & 0.00\\
+ERS86 &  & Brunel\_2020 & 0.00\\
+ERS88 &  & Brunel\_2020 & 0.00\\
+Es97-1 &  & Brunel\_2020 & 0.00\\
+EUG11 &  & Brunel\_2020 & 0.00\\
+F38 &  &  & 2.00\\
+Jeb8 &  & Brunel\_2020 & 0.00\\
+KER\_1 &  & zuzana\_new & 10.00\\
+Kir23 &  & Bavaria\_Earl & 17.52\\
+Kir24 &  & new\_bavaria & 3.98\\
+Kir25 &  & new\_bavaria & 4.55\\
+Kir26 &  & new\_bavaria & 4.84\\
+Kir27 &  & new\_bavaria & 16.60\\
+Kir28 &  & new\_bavaria & 17.30\\
+KK1 &  &  & 10.00\\
+Klei10 &  & Hofmanova\_2016 & 2.01\\
+KO1 &  & Gamba\_2014 & 1.24\\
+KO2 &  & Gamba\_2014 & 0.13\\
+Kostenki14 &  & Seguin-Orlando\_2014 & 1.00\\
+LaBrana &  & Olade\_2014 & 4.00\\
+MA2195 &  & deBarrosDamgaard\_2018a\_FirstHorse & 0.90\\
+MA2200 &  & deBarrosDamgaard\_2018a\_FirstHorse & 2.20\\
+MA2203 &  & deBarrosDamgaard\_2018a\_FirstHorse & 0.90\\
+MA2210 &  & deBarrosDamgaard\_2018a\_FirstHorse & 0.90\\
+MA2212 &  & deBarrosDamgaard\_2018a\_FirstHorse & 0.90\\
+MA2213 &  & deBarrosDamgaard\_2018a\_FirstHorse & 1.20\\
+MDV248 &  & Brunel\_2020 & 0.00\\
+Molz1 &  & new\_bavaria & 13.00\\
+Mor6 &  & Brunel\_2020 & 0.00\\
+Mota &  &  & 10.00\\
+NE1 &  & Gamba\_2014 & 22.12\\
+NE2 &  & Gamba\_2014 & 0.19\\
+NE3 &  & Gamba\_2014 & 0.13\\
+NE5 &  & Gamba\_2014 & 1.04\\
+NE6 &  & Gamba\_2014 & 1.18\\
+NE7 &  & Gamba\_2014 & 1.14\\
+NIED &  & Brunel\_2020 & 0.00\\
+NOR2B6 &  & Brunel\_2020 & 0.00\\
+NOR3-15 &  & Brunel\_2020 & 0.00\\
+NOR3-6 &  & Brunel\_2020 & 0.00\\
+NOR4 &  & Brunel\_2020 & 0.00\\
+NW\_54 &  & zuzana\_new & 10.00\\
+OBE3626-1 &  & Brunel\_2020 & 0.00\\
+OBE3722 &  & Brunel\_2020 & 0.00\\
+Pal7 &  & Hofmanova\_2016 & 1.28\\
+PECH5 &  & Brunel\_2020 & 0.00\\
+PECH8 &  & Brunel\_2020 & 0.00\\
+PEI10 &  & Brunel\_2020 & 0.00\\
+PEI2 &  & Brunel\_2020 & 0.00\\
+PER1150503 &  & Brunel\_2020 & 0.00\\
+PER3023 &  & Brunel\_2020 & 0.00\\
+PER3123 &  & Brunel\_2020 & 0.00\\
+PEY163 &  & Brunel\_2020 & 0.00\\
+PEY53 &  & Brunel\_2020 & 0.00\\
+PIR3037AB &  & Brunel\_2020 & 0.00\\
+PIR3116B &  & Brunel\_2020 & 0.00\\
+Pir4 &  & Brunel\_2020 & 0.00\\
+Pir6 &  & Brunel\_2020 & 0.00\\
+prs002 &  & Sannchez-Quinto\_2019 & 5.76\\
+prs009 &  & Sannchez-Quinto\_2019 & 7.10\\
+prs013 &  & Sannchez-Quinto\_2019 & 4.73\\
+prs016 &  & Sannchez-Quinto\_2019 & 6.40\\
+PSS4170 &  & Brunel\_2020 & 0.00\\
+PSS4693 &  & Brunel\_2020 & 0.00\\
+PT2 &  & Brunel\_2020 & 0.00\\
+QUIN234 &  & Brunel\_2020 & 0.00\\
+QUIN58 &  & Brunel\_2020 & 0.00\\
+R-11 &  & antonio\_19 & 0.92\\
+R1 &  & antonio\_19 & 3.94\\
+R10 &  & antonio\_19 & 1.30\\
+R1014 &  & antonio\_19 & 0.59\\
+R1015 &  & antonio\_19 & 0.87\\
+R1016 &  & antonio\_19 & 0.39\\
+R1021 &  & antonio\_19 & 0.56\\
+R104 &  & antonio\_19 & 0.85\\
+R105 &  & antonio\_19 & 1.13\\
+R106 &  & antonio\_19 & 1.06\\
+R107 &  & antonio\_19 & 1.47\\
+R108 &  & antonio\_19 & 1.06\\
+R109 &  & antonio\_19 & 0.49\\
+R110 &  & antonio\_19 & 0.68\\
+R111 &  & antonio\_19 & 0.59\\
+R113 &  & antonio\_19 & 0.61\\
+R114 &  & antonio\_19 & 1.17\\
+R115 &  & antonio\_19 & 1.10\\
+R116 &  & antonio\_19 & 1.05\\
+R117 &  & antonio\_19 & 0.95\\
+R118 &  & antonio\_19 & 0.63\\
+R120 &  & antonio\_19 & 0.51\\
+R121 &  & antonio\_19 & 0.61\\
+R1219 &  & antonio\_19 & 1.61\\
+R122 &  & antonio\_19 & 1.38\\
+R1220 &  & antonio\_19 & 1.02\\
+R1221 &  & antonio\_19 & 1.32\\
+R1224 &  & antonio\_19 & 1.10\\
+R123 &  & antonio\_19 & 0.66\\
+R125 &  & antonio\_19 & 0.67\\
+R126 &  & antonio\_19 & 1.04\\
+R128 &  & antonio\_19 & 0.92\\
+R1283 &  & antonio\_19 & 1.04\\
+R1285 &  & antonio\_19 & 0.99\\
+R1286 &  & antonio\_19 & 1.05\\
+R1287 &  & antonio\_19 & 1.14\\
+R1288 &  & antonio\_19 & 1.14\\
+R1289 &  & antonio\_19 & 0.76\\
+R1290 &  & antonio\_19 & 1.08\\
+R130 &  & antonio\_19 & 1.37\\
+R131 &  & antonio\_19 & 0.59\\
+R132 &  & antonio\_19 & 1.50\\
+R133 &  & antonio\_19 & 1.62\\
+R134 &  & antonio\_19 & 1.17\\
+R136 &  & antonio\_19 & 1.82\\
+R137 &  & antonio\_19 & 1.32\\
+R15 &  & antonio\_19 & 2.95\\
+R1543 &  & antonio\_19 & 0.99\\
+R1544 &  & antonio\_19 & 0.93\\
+R1545 &  & antonio\_19 & 1.52\\
+R1547 &  & antonio\_19 & 0.77\\
+R1548 &  & antonio\_19 & 0.86\\
+R1549 &  & antonio\_19 & 1.03\\
+R1550 &  & antonio\_19 & 0.87\\
+R1551 &  & antonio\_19 & 0.81\\
+R16 &  & antonio\_19 & 0.56\\
+R17 &  & antonio\_19 & 0.54\\
+R18 &  & antonio\_19 & 0.62\\
+R19 &  & antonio\_19 & 0.50\\
+R2 &  & antonio\_19 & 3.64\\
+R22 &  & antonio\_19 & 0.77\\
+R24 &  & antonio\_19 & 0.54\\
+R25 &  & antonio\_19 & 0.53\\
+R26 &  & antonio\_19 & 0.51\\
+R27 &  & antonio\_19 & 0.68\\
+R28 &  & antonio\_19 & 0.72\\
+R29 &  & antonio\_19 & 0.54\\
+R3 &  & antonio\_19 & 3.99\\
+R30 &  & antonio\_19 & 1.39\\
+R31 &  & antonio\_19 & 1.96\\
+R32 &  & antonio\_19 & 0.65\\
+R33 &  & antonio\_19 & 1.52\\
+R34 &  & antonio\_19 & 1.06\\
+R35 &  & antonio\_19 & 0.64\\
+R36 &  & antonio\_19 & 1.25\\
+R37 &  & antonio\_19 & 0.92\\
+R38 &  & antonio\_19 & 1.15\\
+R39 &  & antonio\_19 & 1.64\\
+R4 &  & antonio\_19 & 3.53\\
+R40 &  & antonio\_19 & 1.01\\
+R41 &  & antonio\_19 & 1.11\\
+R42 &  & antonio\_19 & 2.35\\
+R43 &  & antonio\_19 & 1.50\\
+R435 &  & antonio\_19 & 1.00\\
+R436 &  & antonio\_19 & 0.63\\
+R437 &  & antonio\_19 & 1.41\\
+R44 &  & antonio\_19 & 1.03\\
+R45 &  & antonio\_19 & 1.07\\
+R47 &  & antonio\_19 & 1.12\\
+R473 &  & antonio\_19 & 1.55\\
+R474 &  & antonio\_19 & 1.27\\
+R475 &  & antonio\_19 & 1.25\\
+R49 &  & antonio\_19 & 1.22\\
+R5 &  & antonio\_19 & 1.48\\
+R50 &  & antonio\_19 & 1.30\\
+R51 &  & antonio\_19 & 0.99\\
+R52 &  & antonio\_19 & 0.67\\
+R53 &  & antonio\_19 & 1.22\\
+R54 &  & antonio\_19 & 0.81\\
+R55 &  & antonio\_19 & 1.43\\
+R56 &  & antonio\_19 & 0.92\\
+R57 &  & antonio\_19 & 1.23\\
+R58 &  & antonio\_19 & 1.49\\
+R59 &  & antonio\_19 & 1.44\\
+R6 &  & antonio\_19 & 0.58\\
+R60 &  & antonio\_19 & 1.91\\
+R61 &  & antonio\_19 & 1.45\\
+R62 &  & antonio\_19 & 1.69\\
+R63 &  & antonio\_19 & 1.97\\
+R64 &  & antonio\_19 & 1.93\\
+R65 &  & antonio\_19 & 2.04\\
+R66 &  & antonio\_19 & 0.54\\
+R67 &  & antonio\_19 & 1.64\\
+R68 &  & antonio\_19 & 1.30\\
+R69 &  & antonio\_19 & 1.59\\
+R7 &  & antonio\_19 & 3.03\\
+R70 &  & antonio\_19 & 1.06\\
+R71 &  & antonio\_19 & 0.83\\
+R72 &  & antonio\_19 & 0.78\\
+R73 &  & antonio\_19 & 0.95\\
+R75 &  & antonio\_19 & 0.56\\
+R76 &  & antonio\_19 & 0.64\\
+R78 &  & antonio\_19 & 1.14\\
+R8 &  & antonio\_19 & 0.52\\
+R80 &  & antonio\_19 & 1.90\\
+R81 &  & antonio\_19 & 0.51\\
+R835 &  & antonio\_19 & 0.63\\
+R836 &  & antonio\_19 & 0.54\\
+R850 &  & antonio\_19 & 0.64\\
+R851 &  & antonio\_19 & 0.69\\
+R9 &  & antonio\_19 & 3.88\\
+R969 &  & antonio\_19 & 2.38\\
+R970 &  & antonio\_19 & 0.61\\
+R973 &  & antonio\_19 & 1.15\\
+Rev5 &  & Hofmanova\_2016 & 1.16\\
+RISE174 &  & allentoft\_2015 & 2.49\\
+RISE395 &  & allentoft\_2015 & 2.32\\
+RISE479 &  & allentoft\_2015 & 1.15\\
+RISE493 &  & allentoft\_2015 & 6.41\\
+RISE495 &  & allentoft\_2015 & 3.54\\
+RISE496 &  & allentoft\_2015 & 2.42\\
+RISE497 &  & allentoft\_2015 & 7.41\\
+RISE499 &  & allentoft\_2015 & 1.27\\
+RISE500 &  & allentoft\_2015 & 1.40\\
+RISE502 &  & allentoft\_2015 & 1.14\\
+RISE504 &  & allentoft\_2015 & 1.26\\
+RISE505 &  & allentoft\_2015 & 4.42\\
+RISE511 &  & allentoft\_2015 & 2.94\\
+RISE516 &  & deBarrosDamgaard\_2018a\_FirstHorse & 0.90\\
+RISE523 &  & allentoft\_2015 & 2.19\\
+RISE548 &  & allentoft\_2015 & 0.87\\
+RISE552 &  & allentoft\_2015 & 2.34\\
+RISE568 &  & zuzana\_new & 10.00\\
+RISE569 &  & zuzana\_new & 10.00\\
+RISE601 &  & allentoft\_2015 & 1.06\\
+RISE602 &  & allentoft\_2015 & 1.15\\
+RISE664 &  & deBarrosDamgaard\_2018a\_FirstHorse & 4.60\\
+RISE672 &  & deBarrosDamgaard\_2018a\_FirstHorse & 1.20\\
+RISE674 &  & deBarrosDamgaard\_2018a\_FirstHorse & 2.60\\
+RISE680 &  & deBarrosDamgaard\_2018a\_FirstHorse & 1.50\\
+RISE683 &  & deBarrosDamgaard\_2018a\_FirstHorse & 2.00\\
+RISE685 &  & deBarrosDamgaard\_2018a\_FirstHorse & 1.30\\
+RISE98 &  & allentoft\_2015 & 4.97\\
+RIX15 &  & Brunel\_2020 & 0.00\\
+RIX2 &  & Brunel\_2020 & 0.00\\
+RIX4 &  & Brunel\_2020 & 0.00\\
+ROS102 &  & Brunel\_2020 & 0.00\\
+ROS45 &  & Brunel\_2020 & 0.00\\
+ROS78 &  & Brunel\_2020 & 0.00\\
+ROS82 &  & Brunel\_2020 & 0.00\\
+Satsurblia &  & Jones\_2015 & 1.40\\
+Sch72-15 &  & Brunel\_2020 & 0.00\\
+Schw432 &  & Brunel\_2020 & 0.00\\
+sidelkino &  &  & 2.00\\
+STR\_220 &  & zuzana\_new & 10.00\\
+STR\_300 &  & zuzana\_new & 10.00\\
+STR\_310 &  & zuzana\_new & 10.00\\
+STR\_355c &  & zuzana\_new & 10.00\\
+STR\_486 &  & zuzana\_new & 10.00\\
+SZ1 &  & zuzana\_new & 10.00\\
+SZ11 &  & zuzana\_new & 10.00\\
+SZ15 &  & zuzana\_new & 10.00\\
+SZ2 &  & zuzana\_new & 10.00\\
+SZ3 &  & zuzana\_new & 10.00\\
+SZ36 &  & zuzana\_new & 10.00\\
+SZ4 &  & zuzana\_new & 10.00\\
+SZ43 &  & zuzana\_new & 10.00\\
+SZ45 &  & zuzana\_new & 10.00\\
+SZ5 &  & zuzana\_new & 10.00\\
+VIM\_2b &  & zuzana\_new & NA\\
+WC1 &  & Broushaki\_201Broushaki & 10.00\\
+WET370 &  & Brunel\_2020 & 0.00\\
+WEZ53-2 &  & new\_bavaria & 8.20\\
+WEZ56-1 &  & new\_bavaria & 7.40\\
+Yamnaya &  & deBarrosDamgaard\_2018a\_FirstHorse & 25.20\\*
+\end{longtable}
+\endgroup{}
+
+
+
+
 
 \chapter{Some commonly used terms and their motivation for use}
 \label{appendixlabel2}

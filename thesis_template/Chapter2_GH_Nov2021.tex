@@ -13,21 +13,23 @@ Next I will perform benchmarking tests on all the steps necessary to analyse low
 
 \subsection{Description of the ChromoPainter algorithm} \label{sec:ChromopainterDescription}
 
-As discussed in the introduction, ChromoPainter is a method designed to estimate haplotype sharing between individuals \cite{Lawson2012}. In diploid organisms such as humans and dogs, ignoring copy-number-variation, each genetic autosomal of an individual is represented by two haplotypes. As input, ChromoPainter requires each individual's data to be `phased' into these two haplotypes. Phasing refers to the process of determining which alleles along a chromosome were inherited together from the same parent. 
+As discussed in the introduction, ChromoPainter is a method designed to estimate the amount haplotype sharing between individuals \cite{Lawson2012}. In diploid organisms such as humans and dogs, ignoring copy-number-variation, each genetic autosomal of an individual is represented by two haplotypes. As input, ChromoPainter requires each individual's data to be `phased' into these two haplotypes. Phasing refers to the process of determining which alleles along a chromosome were inherited together from the same parent. 
 
-In ChromoPainter, sampled individuals are split into `donor' and `recipient' haplotypes. It employs the widely-used Li and Stephens copying model \cite{Li2003} to model each recipient haplotype as a mosaic of haplotypes observed in the donor panel. Typically (and throughout this thesis) an individual does not act as a donor to themself, e.g.\ one of the individual's two haplotypes can not act as a donor for the other haplotype. Unlike the original Li and Stephens model, which uses the product of approximate conditionals (PAC) likelihoods, ChromoPainter reconstructs each recipient haplotype as a mosaic of \textit{all} other donor haplotypes. Here, the term `copying' can be though of as a genealogical process where haplotypes are reconstructed using the genealogically closest haplotype. The copying model is implemented in the form of a Hidden Markov Model (HMM), with the observed states being the genotype data, and the hidden states being the `nearest-neighbour' haplotype the recipient haplotype copies from. The emission probabilities are given as the probability of a recipient haplotype copying from a particular donor haplotype, given their respective genotypes. 
+In ChromoPainter, sampled individuals are split into `donor' and `recipient' haplotypes. It employs the widely-used Li and Stephens copying model \cite{Li2003} to model each recipient haplotype as a mosaic of haplotypes observed in the donor panel. Typically (and throughout this thesis) an individual does not act as a donor to themself, e.g.\ one of the individual's two haplotypes can not act as a donor for the other haplotype. Unlike the original Li and Stephens model, which uses the product of approximate conditionals (PAC) likelihoods, ChromoPainter reconstructs each recipient haplotype as a mosaic of \textit{all} other donor haplotypes. Here, the term `copying' can be though of as a genealogical process where haplotypes are reconstructed using the genealogically closest haplotype. 
 
-Consider a donor haplotype $d$ and recipient haplotype $r$, carrying alleles $x$ and $y$, respectively, at position (e.g.\ a SNP) $p$. There are two possibilities - either the alleles match between the donor and recipient at $p$, or they do not. The probability of $r$ copying from $d$ is: 
+Suppose we have a particular recipient haplotype, $h*$, which we wish to paint using $j$ donor haplotypes, denoted by $\{h_{1}, ..., h_{j}\}$. $h*$ consists of a sequence of $L$ alleles denoted $\{h*_{1}, ..., h*_{L}\}$, where $h*_{l}$ is the observed allele at site $l$.
+
+The copying model is implemented in the form of a Hidden Markov Model (HMM), with the observed states being the alleles carried by the donor and recipient individuals, and the hidden states being the `nearest-neighbour' haplotype the recipient haplotype copies from. Thus we can define a hidden-state sequence vector $\{Y_{1}, ..., Y_{L}\}$, which corresponds to which of the $j$ donors $h*$ copies from at a given site $l$. The emission probabilities are given as the probability of $h*$ carrying allele $a$, given it copies from haplotype $y_{l}$, and is conditional upon whether, at site $l$,  $h*$ and $y_{l}$ both carry allele $a$ or not:
 
 \begin{equation} \label{eq:cp}
-\Pr(h_{l} = a \mid Y_{l} = y_{l}) =     
+\Pr(h*_{l} = a \mid Y_{l} = y_{l}) =     
 	\begin{cases}
 		1.0 - \theta & h_{yl} = a \\
 		\theta & h_{yl} \neq a 
 	\end{cases}       
 \end{equation}
 
-%where $z_{dr} = 1$ if $x=y$ and $z_{!dr} = 0$ if $x \ne y$, and $\theta$ is the probability of a mutation occurring. The mutation probability $\theta$ can be estimated using Watterson's estimator \cite{Watterson1975}, or estimated using an iterative EM algorithm.
+where $\theta$ is the probability of a mutation occurring. The mutation probability $\theta$ can be estimated using Watterson's estimator \cite{Watterson1975}, or estimated using an iterative EM algorithm.
 
 The transition probabilities of the HMM, which are the probabilities of a change in the donor being copied when moving from one SNP to another, is guided by a recombination rate map, with higher recombination rates leading to a higher probability of transitioning. Switches between donors are interpreted as changes in ancestral relationships due to historical recombination and modelled as a Poisson process. 
 
@@ -46,9 +48,11 @@ We also have a posterior genotype likelihood, in the form $GL(p_{0}, p_{1}, p_{2
 The second difference is the incorporation of the allele probability into the emission probability of the HMM. As before, consider a donor $d$ and recipient $r$ at SNP $p$. Now we let $r_x$ be the probability that the recipient haploid $r$ carries the alternative allele, with $d_x$ the probability the donor haploid carries the alternative allele.
 
 \begin{equation} \label{eq:cp_uncertainty}
-\begin{split}
-p(r_{x} | d_{x}) = (1-\theta)*[r_{x}*d_{x} + (1-r_{x}) * (1-d_{x})] \\ + \theta * [r_{x}*(1-d_{x}) + (1-r_{x})*d_{x}]
-\end{split}
+\Pr(h*_{l} = a \mid Y_{l} = y_{l}) =     
+	\begin{cases}
+		[1.0 - \theta]  & h_{yl} = a \\
+		\theta & h_{yl} \neq a 
+	\end{cases}       
 \end{equation}
 
 Note that \ref{eq:cp_uncertainty} reduces \ref{eq:cp} if $d_{x} = \{0,1\}$ and if $r_{x} = \{0,1\}$, i.e\ there is no uncertainty in the calls.
@@ -56,7 +60,7 @@ Note that \ref{eq:cp_uncertainty} reduces \ref{eq:cp} if $d_{x} = \{0,1\}$ and i
 
 \subsection{Generation of downsampled genomes}
 
-I created a set of `downsampled' ancient genomes in order to explicitly quantify the effect of coverage on each stage of the ChromoPainter analysis. I took five high coverage genomes and for each, removed a random subset of reads from the \texttt{.bam} file in order to reduce the coverage to a target level. I then performed each stage of a typical ChromoPainter analysis, e.g.\ mimicking the analyses of new ancient DNA samples I describe in chapters 4 and 5, on the full coverage and downsampled genomes.
+I created a set of `downsampled' ancient genomes in order to explicitly quantify the effect of coverage on each stage of the ChromoPainter analysis. I took five high coverage genomes and for each, removed a random subset of reads from the \texttt{.bam} file in order to reduce the coverage to a target level. I then performed each stage of a typical ChromoPainter analysis, e.g.\ mimicking the analyses of new ancient DNA samples I describe in chapters 4 and 5, on the full coverage and downsampled genomes. I also processed a set of X ancient samples from the literature, downloaded from the European Nucleotide Archive, in an identical way to act as comparison samples. 
 
 Five high coverage ancient genomes were downloaded in the form of aligned \texttt{.bam} files from the European Nucleotide Archive:
 
@@ -70,11 +74,13 @@ Five high coverage ancient genomes were downloaded in the form of aligned \textt
 
 These samples were chosen due to their high original coverage ($>18$x), and because they represent some of the ancestries present in Western Eurasia over the past 40,000 years.  
 
-Each original full-coverage \texttt{.bam} file was processed using the atlas (version 1.0, commit f612f28) pipeline \cite{Link2017} \\(\url{https://bitbucket.org/wegmannlab/atlas/wiki/Home}). First, the validity of each file was assessed (i.e. ensuring that each \texttt{.bam} file was not malformed in any way) using ValidateSamFile command from PicardTools \cite{Picard2018toolkit}. atlas is a suite of software designed for processing low-coverage ancient DNA and was chosen following the recommendation of Hui et al (2020) \cite{hui2020evaluating}, as it explicitly accounts for post-mortem damage (PMD) patterns in ancient DNA. The most common form of PMD is C-deamination, which leads to a C->T transition on the affected strand and a G-->A transition on the complimentary strand.
+For each full coverage, downsampled and literature ancient \texttt{.bam} file was processed using the atlas (version 1.0, commit f612f28) pipeline \cite{Link2017} \\(\url{https://bitbucket.org/wegmannlab/atlas/wiki/Home}). First, the validity of each file was assessed (i.e. ensuring that each \texttt{.bam} file was not malformed in any way) using ValidateSamFile command from PicardTools \cite{Picard2018toolkit}. atlas is a suite of software designed for processing low-coverage ancient DNA and was chosen following the recommendation of Hui et al (2020) \cite{hui2020evaluating}, as it explicitly accounts for post-mortem damage (PMD) patterns in ancient DNA. The most common form of PMD is C-deamination, which leads to a C->T transition on the affected strand and a G-->A transition on the complimentary strand.
 
 I then downsampled each full-coverage genome using the \texttt{atlas downsample} task, resulting in a \texttt{.bam} file with coverages 0.1x, 0.5x, 0.8x, 1x, 2x, 3.5x, 5x, 10x and 20x per individual. 
 
-For each full coverage and downsampled \texttt{.bam} file, I estimated post-mortem damage (PMD) patterns using the \texttt{atlas estimatePMD} task. Recalibration parameters were then estimated using the atlas \texttt{atlas recal} task. Finally, both the recalibration and PMD parameters were given to the \texttt{atlas callNEW} task which produces genotype calls and genotype likelihood estimates for each downsampled and full coverage \texttt{.bam}. For this stage, I made calls at the 77,818,345 genome-wide positions present in the phase 3 thousand genomes project \cite{1000GenomesProjectConsortium2015}. This was done to reduce the risk of calling false-positive (i.e.\ falsely polymorphic) genotypes in the aDNA samples. No minimum read-depth filter was applied when calling genotypes. 
+Again, for each full coverage, downsampled and literature ancient \texttt{.bam} file, I estimated post-mortem damage (PMD) patterns using the \texttt{atlas estimatePMD} task. Recalibration parameters were then estimated using the atlas \texttt{atlas recal} task. Finally, both the recalibration and PMD parameters were given to the \texttt{atlas callNEW} task which produces genotype calls and genotype likelihood estimates for each downsampled and full coverage \texttt{.bam}. For this stage, I made calls at the 77,818,264 genome-wide positions present in the phase 3 thousand genomes project \cite{1000GenomesProjectConsortium2015}. This was done to reduce the risk of calling false-positive (i.e.\ falsely polymorphic) genotypes in the aDNA samples. No minimum read-depth filter was applied when calling genotypes. This step resulted in a \texttt{.vcf} file for each of the X samples. For each of the 22 autosomes, I merged all X samples together into a single \texttt{.vcf} file. 
+
+atlas does not make calls at positions in the genome where no reads have been aligned. If multiple \texttt{.vcf} files are merged together, and at a given position in the genome, some samples contain genotype calls and others do not, this position will be present but the genotype will be set as missing \texttt{./.} in  the merged \texttt{.vcf}. Therefore, the merged \texttt{.vcf} contained positions at all 77,818,264 positions, as across all X samples, at least one individual have a genotype call at each position. 
 
 \subsection{Generation of ancient literature samples} \label{AncientReferenceSamples}
 
@@ -88,7 +94,7 @@ Genotype imputation and phasing are two important steps for processing low-cover
 
 Three different characteristics are desirable for an imputation algorithm in this context. Firstly, it should take genotype likelihoods as input. This is because genotype likelihoods allow for flexible representation of the possible genotypes at a particular position, particularly when there may not be enough coverage to make a hard genotype call. Secondly, it should emit posterior genotype-probabilities which, when accurately calibrated, give the probability that a particular genotype call is correct. This is necessary for estimating the uncertainty values, described in section \ref{sec:DescriptionChromoPainterV2Uncertainty}, needed for ChromoPainterUncertainty analysis. Thirdly, the algorithm must be able to complete in a reasonable running time when using a large number of samples and high number of SNPs. Using a large number of densely positioned SNPs (e.g. such as the approximately 77 million identified in the 1000 Genomes Project) increases the useful linkage-disequilibrium information between each SNP, and it is well-established that increasing the number of individuals used in imputation/phasing reference panels improves accuracy \cite{delaneau2018integrative, HUANG2009235, mccarthy2016reference, rubinacci2021efficient}. 
 
-Two programs, Beagle 4.0 \cite{Browning2007} and GLIMPSE \cite{rubinacci2021efficient} fulfil the first and second criteria above, but only GLIMPSE runs quickly enough to analyse SNPs with sequence-level density. GLIMPSE offers up to 1000x reduction in running time compared to Beagle 4.0 \cite{rubinacci2021efficient}, so I chose to use this algorithm for the imputation and phasing steps.   
+Two programs, Beagle 4.0 \cite{Browning2007} and GLIMPSE \cite{rubinacci2021efficient} fulfil the first and second criteria above, but GLIMPSE offers up to 1000x reduction in running time compared to Beagle 4.0 \cite{rubinacci2021efficicanent}, and hence chose it for the imputation and phasing steps.   
 
 Phasing and imputation ideally requires a reference panel of high-coverage present-day individuals. I used the 1000 Genomes Project dataset re-sequenced to 30x average coverage, which contains 3202 individuals from 26 worldwide populations \cite{byrska2021high}. A description of the processing of this reference dataset can be found in Appendix \ref{section:1000genomes}.
 
@@ -115,7 +121,7 @@ precision = \frac{V_{baseline}-FN}{V_{baseline}}
 
 A `variant' is considered to be a SNP with a genotype that is either \texttt{0/1} or \texttt{1/1}, with $V_{baseline}$ and $V_{call}$ the number of variants called in the full coverage and downsampled genomes, respectively. False negatives (FN) are where a variant is called in the full coverage genome but not in the downsampled genome. False positives (FP) are cases where a variant is called in the downsampled genome but not in the full-coverage genome.
 
-$V$, or true-positive, is the number of events where a variant position (i.e. a SNP with a genotype that is either \texttt{0/1} or \texttt{1/1}) is detected in either the full coverage ($V_{baseline}$) or downsampled ($V_{baseline}$) sample. $FN$ is the number of times that a variant position is called in the full coverage sample and not the downsampled sample. Conversely, $FP$ is the number of times a variant position is called in the downsampled sample and where the same SNP in the full coverage sample is invariant (i.e. \texttt{0/0}). Only genotypes called in the full coverage and downsampled individuals were considered. 
+$V$, or true-positive, is the number of events where a variant position (i.e. a SNP with a genotype that is either \texttt{0/1} or \texttt{1/1}) is detected in either the full coverage ($V_{baseline}$) or downsampled ($V_{baseline}$) sample. $FN$ is the number of times that a variant position is called in the full coverage sample and not the downsampled sample. Conversely, $FP$ is the number of times a variant position is called in the downsampled sample and where the same SNP in the full coverage sample is invariant (i.e. \texttt{0/0}). Only genotypes called in the full coverage and downsampled individuals were considered. No allele frequency filters were applied before conducting this analysis.
 
 
 \subsection{ChromoPainter analysis} \label{ChromoPainter_analysis}
@@ -136,6 +142,8 @@ This painting produced a chunklengths matrix for each chromosome which were merg
 
 Principle Component Analysis (PCA) can be used to reduce the underlying structure in the chunklengths coancestry matrix to two dimensions, thus allowing it to be more easily visualised. As individuals cannot paint themselves, the diagonals of each coancestry matrix contain zeros. Therefore, I performed PCA using the fineSTRUCTURE library \url{https://people.maths.bris.ac.uk/~madjl/finestructure/finestructureR.html}.
 
+All downsampled and full coverage individuals were projected onto the principle components of the reference ancient samples. 
+
 
 \subsection{SOURCEFIND}
 
@@ -151,7 +159,9 @@ For all runs of SOURCEFIND, I used 1,000,000 iterations, of which 50,000 were de
 
 \section{Pre-post GLIMPSE and linked/unlinked PCA test}
 
-I wanted to determine at what stage of the analysis pipeline low coverage samples (0.1x) become significantly diverged from the other downsamples when plotted on a PCA. For instance, it may be that the bias is introduced in the imputation stage. To test this, I performed a set four PCAs on all downsampled and equivalent full coverage samples and a set of present-day individuals shown in Table \ref{tab:HB_pops}.
+I wanted to determine at what stage of the analysis pipeline low coverage samples (0.1x) significantly diverge from the other downsamples when plotted on a PCA. I will hereafter refer to this phenomenom as `coverage-related bias'. For instance, it may be that the coverage-related bias is introduced in the imputation stage. Coverage-related bias can be measured by calculating $d = \sqrt{(PC1_{f} - PC1_{d})^2 + (PC2_{f} - PC2_{d})^2}$, where $(PC1_{f}$ is the PC1 value for the full coverage individual and $(PC1_{d}$ is the equivalent for the downsampled individual. In other words, $d$ measures the Cartesian distance between the full coverage and downsampled individual on principle component space, with higher distances corresponding to more coverage-related bias. 
+
+To test this, I performed a set four PCAs on all downsampled and equivalent full coverage samples and a set of present-day individuals shown in Table \ref{tab:HB_pops}.
 
 For both the ChromoPainter PCAs, in order to account for the zeros on the diagonals of each coancestry matrix, I used the fineSTRUCTURE R library \url{https://people.maths.bris.ac.uk/~madjl/finestructure/finestructureR.html}.
 
@@ -164,7 +174,7 @@ The four PCAs were as follows:
 \item \textbf{ChromoPainter - linked} I performed an `all-v-all' unlinked ChromoPainter painting, using all populations in Table \ref{tab:HB_pops}.
 \end{enumerate}
 
-Bias present in PCA (2) but not (1) indicates it has been introduced in the imputation stage. Similarly, bias present in (4) but not (3) suggests that including linkage information introduces bias in low coverage samples. 
+Coverage-related bias present in PCA (2) but not (1) indicates it has been introduced in the imputation stage. Similarly, coverage-related bias present in (4) but not (3) suggests that including linkage information introduces bias in low coverage samples. 
 
 
 \begin{table}
@@ -353,8 +363,7 @@ Coverage & Loschbour & sf12 & UstIshim & Yamnaya\\
 \end{table}
 
 
-Taken together, this data suggests a minimal effect of coverage down to and including 0.5x mean depth. To my knowledge, no other study has evaluated the effect of coverage on ChromoPainter analysis down to a coverage of 0.5x. Margaryan et al (2020) showed a minimal effect of coverage at 1x and that fineSTRUCTURE groupings, containing individuals as low as 0.1x coverage, were not driven by coverage \cite{margaryan2020population}. 
-
+Taken together, this data suggests a minimal effect of coverage down to and including 0.5x mean depth. To my knowledge, no other study has evaluated the effect of coverage on ChromoPainter analysis down to a coverage of 0.5x. Margaryan et al (2020) showed a minimal effect of coverage at 1x and that fineSTRUCTURE groupings, containing individuals as low as 0.5x coverage, were not driven by coverage \cite{margaryan2020population}. 
 
 
 \subsection{SOURCEFIND}
@@ -366,11 +375,11 @@ I began by considering three ancestral sources, or `surrogates', fixed as Anatol
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1.0\textwidth]{../images/chapter1/3pop_SF_downsampled.pdf}
-    \caption{Each panel gives SOURCEFIND inferred recent ancestry sharing proportions for a different downsampled genome. Bars represent proportion of ancestry, coloured by different surrogates. Different coverages for the same individual are given within each panel. Three surrogates were used. LBK excluded because of anomalously poor results.}
+    \caption{Each panel gives SOURCEFIND inferred recent ancestry sharing proportions for a different downsampled genome. Bars represent proportion of ancestry, coloured by different surrogates. Different coverages for the same individual are given within each panel. Three surrogates were used.}
     \label{fig:3pop_SF_downsampled}
 \end{figure}
 
-Consistent with previous results, SOURCEFIND estimates are robust down to 0.5-0.8x coverage. At 0.1x coverage, there is an increase in ancestry components that are not present in higher coverage samples, suggesting they are artefacts caused by low coverage. For example, small components of Anatolia Neolithic and Yamnaya ancestry appear in Loschbour at 0.1x coverage, which are not present at any higher coverages. Above 0.5x coverage, the effect of coverage on estimated ancestry proportions appears to be marginal. For example, in sf12, the difference in the minor ancestry component of Anatolia Neolithic is, at most, 2.4\%.
+Consistent with previous results, SOURCEFIND estimates are robust down to 0.5-0.8x coverage. At 0.1x coverage, there is an increase in ancestry components that are not present in higher coverage samples, suggesting they are artefacts caused by low coverage. For example, small components of Anatolia Neolithic and Yamnaya ancestry appear in Loschbour at 0.1x coverage, which are not present at any higher coverages. Above 0.5x coverage, the effect of coverage on estimated ancestry proportions appears to be marginal. For example, in sf12, the difference in the minor ancestry component of Anatolia Neolithic is, at most, 2.4\%. LBK was excluded because downsamples had anomalously poor results; I inferred roughly equal proportions of all surrogates in spite of the fact that they should have been almost 100\% farmer. 
 
 However, more than three surrogates are often used, as SOURCEFIND is meant to infer the most important contributors without \textit{a priori} knowledge of the samples' ancestry. Therefore, I re-ran SOURCEFIND using 39 surrogate populations (Fig. \ref{fig:SOURCEFIND_AllPSop_downsampled}). For all downsamples above 0.1x in coverage, the ordering of proportions for each surrogate was the same. 
 
@@ -400,19 +409,19 @@ On the other hand, downsamples of UstIshim, sf12 and Loschbour are shifted to th
 
 I also performed PCAs based upon an all-v-all ChromoPainter painting using the same set of present-day European samples (Table \ref{tab:HB_pops}) and downsampled ancient individuals as previously, in both linked and unlinked modes. There is an increased amount of noise and evidence of coverage-related bias relative to the post-GLIMPSE genotype PCA. Fig. \ref{fig:CP_linked_unlinked}) displays the PCA for the same painting, but using the unlinked chunkcounts matrix. Comparing the linked and unlinked PCAs shows the effect of including linkage (i.e. haplotype information) on the amount of bias and noise across each sample. Per-sample, there appears to be reduced noise in the unlinked painting.
 
-These results suggest that imputation introduces a degree of bias into 0.1x samples that is not apparent on non-imputed genotypes. They also suggest that ChromoPainter introduces an additional degree of bias when analysing haplotypes, or that it amplifies bias already present introduced at the imputation stage. Accordingly, removing SNPs which have been poorly imputed may be a way to mitigate such biases.
+These results suggest that imputation using GLIMPSE introduces a degree of bias into 0.1x samples that is not apparent on non-imputed genotypes. They also suggest that ChromoPainter introduces an additional degree of bias when analysing haplotypes, or that it amplifies bias already present introduced at the imputation stage. Accordingly, removing SNPs which have been poorly imputed may be a way to mitigate such biases.
 
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1.0\textwidth]{../images/chapter1/pre_post_GLIMPSE_PCA.pdf}
-    \caption{Principle Component Analysis. Left - pre-GLIMPSE genotypes. Right - post-GLIMPSE (imputed) genotypes. White labels correspond to the midpoint of all samples from that population, grey points correspond to modern individuals. 0.1x samples highlighted in red for clarity.}
+    \caption{Principle Component Analysis. Left - pre-GLIMPSE genotypes. Right - post-GLIMPSE (imputed) genotypes. White labels correspond to the midpoint of all samples from that population, grey points correspond to modern individuals. 0.1x samples highlighted in red for clarity. Black lines are $y=0; x=0$.}
     \label{fig:pre_GLIMPSE_PCA}
 \end{figure}
 
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1.0\textwidth]{../images/chapter1/CP_linked_unlinked.pdf}
-    \caption{Left - ChromoPainter Linked. Right - ChromoPainter Unlinked. White labels correspond to the midpoint of all samples from that population, grey points correspond to modern individuals. 0.1x samples highlighted in red for clarity.}
+    \caption{Left - ChromoPainter Linked. Right - ChromoPainter Unlinked. White labels correspond to the midpoint of all samples from that population, grey points correspond to modern individuals. 0.1x samples highlighted in red for clarity. Black lines are $y=0; x=0$.}
     \label{fig:CP_linked_unlinked}
 \end{figure}
 
@@ -427,7 +436,7 @@ Therefore, we can compare the amount different donor groups donate under the dat
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1.0\textwidth]{../images/chapter1/donation_imputed_nonimputed.pdf}
-    \caption{Comparison of the mean normalised cM donated by each donor population using the imputed and non-imputed SNP sets. The 20 populations with the largest difference between imputed and non-imputed donation are highlighted. Red line is line of equality.}
+    \caption{Comparison of the mean normalised cM donated by each donor population using the imputed and non-imputed SNP sets. The 20 populations with the largest difference between imputed and non-imputed donation are highlighted. Red line is line of $y=x$.}
     \label{fig:imputed_nonimputed_donation}
 \end{figure}
 
@@ -454,7 +463,7 @@ To determine whether accounting for allele likelihoods improved the painting acc
 
 In this section, I will test whether filtering the set of input SNPs on different criteria reduces the effect of coverage related bias. 
 
-The frequency of a particular variant in the reference panel (RAF - reference allele frequency) used for imputation is known to affect how accurately that variant can be imputed \cite{rubinacci2021efficient, delaneau2018integrative, Browning2016, hui2020evaluating}. Specifically, we expect variants which are less frequent in the reference panel to be imputed at a lower accuracy than those which are more frequent. Therefore, removing variants with a low frequency in the reference panel may mitigate the coverage related bias by removing variants which have been incorrectly imputed. In other words, we want to retain the SNPs where both alleles are relatively common within the population. 
+The frequency of a particular variant in the reference panel (RAF - minor reference allele frequency) used for imputation is known to affect how accurately that variant can be imputed \cite{rubinacci2021efficient, delaneau2018integrative, Browning2016, hui2020evaluating}. Specifically, we expect variants which are less frequent in the reference panel to be imputed at a lower accuracy than those which are more frequent. Therefore, removing variants with a low frequency in the reference panel may mitigate the coverage related bias by removing variants which have been incorrectly imputed. In other words, we want to retain the SNPs where both alleles are relatively common within the population. 
 
 For each individual, I took the 428,425 SNPs in the HellBus set and removed SNPs with $0.1 > RAF$ or $RAF > 0.9$, removing an average of 50,187 SNPs per individual. $RAF$ refers to the frequency of the allele in the 1000 genomes reference panel used to phase and impute the HellBus dataset. I then painted individuals downsampled to 0.1x and 0.5x using the standard set of 125 ancient donor individuals.  
 
