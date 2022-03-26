@@ -9,7 +9,7 @@ Later, the region was also home to one of the first Neolithic traditions in the 
 
 During the Bronze Age, cultures closely related to Yamnaya, such as Bell Beakers, Corded Ware and Unetice \cite{Haak2015} appeared across Germany at sites such as Kromsdorf \cite{lee2012emerging} and Tollense \cite{jantzen2011bronze, brinker2013human}. It was later dominated by Iron Age cultures such as Hallstatt and La Tène, which have been shown to be partially continuous with the preceding Bell Beaker culture \cite{Brunel12791}. 
  
-In the present-day, Germany represents a boundary point between East and West Europe, with a relatively sharp genetic boundary occurring between Germany and Poland to the east, given their close geographic proximity \cite{novembre2008genes, kayser2005significant, veeramah2011genetic}. However, within Germany, SNP-based studies have shown that there is only very weak substructure \cite{steffens2006snp}. Questions remain as to the origin of this East-West structure; is it recent structure, or does it persist to the Middle Ages or earlier? 
+In the present-day, Germany represents a boundary point between East and West Europe, with a relatively sharp genetic boundary occurring between Germany and Poland to the east, given their close geographic proximity \cite{novembre2008genes, kayser2005significant, veeramah2011genetic}. However, within Germany, SNP-based studies have shown that there is only very weak substructure \cite{steffens2006snp}. Questions remain as to the origin of this East-West structure; is it recent structure, or did it exist during the Middle Ages or earlier? 
 
 Cherry-Tree cave, or \textit{Kirschbaumhöhle}, represents a unique opportunity to study a transect of southern German samples from the Neolithic to the present-day. The cave represents a relatively untouched layer of stratigraphy, with a large series of radiocarbon dates revealing that human and animal inhabitation of the cave stretches back until at least the Michelsberg Culture in the Early Neolithic \cite{botigue2017ancient}. 
 
@@ -49,19 +49,19 @@ I was given the data of each newly sequenced sample in \texttt{vcf} format.
 \centering
 \begin{tabular}[t]{llrrrlr}
 \toprule
-Sample.ID & Location & Date & UQ & LQ & Period & \thead{Sequencing\\ Depth}\\
+Sample.ID & Location & Date  & UQ  & LQ  & Period & \thead{Sequencing\\ Depth}\\
 \midrule
-Erg1 & Ergoldsbach & 5200 & 5400 & 5000 & Early Neo (LBK) & 4.52\\
-Erg2 & Ergoldsbach & 5200 & 5400 & 5000 & Early Neo (LBK) & 0.71\\
-DIN2 & Dingolfing & 4200 & 4500 & 3900 & Early Copper Age & 1.71\\
-Kir24 & Cherry Tree Cave & 2762 & 2821 & 2632 & Final Neo & 3.98\\
-Kir23 & Cherry Tree Cave & 2741 & 2817 & 2666 & Final Neo & 17.52\\
-Kir28 & Cherry Tree Cave & 1863 & 1977 & 1749 & EBA & 17.30\\
-Kir26 & Cherry Tree Cave & 595 & 762 & 428 & Iron Age & 4.84\\
-Kir27 & Cherry Tree Cave & 593 & 672 & 514 & Iron Age & 16.60\\
-BRU1 & Bruckberg & 535 & 620 & 450 & Iron Age & 11.54\\
-Kir25 & Cherry Tree Cave & 481 & 552 & 410 & Iron Age & 4.55\\
-Molz1 & Molzbichl & 1069 & 1138 & 1000 & Early Middle Age & 13.22\\
+Erg1 & Ergoldsbach & 5200 (BC) & 5400 & 5000 & Early Neo (LBK) & 4.52\\
+Erg2 & Ergoldsbach & 5200 (BC) & 5400 & 5000 & Early Neo (LBK) & 0.71\\
+DIN2 & Dingolfing & 4200 (BC) & 4500 & 3900 & Early Copper Age & 1.71\\
+Kir24 & Cherry Tree Cave & 2762 (BC) & 2821 & 2632 & Final Neo & 3.98\\
+Kir23 & Cherry Tree Cave & 2741 (BC) & 2817 & 2666 & Final Neo & 17.52\\
+Kir28 & Cherry Tree Cave & 1863 (BC) & 1977 & 1749 & EBA & 17.30\\
+Kir26 & Cherry Tree Cave & 595 (BC) & 762 & 428 & Iron Age & 4.84\\
+Kir27 & Cherry Tree Cave & 593 (BC) & 672 & 514 & Iron Age & 16.60\\
+BRU1 & Bruckberg & 535 (BC) & 620 & 450 & Iron Age & 11.54\\
+Kir25 & Cherry Tree Cave & 481 (BC) & 552 & 410 & Iron Age & 4.55\\
+Molz1 & Molzbichl & 1069 (AD) & 1138 & 1000 & Early Middle Age & 13.22\\
 \bottomrule
 \end{tabular}
 \caption{Details of newly sequenced ancient DNA samples. UQ and LQ give upper and lower 95\% quantile estimates for radiocarbon dates. EBA is Early Bronze Age.}
@@ -85,7 +85,7 @@ I used hap-IBD \cite{zhou2020fast} to estimate IBD segments greater than 2cM in 
 
 \subsection{plink PCA}
 
-To obtain a broad overview of the ancestry of the newly sequenced individuals in the context of the 942 literature samples detailed in Appendix section \ref{section:AncientReferenceDataset}, I performed PCA on the pre-imputation genotypes using plink2 \cite{chang2015second}. 
+To obtain a broad overview of the ancestry of the newly sequenced individuals in the context of the 942 literature samples detailed in Appendix section \ref{section:AncientReferenceDataset}, I performed PCA on the pre-imputation genotypes using plink2 \cite{chang2015second}. Genotypes were set to missing in an individual if, at that position, they were covered by fewer than two reads. 
 
 I retained the 500,000 markers with the lowest amount of missingness across all samples and LD-pruned the resulting SNPs using the settings \texttt{--maf 0.01} and \texttt{--indep-pairwise 50 5 0.2}. PCA was performed using default settings from plink2.
 
@@ -182,7 +182,7 @@ There are four key observations from the Figure \ref{fig:plink_PCA} PCA regardin
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1.0\textwidth]{../images/chapter4/plink_PCA.pdf}
-    \caption{Principle component analysis of genotype matrix using plink2. Grey points indicate principle component coordinates for each sample. Black text indicated mean principle component coordinates for all individuals within that group. Coloured labels represent newly sequenced ancient samples.}
+    \caption{Principle component analysis of pre-imputation genotypes using plink2. Grey points indicate principle component coordinates for each sample. Black text indicated mean principle component coordinates for all individuals within that group. Coloured labels represent newly sequenced ancient samples.}
     \label{fig:plink_PCA}
 \end{figure}
 
