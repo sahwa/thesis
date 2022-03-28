@@ -5,7 +5,7 @@
 
 The Slavic peoples originated as a diverse network of tribal societies who lived in Central and Eastern Europe from the first Millennia AD \cite{barford2001early} and whose origin, although disputed, is thought to be Polesia (a marshy forested area straddling Poland, Belarus, Russia and Ukraine) \cite{fouracre1995new}. Although various Roman and Greek sources refer to Slavs as \textit{Veneti} and \textit{Spori} as early as the 1st and 2nd centuries AD, the term `Slavs' was first used in writing by Roman bureaucrat Jordanes at the beginning of the 6th century after their attack on the Byzantine empire \cite{curta2006southeastern}. This era, known by historians as The Migration Period, was a period of European history, roughly between 375-568 AD after the fall of the Roman Empire \cite{halsall2007barbarian}, characterised by the large-scale movement of various peoples. The Migration Period began with the Huns moving into Eastern Europe at the end of the 4th Century, occupying an area including present-day Hungary and Romania. During the 5th century, various Germanic groups invaded and established a homeland across parts of the Western Roman Empire. This was followed by the expansion of Slavic populations into regions of low population density in the sixth century.
 
-Across the next two centuries, these peoples had settled across large parts of Europe. In particular, the Early Slavs had expanded southwards into the Balkans and Alps \cite{barford2001early, brather2008archaologie, geary2003myth,gojda1991ancient}. It has been proposed that these migrations were key to forming the foundations of present-day Slavic (speaking) nations \cite{barford2001early}.  
+Across the next two centuries, these peoples had settled across large parts of Europe (Fig. \ref{fig:Slavic_tribes}). In particular, the Early Slavs had expanded southwards into the Balkans and Alps \cite{barford2001early, brather2008archaologie, geary2003myth,gojda1991ancient}. It has been proposed that these migrations were key to forming the foundations of present-day Slavic (speaking) nations \cite{barford2001early}.  
 
 By the beginning of the 12th century, Slavs constituted a large part of a number of many medieval Christian states across Europe. As from this time period, Slavs could be broadly split up in three groups: the eastern Slavs as part of the Kievan Rus', southern Slavs in the Bulgarian Empire, the Principality of Serbia, Kingdom of Croatia and the Banate of Bosnia, and western Slavs in the Principality of Nitra, Great Moravia, the duchy of Bohemia and the Kingdom and Poland. In addition, Slavic settlement also occurred in the Eastern Alps; Slovenia, large parts of present-day Austria and Friul. 
 
@@ -31,8 +31,8 @@ Finally, several studies have used haplotype-based methods to explore the struct
 In this chapter, I will analyse 17 new medium to high coverage whole ancient genomes from Czech Republic, spanning from the Migration Period to Early Middle Ages (384-950 AD). These are, to my knowledge, the first high-coverage whole ancient-genomes from this period. I will merge the newly sequenced samples with reference data from other ancient individuals and a large reference set of relevant present-day European individuals in order to understand their ancestry in the context of both present-day and ancient samples. In particular, I am interested in considering the following questions:
 
 \begin{enumerate}
-\item Do the labels "Migration Period" and "Early Middle Ages" make sense from a genetic standpoint (i.e. do samples from either period cluster with another to the exclusion of the other). Is there evidence of continuity between these two eras?
-\item Is there evidence of continuity between Early Middle Ages and present-day?
+\item Do the labels "Migration Period" and "Early Middle Ages" make sense from a genetic standpoint? Is there evidence of genetic change between Migration period and Early Middle Ages in the area of present-day Czech Republic). 
+\item Is it possible to use these samples to reject a null-model of continuity between the Migration Era and Early Middle Ages?
 \item How are present-day Slavic speakers structured, and do the different ancient Slavic samples have different affinities to different present-day Slavic language groups?
 \end{enumerate}
 
@@ -82,7 +82,7 @@ The Migration Period and Early Middle Age samples were categorised based upon th
 
 I merged the 17 newly sequenced individuals with the ancient literature samples given in section \ref{section:AncientReferenceDataset}, resulting in a total of 959 ancient individuals with genotype likelihoods at 77,213,942 genome-wide autosomal SNPs. 
 
-I followed the GLIMPSE \cite{rubinacci2021efficient} imputation and phasing pipeline (\url{https://odelaneau.github.io/GLIMPSE/tutorial_b38.html}) to generate genotype likelihoods and phased genotypes for each individual. For the reference panel, I used the 30x 1000 genomes dataset \cite{byrska2021high}, described in Appendix section \ref{section:1000genomes}.  
+I followed the GLIMPSE \cite{rubinacci2021efficient} imputation and phasing pipeline (\url{https://odelaneau.github.io/GLIMPSE/tutorial_b38.html}) to generate genotype probabilities and phased genotypes for each individual. For the reference panel, I used the 30x 1000 genomes dataset \cite{byrska2021high}, described in Appendix section \ref{section:1000genomes}.  
 
 \subsection{Present-day DNA processing} \label{PresentdayDNAprocessing}
 
@@ -164,6 +164,7 @@ I then performed a `present-day surrogates' analysis using a select group of pre
 MOSAIC was run using default settings and the following sets of populations as targets and the following sets as surrogates. I formed each target as a mixture of both 2 and 3 mixing sources, with all other parameters left as default. Upper and lower quantiles for admixture dates were estimated using a bootstrap procedure. Other than changing the number of mixing sources, all other parameters were left as default.
 
 \begin{table}
+\small
 \centering
 \begin{tabular}[t]{lr}
 \toprule
@@ -246,9 +247,9 @@ The Migration Period samples consisted of five individuals with radiocarbon date
     \label{fig:fs_PCA}
 \end{figure}
 
-On the other hand, LIB4 and LIB5 cluster together with Early Iron Age and Renaissance samples from Italy, and generally show an increased affinity Neolithic / Southern European populations relative to the other Migration Period samples (Fig \ref{fig:AllChr.plink_PCA}-\ref{fig:fs_PCA}).
+On the other hand, LIB4 and LIB5 are found in a fineSTRUCTURE group together with Early Iron Age and Renaissance samples from Italy, and generally show an increased affinity Neolithic / Southern European populations relative to the other Migration Period samples based on PCA results(Fig \ref{fig:AllChr.plink_PCA}-\ref{fig:fs_PCA}).
 
-LIB3 clusters with Lombard samples from Northern Italy (Fig \ref{fig:AllChr.plink_PCA}) in the `ancient' painting, and with Tuscans in the `present-day' painting. Historical evidence cites alliances between Slavs and Lombards in the 5th century \cite{lotter2003volkerverschiebungen}. Finally, LIB12 displays ancestry which is more typical of the preceding Central European Bronze Age, suggesting it may represent a `leftover' from a local Bronze Age population which was unaffected by the Antiquity / Iron Age migrations to the region.
+LIB3 clusters with Lombard samples from Northern Italy (Fig \ref{fig:AllChr.plink_PCA}) in the `ancient' painting, and with Tuscans in the `present-day' painting. Historical evidence cites alliances between Slavs and Lombards in the 5th century \cite{lotter2003volkerverschiebungen}. Finally, LIB12 displays ancestry which is more typical of the preceding Central European Bronze Age, suggesting it may represent a `leftover' from a local Bronze Age population which was unaffected by the Antiquity / Iron Age migrations to the region. It should be noted that the unlinked plink2 PCA and linked ChromoPainter PCA position LIB12 against slightly different other populations, with the unlinked PCA showing a similarity to Bronze and Iron Age French samples, and the linked PCA to Longobards and Bavarian samples. This may be caused by either the linked PCA giving higher resolution results, or giving details of a more ancient ancestral relationship.  
 
 \subsection{Early Middle Age Slavs represent a relatively homogeneous group typical of European Middle Ages}
 

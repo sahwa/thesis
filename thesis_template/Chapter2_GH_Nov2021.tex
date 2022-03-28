@@ -15,11 +15,11 @@ Next I will perform benchmarking tests on all the steps necessary to analyse low
 
 As discussed in the introduction, ChromoPainter is a method designed to estimate the amount haplotype sharing between individuals \cite{Lawson2012}. In diploid organisms such as humans and dogs, ignoring copy-number-variation, each genetic autosomal of an individual is represented by two haplotypes. As input, ChromoPainter requires each individual's data to be `phased' into these two haplotypes. Phasing refers to the process of determining which alleles along a chromosome were inherited together from the same parent. 
 
-In ChromoPainter, sampled individuals are split into `donor' and `recipient' haplotypes. It employs the widely-used Li and Stephens copying model \cite{Li2003} to model each recipient haplotype as a mosaic of haplotypes observed in the donor panel. Typically (and throughout this thesis) an individual does not act as a donor to themself, e.g.\ one of the individual's two haplotypes can not act as a donor for the other haplotype. Unlike the original Li and Stephens model, which uses the product of approximate conditionals (PAC) likelihoods, ChromoPainter reconstructs each recipient haplotype as a mosaic of \textit{all} other donor haplotypes. Here, the term `copying' can be though of as a genealogical process where haplotypes are reconstructed using the genealogically closest haplotype. 
+In ChromoPainter, sampled individuals are split into `donor' and `recipient' haplotypes. It employs the widely-used Li and Stephens copying model \cite{Li2003} to model each recipient haplotype as a mosaic of all haplotypes observed in the donor panel. Typically (and throughout this thesis) an individual does not act as a donor to themself, e.g.\ one of the individual's two haplotypes can not act as a donor for the other haplotype. Unlike the original Li and Stephens model, which uses the product of approximate conditionals (PAC) likelihoods, ChromoPainter reconstructs each recipient haplotype as a mosaic of \textit{all} other donor haplotypes. Here, the term `copying' can be though of as a genealogical process where haplotypes are reconstructed using the genealogically closest haplotype in the donor set.  
 
 Suppose we have a particular recipient haplotype, $h*$, which we wish to paint using $j$ donor haplotypes, denoted by $\{h_{1}, ..., h_{j}\}$. $h*$ consists of a sequence of $L$ alleles denoted $\{h*_{1}, ..., h*_{L}\}$, where $h*_{l}$ is the observed allele at site $l$.
 
-The copying model is implemented in the form of a Hidden Markov Model (HMM), with the observed states being the alleles carried by the donor and recipient individuals, and the hidden states being the `nearest-neighbour' haplotype the recipient haplotype copies from. Thus we can define a hidden-state sequence vector $\{Y_{1}, ..., Y_{L}\}$, which corresponds to which of the $j$ donors $h*$ copies from at a given site $l$. The emission probabilities are given as the probability of $h*$ carrying allele $a$, given it copies from haplotype $y_{l}$, and is conditional upon whether, at site $l$,  $h*$ and $y_{l}$ both carry allele $a$ or not:
+The copying model is implemented in the form of a Hidden Markov Model (HMM), with the observed states being the alleles carried by the donor and recipient individuals, and the hidden states being the `nearest-neighbour' haplotype the recipient haplotype $h*$ copies from. Thus we can define a hidden-state sequence vector $\{Y_{1}, ..., Y_{L}\}$, which corresponds to which of the $j$ donors $h*$ copies from at a given site $l$. The emission probabilities are given as the probability of $h*$ carrying allele $a$ at site $l$, given it copies from haplotype $y_{l}$, and is conditional upon whether, $h*$ and $y_{l}$ both carry allele $a$ or not:
 
 \begin{equation} \label{eq:cp}
 \Pr(h*_{l} = a \mid Y_{l} = y_{l}) =     
@@ -31,9 +31,9 @@ The copying model is implemented in the form of a Hidden Markov Model (HMM), wit
 
 where $\theta$ is the probability of a mutation occurring. The mutation probability $\theta$ can be estimated using Watterson's estimator \cite{Watterson1975}, or estimated using an iterative EM algorithm.
 
-The transition probabilities of the HMM, which are the probabilities of a change in the donor being copied when moving from one SNP to another, is guided by a recombination rate map, with higher recombination rates leading to a higher probability of transitioning. Switches between donors are interpreted as changes in ancestral relationships due to historical recombination and modelled as a Poisson process. 
+The transition probabilities of the HMM, which are the probabilities of a change in the donor being copied from when transitioning from one SNP to another, is guided by a recombination rate map, with higher recombination rates leading to a higher probability of transitioning. Switches between donors are interpreted as changes in ancestral relationships due to historical recombination and modelled as a Poisson process. 
 
-In ChromoPainterV2, the input genetic data comes in the form of phased genotype calls (i.e. \texttt{1|0}). ChromoPainterV2 produces several different output files. The two which most used in this work are those appended with .chunklengths and .chunkcounts. These matrices are also referred to as `coancestry matrices'. In the chunklengths matrix, $cl$, the entry $cl_{d,r}$ gives the total expected proportion of haplotype segments (defined as a contiguous set of SNPs copied from a single donor) that recipient $r$ copies from donor $d$. Thus, higher values of $cl_{d,r}$ indicate that recipient $r$ and donor $d$ share more recent ancestry. The .chunkcounts matrix instead gives the total number of haplotype segments that recipient $r$ copies from donor $d$.
+In ChromoPainterV2, the input genetic data comes in the form of phased genotype calls (i.e. \texttt{1|0}). ChromoPainterV2 produces several different output files. The two which most used in this work are those appended with .chunklengths and .chunkc$\{h_{1}, ..., h_{j}\}$ounts. These matrices are also referred to as `coancestry matrices'. In the chunklengths matrix, $cl$, the entry $cl_{d,r}$ gives the total expected proportion of haplotype segments (defined as a contiguous set of SNPs copied from a single donor) that recipient $r$ copies from donor $d$. Thus, higher values of $cl_{d,r}$ indicate that recipient $r$ and donor $d$ share more recent ancestry. The .chunkcounts matrix instead gives the total number of haplotype segments that recipient $r$ copies from donor $d$.
 
 In this work, `copyvector' is used to refer to the vector of chunklengths that a single recipient individual copies from all donors, or a single row of the coancestry matrix. Throughout, I often define donors as populations, so that{ each element of the copy vector is the total amount of DNA that the recipient matches to all individuals from a given donor population.
 
@@ -44,18 +44,20 @@ ChromoPainterUncertainty works in a very similar way to ChromoPainterV2, bar two
 Here, I will show how it is possible to incorporate the uncertainty in imputed genotype calls into the ChromoPainter input. Consider the following example: we have a phased genotype in the form \texttt{0|1}, corresponding to the reference allele on the first haplotype and the alternative allele at the second haplotype. I define $G$ as the sum of the genotypes at a SNP; in this case $G=0+1=1$. As GLIMPSE, the imputation and phasing algorithm I will use for this work, provides hard genotype calls, $G$ can be calculated directly.
 
 We also have a posterior genotype likelihood, in the form $GL(p_{0}, p_{1}, p_{2})$, where $p_i$ is the posterior probabilities that the true genotype is $i$. Genotype probability dosage, $D$, is the expected total number of copies of the alternate allele given $GL$. $D$ can be calculated as $p_{1} + [2*p_{2}]$. We can calculate $U$, the uncertainty as $U = |G-D|$. Then, we can assign a probability to each allele; if the allele is \texttt{1} then the allele likelihood is simply $1 - U$ and if the allele is \texttt{0} then the allele likelihood is $0 + U$. Therefore, when there is no uncertainty in the genotype call, the allele probability will be either 0 or 1. When there is uncertainty, the allele probability will take a value $0 \leq x \leq 1$, with more uncertain genotypes tending towards allele probabilities of 0.5. 
+
                  
-The second difference is the incorporation of the allele probability into the emission probability of the HMM. As before, consider a donor $d$ and recipient $r$ at SNP $p$. Now we let $r_x$ be the probability that the recipient haploid $r$ carries the alternative allele, with $d_x$ the probability the donor haploid carries the alternative allele.
+The second difference is the incorporation of the allele probability into the emission probability of the HMM. As before, consider a recipient $h*$ whom we want to reconstruct using the set of donors $\{h_{1}, ..., h_{j}\}$ . At a given SNP $l$, let $h*_{l}$ be the probability that $h*$ carries the alternative allele, with $h_{yl}$ similarly being the probability that $h_{y}$ carries the alternate allele. 
 
-\begin{equation} \label{eq:cp_uncertainty}
-\Pr(h*_{l} = a \mid Y_{l} = y_{l}) =     
-	\begin{cases}
-		[1.0 - \theta]  & h_{yl} = a \\
-		\theta & h_{yl} \neq a 
-	\end{cases}       
-\end{equation}
+\begin{align}
+	\Pr(h*_{l} &= a \mid Y_{l} = y_{l}) = \\
+	&
+	\begin{aligned} \label{eq:cp_uncertainty}
+				&(1.0 - \theta) * [h*_{l}  h_{yl} + (1-h*_{l}) * (1-h_{yl})] +  \\
+				& \theta * [h*_{l} * (1-h_{yl}) + (1-h*_{l}) * h_{yl}]
+	\end{aligned}
+\end{align}
 
-Note that \ref{eq:cp_uncertainty} reduces \ref{eq:cp} if $d_{x} = \{0,1\}$ and if $r_{x} = \{0,1\}$, i.e\ there is no uncertainty in the calls.
+Note that \ref{eq:cp_uncertainty} reduces \ref{eq:cp} if $h_{yl} = \{0,1\}$ and if $h*_{l} = \{0,1\}$, i.e\ there is no uncertainty in the calls.
 
 
 \subsection{Generation of downsampled genomes}
@@ -96,7 +98,7 @@ Three different characteristics are desirable for an imputation algorithm in thi
 
 Two programs, Beagle 4.0 \cite{Browning2007} and GLIMPSE \cite{rubinacci2021efficient} fulfil the first and second criteria above, but GLIMPSE offers up to 1000x reduction in running time compared to Beagle 4.0 \cite{rubinacci2021efficicanent}, and hence chose it for the imputation and phasing steps.   
 
-Phasing and imputation ideally requires a reference panel of high-coverage present-day individuals. I used the 1000 Genomes Project dataset re-sequenced to 30x average coverage, which contains 3202 individuals from 26 worldwide populations \cite{byrska2021high}. A description of the processing of this reference dataset can be found in Appendix \ref{section:1000genomes}.
+Phasing and imputation ideally requires a reference panel of high-coverage present-day individuals. I used the 1000 Genomes Project dataset re-sequenced to 30x average coverage, which contains 3202 individuals from 26 worldwide populations \cite{byrska2021high}. A description of the processing of this reference dataset can be found in Appendix \ref{section:1000genomes}. This reference dataset contained 50,509,915 unique bi-allelic SNPs. 
 
 I merged together i) the full coverage individuals, ii) downsampled individuals and iii) 918 ancient samples from the literature into a single bcf file using bcftools (version 1.11-60-g09dca3e) \cite{li2011statistical} to act as the samples for GLIMPSE to phase. Here, `target' refers to the individuals being imputed/phased and `reference' refers to the reference panel.  
 
