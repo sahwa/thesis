@@ -31,7 +31,7 @@ Finally, several studies have used haplotype-based methods to explore the struct
 In this chapter, I will analyse 17 new medium to high coverage whole ancient genomes from Czech Republic, spanning from the Migration Period to Early Middle Ages (384-950 AD). These are, to my knowledge, the first high-coverage whole ancient-genomes from this period. I will merge the newly sequenced samples with reference data from other ancient individuals and a large reference set of relevant present-day European individuals in order to understand their ancestry in the context of both present-day and ancient samples. In particular, I am interested in considering the following questions:
 
 \begin{enumerate}
-\item Do the labels "Migration Period" and "Early Middle Ages" make sense from a genetic standpoint? Is there evidence of genetic change between Migration period and Early Middle Ages in the area of present-day Czech Republic). 
+\item Do the labels "Migration Period" and "Early Middle Ages" make sense from a genetic standpoint? Is there evidence of genetic change between Migration period and Early Middle Ages in the area of present-day Czech Republic? 
 \item Is it possible to use these samples to reject a null-model of continuity between the Migration Era and Early Middle Ages?
 \item How are present-day Slavic speakers structured, and do the different ancient Slavic samples have different affinities to different present-day Slavic language groups?
 \end{enumerate}
@@ -94,9 +94,9 @@ The present-day and ancient samples described in section \ref{AncientDNAprocessi
 
 \subsection{plink PCA}
 
-I performed a PCA on the pre-imputation genotypes using plink2 \cite{chang2015second}. I chose to use plink2 because recent studies have shown it is substantially better at dealing with samples containing variable amounts of missing data than other methods such as smartPCA \cite{AlbrechtsenPCAmissingness}.
+I performed a PCA on the pre-imputation genotypes for only the ancient samples using plink2 \cite{chang2015second}. I chose to use plink2 because recent studies have shown it is substantially better at dealing with samples containing variable amounts of missing data than other methods such as smartPCA \cite{AlbrechtsenPCAmissingness}.
 
-I retained only the 500,000 markers with the lowest amount of missingness. I then LD-pruned the resulting SNPs using the settings \texttt{--maf 0.01} and \texttt{--indep-pairwise 50 5 0.2} and performed PCA using plink2 under default settings. 
+I ranked all SNPs by the percentage of missing genotypes and retained only the 500,000 markers with the lowest amount of missingness. I then LD-pruned the resulting SNPs using the settings \texttt{--maf 0.01} and \texttt{--indep-pairwise 50 5 0.2} and performed PCA using plink2 under default settings. 
 
 \subsection{Allele-frequency based tests}
 
@@ -247,7 +247,7 @@ The Migration Period samples consisted of five individuals with radiocarbon date
     \label{fig:fs_PCA}
 \end{figure}
 
-On the other hand, LIB4 and LIB5 are found in a fineSTRUCTURE group together with Early Iron Age and Renaissance samples from Italy, and generally show an increased affinity Neolithic / Southern European populations relative to the other Migration Period samples based on PCA results(Fig \ref{fig:AllChr.plink_PCA}-\ref{fig:fs_PCA}).
+On the other hand, LIB4 and LIB5 are found in a fineSTRUCTURE group together with Early Iron Age and Renaissance samples from Italy, and generally show an increased affinity Neolithic / Southern European populations relative to the other Migration Period samples based on PCA results(Fig \ref{fig:AllChr.plink_PCA}-\ref{fig:fs_PCA}). All samples and their associated fineSTRUCTURE groups are found in Appendix section \ref{sec:fs_slavs_group}. 
 
 LIB3 clusters with Lombard samples from Northern Italy (Fig \ref{fig:AllChr.plink_PCA}) in the `ancient' painting, and with Tuscans in the `present-day' painting. Historical evidence cites alliances between Slavs and Lombards in the 5th century \cite{lotter2003volkerverschiebungen}. Finally, LIB12 displays ancestry which is more typical of the preceding Central European Bronze Age, suggesting it may represent a `leftover' from a local Bronze Age population which was unaffected by the Antiquity / Iron Age migrations to the region. It should be noted that the unlinked plink2 PCA and linked ChromoPainter PCA position LIB12 against slightly different other populations, with the unlinked PCA showing a similarity to Bronze and Iron Age French samples, and the linked PCA to Longobards and Bavarian samples. This may be caused by either the linked PCA giving higher resolution results, or giving details of a more ancient ancestral relationship.  
 
@@ -295,7 +295,7 @@ As with the ancients PCA, Migration Era Slavs are spread across the present-day 
     \label{fig:chunklengths_moderns_ancients_PCA}
 \end{figure}
 
-The same pattern can be observed on the raw copyvector output matrix from the present-day painting (Fig. \ref{fig:copymatrix_moderns_ancient_slavs}). In particular, Migration Era samples show little excess affinity to present-day day Slavic populations and more affinity to present-day Greek individuals. 
+The same pattern can be observed on the raw copyvector output matrix from the present-day painting (Fig. \ref{fig:copymatrix_moderns_ancient_slavs}). In particular, Migration Era samples show little excess affinity to present-day day Slavic populations.
 
 \begin{figure}[htp]
     \centering
@@ -336,7 +336,7 @@ When considering 2-way admixture event, all of the tested populations (both anci
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1.0\textwidth]{../images/chapter5/MOSAIC_admixture_dates_plot.pdf}
-    \caption{MOSAIC inferred 2-way admixture dates with bootstrapped 97.5\% and 2.5\% CI. Vertical green lines correspond to radiocarbon estimated dates of Migration Period samples and red lines equivalent for Early Middle Age samples. Estimated dates obtained by assuming an average generation time of 26 and date of birth of 1950 for present-day samples.}
+    \caption{MOSAIC inferred 2-way admixture dates with bootstrapped 97.5\% and 2.5\% CI. Vertical green lines correspond to radiocarbon estimated dates of Migration Period samples and red lines equivalent for Early Middle Age samples. Estimated dates obtained by assuming an average generation time of 26 and date of birth of 1950 for present-day samples. Populations are coloured based on whether they show signals of east Asian admixture (blue) or not (green). Source populations are those given in table \ref{tab:MOSAIC_pops_slav}.}
     \label{fig:MOSAIC_admixture_dates_plot}
 \end{figure} 
 

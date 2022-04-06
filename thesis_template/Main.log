@@ -1,12 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.19)  27 MAR 2022 12:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.19)  6 APR 2022 17:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Main.tex
-(./Main.tex
-LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-01-09> xparse <2020-03-03>
-(/usr/share/texlive/texmf-dist/tex/latex/nag/nag.sty
+**\nonstopmode \input{Main.tex}
+(./Main.tex (/usr/share/texlive/texmf-dist/tex/latex/nag/nag.sty
 Package: nag 2011/11/25 0.7 warning about old commands (ulmi)
 \c@nag@c=\count177
 \c@nag@sins=\count178
@@ -231,6 +228,17 @@ Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \c@LT@tables=\count295
 \c@LT@chunks=\count296
 \LT@p@ftn=\toks25
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
@@ -547,10 +555,7 @@ Package: multirow 2021/01/29 v2.7 Span multiple rows of a table
 )
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
-))
+)
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 )
@@ -839,7 +844,14 @@ File: l3backend-pdftex.def 2020-01-29 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count349
 \l__pdf_internal_box=\box71
 )
-(./Main.aux (./Chapter5_GH.aux))
+(./Main.aux (./Preamble.aux) (./Introduction_GHII.aux)
+(./Chapter2_GH_Nov2021.aux) (./Chapter3_GH_Nov2021.aux)
+(./Chapter4_GH_Dec2021.aux) (./Chapter5_GH.aux) (./Conclusions_GH.aux)
+(./Appendices.aux
+
+LaTeX Warning: Label `sec:leave_one_out' multiply defined.
+
+))
 \openout1 = `Main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
@@ -863,8 +875,7 @@ Package nag Info: Command \RaggedLeft not defined, skipping amendment on input
 line 79.
 Package nag Info: Command \RaggedRight not defined, skipping amendment on input
  line 79.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count350
 \scratchdimen=\dimen291
@@ -955,29 +966,90 @@ line 79.
 Package nag Info: Command \topcaption not defined, skipping amendment on input 
 line 79.
  (./Main.bbl)
-\openout2 = `Chapter5_GH.aux'.
+\openout2 = `Preamble.aux'.
 
- (./Chapter5_GH.tex
-Chapter 1.
+ (./Preamble.tex [1
 
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
+
+]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [1
+ [3
 
 
+]
+[4]
+Underfull \vbox (badness 1472) has occurred while \output is active []
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<../images/chapter5/Slavic_tribes_in_the_7th_to_9th_century.jpg, id=103, 1525.7
-pt x 1447.4075pt>
-File: ../images/chapter5/Slavic_tribes_in_the_7th_to_9th_century.jpg Graphic fi
-le (type jpg)
-<use ../images/chapter5/Slavic_tribes_in_the_7th_to_9th_century.jpg>
-Package pdftex.def Info: ../images/chapter5/Slavic_tribes_in_the_7th_to_9th_cen
-tury.jpg  used on input line 14.
-(pdftex.def)             Requested size: 398.33858pt x 377.88516pt.
+ [5
+
+]
+[6] (./Main.toc
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+.
+ (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+.
+
+(/usr/share/texmf/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+1.
+
+(/usr/share/texmf/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+1.
+
+(/usr/share/texmf/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 1.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 1.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 1.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+.
+
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [7
+
+]
+Underfull \vbox (badness 2846) has occurred while \output is active []
+
+ [8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+[11] [12])
+\tf@toc=\write5
+\openout5 = `Main.toc'.
+
+) [13]
+\openout2 = `Introduction_GHII.aux'.
+
+ (./Introduction_GHII.tex
+Chapter 1.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 11.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 11.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 11.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-5.
-
+1.
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -985,42 +1057,748 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-5.
 
-(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-5.
+Underfull \vbox (badness 1552) has occurred while \output is active []
 
-(/usr/share/texmf/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-15.
+ [14
 
-(/usr/share/texmf/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-15.
 
-(/usr/share/texmf/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
+[16]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
+Underfull \vbox (badness 2393) has occurred while \output is active []
+
+ [19]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
+[21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
+Underfull \vbox (badness 6173) has occurred while \output is active []
+
+ [23]
+<../images/introduction/broushaki_haplotype_sharing.jpg, id=850, 308.352pt x 21
+4.1601pt>
+File: ../images/introduction/broushaki_haplotype_sharing.jpg Graphic file (type
+ jpg)
+<use ../images/introduction/broushaki_haplotype_sharing.jpg>
+Package pdftex.def Info: ../images/introduction/broushaki_haplotype_sharing.jpg
+  used on input line 76.
+(pdftex.def)             Requested size: 398.33858pt x 276.66306pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25 <../images/introduction/broushaki_haplotype_sharing.jpg>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27]
+[28]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33])
+[34]
+\openout2 = `Chapter2_GH_Nov2021.aux'.
+
+ (./Chapter2_GH_Nov2021.tex
+Chapter 2.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35
+
+
+
+
+]
+Underfull \vbox (badness 1158) has occurred while \output is active []
+
+ [36]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37]
+Underfull \vbox (badness 2393) has occurred while \output is active []
+
+ [38]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39]
+[40]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41]
+
+LaTeX Warning: Citation `rubinacci2021efficicanent' on page 42 undefined on inp
+ut line 99.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42]
+Underfull \hbox (badness 4479) in paragraph at lines 105--106
+[]\T1/lmr/m/n/12 (+20) Following the GLIMPSE tu-to-rial ([]$\T1/lmtt/m/n/12 htt
+ps : / / odelaneau . github . io /
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [43]
+[44] [45]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46]
+Underfull \vbox (badness 4132) has occurred while \output is active []
+
+ [47]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48]
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
+\T1/lmr/m/n/12 (+20) R li-brary []$\T1/lmtt/m/n/12 https : / / people . maths .
+ bris . ac . uk / ~madjl / finestructure /
+ []
+
+[49] [50]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [51]
+Underfull \hbox (badness 1024) in paragraph at lines 236--237
+\T1/lmr/m/n/12 (+20) con-tain-ing 560,240 bi-allelic SNPs and sub-mit-ted the r
+e-duced dataset
+ []
+
+
+Underfull \hbox (badness 3354) in paragraph at lines 236--237
+\T1/lmr/m/n/12 (+20) to the Sanger Im-pu-ta-tion Ser-vice ([]$\T1/lmtt/m/n/12 h
+ttps : / / www . sanger . ac . uk / tool /
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [52]
+<../images/chapter1/allDownsampled_rtgtools_sensitivity.pdf, id=1169, 1870.99pt
+ x 1870.99pt>
+File: ../images/chapter1/allDownsampled_rtgtools_sensitivity.pdf Graphic file (
+type pdf)
+<use ../images/chapter1/allDownsampled_rtgtools_sensitivity.pdf>
+Package pdftex.def Info: ../images/chapter1/allDownsampled_rtgtools_sensitivity
+.pdf  used on input line 249.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+<../images/chapter1/allDownsampled_rtgtools_Precision.pdf, id=1170, 1870.99pt x
+ 1870.99pt>
+File: ../images/chapter1/allDownsampled_rtgtools_Precision.pdf Graphic file (ty
+pe pdf)
+<use ../images/chapter1/allDownsampled_rtgtools_Precision.pdf>
+Package pdftex.def Info: ../images/chapter1/allDownsampled_rtgtools_Precision.p
+df  used on input line 256.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+
+[53 <../images/chapter1/allDownsampled_rtgtools_sensitivity.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54 <../images/chapter1/allDownsampled_rtgtools_Precision.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55]
+<../images/chapter1/phasing_performance_downsampled.pdf, id=1211, 1870.99pt x 1
+870.99pt>
+File: ../images/chapter1/phasing_performance_downsampled.pdf Graphic file (type
+ pdf)
+<use ../images/chapter1/phasing_performance_downsampled.pdf>
+Package pdftex.def Info: ../images/chapter1/phasing_performance_downsampled.pdf
+  used on input line 273.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+
+[56 <../images/chapter1/phasing_performance_downsampled.pdf>]
+<../images/chapter1/Yamnaya_0.1x_bin.pdf, id=1223, 1870.99pt x 1870.99pt>
+File: ../images/chapter1/Yamnaya_0.1x_bin.pdf Graphic file (type pdf)
+<use ../images/chapter1/Yamnaya_0.1x_bin.pdf>
+Package pdftex.def Info: ../images/chapter1/Yamnaya_0.1x_bin.pdf  used on input
+ line 286.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 15.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 15.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 15.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-5.
+(Font)              <10.95> on input line 287.
 
-(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57]
+[58 <../images/chapter1/Yamnaya_0.1x_bin.pdf>]
+<../images/chapter1/CP_correlation_allSamples_0.1x_0.5x_30x.pdf, id=1249, 1870.
+99pt x 1870.99pt>
+File: ../images/chapter1/CP_correlation_allSamples_0.1x_0.5x_30x.pdf Graphic fi
+le (type pdf)
+<use ../images/chapter1/CP_correlation_allSamples_0.1x_0.5x_30x.pdf>
+Package pdftex.def Info: ../images/chapter1/CP_correlation_allSamples_0.1x_0.5x
+_30x.pdf  used on input line 303.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+<../images/chapter1/TVD_ancients_flat_prior.pdf, id=1251, 1870.99pt x 1870.99pt
+>
+File: ../images/chapter1/TVD_ancients_flat_prior.pdf Graphic file (type pdf)
+<use ../images/chapter1/TVD_ancients_flat_prior.pdf>
+Package pdftex.def Info: ../images/chapter1/TVD_ancients_flat_prior.pdf  used o
+n input line 314.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59]
+[60 <../images/chapter1/CP_correlation_allSamples_0.1x_0.5x_30x.pdf>] [61 <../i
+mages/chapter1/TVD_ancients_flat_prior.pdf>]
+<../images/chapter1/CP_correlation_allSamples_0.1x_0.5x_30x_moderns.pdf, id=128
+6, 1870.99pt x 1870.99pt>
+File: ../images/chapter1/CP_correlation_allSamples_0.1x_0.5x_30x_moderns.pdf Gr
+aphic file (type pdf)
+<use ../images/chapter1/CP_correlation_allSamples_0.1x_0.5x_30x_moderns.pdf>
+Package pdftex.def Info: ../images/chapter1/CP_correlation_allSamples_0.1x_0.5x
+_30x_moderns.pdf  used on input line 325.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [62]
+[63 <../images/chapter1/CP_correlation_allSamples_0.1x_0.5x_30x_moderns.pdf>]
+<../images/chapter1/PCA_panel_allInds.allCoverage.pdf, id=1308, 1870.99pt x 187
+0.99pt>
+File: ../images/chapter1/PCA_panel_allInds.allCoverage.pdf Graphic file (type p
+df)
+<use ../images/chapter1/PCA_panel_allInds.allCoverage.pdf>
+Package pdftex.def Info: ../images/chapter1/PCA_panel_allInds.allCoverage.pdf  
+used on input line 341.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+
+Overfull \hbox (55.63579pt too wide) in paragraph at lines 348--363
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [64]
+[65 <../images/chapter1/PCA_panel_allInds.allCoverage.pdf>]
+<../images/chapter1/3pop_SF_downsampled.pdf, id=1329, 1870.99pt x 1870.99pt>
+File: ../images/chapter1/3pop_SF_downsampled.pdf Graphic file (type pdf)
+<use ../images/chapter1/3pop_SF_downsampled.pdf>
+Package pdftex.def Info: ../images/chapter1/3pop_SF_downsampled.pdf  used on in
+put line 379.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [66]
+[67 <../images/chapter1/3pop_SF_downsampled.pdf>]
+<../images/chapter1/Allpops_SF_downsampled.pdf, id=1346, 1870.99pt x 1870.99pt>
+
+File: ../images/chapter1/Allpops_SF_downsampled.pdf Graphic file (type pdf)
+<use ../images/chapter1/Allpops_SF_downsampled.pdf>
+Package pdftex.def Info: ../images/chapter1/Allpops_SF_downsampled.pdf  used on
+ input line 390.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [68]
+[69 <../images/chapter1/Allpops_SF_downsampled.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [70]
+<../images/chapter1/pre_post_GLIMPSE_PCA.pdf, id=1378, 1870.99pt x 1870.99pt>
+File: ../images/chapter1/pre_post_GLIMPSE_PCA.pdf Graphic file (type pdf)
+<use ../images/chapter1/pre_post_GLIMPSE_PCA.pdf>
+Package pdftex.def Info: ../images/chapter1/pre_post_GLIMPSE_PCA.pdf  used on i
+nput line 418.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+<../images/chapter1/CP_linked_unlinked.pdf, id=1379, 1870.99pt x 1870.99pt>
+File: ../images/chapter1/CP_linked_unlinked.pdf Graphic file (type pdf)
+<use ../images/chapter1/CP_linked_unlinked.pdf>
+Package pdftex.def Info: ../images/chapter1/CP_linked_unlinked.pdf  used on inp
+ut line 425.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [71]
+[72 <../images/chapter1/pre_post_GLIMPSE_PCA.pdf>] [73 <../images/chapter1/CP_l
+inked_unlinked.pdf>]
+<../images/chapter1/donation_imputed_nonimputed.pdf, id=1416, 1870.99pt x 1870.
+99pt>
+File: ../images/chapter1/donation_imputed_nonimputed.pdf Graphic file (type pdf
 )
+<use ../images/chapter1/donation_imputed_nonimputed.pdf>
+Package pdftex.def Info: ../images/chapter1/donation_imputed_nonimputed.pdf  us
+ed on input line 440.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [74]
+[75 <../images/chapter1/donation_imputed_nonimputed.pdf>]
+<../images/chapter1/uncertainty_v_noUncertainty_0.5x_0.1x.pdf, id=1434, 1870.99
+pt x 1870.99pt>
+File: ../images/chapter1/uncertainty_v_noUncertainty_0.5x_0.1x.pdf Graphic file
+ (type pdf)
+<use ../images/chapter1/uncertainty_v_noUncertainty_0.5x_0.1x.pdf>
+Package pdftex.def Info: ../images/chapter1/uncertainty_v_noUncertainty_0.5x_0.
+1x.pdf  used on input line 458.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+
+Underfull \hbox (badness 3449) in paragraph at lines 459--459
+[][]|\T1/lmr/m/n/10.95 (+20) Com-par-i-son of per-for-mance of Chro-moPainterV2
+ and Chro-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [76]
+[77 <../images/chapter1/uncertainty_v_noUncertainty_0.5x_0.1x.pdf>]
+Overfull \hbox (32.7823pt too wide) in paragraph at lines 479--490
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [78]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [79]
+<../images/chapter1/het_prob.pdf, id=1471, 910.40125pt x 765.86125pt>
+File: ../images/chapter1/het_prob.pdf Graphic file (type pdf)
+<use ../images/chapter1/het_prob.pdf>
+Package pdftex.def Info: ../images/chapter1/het_prob.pdf  used on input line 50
+9.
+(pdftex.def)             Requested size: 398.33858pt x 335.09853pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [80]
+[81 <../images/chapter1/het_prob.pdf>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 1412) has occurred while \output is active []
+
+ [82]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [83]
+<../images/chapter1/avg_good_windows.pdf, id=1504, 1870.99pt x 3035.34pt>
+File: ../images/chapter1/avg_good_windows.pdf Graphic file (type pdf)
+<use ../images/chapter1/avg_good_windows.pdf>
+Package pdftex.def Info: ../images/chapter1/avg_good_windows.pdf  used on input
+ line 612.
+(pdftex.def)             Requested size: 398.33858pt x 646.19385pt.
+
+
+LaTeX Warning: Float too large for page by 36.88992pt on input line 615.
+
+<../images/chapter1/cumulative_windows_val.pdf, id=1505, 1870.99pt x 3035.34pt>
+
+File: ../images/chapter1/cumulative_windows_val.pdf Graphic file (type pdf)
+<use ../images/chapter1/cumulative_windows_val.pdf>
+Package pdftex.def Info: ../images/chapter1/cumulative_windows_val.pdf  used on
+ input line 620.
+(pdftex.def)             Requested size: 398.33858pt x 646.19385pt.
+
+LaTeX Warning: Float too large for page by 64.08994pt on input line 623.
+
+
+Underfull \vbox (badness 4144) has occurred while \output is active []
+
+ [84]
+[85 <../images/chapter1/avg_good_windows.pdf>] [86 <../images/chapter1/cumulati
+ve_windows_val.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [87])
+[88]
+\openout2 = `Chapter3_GH_Nov2021.aux'.
+
+ (./Chapter3_GH_Nov2021.tex
+Chapter 3.
+[89
+
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [90]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [91]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [92]
+Underfull \vbox (badness 1158) has occurred while \output is active []
+
+ [93]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [94]
+<../images/chapter3/HumanOriginsMap.pdf, id=1618, 1870.99pt x 1445.4pt>
+File: ../images/chapter3/HumanOriginsMap.pdf Graphic file (type pdf)
+<use ../images/chapter3/HumanOriginsMap.pdf>
+Package pdftex.def Info: ../images/chapter3/HumanOriginsMap.pdf  used on input 
+line 56.
+(pdftex.def)             Requested size: 660.10393pt x 509.9557pt.
+
+[95] [96 <../images/chapter3/HumanOriginsMap.pdf>]
+Underfull \hbox (badness 2538) in paragraph at lines 73--74
+[]\T1/lmr/m/n/12 (+20) An al-ter-na-tive op-tion to us-ing Chro-moPainter would
+ be to use
+ []
+
+[97]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [98]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [99]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [100]
+<../images/chapter3/African_Inds_proportions.pdf, id=1674, 1870.99pt x 1870.99p
+t>
+File: ../images/chapter3/African_Inds_proportions.pdf Graphic file (type pdf)
+<use ../images/chapter3/African_Inds_proportions.pdf>
+Package pdftex.def Info: ../images/chapter3/African_Inds_proportions.pdf  used 
+on input line 106.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+
+[101 <../images/chapter3/African_Inds_proportions.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [102]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [103]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [104]
+<../images/chapter3/imputed_excess_copying_pops.pdf, id=1713, 1870.99pt x 1300.
+86pt>
+File: ../images/chapter3/imputed_excess_copying_pops.pdf Graphic file (type pdf
+)
+<use ../images/chapter3/imputed_excess_copying_pops.pdf>
+Package pdftex.def Info: ../images/chapter3/imputed_excess_copying_pops.pdf  us
+ed on input line 150.
+(pdftex.def)             Requested size: 660.10393pt x 458.96013pt.
+
+Underfull \vbox (badness 5105) has occurred while \output is active []
+
+ [105]
+[106 <../images/chapter3/imputed_excess_copying_pops.pdf>]
+<../images/chapter3/ChromoPainter_PCA_UKB_HO.pdf, id=1730, 1870.99pt x 1870.99p
+t>
+File: ../images/chapter3/ChromoPainter_PCA_UKB_HO.pdf Graphic file (type pdf)
+<use ../images/chapter3/ChromoPainter_PCA_UKB_HO.pdf>
+Package pdftex.def Info: ../images/chapter3/ChromoPainter_PCA_UKB_HO.pdf  used 
+on input line 165.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+<../images/chapter3/haplotype_sharing_map.pdf, id=1733, 1870.99pt x 1870.99pt>
+File: ../images/chapter3/haplotype_sharing_map.pdf Graphic file (type pdf)
+<use ../images/chapter3/haplotype_sharing_map.pdf>
+Package pdftex.def Info: ../images/chapter3/haplotype_sharing_map.pdf  used on 
+input line 174.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [107]
+[108 <../images/chapter3/ChromoPainter_PCA_UKB_HO.pdf>] [109 <../images/chapter
+3/haplotype_sharing_map.pdf>]
+<../images/chapter3/SF_props_map.pdf, id=1777, 1870.99pt x 1870.99pt>
+File: ../images/chapter3/SF_props_map.pdf Graphic file (type pdf)
+<use ../images/chapter3/SF_props_map.pdf>
+Package pdftex.def Info: ../images/chapter3/SF_props_map.pdf  used on input lin
+e 189.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [110]
+[111 <../images/chapter3/SF_props_map.pdf>]
+<../images/chapter3/SF_props_distribution_top30.pdf, id=1802, 1870.99pt x 2312.
+64pt>
+File: ../images/chapter3/SF_props_distribution_top30.pdf Graphic file (type pdf
+)
+<use ../images/chapter3/SF_props_distribution_top30.pdf>
+Package pdftex.def Info: ../images/chapter3/SF_props_distribution_top30.pdf  us
+ed on input line 199.
+(pdftex.def)             Requested size: 398.33858pt x 492.33817pt.
+<../images/chapter3/all_countries_SF_props_pie_chart.pdf, id=1804, 1870.99pt x 
+1870.99pt>
+File: ../images/chapter3/all_countries_SF_props_pie_chart.pdf Graphic file (typ
+e pdf)
+<use ../images/chapter3/all_countries_SF_props_pie_chart.pdf>
+Package pdftex.def Info: ../images/chapter3/all_countries_SF_props_pie_chart.pd
+f  used on input line 208.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [112]
+[113 <../images/chapter3/SF_props_distribution_top30.pdf>] [114 <../images/chap
+ter3/all_countries_SF_props_pie_chart.pdf>] [115]
+<../images/chapter3/haplotype_map_SouthAfrica.pdf, id=1838, 1870.99pt x 1870.99
+pt>
+File: ../images/chapter3/haplotype_map_SouthAfrica.pdf Graphic file (type pdf)
+<use ../images/chapter3/haplotype_map_SouthAfrica.pdf>
+Package pdftex.def Info: ../images/chapter3/haplotype_map_SouthAfrica.pdf  used
+ on input line 225.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+ [116 <../images/chapter3/haplotype_map_SouthAfrica.pdf>]
+<../images/chapter3/country_of_origin_allInds.pdf, id=1862, 1870.99pt x 1870.99
+pt>
+File: ../images/chapter3/country_of_origin_allInds.pdf Graphic file (type pdf)
+<use ../images/chapter3/country_of_origin_allInds.pdf>
+Package pdftex.def Info: ../images/chapter3/country_of_origin_allInds.pdf  used
+ on input line 238.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [117]
+[118 <../images/chapter3/country_of_origin_allInds.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [119]
+<../images/chapter3/SOURCEFIND_imp_nonimp.pdf, id=1886, 1870.99pt x 1870.99pt>
+File: ../images/chapter3/SOURCEFIND_imp_nonimp.pdf Graphic file (type pdf)
+<use ../images/chapter3/SOURCEFIND_imp_nonimp.pdf>
+Package pdftex.def Info: ../images/chapter3/SOURCEFIND_imp_nonimp.pdf  used on 
+input line 251.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+
+[120 <../images/chapter3/SOURCEFIND_imp_nonimp.pdf>]
+<../images/chapter3/SF_props_pie_chart.pdf, id=1901, 1445.4pt x 2890.8pt>
+File: ../images/chapter3/SF_props_pie_chart.pdf Graphic file (type pdf)
+<use ../images/chapter3/SF_props_pie_chart.pdf>
+Package pdftex.def Info: ../images/chapter3/SF_props_pie_chart.pdf  used on inp
+ut line 270.
+(pdftex.def)             Requested size: 660.10393pt x 1320.21231pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [121]
+[122 <../images/chapter3/SF_props_pie_chart.pdf>]
+<../images/chapter3/rollingaverage_time_Buganda_ancestry.pdf, id=1924, 1870.99p
+t x 1870.99pt>
+File: ../images/chapter3/rollingaverage_time_Buganda_ancestry.pdf Graphic file 
+(type pdf)
+<use ../images/chapter3/rollingaverage_time_Buganda_ancestry.pdf>
+Package pdftex.def Info: ../images/chapter3/rollingaverage_time_Buganda_ancestr
+y.pdf  used on input line 282.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+
+Underfull \hbox (badness 2564) in paragraph at lines 287--288
+[]\T1/lmr/m/n/12 (+20) We can ob-serve roughly a dou-bling of the mean pro-por-
+tion of
+ []
+
+[123] [124 <../images/chapter3/rollingaverage_time_Buganda_ancestry.pdf>])
+[125]
+\openout2 = `Chapter4_GH_Dec2021.aux'.
+
+ (./Chapter4_GH_Dec2021.tex
+Chapter 4.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [126
+
+
+
+
+]
+Underfull \vbox (badness 4144) has occurred while \output is active []
+
+ [127]
+<../images/chapter4/sample_map.pdf, id=1991, 1870.99pt x 1870.99pt>
+File: ../images/chapter4/sample_map.pdf Graphic file (type pdf)
+<use ../images/chapter4/sample_map.pdf>
+Package pdftex.def Info: ../images/chapter4/sample_map.pdf  used on input line 
+36.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+<../images/chapter4/Dates.pdf, id=1992, 1870.99pt x 1870.99pt>
+File: ../images/chapter4/Dates.pdf Graphic file (type pdf)
+<use ../images/chapter4/Dates.pdf>
+Package pdftex.def Info: ../images/chapter4/Dates.pdf  used on input line 43.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+
+Overfull \hbox (73.53407pt too wide) in paragraph at lines 50--67
+ [][] 
+ []
+
+[128]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [129 <../images/chapter4/sample_map.pdf>] [130 <../images/chapter4/Dates.pdf>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [131]
+Underfull \vbox (badness 4132) has occurred while \output is active []
+
+ [132]
+[133]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [134]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [135]
+[136] [137]
+<../images/chapter4/plink_PCA.pdf, id=2105, 1870.99pt x 1870.99pt>
+File: ../images/chapter4/plink_PCA.pdf Graphic file (type pdf)
+<use ../images/chapter4/plink_PCA.pdf>
+Package pdftex.def Info: ../images/chapter4/plink_PCA.pdf  used on input line 1
+84.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+<../images/chapter4/chunklengths_moderns_ancients_PCA.pdf, id=2106, 1870.99pt x
+ 1870.99pt>
+File: ../images/chapter4/chunklengths_moderns_ancients_PCA.pdf Graphic file (ty
+pe pdf)
+<use ../images/chapter4/chunklengths_moderns_ancients_PCA.pdf>
+Package pdftex.def Info: ../images/chapter4/chunklengths_moderns_ancients_PCA.p
+df  used on input line 193.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+ [138] [139 <../images/chapter4/plink_PCA.pdf>] [140 <../images/chapter4/chunkl
+engths_moderns_ancients_PCA.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [141]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [142]
+<../images/chapter4/SOURCEFINDheatmapOlderSurrogates_2.pdf, id=2175, 1870.99pt 
+x 2746.26pt>
+File: ../images/chapter4/SOURCEFINDheatmapOlderSurrogates_2.pdf Graphic file (t
+ype pdf)
+<use ../images/chapter4/SOURCEFINDheatmapOlderSurrogates_2.pdf>
+Package pdftex.def Info: ../images/chapter4/SOURCEFINDheatmapOlderSurrogates_2.
+pdf  used on input line 217.
+(pdftex.def)             Requested size: 398.33858pt x 584.65158pt.
+
+
+LaTeX Warning: Float too large for page by 29.74768pt on input line 220.
+
+<../images/chapter4/Erg1_MU_matrix.pdf, id=2179, 1870.99pt x 1870.99pt>
+File: ../images/chapter4/Erg1_MU_matrix.pdf Graphic file (type pdf)
+<use ../images/chapter4/Erg1_MU_matrix.pdf>
+Package pdftex.def Info: ../images/chapter4/Erg1_MU_matrix.pdf  used on input l
+ine 228.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+<../images/chapter4/HG_ancestry_Neolithic.pdf, id=2180, 1870.99pt x 1870.99pt>
+File: ../images/chapter4/HG_ancestry_Neolithic.pdf Graphic file (type pdf)
+<use ../images/chapter4/HG_ancestry_Neolithic.pdf>
+Package pdftex.def Info: ../images/chapter4/HG_ancestry_Neolithic.pdf  used on 
+input line 237.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+<../images/chapter4/plots3PopBarlot.pdf, id=2181, 1870.99pt x 1870.99pt>
+File: ../images/chapter4/plots3PopBarlot.pdf Graphic file (type pdf)
+<use ../images/chapter4/plots3PopBarlot.pdf>
+Package pdftex.def Info: ../images/chapter4/plots3PopBarlot.pdf  used on input 
+line 245.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [143]
+[144 <../images/chapter4/SOURCEFINDheatmapOlderSurrogates_2.pdf>] [145 <../imag
+es/chapter4/Erg1_MU_matrix.pdf>] [146 <../images/chapter4/HG_ancestry_Neolithic
+.pdf>] [147 <../images/chapter4/plots3PopBarlot.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [148]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [149]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [150]
+Overfull \hbox (52.97505pt too wide) in paragraph at lines 308--309
+[]$\OML/lmm/m/it/12 f[]$ \T1/lmr/m/n/12 (-20) in the form $\OML/lmm/m/it/12 f[]
+\OT1/lmr/m/n/12 (-20) (\OML/lmm/m/it/12 mbutipygymy; Bavaria[]Iron\OT1/lmr/m/n/
+12 (-20) ; \OML/lmm/m/it/12 Bavaria[]Slav; Bavaria[]Germanic\OT1/lmr/m/n/12 (-2
+0) )$
+ []
+
+[151]
+<../images/chapter4/germanic_slavic_HB_sharing.pdf, id=2268, 1870.99pt x 1870.9
+9pt>
+File: ../images/chapter4/germanic_slavic_HB_sharing.pdf Graphic file (type pdf)
+
+<use ../images/chapter4/germanic_slavic_HB_sharing.pdf>
+Package pdftex.def Info: ../images/chapter4/germanic_slavic_HB_sharing.pdf  use
+d on input line 318.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [152]
+[153 <../images/chapter4/germanic_slavic_HB_sharing.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [154])
+[155]
+\openout2 = `Chapter5_GH.aux'.
+
+ (./Chapter5_GH.tex
+Chapter 5.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [156
+
+
+
+
+]
+<../images/chapter5/Slavic_tribes_in_the_7th_to_9th_century.jpg, id=2317, 1525.
+7pt x 1447.4075pt>
+File: ../images/chapter5/Slavic_tribes_in_the_7th_to_9th_century.jpg Graphic fi
+le (type jpg)
+<use ../images/chapter5/Slavic_tribes_in_the_7th_to_9th_century.jpg>
+Package pdftex.def Info: ../images/chapter5/Slavic_tribes_in_the_7th_to_9th_cen
+tury.jpg  used on input line 14.
+(pdftex.def)             Requested size: 398.33858pt x 377.88516pt.
+
 Underfull \hbox (badness 6927) in paragraph at lines 15--15
 [][]|\T1/lmr/m/n/10.95 (+20) Slavic tribes from the 7th to 9th cen-turies AD in
  Eu-
@@ -1032,59 +1810,33 @@ Underfull \hbox (badness 4391) in paragraph at lines 15--15
 s . wikimedia . org / wiki / File :
  []
 
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 21.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2]
+ [157]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3 <../images/chapter5/Slavic_tribes_in_the_7th_to_9th_century.jpg>]
+ [158 <../images/chapter5/Slavic_tribes_in_the_7th_to_9th_century.jpg>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4]
+ [159]
 Overfull \hbox (68.8908pt too wide) in paragraph at lines 48--74
  [][] 
  []
 
-[5]
-
-LaTeX Warning: Reference `section:AncientReferenceDataset' on page 6 undefined 
-on input line 83.
-
-
-LaTeX Warning: Reference `section:1000genomes' on page 6 undefined on input lin
-e 85.
-
-
-LaTeX Warning: Reference `section:MSPOBIHellBus' on page 6 undefined on input l
-ine 89.
-
-
+[160]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6]
-[7]
-
-LaTeX Warning: Reference `sec:ChromoPainterChap2' on page 8 undefined on input 
-line 109.
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 122.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 122.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 122.
-
+ [161]
+[162]
 Underfull \vbox (badness 4366) has occurred while \output is active []
 
- [8]
-[9]
+ [163]
+[164]
 
 LaTeX Warning: Float too large for page by 86.813pt on input line 226.
 
-<../images/chapter5/plink_pca.pdf, id=217, 1870.99pt x 1870.99pt>
+<../images/chapter5/plink_pca.pdf, id=2421, 1870.99pt x 1870.99pt>
 File: ../images/chapter5/plink_pca.pdf Graphic file (type pdf)
 <use ../images/chapter5/plink_pca.pdf>
 Package pdftex.def Info: ../images/chapter5/plink_pca.pdf  used on input line 2
@@ -1093,33 +1845,28 @@ Package pdftex.def Info: ../images/chapter5/plink_pca.pdf  used on input line 2
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10]
-[11] [12 <../images/chapter5/plink_pca.pdf>]
-<../images/chapter5/fs_PCA.pdf, id=246, 1870.99pt x 1870.99pt>
+ [165]
+[166] [167 <../images/chapter5/plink_pca.pdf>]
+<../images/chapter5/fs_PCA.pdf, id=2450, 1870.99pt x 1870.99pt>
 File: ../images/chapter5/fs_PCA.pdf Graphic file (type pdf)
 <use ../images/chapter5/fs_PCA.pdf>
 Package pdftex.def Info: ../images/chapter5/fs_PCA.pdf  used on input line 245.
 
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
- [13 <../images/chapter5/fs_PCA.pdf>]
-
-LaTeX Warning: Reference `fig:SF_heatmap_slavs' on page 14 undefined on input l
-ine 256.
-
-
+ [168 <../images/chapter5/fs_PCA.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14]
-<../images/chapter5/Mu_plot_EarlyMiddleAges_3way.pdf, id=274, 1870.99pt x 1870.
-99pt>
+ [169]
+<../images/chapter5/Mu_plot_EarlyMiddleAges_3way.pdf, id=2479, 1870.99pt x 1870
+.99pt>
 File: ../images/chapter5/Mu_plot_EarlyMiddleAges_3way.pdf Graphic file (type pd
 f)
 <use ../images/chapter5/Mu_plot_EarlyMiddleAges_3way.pdf>
 Package pdftex.def Info: ../images/chapter5/Mu_plot_EarlyMiddleAges_3way.pdf  u
 sed on input line 264.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-<../images/chapter5/EarlyMiddleAges_3way_acoanc.pdf, id=275, 1084.05pt x 722.7p
-t>
+<../images/chapter5/EarlyMiddleAges_3way_acoanc.pdf, id=2480, 1084.05pt x 722.7
+pt>
 File: ../images/chapter5/EarlyMiddleAges_3way_acoanc.pdf Graphic file (type pdf
 )
 <use ../images/chapter5/EarlyMiddleAges_3way_acoanc.pdf>
@@ -1127,28 +1874,23 @@ Package pdftex.def Info: ../images/chapter5/EarlyMiddleAges_3way_acoanc.pdf  us
 ed on input line 271.
 (pdftex.def)             Requested size: 398.33858pt x 265.55322pt.
 
-
-LaTeX Warning: Reference `sec:appendixTVD' on page 15 undefined on input line 2
-79.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15 <../images/chapter5/Mu_plot_EarlyMiddleAges_3way.pdf>] [16 <../images/chap
-ter5/EarlyMiddleAges_3way_acoanc.pdf>]
+ [170]
+[171 <../images/chapter5/Mu_plot_EarlyMiddleAges_3way.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17]
-<../images/chapter5/chunklengths_moderns_ancients_PCA.pdf, id=360, 1870.99pt x 
-1870.99pt>
+ [172 <../images/chapter5/EarlyMiddleAges_3way_acoanc.pdf>]
+<../images/chapter5/chunklengths_moderns_ancients_PCA.pdf, id=2562, 1870.99pt x
+ 1870.99pt>
 File: ../images/chapter5/chunklengths_moderns_ancients_PCA.pdf Graphic file (ty
 pe pdf)
 <use ../images/chapter5/chunklengths_moderns_ancients_PCA.pdf>
 Package pdftex.def Info: ../images/chapter5/chunklengths_moderns_ancients_PCA.p
 df  used on input line 293.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-<../images/chapter5/copymatrix_moderns_ancient_slavs.pdf, id=362, 1870.99pt x 1
-870.99pt>
+<../images/chapter5/copymatrix_moderns_ancient_slavs.pdf, id=2564, 1870.99pt x 
+1870.99pt>
 File: ../images/chapter5/copymatrix_moderns_ancient_slavs.pdf Graphic file (typ
 e pdf)
 <use ../images/chapter5/copymatrix_moderns_ancient_slavs.pdf>
@@ -1156,43 +1898,36 @@ Package pdftex.def Info: ../images/chapter5/copymatrix_moderns_ancient_slavs.pd
 f  used on input line 302.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
 
-[18 <../images/chapter5/chunklengths_moderns_ancients_PCA.pdf>] [19 <../images/
-chapter5/copymatrix_moderns_ancient_slavs.pdf>]
-<../images/chapter5/f3_HB_ancient_slavs.pdf, id=388, 1871.99374pt x 1035.87pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [173]
+[174 <../images/chapter5/chunklengths_moderns_ancients_PCA.pdf>] [175 <../image
+s/chapter5/copymatrix_moderns_ancient_slavs.pdf>]
+<../images/chapter5/f3_HB_ancient_slavs.pdf, id=2597, 1871.99374pt x 1035.87pt>
+
 File: ../images/chapter5/f3_HB_ancient_slavs.pdf Graphic file (type pdf)
 <use ../images/chapter5/f3_HB_ancient_slavs.pdf>
 Package pdftex.def Info: ../images/chapter5/f3_HB_ancient_slavs.pdf  used on in
 put line 313.
 (pdftex.def)             Requested size: 398.33858pt x 220.41582pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [20 <../images/chapter5/f3_HB_ancient_slavs.pdf>]
-<../images/chapter5/tree_with_ancients.pdf, id=403, 963.6pt x 542.025pt>
+ [176 <../images/chapter5/f3_HB_ancient_slavs.pdf>]
+<../images/chapter5/tree_with_ancients.pdf, id=2608, 963.6pt x 542.025pt>
 File: ../images/chapter5/tree_with_ancients.pdf Graphic file (type pdf)
 <use ../images/chapter5/tree_with_ancients.pdf>
 Package pdftex.def Info: ../images/chapter5/tree_with_ancients.pdf  used on inp
 ut line 326.
 (pdftex.def)             Requested size: 398.33858pt x 224.0595pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [21]
-<../images/chapter5/MOSAIC_admixture_dates_plot.pdf, id=415, 1870.99pt x 1870.9
-9pt>
+ [177 <../images/chapter5/tree_with_ancients.pdf>]
+<../images/chapter5/MOSAIC_admixture_dates_plot.pdf, id=2653, 1870.99pt x 1870.
+99pt>
 File: ../images/chapter5/MOSAIC_admixture_dates_plot.pdf Graphic file (type pdf
 )
 <use ../images/chapter5/MOSAIC_admixture_dates_plot.pdf>
 Package pdftex.def Info: ../images/chapter5/MOSAIC_admixture_dates_plot.pdf  us
 ed on input line 338.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [22 <../images/chapter5/tree_with_ancients.pdf>] [23 <../images/chapter5/MOSAI
-C_admixture_dates_plot.pdf>]
-<../images/chapter5/Fst_plot_HB:belorussian.pdf, id=471, 1870.99pt x 1870.99pt>
-
+<../images/chapter5/Fst_plot_HB:belorussian.pdf, id=2659, 1870.99pt x 1870.99pt
+>
 File: ../images/chapter5/Fst_plot_HB:belorussian.pdf Graphic file (type pdf)
 <use ../images/chapter5/Fst_plot_HB:belorussian.pdf>
 Package pdftex.def Info: ../images/chapter5/Fst_plot_HB:belorussian.pdf  used o
@@ -1201,36 +1936,315 @@ n input line 347.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24 <../images/chapter5/Fst_plot_HB:belorussian.pdf>]
+ [178]
+[179 <../images/chapter5/MOSAIC_admixture_dates_plot.pdf>] [180 <../images/chap
+ter5/Fst_plot_HB:belorussian.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25]
+ [181]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26])
-[27] (./Main.bbl [28
+ [182])
+[183]
+\openout2 = `Conclusions_GH.aux'.
+
+ (./Conclusions_GH.tex
+Chapter 6.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [184
 
 
 
-] [29] [30] [31])
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [185]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [186]
+[187]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [188])
+[189]
+\openout2 = `Appendices.aux'.
+
+ (./Appendices.tex
+Appendix A.
+[190
+
+
+
+
+] [191] [192]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 90.
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+\T1/lmtt/m/n/12 org / 0 / Sections / Collections / NHGRI / 1000genome . aspx ? 
+PgId = 664 & coll =
+ []
+
+[193]
+Overfull \hbox (28.99646pt too wide) in alignment at lines 138--161
+ [] [] [] [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 161
+ []
+
+
+Overfull \hbox (28.99646pt too wide) in alignment at lines 161--181
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (28.99646pt too wide) in alignment at lines 181--201
+ [] [] [] [] [] 
+ []
+
+[194]
+Overfull \hbox (28.99646pt too wide) in alignment at lines 201--221
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (28.99646pt too wide) in alignment at lines 221--242
+ [] [] [] [] [] 
+ []
+
+[195]
+Overfull \hbox (28.99646pt too wide) in alignment at lines 242--266
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (28.99646pt too wide) in alignment at lines 266--290
+ [] [] [] [] [] 
+ []
+
+[196]
+Overfull \hbox (28.99646pt too wide) in alignment at lines 290--314
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (28.99646pt too wide) in alignment at lines 314--338
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (28.99646pt too wide) in alignment at lines 338--358
+ [] [] [] [] [] 
+ []
+
+[197]
+Overfull \hbox (28.99646pt too wide) in alignment at lines 358--378
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (28.99646pt too wide) in alignment at lines 378--398
+ [] [] [] [] [] 
+ []
+
+[198]
+Overfull \hbox (28.99646pt too wide) in alignment at lines 398--418
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (28.99646pt too wide) in alignment at lines 418--438
+ [] [] [] [] [] 
+ []
+
+[199]
+Overfull \hbox (28.99646pt too wide) in alignment at lines 438--444
+ [] [] [] [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [200]
+[201] [202] [203] [204] [205] [206] [207] [208] [209] [210] [211] [212]
+[213] [214] [215] [216] [217] [218] [219] [220] [221] [222] [223] [224]
+[225] [226] [227] [228] [229] [230] [231] [232] [233]
+Appendix B.
+[234
+
+] [235]
+Appendix C.
+[236
+
+]
+Appendix D.
+<../images/appendix/UstIshim_0.1x_bin.pdf, id=3041, 1870.99pt x 1870.99pt>
+File: ../images/appendix/UstIshim_0.1x_bin.pdf Graphic file (type pdf)
+<use ../images/appendix/UstIshim_0.1x_bin.pdf>
+Package pdftex.def Info: ../images/appendix/UstIshim_0.1x_bin.pdf  used on inpu
+t line 1736.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+<../images/appendix/plink_withHG_PCA.pdf, id=3042, 1870.99pt x 1870.99pt>
+File: ../images/appendix/plink_withHG_PCA.pdf Graphic file (type pdf)
+<use ../images/appendix/plink_withHG_PCA.pdf>
+Package pdftex.def Info: ../images/appendix/plink_withHG_PCA.pdf  used on input
+ line 1743.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+<../images/appendix/haplotype_map_Brazil.pdf, id=3043, 1870.99pt x 1870.99pt>
+File: ../images/appendix/haplotype_map_Brazil.pdf Graphic file (type pdf)
+<use ../images/appendix/haplotype_map_Brazil.pdf>
+Package pdftex.def Info: ../images/appendix/haplotype_map_Brazil.pdf  used on i
+nput line 1750.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+<../images/appendix/haplotype_map_Caribbean.pdf, id=3044, 1870.99pt x 1870.99pt
+>
+File: ../images/appendix/haplotype_map_Caribbean.pdf Graphic file (type pdf)
+<use ../images/appendix/haplotype_map_Caribbean.pdf>
+Package pdftex.def Info: ../images/appendix/haplotype_map_Caribbean.pdf  used o
+n input line 1757.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+<../images/appendix/testing_centre_afr_prop.pdf, id=3045, 1870.99pt x 1870.99pt
+>
+File: ../images/appendix/testing_centre_afr_prop.pdf Graphic file (type pdf)
+<use ../images/appendix/testing_centre_afr_prop.pdf>
+Package pdftex.def Info: ../images/appendix/testing_centre_afr_prop.pdf  used o
+n input line 1764.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+<../images/appendix/chromopainter_PCA_ancients_Bavaria.pdf, id=3046, 1870.99pt 
+x 1870.99pt>
+File: ../images/appendix/chromopainter_PCA_ancients_Bavaria.pdf Graphic file (t
+ype pdf)
+<use ../images/appendix/chromopainter_PCA_ancients_Bavaria.pdf>
+Package pdftex.def Info: ../images/appendix/chromopainter_PCA_ancients_Bavaria.
+pdf  used on input line 1771.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+<../images/appendix/SF_heatmap_slavs.pdf, id=3047, 1870.99pt x 1870.99pt>
+File: ../images/appendix/SF_heatmap_slavs.pdf Graphic file (type pdf)
+<use ../images/appendix/SF_heatmap_slavs.pdf>
+Package pdftex.def Info: ../images/appendix/SF_heatmap_slavs.pdf  used on input
+ line 1778.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+[237
+
+] [238 <../images/appendix/UstIshim_0.1x_bin.pdf>] [239 <../images/appendix/pli
+nk_withHG_PCA.pdf>] [240 <../images/appendix/haplotype_map_Brazil.pdf>]
+[241 <../images/appendix/haplotype_map_Caribbean.pdf>] [242 <../images/appendix
+/testing_centre_afr_prop.pdf>] [243 <../images/appendix/chromopainter_PCA_ancie
+nts_Bavaria.pdf>] [244 <../images/appendix/SF_heatmap_slavs.pdf>]
+Appendix E.
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 1788.
+
+
+Underfull \hbox (badness 1742) in paragraph at lines 1792--1793
+[]\T1/lmr/m/n/12 (+20) To de-ter-mine what is the min-i-mum num-ber of it-er-a-
+tions, I ran
+ []
+
+<../images/appendix/iterations.pdf, id=3149, 1870.99pt x 1870.99pt>
+File: ../images/appendix/iterations.pdf Graphic file (type pdf)
+<use ../images/appendix/iterations.pdf>
+Package pdftex.def Info: ../images/appendix/iterations.pdf  used on input line 
+1796.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+<../images/appendix/Devon_Cornwall_TVD_reduced.pdf, id=3150, 1870.99pt x 1870.9
+9pt>
+File: ../images/appendix/Devon_Cornwall_TVD_reduced.pdf Graphic file (type pdf)
+
+<use ../images/appendix/Devon_Cornwall_TVD_reduced.pdf>
+Package pdftex.def Info: ../images/appendix/Devon_Cornwall_TVD_reduced.pdf  use
+d on input line 1809.
+(pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [245
+
+]
+[246 <../images/appendix/iterations.pdf>] [247 <../images/appendix/Devon_Cornwa
+ll_TVD_reduced.pdf>] [248] [249] [250] [251]) [252] (./Main.bbl [253
+
+
+
+] [254]
+[255]
+Overfull \hbox (1.41295pt too wide) in paragraph at lines 176--180
+\T1/lmr/m/n/12 (-20) lo-types Can Im-prove Pop-u-la-tion Struc-ture In-fer-ence
+.  \T1/lmr/m/it/12 (-20) Ge-net-ics\T1/lmr/m/n/12 (-20) , 190(1):159--
+ []
+
+[256] [257] [258] [259] [260] [261] [262] [263] [264] [265] [266] [267]
+[268] [269] [270] [271] [272] [273] [274] [275] [276])
 No complaints by nag.
-[32] (./Main.aux (./Chapter5_GH.aux))
+[277] (./Main.aux (./Preamble.aux) (./Introduction_GHII.aux)
+(./Chapter2_GH_Nov2021.aux) (./Chapter3_GH_Nov2021.aux)
+(./Chapter4_GH_Dec2021.aux) (./Chapter5_GH.aux) (./Conclusions_GH.aux)
+(./Appendices.aux))
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: D8DA5AB98C466F675F04B1055B72278B;1664.
- ) 
+(rerunfilecheck)             Checksum: 6D1D3F21AEBA7B1CE28EE9702B855EF4;9677.
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 38 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 24162 strings out of 481134
- 439430 string characters out of 5913145
- 806511 words of memory out of 5000000
- 40189 multiletter control sequences out of 15000+600000
- 489007 words of font info for 198 fonts, out of 8000000 for 9000
+ 26159 strings out of 481134
+ 479744 string characters out of 5913145
+ 911959 words of memory out of 5000000
+ 41071 multiletter control sequences out of 15000+600000
+ 522601 words of font info for 300 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 92i,16n,92p,1516b,653s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{cite.veeramah2011genetic} has been referenced but
+ 96i,16n,95p,2175b,699s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{cite.Sawcer2011} has been reference
+d but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.li2009sequence} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Seguin-Orlando2014} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.sanchez2019megalithic} has been referenced but
  does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.olalde2014derived} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.marchi2020mixed} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Jones2015} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.gunther2015ancient} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Cassidy368} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Broushaki2016b} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.colate} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Lipatov023374} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.ngsLD} has been referenced but does not exist,
+ replaced by a fixed one
 
 pdfTeX warning (dest): name{cite.Veeramah2018} has been referenced but does not
  exist, replaced by a fixed one
@@ -1244,44 +2258,11 @@ pdfTeX warning (dest): name{cite.duczko2004viking} has been referenced but does
 pdfTeX warning (dest): name{cite.Hellenthal2016} has been referenced but does n
 ot exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{cite.Leslie2015} has been referenced but does not e
-xist, replaced by a fixed one
-
 pdfTeX warning (dest): name{cite.lotter2003volkerverschiebungen} has been refer
 enced but does not exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{cite.oro22547} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.Chacon-Duque2018} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.Lawson2012} has been referenced but does not e
-xist, replaced by a fixed one
-
 pdfTeX warning (dest): name{cite.admixrpetr2019} has been referenced but does n
 ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.Patterson2012} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.AlbrechtsenPCAmissingness} has been referenced
- but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.chang2015second} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.delaneau2018integrative} has been referenced b
-ut does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.byrska2021high} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.rubinacci2021efficient} has been referenced bu
-t does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.MOSAIC_2019} has been referenced but does not 
-exist, replaced by a fixed one
 
 pdfTeX warning (dest): name{cite.ringbauer2017inferring} has been referenced bu
 t does not exist, replaced by a fixed one
@@ -1295,8 +2276,8 @@ t exist, replaced by a fixed one
 pdfTeX warning (dest): name{cite.qin2015quantitating} has been referenced but d
 oes not exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{cite.Hellenthal2014} has been referenced but does n
-ot exist, replaced by a fixed one
+pdfTeX warning (dest): name{cite.pankratov2016east} has been referenced but doe
+s not exist, replaced by a fixed one
 
 pdfTeX warning (dest): name{cite.MACHACEK2021105333} has been referenced but do
 es not exist, replaced by a fixed one
@@ -1340,23 +2321,536 @@ not exist, replaced by a fixed one
 pdfTeX warning (dest): name{cite.barford2001early} has been referenced but does
  not exist, replaced by a fixed one
 
+pdfTeX warning (dest): name{cite.wegewitz1972} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.de2018137} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.nelis2009genetic} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.keyser2009ancient} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Racimo8989} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.gonzalez2017paleogenomic} has been referenced 
+but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Gamba2014} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Mathieson2015} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Lazaridis2016} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.fernandez2014ancient} has been referenced but 
+does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.bramanti2009genetic} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Haak2010} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.rivollat2020france} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Patterson2012} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.MOSAIC_2019} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.LohAlderAdmixture} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.chang2015second} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.weissensteiner2016haplogrep} has been referenc
+ed but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.botigue2017ancient} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.steffens2006snp} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.veeramah2011genetic} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.novembre2008genes} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Brunel12791} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.brinker2013human} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.jantzen2011bronze} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.lee2012emerging} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.furtwangler2020ancient} has been referenced bu
+t does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.furholt2003absolutchronologische} has been ref
+erenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Allentoft2015} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Hofmanova2016} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Lipson2017b} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.conard2009new} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.conard2009female} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.schutze2008introduction} has been referenced b
+ut does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.van2019genetic} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.rawley2005transatlantic} has been referenced b
+ut does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.micheletti2020genetic} has been referenced but
+ does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.banton1953recent} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.bosch2009decay} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.LouwersSelfReportedEthnicity2014} has been ref
+erenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.shraga2017evaluating} has been referenced but 
+does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.huang2011haplotype} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.purcell2007plink} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.taliun2021sequencing} has been referenced but 
+does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.peterson2019genome} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.gurdasani2019uganda} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.lopez2021evidence} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.ZHOU2020426} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.zaidi2020demographic} has been referenced but 
+does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.vilhjalmsson2015modeling} has been referenced 
+but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.bustamante2011genomics} has been referenced bu
+t does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.kuchenbaecker2019transferability} has been ref
+erenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.hellwege2017population} has been referenced bu
+t does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.manolio2019using} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.nasta2005voyaging} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.liu2020human} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.UK10k2015UK10k} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.bycroft2018UK} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.vieira2016estimating} has been referenced but 
+does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Fu2016} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.excoffier1999hunter} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.kong2008detection} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.browning2015accurate} has been referenced but 
+does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Prufer2014} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Haak2005} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.loh2016reference} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.alexander2009fast} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Price2006} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.oro22547} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Haak2015} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.cleary2014joint} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.li2011statistical} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.byrska2021high} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Browning2007} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.mccarthy2016reference} has been referenced but
+ does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.HUANG2009235} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.nielsen2011genotype} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.1000GenomesProjectConsortium2015} has been ref
+erenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Picard2018toolkit} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Gunther2018a} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Fu2014} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.deBarrosDamgaardeaar7711} has been referenced 
+but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Watterson1975} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.rubinacci2021efficient} has been referenced bu
+t does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Browning2016} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.dabney2013ancient} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.de2018quantifying} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.paabo1991miocene} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.paabo1989ancient} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Meyer2012} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.nakatsuka2020contamld} has been referenced but
+ does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.green2009neandertal} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.wall2007inconsistencies} has been referenced b
+ut does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.peyregne2020present} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Vieira2016} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Schraiber2018} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Racimo2016} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.fernandes2021tkgwv2} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.fernandes2017identification} has been referenc
+ed but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.zhang2021novel} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.skotte2013estimating} has been referenced but 
+does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Alexander2009} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.davies2021rapid} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Davies2016} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Link2017} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Korneliussen2014} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Kim2011} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Li2009a} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Li2009} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.VanderAuwera2013} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.McKenna2010} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.EmpiricalAncient} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.hui2020evaluating} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Martiniano2017} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Moodleye2015523118} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.teixeira2021widespread} has been referenced bu
+t does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.JACOBS20191010} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.antonio2019ancient} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.margaryan2020population} has been referenced b
+ut does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Broushaki2016a} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.wright1949genetical} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.AlbrechtsenPCAmissingness} has been referenced
+ but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.franccois2020factor} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.reich2009reconstructing} has been referenced b
+ut does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Lazaridis2014} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Garrison2018} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.martiniano2020removing} has been referenced bu
+t does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.GuntherRefBias} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.sirak2021social} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.price2006principal} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.AssessingqpAdm} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Green2010} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.LawsonFalushReview} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.o2015rare} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.schiffels2016iron} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.bowcock1994high} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.rosenberg2002genetic} has been referenced but 
+does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.BergstromHGDP} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.JakobssonCombiningMarkers} has been referenced
+ but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Leslie2015} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.zhou2020fast} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.naseri2019rapid} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.saada2020identity} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.byrne2020dutch} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.naseri2019multi} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.delaneau2018integrative} has been referenced b
+ut does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.LiBWA} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.DurbinPBWT} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.burrows1994block} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Chacon-Duque2018} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Hellenthal2014} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Lawson2012} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.jakobsson2008genotype} has been referenced but
+ does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.hellenthal2008inferring} has been referenced b
+ut does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.stephens2005accounting} has been referenced bu
+t does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.stephens2003comparison} has been referenced bu
+t does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.song2016li} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Li2003} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.cann1987mitochondrial} has been referenced but
+ does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.conrad2006worldwide} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.reich2001linkage} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.evans2005comparison} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.crawford2004evidence} has been referenced but 
+does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.gibbs2003international} has been referenced bu
+t does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.tishkoff1996global} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.amos1993social} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.slatkin2008linkage} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.bateson1902experiments} has been referenced bu
+t does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.morgan1912complete} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.octopus} has been referenced but does not exis
+t, replaced by a fixed one
+
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvip
-s/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/t
-exmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-m
+s/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/t
+exmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-m
 athsy.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/
 fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10
 .pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb><
-/usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/
-public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmro12.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmt
-t10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Main.pdf (32 pages, 1047431 bytes).
+/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/
+public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm
+/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmtt12.pfb>
+Output written on Main.pdf (277 pages, 21571969 bytes).
 PDF statistics:
- 661 PDF objects out of 1000 (max. 8388607)
- 574 compressed objects within 6 object streams
- 146 named destinations out of 1000 (max. 500000)
- 58588 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 3808 PDF objects out of 4296 (max. 8388607)
+ 3335 compressed objects within 34 object streams
+ 958 named destinations out of 1000 (max. 500000)
+ 76521 words of extra memory for PDF output out of 89155 (max. 10000000)
 

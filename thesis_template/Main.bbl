@@ -1,4 +1,1044 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
+
+\bibitem{octopus}
+Daniel~P. Cooke, David~C. Wedge, and Gerton Lunter.
+\newblock A unified haplotype-based method for accurate and comprehensive
+  variant calling.
+\newblock {\em Nature Biotechnology}, 2021.
+
+\bibitem{morgan1912complete}
+Thomas~Hunt Morgan.
+\newblock Complete linkage in the second chromosome of the male of Drosophila.
+\newblock {\em Science}, 36(934):719--720, 1912.
+
+\bibitem{bateson1902experiments}
+William Bateson and Edith~Rebecca Saunders.
+\newblock {\em Experiments [in the Physiology of Heredity]}.
+\newblock Harrison, 1902.
+
+\bibitem{slatkin2008linkage}
+Montgomery Slatkin.
+\newblock Linkage disequilibrium—understanding the evolutionary past and
+  mapping the medical future.
+\newblock {\em Nature Reviews Genetics}, 9(6):477--485, 2008.
+
+\bibitem{amos1993social}
+Bill Amos, Christian Schlotterer, and Diethard Tautz.
+\newblock Social structure of pilot whales revealed by analytical DNA
+  profiling.
+\newblock {\em Science}, 260(5108):670--672, 1993.
+
+\bibitem{tishkoff1996global}
+Sarah~A Tishkoff, Erin Dietzsch, William Speed, et~al.
+\newblock Global patterns of linkage disequilibrium at the CD4 locus and modern
+  human origins.
+\newblock {\em Science}, 271(5254):1380--1387, 1996.
+
+\bibitem{gibbs2003international}
+Richard~A Gibbs, John~W Belmont, Paul Hardenbol, et~al.
+\newblock The international HapMap project.
+\newblock 2003.
+
+\bibitem{crawford2004evidence}
+Dana~C Crawford, Tushar Bhangale, Na~Li, et~al.
+\newblock Evidence for substantial fine-scale variation in recombination rates
+  across the human genome.
+\newblock {\em Nature genetics}, 36(7):700--706, 2004.
+
+\bibitem{evans2005comparison}
+David~M Evans and Lon~R Cardon.
+\newblock A comparison of linkage disequilibrium patterns and estimated
+  population recombination rates across multiple populations.
+\newblock {\em The American Journal of Human Genetics}, 76(4):681--687, 2005.
+
+\bibitem{reich2001linkage}
+David~E Reich, Michele Cargill, Stacey Bolk, et~al.
+\newblock Linkage disequilibrium in the human genome.
+\newblock {\em Nature}, 411(6834):199--204, 2001.
+
+\bibitem{conrad2006worldwide}
+Donald~F Conrad, Mattias Jakobsson, Graham Coop, et~al.
+\newblock A worldwide survey of haplotype variation and linkage disequilibrium
+  in the human genome.
+\newblock {\em Nature genetics}, 38(11):1251--1260, 2006.
+
+\bibitem{cann1987mitochondrial}
+Rebecca~L Cann, Mark Stoneking, and Allan~C Wilson.
+\newblock Mitochondrial DNA and human evolution.
+\newblock {\em Nature}, 325(6099):31--36, 1987.
+
+\bibitem{Li2003}
+Na~Li and Matthew Stephens.
+\newblock {Modeling Linkage Disequilibrium and Identifying Recombination
+  Hotspots Using Single-Nucleotide Polymorphism Data}.
+\newblock {\em Genetics}, 165(4):2213--2233, 2003.
+
+\bibitem{song2016li}
+Yun~S Song.
+\newblock Na Li and Matthew Stephens on modeling linkage disequilibrium.
+\newblock {\em Genetics}, 203(3):1005--1006, 2016.
+
+\bibitem{stephens2003comparison}
+Matthew Stephens and Peter Donnelly.
+\newblock A comparison of bayesian methods for haplotype reconstruction from
+  population genotype data.
+\newblock {\em The American Journal of Human Genetics}, 73(5):1162--1169, 2003.
+
+\bibitem{stephens2005accounting}
+Matthew Stephens and Paul Scheet.
+\newblock Accounting for decay of linkage disequilibrium in haplotype inference
+  and missing-data imputation.
+\newblock {\em The American Journal of Human Genetics}, 76(3):449--462, 2005.
+
+\bibitem{hellenthal2008inferring}
+Garrett Hellenthal, Adam Auton, and Daniel Falush.
+\newblock Inferring human colonization history using a copying model.
+\newblock {\em PLoS genetics}, 4(5):e1000078, 2008.
+
+\bibitem{jakobsson2008genotype}
+Mattias Jakobsson, Sonja~W Scholz, Paul Scheet, et~al.
+\newblock Genotype, haplotype and copy-number variation in worldwide human
+  populations.
+\newblock {\em Nature}, 451(7181):998--1003, 2008.
+
+\bibitem{Lawson2012}
+Daniel~John Lawson, Garrett Hellenthal, Simon Myers, and Daniel Falush.
+\newblock {Inference of population structure using dense haplotype data}.
+\newblock {\em PLoS Genetics}, 8(1):11--17, 2012.
+
+\bibitem{Hellenthal2014}
+Garrett Hellenthal, George B.J.~J. Busby, Gavin Band, et~al.
+\newblock {A Genetic Atlas of Human Admixture History}.
+\newblock {\em Science}, 343(6172):747--751, 2014.
+
+\bibitem{Chacon-Duque2018}
+Juan~C. Chacon-Duque, Kaustubh Adhikari, Macarena Fuentes-Guajardo, et~al.
+\newblock {Latin Americans show wide-spread Converso ancestry and the imprint
+  of local Native ancestry on physical appearance}.
+\newblock {\em Nature Communications}, page 252155, 2018.
+
+\bibitem{burrows1994block}
+Michael Burrows and David Wheeler.
+\newblock A block-sorting lossless data compression algorithm.
+\newblock In {\em Digital SRC Research Report}. Citeseer, 1994.
+
+\bibitem{DurbinPBWT}
+Richard Durbin.
+\newblock {Efficient haplotype matching and storage using the positional
+  Burrows–Wheeler transform (PBWT)}.
+\newblock {\em Bioinformatics}, 30(9):1266--1272, 01 2014.
+
+\bibitem{LiBWA}
+Heng Li and Richard Durbin.
+\newblock {Fast and accurate short read alignment with Burrows–Wheeler
+  transform}.
+\newblock {\em Bioinformatics}, 25(14):1754--1760, 05 2009.
+
+\bibitem{delaneau2018integrative}
+Olivier Delaneau, Jean-Fran{\c{c}}ois Zagury, Matthew~R Robinson, et~al.
+\newblock Accurate, scalable and integrative haplotype estimation.
+\newblock {\em Nature communications}, 10(1):1--10, 2019.
+
+\bibitem{naseri2019multi}
+Ardalan Naseri, Degui Zhi, and Shaojie Zhang.
+\newblock Multi-allelic positional Burrows-Wheeler transform.
+\newblock {\em BMC bioinformatics}, 20(11):1--8, 2019.
+
+\bibitem{byrne2020dutch}
+Ross~P Byrne, Wouter van Rheenen, Leonard~H van~den Berg, et~al.
+\newblock Dutch population structure across space, time and GWAS design.
+\newblock {\em Nature communications}, 11(1):1--11, 2020.
+
+\bibitem{saada2020identity}
+Juba~Nait Saada, Georgios Kalantzis, Derek Shyr, et~al.
+\newblock Identity-by-descent detection across 487,409 British samples reveals
+  fine scale population structure and ultra-rare variant associations.
+\newblock {\em Nature Communications}, 11(1):1--15, 2020.
+
+\bibitem{naseri2019rapid}
+Ardalan Naseri, Xiaoming Liu, Kecong Tang, et~al.
+\newblock RaPID: ultra-fast, powerful, and accurate detection of segments
+  identical by descent (IBD) in biobank-scale cohorts.
+\newblock {\em Genome biology}, 20(1):1--15, 2019.
+
+\bibitem{zhou2020fast}
+Ying Zhou, Sharon~R Browning, and Brian~L Browning.
+\newblock A fast and simple method for detecting identity-by-descent segments
+  in large-scale data.
+\newblock {\em The American Journal of Human Genetics}, 106(4):426--437, 2020.
+
+\bibitem{Leslie2015}
+Stephen Leslie, Bruce Winney, Garrett Hellenthal, et~al.
+\newblock {The fine-scale genetic structure of the British population}.
+\newblock {\em Nature}, 519(7543):309--314, 2015.
+
+\bibitem{JakobssonCombiningMarkers}
+Lucie~M Gattepaille and Mattias Jakobsson.
+\newblock {Combining Markers into Haplotypes Can Improve Population Structure
+  Inference}.
+\newblock {\em Genetics}, 190(1):159--174, 01 2012.
+
+\bibitem{BergstromHGDP}
+Anders Bergström, Shane~A. McCarthy, Ruoyun Hui, et~al.
+\newblock Insights into human genetic variation and population history from 929
+  diverse genomes.
+\newblock {\em Science}, 367(6484):eaay5012, 2020.
+
+\bibitem{rosenberg2002genetic}
+Noah~A Rosenberg, Jonathan~K Pritchard, James~L Weber, et~al.
+\newblock Genetic structure of human populations.
+\newblock {\em science}, 298(5602):2381--2385, 2002.
+
+\bibitem{ramachandran2005support}
+Sohini Ramachandran, Omkar Deshpande, Charles~C Roseman, et~al.
+\newblock Support from the relationship of genetic and geographic distance in
+  human populations for a serial founder effect originating in Africa.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  102(44):15942--15947, 2005.
+
+\bibitem{bowcock1994high}
+Anne~M Bowcock, Andres Ruiz-Linares, James Tomfohrde, et~al.
+\newblock High resolution of human evolutionary trees with polymorphic
+  microsatellites.
+\newblock {\em Nature}, 368(6470):455--457, 1994.
+
+\bibitem{schiffels2016iron}
+Stephan Schiffels, Wolfgang Haak, Pirita Paajanen, et~al.
+\newblock Iron age and Anglo-Saxon genomes from East England reveal British
+  migration history.
+\newblock {\em Nature communications}, 7(1):1--9, 2016.
+
+\bibitem{gravel2011demographic}
+Simon Gravel, Brenna~M Henn, Ryan~N Gutenkunst, et~al.
+\newblock Demographic history and rare allele sharing among human populations.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  108(29):11983--11988, 2011.
+
+\bibitem{o2015rare}
+Timothy~D O’Connor, Wenqing Fu, NHLBI GO Exome~Sequencing Project, et~al.
+\newblock Rare variation facilitates inferences of fine-scale population
+  structure in humans.
+\newblock {\em Molecular biology and evolution}, 32(3):653--660, 2015.
+
+\bibitem{LawsonFalushReview}
+Daniel~John Lawson and Daniel Falush.
+\newblock Population Identification Using Genetic Data.
+\newblock {\em Annual Review of Genomics and Human Genetics}, 13(1):337--361,
+  2012.
+\newblock PMID: 22703172.
+
+\bibitem{Green2010}
+Richard~E Green, Johannes Krause, Adrian~W Briggs, et~al.
+\newblock A draft sequence of the Neandertal genome.
+\newblock {\em science}, 328(5979):710--722, 2010.
+
+\bibitem{Patterson2012}
+Nick Patterson, Priya Moorjani, Yontao Luo, et~al.
+\newblock {Ancient admixture in human history}.
+\newblock {\em Genetics}, 192(3):1065--1093, 2012.
+
+\bibitem{peter2016admixture}
+Benjamin~M Peter.
+\newblock Admixture, population structure, and F-statistics.
+\newblock {\em Genetics}, 202(4):1485--1501, 2016.
+
+\bibitem{AssessingqpAdm}
+Éadaoin Harney, Nick Patterson, David Reich, and John Wakeley.
+\newblock {Assessing the performance of qpAdm: a statistical tool for studying
+  population admixture}.
+\newblock {\em Genetics}, 217(4), 01 2021.
+\newblock iyaa045.
+
+\bibitem{price2006principal}
+Alkes~L Price, Nick~J Patterson, Robert~M Plenge, et~al.
+\newblock Principal components analysis corrects for stratification in
+  genome-wide association studies.
+\newblock {\em Nature genetics}, 38(8):904--909, 2006.
+
+\bibitem{sirak2021social}
+Kendra~A Sirak, Daniel~M Fernandes, Mark Lipson, et~al.
+\newblock Social stratification without genetic differentiation at the site of
+  Kulubnarti in Christian Period Nubia.
+\newblock {\em bioRxiv}, 2021.
+
+\bibitem{GuntherRefBias}
+Torsten Günther and Carl Nettelblad.
+\newblock The presence and impact of reference bias on population genomic
+  studies of prehistoric human populations.
+\newblock {\em PLOS Genetics}, 15(7):1--20, 07 2019.
+
+\bibitem{Martiniano2017}
+Rui Martiniano, Lara~M. Cassidy, Ros {\'{O}}'Maold{\'{u}}in, et~al.
+\newblock {The population genomics of archaeological transition in west Iberia:
+  Investigation of ancient substructure using imputation and haplotype-based
+  methods}.
+\newblock {\em PLoS Genetics}, 13(7):1--24, 2017.
+
+\bibitem{martiniano2020removing}
+Rui Martiniano, Erik Garrison, Eppie~R Jones, et~al.
+\newblock Removing reference bias and improving indel calling in ancient DNA
+  data analysis by mapping to a sequence variation graph.
+\newblock {\em Genome biology}, 21(1):1--18, 2020.
+
+\bibitem{Garrison2018}
+Erik Garrison, Jouni Sir{\'{e}}n, Adam~M. Novak, et~al.
+\newblock {Variation graph toolkit improves read mapping by representing
+  genetic variation in the reference}, 2018.
+
+\bibitem{Lazaridis2014}
+Iosif Lazaridis, Nick Patterson, Alissa Mittnik, et~al.
+\newblock {Ancient human genomes suggest three ancestral populations for
+  present-day Europeans}.
+\newblock {\em Nature}, 513(7518):409--413, 2014.
+
+\bibitem{wright1949genetical}
+Sewall Wright.
+\newblock The genetical structure of populations.
+\newblock {\em Annals of eugenics}, 15(1):323--354, 1949.
+
+\bibitem{reich2009reconstructing}
+David Reich, Kumarasamy Thangaraj, Nick Patterson, et~al.
+\newblock Reconstructing Indian population history.
+\newblock {\em Nature}, 461(7263):489--494, 2009.
+
+\bibitem{franccois2020factor}
+Olivier Fran{\c{c}}ois and Flora Jay.
+\newblock Factor analysis of ancient population genomic samples.
+\newblock {\em Nature communications}, 11(1):1--11, 2020.
+
+\bibitem{herrando2021smartsnp}
+Salvador Herrando-P{\'e}rez, Raymond Tobler, and Christian~D Huber.
+\newblock smartsnp, an r package for fast multivariate analyses of big genomic
+  data.
+\newblock {\em Methods in Ecology and Evolution}, 2021.
+
+\bibitem{AlbrechtsenPCAmissingness}
+Jonas Meisner, Siyang Liu, Mingxi Huang, and Anders Albrechtsen.
+\newblock {Large-scale inference of population structure in presence of
+  missingness using PCA}.
+\newblock {\em Bioinformatics}, 37(13):1868--1875, 01 2021.
+
+\bibitem{Broushaki2016a}
+Farnaz Broushaki, Mark~G Thomas, Vivian Link, et~al.
+\newblock {eastern Fertile Crescent}.
+\newblock {\em Science}, 353(6298):499--503, 2016.
+
+\bibitem{margaryan2020population}
+Ashot Margaryan, Daniel~J Lawson, Martin Sikora, et~al.
+\newblock Population genomics of the Viking world.
+\newblock {\em Nature}, 585(7825):390--396, 2020.
+
+\bibitem{antonio2019ancient}
+Margaret~L Antonio, Ziyue Gao, Hannah~M Moots, et~al.
+\newblock Ancient Rome: a genetic crossroads of Europe and the Mediterranean.
+\newblock {\em Science}, 366(6466):708--714, 2019.
+
+\bibitem{JACOBS20191010}
+Guy~S. Jacobs, Georgi Hudjashov, Lauri Saag, et~al.
+\newblock Multiple Deeply Divergent Denisovan Ancestries in Papuans.
+\newblock {\em Cell}, 177(4):1010--1021.e32, 2019.
+
+\bibitem{teixeira2021widespread}
+Jo{\~a}o~C Teixeira, Guy~S Jacobs, Chris Stringer, et~al.
+\newblock Widespread Denisovan ancestry in Island Southeast Asia but no
+  evidence of substantial super-archaic hominin admixture.
+\newblock {\em Nature Ecology \& Evolution}, 5(5):616--624, 2021.
+
+\bibitem{Moodleye2015523118}
+Yoshan Moodley, Andrea Brunelli, Silvia Ghirotto, et~al.
+\newblock Helicobacter pylori{\textquoteright}s historical journey through
+  Siberia and the Americas.
+\newblock {\em Proceedings of the National Academy of Sciences}, 118(25), 2021.
+
+\bibitem{hui2020evaluating}
+Ruoyun Hui, Eugenia D’Atanasio, Lara~M Cassidy, et~al.
+\newblock Evaluating genotype imputation pipeline for ultra-low coverage
+  ancient genomes.
+\newblock {\em Scientific reports}, 10(1):1--8, 2020.
+
+\bibitem{EmpiricalAncient}
+Kristiina Ausmees, Federico Sanchez-Quinto, Mattias Jakobsson, and Carl
+  Nettelblad.
+\newblock An Empirical Evaluation of Genotype Imputation of Ancient {DNA}.
+\newblock Technical Report 2019-008, Department of Information Technology,
+  Uppsala University, October 2019.
+
+\bibitem{McKenna2010}
+Aaron McKenna, Matthew Hanna, Eric Banks, et~al.
+\newblock {The Genome Analysis Toolkit: a MapReduce framework for analyzing
+  next-generation DNA sequencing data.}
+\newblock {\em Genome research}, 2010.
+
+\bibitem{VanderAuwera2013}
+Geraldine~A. {Van der Auwera}, Mauricio~O. Carneiro, Christopher Hartl, et~al.
+\newblock {From fastQ data to high-confidence variant calls: The genome
+  analysis toolkit best practices pipeline}.
+\newblock {\em Current Protocols in Bioinformatics}, 2013.
+
+\bibitem{Li2009}
+Heng Li, Bob Handsaker, Alec Wysoker, et~al.
+\newblock {The Sequence Alignment/Map format and SAMtools}.
+\newblock {\em Bioinformatics}, 2009.
+
+\bibitem{Li2009a}
+Ruiqiang Li, Yingrui Li, Xiaodong Fang, et~al.
+\newblock {SNP detection for massively parallel whole-genome resequencing}.
+\newblock {\em Genome Research}, 2009.
+
+\bibitem{Kim2011}
+Su~Y. Kim, Kirk~E. Lohmueller, Anders Albrechtsen, et~al.
+\newblock {Estimation of allele frequency and association mapping using
+  next-generation sequencing data}.
+\newblock {\em BMC Bioinformatics}, 2011.
+
+\bibitem{Korneliussen2014}
+Thorfinn~Sand Korneliussen, Anders Albrechtsen, and Rasmus Nielsen.
+\newblock {ANGSD: Analysis of Next Generation Sequencing Data}.
+\newblock {\em BMC Bioinformatics}, 15(1):1--13, 2014.
+
+\bibitem{Link2017}
+Vivian Link, Athanasios Kousathanas, Krishna Veeramah, et~al.
+\newblock {ATLAS: Analysis Tools for Low-depth and Ancient Samples}.
+\newblock {\em bioRxiv}, page 105346, 2017.
+
+\bibitem{Davies2016}
+Robert~W. Davies, Jonathan Flint, Simon Myers, and Richard Mott.
+\newblock {Rapid genotype imputation from sequence without reference panels}.
+\newblock {\em Nature Genetics}, 48(8):965--969, 2016.
+
+\bibitem{davies2021rapid}
+Robert~W Davies, Marek Kucka, Dingwen Su, et~al.
+\newblock Rapid genotype imputation from sequence with reference panels.
+\newblock {\em Nature Genetics}, 53(7):1104--1111, 2021.
+
+\bibitem{Alexander2009}
+David~H. Alexander, John Novembre, and Kenneth Lange.
+\newblock {Fast model-based estimation of ancestry in unrelated individuals}.
+\newblock {\em Genome Research}, 19(9):1655--1664, 2009.
+
+\bibitem{skotte2013estimating}
+Line Skotte, Thorfinn~Sand Korneliussen, and Anders Albrechtsen.
+\newblock Estimating individual admixture proportions from next generation
+  sequencing data.
+\newblock {\em Genetics}, 195(3):693--702, 2013.
+
+\bibitem{zhang2021novel}
+Miao Zhang, Yiwen Liu, Hua Zhou, et~al.
+\newblock A novel nonlinear dimension reduction approach to infer population
+  structure for low-coverage sequencing data.
+\newblock {\em BMC bioinformatics}, 22(1):1--13, 2021.
+
+\bibitem{fernandes2017identification}
+Daniel Fernandes, Kendra Sirak, Mario Novak, et~al.
+\newblock The Identification of a 1916 Irish Rebel: new approach for estimating
+  relatedness from low coverage homozygous genomes.
+\newblock {\em Scientific reports}, 7(1):1--10, 2017.
+
+\bibitem{fernandes2021tkgwv2}
+Daniel~M Fernandes, Olivia Cheronet, Pere Gelabert, and Ron Pinhasi.
+\newblock TKGWV2: An ancient DNA relatedness pipeline for ultra-low coverage
+  whole genome shotgun data.
+\newblock {\em Nature Communications}, 2021.
+
+\bibitem{Racimo2016}
+Fernando Racimo, Gabriel Renaud, and Montgomery Slatkin.
+\newblock {Joint Estimation of Contamination, Error and Demography for Nuclear
+  DNA from Ancient Humans}.
+\newblock {\em PLoS Genetics}, 2016.
+
+\bibitem{Schraiber2018}
+Joshua~G. Schraiber.
+\newblock {Assessing the relationship of ancient and modern populations}.
+\newblock {\em Genetics}, 2018.
+
+\bibitem{Vieira2016}
+Filipe~G. Vieira, Anders Albrechtsen, and Rasmus Nielsen.
+\newblock {Estimating IBD tracts from low coverage NGS data}.
+\newblock {\em Bioinformatics}, 2016.
+
+\bibitem{peyregne2020present}
+St{\'e}phane Peyr{\'e}gne and Kay Pr{\"u}fer.
+\newblock Present-Day DNA Contamination in Ancient DNA Datasets.
+\newblock {\em BioEssays}, 42(9):2000081, 2020.
+
+\bibitem{wall2007inconsistencies}
+Jeffrey~D Wall and Sung~K Kim.
+\newblock Inconsistencies in Neanderthal genomic DNA sequences.
+\newblock {\em PLoS Genetics}, 3(10):e175, 2007.
+
+\bibitem{green2009neandertal}
+Richard~E Green, Adrian~W Briggs, Johannes Krause, et~al.
+\newblock The Neandertal genome and ancient DNA authenticity.
+\newblock {\em The EMBO journal}, 28(17):2494--2502, 2009.
+
+\bibitem{nakatsuka2020contamld}
+Nathan Nakatsuka, {\'E}adaoin Harney, Swapan Mallick, et~al.
+\newblock ContamLD: estimation of ancient nuclear DNA contamination using
+  breakdown of linkage disequilibrium.
+\newblock {\em Genome biology}, 21(1):1--22, 2020.
+
+\bibitem{Meyer2012}
+Matthias Meyer, Martin Kircher, Marie-theres Gansauge, et~al.
+\newblock {A High-Coverage Genome Sequence from an Archaic Denisovan Individual
+  A High-Coverage Genome Sequence from an Archaic Denisovan Individual A
+  High-Coverage Genome Sequence from an Archaic Denisovan Individual}.
+\newblock {\em Science (New York, NY)}, 222(2012):1--14, 2012.
+
+\bibitem{paabo1989ancient}
+Svante P{\"a}{\"a}bo.
+\newblock Ancient DNA: extraction, characterization, molecular cloning, and
+  enzymatic amplification.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  86(6):1939--1943, 1989.
+
+\bibitem{paabo1991miocene}
+S~Paabo.
+\newblock Miocene DNA sequence-a dream come true?
+\newblock {\em Curr. Biol.}, 1:45--46, 1991.
+
+\bibitem{de2018quantifying}
+Cesare de~Filippo, Matthias Meyer, and Kay Pr{\"u}fer.
+\newblock Quantifying and reducing spurious alignments for the analysis of
+  ultra-short ancient DNA sequences.
+\newblock {\em BMC biology}, 16(1):1--11, 2018.
+
+\bibitem{dabney2013ancient}
+Jesse Dabney, Matthias Meyer, and Svante P{\"a}{\"a}bo.
+\newblock Ancient DNA damage.
+\newblock {\em Cold Spring Harbor perspectives in biology}, 5(7):a012567, 2013.
+
+\bibitem{Browning2016}
+Brian~L. Browning and Sharon~R. Browning.
+\newblock {Genotype Imputation with Millions of Reference Samples}.
+\newblock {\em American Journal of Human Genetics}, 98(1):116--126, 2016.
+
+\bibitem{rubinacci2021efficient}
+Simone Rubinacci, Diogo~M Ribeiro, Robin~J Hofmeister, and Olivier Delaneau.
+\newblock Efficient phasing and imputation of low-coverage sequencing data
+  using large reference panels.
+\newblock {\em Nature Genetics}, 53(1):120--126, 2021.
+
+\bibitem{Watterson1975}
+G.~A. Watterson.
+\newblock {On the number of segregating sites in genetical models without
+  recombination}.
+\newblock {\em Theoretical Population Biology}, 1975.
+
+\bibitem{deBarrosDamgaardeaar7711}
+Peter de~Barros~Damgaard, Rui Martiniano, Jack Kamm, et~al.
+\newblock The first horse herders and the impact of early Bronze Age steppe
+  expansions into Asia.
+\newblock {\em Science}, 360(6396), 2018.
+
+\bibitem{Fu2014}
+Qiaomei Fu, Heng Li, Priya Moorjani, et~al.
+\newblock {Genome sequence of a 45,000-year-old modern human from western
+  Siberia}.
+\newblock {\em Nature}, 2014.
+
+\bibitem{Gunther2018a}
+Torsten G{\"{u}}nther, Helena Malmstr{\"{o}}m, Emma~M. Svensson, et~al.
+\newblock {Population genomics of Mesolithic Scandinavia: Investigating early
+  postglacial migration routes and high-latitude adaptation}.
+\newblock {\em PLoS Biology}, 2018.
+
+\bibitem{Picard2018toolkit}
+Broad Institute.
+\newblock Picard Tools.
+\newblock \url{http://broadinstitute.github.io/picard/}, 2018.
+\newblock Accessed: 2018-MM-DD; version X.Y.Z.
+
+\bibitem{1000GenomesProjectConsortium2015}
+{1000 Genomes Project Consortium}, Adam Auton, Lisa~D. Brooks, et~al.
+\newblock {A global reference for human genetic variation.}
+\newblock {\em Nature}, 526(7571):68--74, 2015.
+
+\bibitem{nielsen2011genotype}
+Rasmus Nielsen, Joshua~S Paul, Anders Albrechtsen, and Yun~S Song.
+\newblock Genotype and SNP calling from next-generation sequencing data.
+\newblock {\em Nature Reviews Genetics}, 12(6):443--451, 2011.
+
+\bibitem{HUANG2009235}
+Lucy Huang, Yun Li, Andrew~B. Singleton, et~al.
+\newblock Genotype-Imputation Accuracy across Worldwide Human Populations.
+\newblock {\em The American Journal of Human Genetics}, 84(2):235--250, 2009.
+
+\bibitem{mccarthy2016reference}
+Shane McCarthy, Sayantan Das, Warren Kretzschmar, et~al.
+\newblock A reference panel of 64,976 haplotypes for genotype imputation.
+\newblock {\em Nature genetics}, 48(10):1279, 2016.
+
+\bibitem{Browning2007}
+Sharon~R. Browning and Brian~L. Browning.
+\newblock {Rapid and Accurate Haplotype Phasing and Missing-Data Inference for
+  Whole-Genome Association Studies By Use of Localized Haplotype Clustering}.
+\newblock {\em The American Journal of Human Genetics}, 81(5):1084--1097, 2007.
+
+\bibitem{byrska2021high}
+Marta Byrska-Bishop, Uday~S Evani, Xuefang Zhao, et~al.
+\newblock High coverage whole genome sequencing of the expanded 1000 Genomes
+  Project cohort including 602 trios.
+\newblock {\em bioRxiv}, 2021.
+
+\bibitem{li2011statistical}
+Heng Li.
+\newblock A statistical framework for SNP calling, mutation discovery,
+  association mapping and population genetical parameter estimation from
+  sequencing data.
+\newblock {\em Bioinformatics}, 27(21):2987--2993, 2011.
+
+\bibitem{cleary2014joint}
+John~G Cleary, Ross Braithwaite, Kurt Gaastra, et~al.
+\newblock Joint variant and de novo mutation identification on pedigrees from
+  high-throughput sequencing data.
+\newblock {\em Journal of Computational Biology}, 21(6):405--419, 2014.
+
+\bibitem{Haak2015}
+Wolfgang Haak, Iosif Lazaridis, Nick Patterson, et~al.
+\newblock {Massive migration from the steppe was a source for Indo-European
+  languages in Europe}.
+\newblock {\em Nature}, 522(7555):207--211, 2015.
+
+\bibitem{oro22547}
+Martyn Plummer, Nicky Best, Kate Cowles, and Karen Vines.
+\newblock CODA: convergence diagnosis and output analysis for MCMC.
+\newblock {\em R News}, 6(1):7--11, March 2006.
+
+\bibitem{Price2006}
+Alkes~L. Price, Nick~J. Patterson, Robert~M. Plenge, et~al.
+\newblock {Principal components analysis corrects for stratification in
+  genome-wide association studies}.
+\newblock {\em Nature Genetics}, 38(8):904--909, 2006.
+
+\bibitem{alexander2009fast}
+David~H Alexander, John Novembre, and Kenneth Lange.
+\newblock Fast model-based estimation of ancestry in unrelated individuals.
+\newblock {\em Genome research}, 19(9):1655--1664, 2009.
+
+\bibitem{loh2016reference}
+Po-Ru Loh, Petr Danecek, Pier~Francesco Palamara, et~al.
+\newblock Reference-based phasing using the Haplotype Reference Consortium
+  panel.
+\newblock {\em Nature genetics}, 48(11):1443--1448, 2016.
+
+\bibitem{Haak2005}
+W~Haak, P~Forster, B~Bramanti, et~al.
+\newblock {Ancient DNA from the first European farmer in 750-year-old Neolithic
+  sites}.
+\newblock {\em Science}, 310(November):1016--1019, 2005.
+
+\bibitem{Prufer2014}
+Kay Pr{\"{u}}fer, Fernando Racimo, Nick Patterson, et~al.
+\newblock {The complete genome sequence of a Neanderthal from the Altai
+  Mountains}.
+\newblock {\em Nature}, 505(7481):43--49, 2014.
+
+\bibitem{browning2015accurate}
+Sharon~R Browning and Brian~L Browning.
+\newblock Accurate non-parametric estimation of recent effective population
+  size from segments of identity by descent.
+\newblock {\em The American Journal of Human Genetics}, 97(3):404--418, 2015.
+
+\bibitem{kong2008detection}
+Augustine Kong, Gisli Masson, Michael~L Frigge, et~al.
+\newblock Detection of sharing by descent, long-range phasing and haplotype
+  imputation.
+\newblock {\em Nature genetics}, 40(9):1068--1075, 2008.
+
+\bibitem{excoffier1999hunter}
+Laurent Excoffier and Stefan Schneider.
+\newblock Why hunter-gatherer populations do not show signs of Pleistocene
+  demographic expansions.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  96(19):10597--10602, 1999.
+
+\bibitem{Fu2016}
+Qiaomei Fu, Cosimo Posth, Mateja Hajdinjak, et~al.
+\newblock {The genetic history of Ice Age Europe}.
+\newblock {\em Nature}, 534(7606):200--205, 2016.
+
+\bibitem{vieira2016estimating}
+Filipe~G Vieira, Anders Albrechtsen, and Rasmus Nielsen.
+\newblock Estimating IBD tracts from low coverage NGS data.
+\newblock {\em Bioinformatics}, 32(14):2096--2102, 2016.
+
+\bibitem{bycroft2018UK}
+Clare Bycroft, Colin Freeman, Desislava Petkova, et~al.
+\newblock The UK Biobank resource with deep phenotyping and genomic data.
+\newblock {\em Nature}, 562(7726):203--209, 2018.
+
+\bibitem{turnbull2018introducing}
+Clare Turnbull.
+\newblock Introducing whole-genome sequencing into routine cancer care: the
+  Genomics England 100 000 Genomes Project.
+\newblock {\em Annals of Oncology}, 29(4):784--787, 2018.
+
+\bibitem{UK10k2015UK10k}
+UK10K consortium et~al.
+\newblock The UK10K project identifies rare variants in health and disease.
+\newblock {\em Nature}, 526(7571):82, 2015.
+
+\bibitem{liu2020human}
+Xiaoming Liu.
+\newblock Human prehistoric demography revealed by the polymorphic pattern of
+  CpG transitions.
+\newblock {\em Molecular biology and evolution}, 37(9):2691--2698, 2020.
+
+\bibitem{nasta2005voyaging}
+Susheila Nasta.
+\newblock {\em 'Voyaging in': colonialism and migration}.
+\newblock Cambridge University Press, 2005.
+
+\bibitem{manolio2019using}
+Teri~A Manolio.
+\newblock Using the data we have: improving diversity in genomic research.
+\newblock {\em The American Journal of Human Genetics}, 105(2):233--236, 2019.
+
+\bibitem{hellwege2017population}
+Jacklyn~N Hellwege, Jacob~M Keaton, Ayush Giri, et~al.
+\newblock Population stratification in genetic association studies.
+\newblock {\em Current protocols in human genetics}, 95(1):1--22, 2017.
+
+\bibitem{kuchenbaecker2019transferability}
+Karoline Kuchenbaecker, Nikita Telkar, Theresa Reiker, et~al.
+\newblock The transferability of lipid loci across African, Asian and European
+  cohorts.
+\newblock {\em Nature communications}, 10(1):1--10, 2019.
+
+\bibitem{martin2017human}
+Alicia~R Martin, Christopher~R Gignoux, Raymond~K Walters, et~al.
+\newblock Human demographic history impacts genetic risk prediction across
+  diverse populations.
+\newblock {\em The American Journal of Human Genetics}, 100(4):635--649, 2017.
+
+\bibitem{bustamante2011genomics}
+Carlos~D Bustamante, M~Francisco, and Esteban~G Burchard.
+\newblock Genomics for the world.
+\newblock {\em Nature}, 475(7355):163--165, 2011.
+
+\bibitem{vilhjalmsson2015modeling}
+Bjarni~J Vilhj{\'a}lmsson, Jian Yang, Hilary~K Finucane, et~al.
+\newblock Modeling linkage disequilibrium increases accuracy of polygenic risk
+  scores.
+\newblock {\em The american journal of human genetics}, 97(4):576--592, 2015.
+
+\bibitem{zaidi2020demographic}
+Arslan~A Zaidi and Iain Mathieson.
+\newblock Demographic history mediates the effect of stratification on
+  polygenic scores.
+\newblock {\em Elife}, 9:e61548, 2020.
+
+\bibitem{ZHOU2020426}
+Ying Zhou, Sharon~R. Browning, and Brian~L. Browning.
+\newblock A Fast and Simple Method for Detecting Identity-by-Descent Segments
+  in Large-Scale Data.
+\newblock {\em The American Journal of Human Genetics}, 106(4):426--437, 2020.
+
+\bibitem{lopez2021evidence}
+Saioa L{\'o}pez, Ayele Tarekegn, Gavin Band, et~al.
+\newblock Evidence of the interplay of genetics and culture in Ethiopia.
+\newblock {\em Nature communications}, 12(1):1--15, 2021.
+
+\bibitem{StructureEthiopians2021}
+Garrett Hellenthal, Nancy Bird, and Sam Morris.
+\newblock {Structure and ancestry patterns of Ethiopians in genome-wide
+  autosomal DNA}.
+\newblock {\em Human Molecular Genetics}, 30(R1):R42--R48, 02 2021.
+
+\bibitem{gurdasani2019uganda}
+Deepti Gurdasani, Tommy Carstensen, Segun Fatumo, et~al.
+\newblock Uganda genome resource enables insights into population history and
+  genomic discovery in Africa.
+\newblock {\em Cell}, 179(4):984--1002, 2019.
+
+\bibitem{peterson2019genome}
+Roseann~E Peterson, Karoline Kuchenbaecker, Raymond~K Walters, et~al.
+\newblock Genome-wide association studies in ancestrally diverse populations:
+  opportunities, methods, pitfalls, and recommendations.
+\newblock {\em Cell}, 179(3):589--603, 2019.
+
+\bibitem{taliun2021sequencing}
+Daniel Taliun, Daniel~N Harris, Michael~D Kessler, et~al.
+\newblock Sequencing of 53,831 diverse genomes from the NHLBI TOPMed Program.
+\newblock {\em Nature}, 590(7845):290--299, 2021.
+
+\bibitem{purcell2007plink}
+Shaun Purcell, Benjamin Neale, Kathe Todd-Brown, et~al.
+\newblock PLINK: a tool set for whole-genome association and population-based
+  linkage analyses.
+\newblock {\em The American journal of human genetics}, 81(3):559--575, 2007.
+
+\bibitem{huang2011haplotype}
+Lucy Huang, Mattias Jakobsson, Trevor~J Pemberton, et~al.
+\newblock Haplotype variation and genotype imputation in African populations.
+\newblock {\em Genetic epidemiology}, 35(8):766--780, 2011.
+
+\bibitem{shraga2017evaluating}
+Roman Shraga, Sarah Yarnall, Sonya Elango, et~al.
+\newblock Evaluating genetic ancestry and self-reported ethnicity in the
+  context of carrier screening.
+\newblock {\em BMC genetics}, 18(1):1--9, 2017.
+
+\bibitem{LouwersSelfReportedEthnicity2014}
+Y.~V. Louwers, O.~Lao, B.~C. J.~M. Fauser, et~al.
+\newblock {The Impact of Self-Reported Ethnicity Versus Genetic Ancestry on
+  Phenotypic Characteristics of Polycystic Ovary Syndrome (PCOS)}.
+\newblock {\em The Journal of Clinical Endocrinology \& Metabolism},
+  99(10):E2107--E2116, 10 2014.
+
+\bibitem{bosch2009decay}
+Elena Bosch, Hafid Laayouni, Carlos Morcillo-Suarez, et~al.
+\newblock Decay of linkage disequilibrium within genes across HGDP-CEPH human
+  samples: most population isolates do not show increased LD.
+\newblock {\em BMC genomics}, 10(1):1--9, 2009.
+
+\bibitem{banton1953recent}
+Michael Banton.
+\newblock Recent Migration from West Africa and the West Indies to the United
+  Kingdom.
+\newblock {\em Population Studies}, 7(1):2--13, 1953.
+
+\bibitem{micheletti2020genetic}
+Steven~J Micheletti, Kasia Bryc, Samantha G~Ancona Esselmann, et~al.
+\newblock Genetic consequences of the transatlantic slave trade in the
+  Americas.
+\newblock {\em The American Journal of Human Genetics}, 107(2):265--277, 2020.
+
+\bibitem{rawley2005transatlantic}
+James~A Rawley and Stephen~D Behrendt.
+\newblock {\em The transatlantic slave trade: a history}.
+\newblock U of Nebraska Press, 2005.
+
+\bibitem{van2019genetic}
+Lucy Van~Dorp, Sara Lowes, Jonathan~L Weigel, et~al.
+\newblock Genetic legacy of state centralization in the Kuba Kingdom of the
+  Democratic Republic of the Congo.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  116(2):593--598, 2019.
+
+\bibitem{schutze2008introduction}
+Hinrich Sch{\"u}tze, Christopher~D Manning, and Prabhakar Raghavan.
+\newblock {\em Introduction to information retrieval}, volume~39.
+\newblock Cambridge University Press Cambridge, 2008.
+
+\bibitem{conard2009female}
+Nicholas~J Conard.
+\newblock A female figurine from the basal Aurignacian of Hohle Fels Cave in
+  southwestern Germany.
+\newblock {\em Nature}, 459(7244):248--252, 2009.
+
+\bibitem{conard2009new}
+Nicholas~J Conard, Maria Malina, and Susanne~C M{\"u}nzel.
+\newblock New flutes document the earliest musical tradition in southwestern
+  Germany.
+\newblock {\em Nature}, 460(7256):737--740, 2009.
+
+\bibitem{Lipson2017b}
+Mark Lipson, Anna Sz{\'{e}}cs{\'{e}}nyi-Nagy, Swapan Mallick, et~al.
+\newblock {Parallel palaeogenomic transects reveal complex genetic history of
+  early European farmers}.
+\newblock {\em Nature}, 551(7680):368--372, 2017.
+
+\bibitem{mathieson2015genome}
+Iain Mathieson, Iosif Lazaridis, Nadin Rohland, et~al.
+\newblock Genome-wide patterns of selection in 230 ancient Eurasians.
+\newblock {\em Nature}, 528(7583):499--503, 2015.
+
+\bibitem{gunther2015ancient}
+Torsten G{\"u}nther, Cristina Valdiosera, Helena Malmstr{\"o}m, et~al.
+\newblock Ancient genomes link early farmers from Atapuerca in Spain to
+  modern-day Basques.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  112(38):11917--11922, 2015.
+
+\bibitem{Hofmanova2016}
+Zuzana Hofmanov{\'{a}}, Susanne Kreutzer, Garrett Hellenthal, et~al.
+\newblock {Early farmers from across Europe directly descended from Neolithic
+  Aegeans}.
+\newblock {\em Proceedings of the National Academy of Sciences}, 2016.
+
+\bibitem{Allentoft2015}
+Morten~E. Allentoft, Martin Sikora, Karl~G{\"{o}}ran Sj{\"{o}}gren, et~al.
+\newblock {Population genomics of Bronze Age Eurasia}.
+\newblock {\em Nature}, 2015.
+
+\bibitem{furholt2003absolutchronologische}
+Martin Furholt.
+\newblock The absolute chronological dating of cord ceramics in Central Europe
+  and South Scandinavia.
+\newblock 2003.
+
+\bibitem{furtwangler2020ancient}
+Anja Furtw{\"a}ngler, Adam~Ben Rohrlach, Thiseas~C Lamnidis, et~al.
+\newblock Ancient genomes reveal social and genetic structure of Late Neolithic
+  Switzerland.
+\newblock {\em Nature communications}, 11(1):1--11, 2020.
+
+\bibitem{lee2012emerging}
+Esther~J Lee, Cheryl Makarewicz, Rebecca Renneberg, et~al.
+\newblock Emerging genetic patterns of the European Neolithic: perspectives
+  from a late Neolithic Bell Beaker burial site in Germany.
+\newblock {\em American journal of physical anthropology}, 148(4):571--579,
+  2012.
+
+\bibitem{jantzen2011bronze}
+Detlef Jantzen, Ute Brinker, J{\"o}rg Orschiedt, et~al.
+\newblock A Bronze Age battlefield? Weapons and trauma in the Tollense Valley,
+  north-eastern Germany.
+\newblock {\em Antiquity}, 85(328):417--433, 2011.
+
+\bibitem{brinker2013human}
+Ute Brinker, Stefan Flohr, J{\"u}rgen Piek, and J{\"o}rg Orschiedt.
+\newblock Human remains from a Bronze Age site in the Tollense Valley: victims
+  of a battle?
+\newblock In {\em The Routledge handbook of the bioarchaeology of human
+  conflict}, pages 192--206. Routledge, 2013.
+
+\bibitem{Brunel12791}
+Samantha Brunel, E.~Andrew Bennett, Laurent Cardin, et~al.
+\newblock Ancient genomes from present-day France unveil 7,000 years of its
+  demographic history.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  117(23):12791--12798, 2020.
+
+\bibitem{novembre2008genes}
+John Novembre, Toby Johnson, Katarzyna Bryc, et~al.
+\newblock Genes mirror geography within Europe.
+\newblock {\em Nature}, 456(7218):98--101, 2008.
+
+\bibitem{kayser2005significant}
+Manfred Kayser, Oscar Lao, Katja Anslinger, et~al.
+\newblock Significant genetic differentiation between Poland and Germany
+  follows present-day political borders, as revealed by Y-chromosome analysis.
+\newblock {\em Human genetics}, 117(5):428--443, 2005.
+
+\bibitem{veeramah2011genetic}
+Krishna~R Veeramah, Anke T{\"o}njes, Peter Kovacs, et~al.
+\newblock Genetic variation in the Sorbs of eastern Germany in the context of
+  broader European genetic diversity.
+\newblock {\em European Journal of Human Genetics}, 19(9):995--1001, 2011.
+
+\bibitem{steffens2006snp}
+Michael Steffens, Claudia Lamina, Thomas Illig, et~al.
+\newblock SNP-based analysis of genetic substructure in the German population.
+\newblock {\em Human heredity}, 62(1):20--29, 2006.
+
+\bibitem{botigue2017ancient}
+Laura~R Botigu{\'e}, Shiya Song, Amelie Scheu, et~al.
+\newblock Ancient European dog genomes reveal continuity since the Early
+  Neolithic.
+\newblock {\em Nature communications}, 8(1):1--11, 2017.
+
+\bibitem{weissensteiner2016haplogrep}
+Hansi Weissensteiner, Dominic Pacher, Anita Kloss-Brandst{\"a}tter, et~al.
+\newblock HaploGrep 2: mitochondrial haplogroup classification in the era of
+  high-throughput sequencing.
+\newblock {\em Nucleic acids research}, 44(W1):W58--W63, 2016.
+
+\bibitem{chang2015second}
+Christopher~C Chang, Carson~C Chow, Laurent~CAM Tellier, et~al.
+\newblock Second-generation PLINK: rising to the challenge of larger and richer
+  datasets.
+\newblock {\em Gigascience}, 4(1):s13742--015, 2015.
+
+\bibitem{LohAlderAdmixture}
+Po-Ru Loh, Mark Lipson, Nick Patterson, et~al.
+\newblock {Inferring Admixture Histories of Human Populations Using Linkage
+  Disequilibrium}.
+\newblock {\em Genetics}, 193(4):1233--1254, 04 2013.
+
+\bibitem{MOSAIC_2019}
+Michael Salter-Townshend and Simon Myers.
+\newblock {Fine-Scale Inference of Ancestry Segments Without Prior Knowledge of
+  Admixing Groups}.
+\newblock {\em Genetics}, 212(3):869--889, 05 2019.
+
+\bibitem{rivollat2020france}
+Ma{\"\i}t{\'e} Rivollat, Choongwon Jeong, Stephan Schiffels, et~al.
+\newblock Ancient genome-wide DNA from France highlights the complexity of
+  interactions between Mesolithic hunter-gatherers and Neolithic farmers.
+\newblock {\em Science Advances}, 6(22), 2020.
+
+\bibitem{Haak2010}
+Wolfgang Haak, Oleg Balanovsky, Juan~J. Sanchez, et~al.
+\newblock {Ancient DNA from European early Neolithic farmers reveals their near
+  eastern affinities}.
+\newblock {\em PLoS Biology}, 8(11), 2010.
+
+\bibitem{haak2005ancient}
+Wolfgang Haak, Peter Forster, Barbara Bramanti, et~al.
+\newblock Ancient DNA from the first European farmers in 7500-year-old
+  Neolithic sites.
+\newblock {\em Science}, 310(5750):1016--1018, 2005.
+
+\bibitem{bramanti2009genetic}
+Barbara Bramanti, Mark~G Thomas, Wolfgang Haak, et~al.
+\newblock Genetic discontinuity between local hunter-gatherers and central
+  Europe’s first farmers.
+\newblock {\em science}, 326(5949):137--140, 2009.
+
+\bibitem{fernandez2014ancient}
+Eva Fern{\'a}ndez, Alejandro P{\'e}rez-P{\'e}rez, Cristina Gamba, et~al.
+\newblock Ancient DNA analysis of 8000 BC near eastern farmers supports an
+  early neolithic pioneer maritime colonization of Mainland Europe through
+  Cyprus and the Aegean Islands.
+\newblock {\em PLoS genetics}, 10(6):e1004401, 2014.
+
+\bibitem{Lazaridis2016}
+Iosif Lazaridis, Dani Nadel, Gary Rollefson, et~al.
+\newblock {Genomic insights into the origin of farming in the ancient Near
+  East}.
+\newblock {\em Nature}, 536(7617):419--424, 2016.
+
+\bibitem{Mathieson2015}
+Iain Mathieson, Iosif Lazaridis, Nadin Rohland, et~al.
+\newblock {Genome-wide patterns of selection in 230 ancient Eurasians}.
+\newblock {\em Nature}, 528(7583):499--503, 2015.
+
+\bibitem{Gamba2014}
+Cristina Gamba, Eppie~R. Jones, Matthew~D. Teasdale, et~al.
+\newblock {Genome flux and stasis in a five millennium transect of European
+  prehistory}.
+\newblock {\em Nature Communications}, 5:5257, 2014.
+
+\bibitem{mathieson2018genomic}
+Iain Mathieson, Song{\"u}l Alpaslan-Roodenberg, Cosimo Posth, et~al.
+\newblock The genomic history of southeastern Europe.
+\newblock {\em Nature}, 555(7695):197--203, 2018.
+
+\bibitem{gonzalez2017paleogenomic}
+Gloria Gonz{\'a}lez-Fortes, Eppie~R Jones, Emma Lightfoot, et~al.
+\newblock Paleogenomic evidence for multi-generational mixing between Neolithic
+  farmers and Mesolithic hunter-gatherers in the Lower Danube Basin.
+\newblock {\em Current Biology}, 27(12):1801--1810, 2017.
+
+\bibitem{Racimo8989}
+Fernando Racimo, Jessie Woodbridge, Ralph~M. Fyfe, et~al.
+\newblock The spatiotemporal spread of human migrations during the European
+  Holocene.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  117(16):8989--9000, 2020.
+
+\bibitem{keyser2009ancient}
+Christine Keyser, Caroline Bouakaze, Eric Crub{\'e}zy, et~al.
+\newblock Ancient DNA provides new insights into the history of south Siberian
+  Kurgan people.
+\newblock {\em Human genetics}, 126(3):395--410, 2009.
+
+\bibitem{nelis2009genetic}
+authors.
+\newblock Genetic structure of Europeans: a view from the north--east.
+\newblock {\em PloS one}, 4(5):e5472, 2009.
+
+\bibitem{de2018137}
+Peter de~Barros~Damgaard, Nina Marchi, Simon Rasmussen, et~al.
+\newblock 137 ancient human genomes from across the Eurasian steppes.
+\newblock {\em Nature}, 557(7705):369--374, 2018.
+
+\bibitem{wegewitz1972}
+Willi Wegewitz.
+\newblock {\em The Lombard fire area of Putensen, Harburg district}.
+\newblock Lax, 1972.
 
 \bibitem{barford2001early}
 Paul~M Barford and Paul~M Barford.
@@ -87,22 +1127,11 @@ Jiří Macháček, Robert Nedoma, Petr Dresler, et~al.
   Slavs. A new standard for multidisciplinary analysis of runic bones.
 \newblock {\em Journal of Archaeological Science}, 127:105333, 2021.
 
-\bibitem{Hellenthal2014}
-Garrett Hellenthal, George B.J.~J. Busby, Gavin Band, et~al.
-\newblock {A Genetic Atlas of Human Admixture History}.
-\newblock {\em Science}, 343(6172):747--751, 2014.
-
 \bibitem{pankratov2016east}
 Vasili Pankratov, Sergei Litvinov, Alexei Kassian, et~al.
 \newblock East Eurasian ancestry in the middle of Europe: genetic footprints of
   Steppe nomads in the genomes of Belarusian Lipka Tatars.
 \newblock {\em Scientific reports}, 6(1):1--11, 2016.
-
-\bibitem{MOSAIC_2019}
-Michael Salter-Townshend and Simon Myers.
-\newblock {Fine-Scale Inference of Ancestry Segments Without Prior Knowledge of
-  Admixing Groups}.
-\newblock {\em Genetics}, 212(3):869--889, 05 2019.
 
 \bibitem{maliarchuk2008origin}
 BA~Maliarchuk, MA~Perkova, and MV~Derenko.
@@ -132,71 +1161,16 @@ Harald Ringbauer, Graham Coop, and Nicholas~H Barton.
   sequence blocks.
 \newblock {\em Genetics}, 205(3):1335--1351, 2017.
 
-\bibitem{rubinacci2021efficient}
-Simone Rubinacci, Diogo~M Ribeiro, Robin~J Hofmeister, and Olivier Delaneau.
-\newblock Efficient phasing and imputation of low-coverage sequencing data
-  using large reference panels.
-\newblock {\em Nature Genetics}, 53(1):120--126, 2021.
-
-\bibitem{byrska2021high}
-Marta Byrska-Bishop, Uday~S Evani, Xuefang Zhao, et~al.
-\newblock High coverage whole genome sequencing of the expanded 1000 Genomes
-  Project cohort including 602 trios.
-\newblock {\em bioRxiv}, 2021.
-
-\bibitem{delaneau2018integrative}
-Olivier Delaneau, Jean-Fran{\c{c}}ois Zagury, Matthew~R Robinson, et~al.
-\newblock Accurate, scalable and integrative haplotype estimation.
-\newblock {\em Nature communications}, 10(1):1--10, 2019.
-
-\bibitem{chang2015second}
-Christopher~C Chang, Carson~C Chow, Laurent~CAM Tellier, et~al.
-\newblock Second-generation PLINK: rising to the challenge of larger and richer
-  datasets.
-\newblock {\em Gigascience}, 4(1):s13742--015, 2015.
-
-\bibitem{AlbrechtsenPCAmissingness}
-Jonas Meisner, Siyang Liu, Mingxi Huang, and Anders Albrechtsen.
-\newblock {Large-scale inference of population structure in presence of
-  missingness using PCA}.
-\newblock {\em Bioinformatics}, 37(13):1868--1875, 01 2021.
-
-\bibitem{Patterson2012}
-Nick Patterson, Priya Moorjani, Yontao Luo, et~al.
-\newblock {Ancient admixture in human history}.
-\newblock {\em Genetics}, 192(3):1065--1093, 2012.
-
 \bibitem{admixrpetr2019}
 Martin Petr, Benjamin Vernot, and Janet Kelso.
 \newblock {admixr—R package for reproducible analyses using ADMIXTOOLS}.
 \newblock {\em Bioinformatics}, 35(17):3194--3195, 01 2019.
-
-\bibitem{Lawson2012}
-Daniel~John Lawson, Garrett Hellenthal, Simon Myers, and Daniel Falush.
-\newblock {Inference of population structure using dense haplotype data}.
-\newblock {\em PLoS Genetics}, 8(1):11--17, 2012.
-
-\bibitem{Chacon-Duque2018}
-Juan~C. Chacon-Duque, Kaustubh Adhikari, Macarena Fuentes-Guajardo, et~al.
-\newblock {Latin Americans show wide-spread Converso ancestry and the imprint
-  of local Native ancestry on physical appearance}.
-\newblock {\em Nature Communications}, page 252155, 2018.
-
-\bibitem{oro22547}
-Martyn Plummer, Nicky Best, Kate Cowles, and Karen Vines.
-\newblock CODA: convergence diagnosis and output analysis for MCMC.
-\newblock {\em R News}, 6(1):7--11, March 2006.
 
 \bibitem{lotter2003volkerverschiebungen}
 F~Lotter.
 \newblock V{\"o}lkerverschiebungen im Ostalpen--Mitteldonau--Raum zwischen
   Antike und Mittelalter (365--600).
 \newblock {\em Gra Erg{\"a}nzungsband}, 39, 2003.
-
-\bibitem{Leslie2015}
-Stephen Leslie, Bruce Winney, Garrett Hellenthal, et~al.
-\newblock {The fine-scale genetic structure of the British population}.
-\newblock {\em Nature}, 519(7543):309--314, 2015.
 
 \bibitem{Hellenthal2016}
 Garrett Hellenthal, Daniel Falush, Simon Myers, et~al.
@@ -220,10 +1194,78 @@ Krishna~R. Veeramah, Andreas Rott, Melanie Gro{\ss}, et~al.
   female-biased immigration in Early Medieval Bavaria}.
 \newblock {\em Proceedings of the National Academy of Sciences}, 2018.
 
-\bibitem{veeramah2011genetic}
-Krishna~R Veeramah, Anke T{\"o}njes, Peter Kovacs, et~al.
-\newblock Genetic variation in the Sorbs of eastern Germany in the context of
-  broader European genetic diversity.
-\newblock {\em European Journal of Human Genetics}, 19(9):995--1001, 2011.
+\bibitem{ngsLD}
+Emma~A Fox, Alison~E Wright, Matteo Fumagalli, and Filipe~G Vieira.
+\newblock {ngsLD: evaluating linkage disequilibrium using genotype
+  likelihoods}.
+\newblock {\em Bioinformatics}, 35(19):3855--3856, 03 2019.
+
+\bibitem{Meisner719}
+Jonas Meisner and Anders Albrechtsen.
+\newblock Inferring Population Structure and Admixture Proportions in Low-Depth
+  NGS Data.
+\newblock {\em Genetics}, 210(2):719--731, 2018.
+
+\bibitem{Lipatov023374}
+Mikhail Lipatov, Komal Sanjeev, Rob Patro, and Krishna~R Veeramah.
+\newblock Maximum Likelihood Estimation of Biological Relatedness from Low
+  Coverage Sequencing Data.
+\newblock {\em bioRxiv}, 2015.
+
+\bibitem{colate}
+Leo Speidel, Lara Cassidy, Robert~W Davies, et~al.
+\newblock {Inferring Population Histories for Ancient Genomes Using Genome-Wide
+  Genealogies}.
+\newblock {\em Molecular Biology and Evolution}, 38(9):3497--3511, 06 2021.
+
+\bibitem{Broushaki2016b}
+Farnaz Broushaki, Mark~G. Thomas, Vivian Link, et~al.
+\newblock {Early Neolithic genomes from the eastern Fertile Crescent}.
+\newblock {\em Science}, 2016.
+
+\bibitem{Cassidy368}
+Lara~M. Cassidy, Rui Martiniano, Eileen~M. Murphy, et~al.
+\newblock Neolithic and Bronze Age migration to Ireland and establishment of
+  the insular Atlantic genome.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  113(2):368--373, 2016.
+
+\bibitem{Jones2015}
+Eppie~R. Jones, Gloria Gonzalez-Fortes, Sarah Connell, et~al.
+\newblock {Upper Palaeolithic genomes reveal deep roots of modern Eurasians}.
+\newblock {\em Nature Communications}, 6:1--8, 2015.
+
+\bibitem{marchi2020mixed}
+Nina Marchi, Laura Winkelbach, Ilektra Schulz, et~al.
+\newblock The mixed genetic origin of the first farmers of Europe.
+\newblock {\em bioRxiv}, 2020.
+
+\bibitem{olalde2014derived}
+Inigo Olalde, Morten~E Allentoft, Federico S{\'a}nchez-Quinto, et~al.
+\newblock Derived immune and ancestral pigmentation alleles in a 7,000-year-old
+  Mesolithic European.
+\newblock {\em Nature}, 507(7491):225--228, 2014.
+
+\bibitem{sanchez2019megalithic}
+Federico S{\'a}nchez-Quinto, Helena Malmstr{\"o}m, Magdalena Fraser, et~al.
+\newblock Megalithic tombs in western and northern Neolithic Europe were linked
+  to a kindred society.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  116(19):9469--9474, 2019.
+
+\bibitem{Seguin-Orlando2014}
+Andaine Seguin-Orlando, Thorfinn~S. Korneliussen, Martin Sikora, et~al.
+\newblock {Genomic structure in Europeans dating back at least 36 , 200 years}.
+\newblock {\em Science}, 346(6213):1113--1118, 2014.
+
+\bibitem{li2009sequence}
+Heng Li, Bob Handsaker, Alec Wysoker, et~al.
+\newblock The sequence alignment/map format and SAMtools.
+\newblock {\em Bioinformatics}, 25(16):2078--2079, 2009.
+
+\bibitem{Sawcer2011}
+Stephen Sawcer, Garrett Hellenthal, Matti Pirinen, et~al.
+\newblock {Genetic risk and a primary role for cell-mediated immune mechanisms
+  in multiple sclerosis}, 2011.
 
 \end{thebibliography}
