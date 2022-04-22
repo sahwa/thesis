@@ -46,32 +46,33 @@ Here, I will show how it is possible to incorporate the uncertainty in imputed g
 We also have a posterior genotype likelihood, in the form $GL(p_{0}, p_{1}, p_{2})$, where $p_i$ is the posterior probabilities that the true genotype is $i$. Genotype probability dosage, $D$, is the expected total number of copies of the alternate allele given $GL$. $D$ can be calculated as $p_{1} + [2*p_{2}]$. We can calculate $U$, the uncertainty as $U = |G-D|$. Then, we can assign a probability to each allele; if the allele is \texttt{1} then the allele likelihood is simply $1 - U$ and if the allele is \texttt{0} then the allele likelihood is $0 + U$. Therefore, when there is no uncertainty in the genotype call, the allele probability will be either 0 or 1. When there is uncertainty, the allele probability will take a value $0 \leq x \leq 1$, with more uncertain genotypes tending towards allele probabilities of 0.5. 
 
                  
-The second difference is the incorporation of the allele probability into the emission probability of the HMM. As before, consider a recipient $h*$ whom we want to reconstruct using the set of donors $\{h_{1}, ..., h_{j}\}$ . At a given SNP $l$, let $h*_{l}$ be the probability that $h*$ carries the alternative allele, with $h_{yl}$ similarly being the probability that $h_{y}$ carries the alternate allele. 
+The second difference is the incorporation of the allele probability into the emission probability of the HMM. As before, consider a recipient $h*$ whom we want to reconstruct using the set of donors $\{h_{1}, ..., h_{j}\}$ . At a given SNP $l$, let $h*_{l}$ be the probability that $h*$ carries the alternative allele, with $h_{yl}$ similarly being the probability that $h_{y}$ carries the alternate allele. The probability of $h*$ carrying allele $a$ at site $l$, given it copies from haplotype $y_{l}$ is given as:
 
-\begin{align}
-	\Pr(h*_{l} &= a \mid Y_{l} = y_{l}) = \\
-	&
-	\begin{aligned} \label{eq:cp_uncertainty}
-				&(1.0 - \theta) * [h*_{l}  h_{yl} + (1-h*_{l}) * (1-h_{yl})] +  \\
-				& \theta * [h*_{l} * (1-h_{yl}) + (1-h*_{l}) * h_{yl}]
-	\end{aligned}
+\begin{align} \label{eq:cp_uncertainty}
+\begin{split}
+	\Pr(h*_{l} = a \mid Y_{l} = y_{l}) = &
+				\,(1 - \theta) \cdot [h*_{l} \cdot h_{yl} + (1-h*_{l}) \cdot (1-h_{yl})]\, +  \\
+				& \theta \cdot [h*_{l} \cdot (1-h_{yl}) + (1-h*_{l}) \cdot h_{yl}]
+\end{split}
 \end{align}
+
+
 
 Note that \ref{eq:cp_uncertainty} reduces \ref{eq:cp} if $h_{yl} = \{0,1\}$ and if $h*_{l} = \{0,1\}$, i.e\ there is no uncertainty in the calls.
 
 
 \subsection{Generation of downsampled genomes}
 
-I created a set of `downsampled' ancient genomes in order to explicitly quantify the effect of coverage on each stage of the ChromoPainter analysis. I took five high coverage genomes and for each, removed a random subset of reads from the \texttt{.bam} file in order to reduce the coverage to a target level. I then performed each stage of a typical ChromoPainter analysis, e.g.\ mimicking the analyses of new ancient DNA samples I describe in chapters 4 and 5, on the full coverage and downsampled genomes. I also processed a set of X ancient samples from the literature, downloaded from the European Nucleotide Archive, in an identical way to act as comparison samples. 
+ I created a set of `downsampled' ancient genomes in order to explicitly quantify the effect of coverage on each stage of the ChromoPainter analysis. I took five high coverage genomes and for each, removed a random subset of reads from the \texttt{.bam} file in order to reduce the coverage to a target level. I then performed each stage of a typical ChromoPainter analysis, e.g.\ mimicking the analyses of new ancient DNA samples I describe in chapters 4 and 5, on the full coverage and downsampled genomes. I also processed a set of 918 ancient samples from the literature, downloaded from the European Nucleotide Archive, in an identical way to act as comparison samples (Section \ref{sec:ancient_ref_samples}).
 
 Five high coverage ancient genomes were downloaded in the form of aligned \texttt{.bam} files from the European Nucleotide Archive:
 
 \begin{enumerate}
-\item Yamnaya -- Yamnaya Bronze Age steppe-pastoralist \cite{deBarrosDamgaardeaar7711}
-\item UstIshim -- Siberian Upper Palaeolithic hunter-gatherer \cite{Fu2014}
-\item sf12 -- Scandinavian Hunter-Gatherer \cite{Gunther2018a}
-\item LBK -- early European farmer from the \textit{Linearbandkeramik} culture from Stuttgart, Germany \cite{Lazaridis2014}
-\item Loschbour -- 8,000 year-old hunter-gatherer from Luxembourg) \cite{Lazaridis2014}
+\item Yamnaya (25.2x) -- Yamnaya Bronze Age steppe-pastoralist \cite{deBarrosDamgaardeaar7711}
+\item UstIshim (42x) -- Siberian Upper Palaeolithic hunter-gatherer \cite{Fu2014}
+\item sf12 (72x) -- Scandinavian Hunter-Gatherer \cite{Gunther2018a}
+\item LBK (19x)-- early European farmer from the \textit{Linearbandkeramik} culture from Stuttgart, Germany \cite{Lazaridis2014}
+\item Loschbour (22x) -- 8,000 year-old hunter-gatherer from Luxembourg) \cite{Lazaridis2014}
 \end{enumerate}
 
 These samples were chosen due to their high original coverage ($>18$x), and because they represent some of the ancestries present in Western Eurasia over the past 40,000 years.  
@@ -365,7 +366,7 @@ Coverage & Loschbour & sf12 & UstIshim & Yamnaya\\
 \end{table}
 
 
-Taken together, this data suggests a minimal effect of coverage down to and including 0.5x mean depth. To my knowledge, no other study has evaluated the effect of coverage on ChromoPainter analysis down to a coverage of 0.5x. Margaryan et al (2020) showed a minimal effect of coverage at 1x and that fineSTRUCTURE groupings, containing individuals as low as 0.5x coverage, were not driven by coverage \cite{margaryan2020population}. 
+Taken together, this data suggests a minimal effect of coverage down to and including 0.5x mean depth. To my knowledge, no other study has evaluated the effect of coverage on ChromoPainter analysis down to a coverage of 0.5x. Using Beagle v4/v4.1, Margaryan et al (2020) showed a minimal effect of coverage at 1x and that fineSTRUCTURE groupings, containing individuals as low as 0.5x coverage, were not driven by coverage \cite{margaryan2020population}. 
 
 
 \subsection{SOURCEFIND}
@@ -405,13 +406,13 @@ In order to solve the issue of coverage-related bias, it is first necessary to d
 
 To explicitly test at what stage the bias is introduced, I performed a set of principle component analyses on the downsampled data. First, I performed PCA projections of all downsampled ancient individuals onto a set of present-day European individuals (shown in Table \ref{tab:HB_pops}) using i) pre-GLIMPSE genotypes and ii) post-GLIMPSE (imputed) genotypes (Fig. \ref{fig:pre_GLIMPSE_PCA}). PCA projections are used when the target dataset, in this case downsampled ancients, contain variable levels of missing data.  
 
-The results show that there is no apparent coverage-related bias in the pre-GLIMPSE PCA; the 0.1x samples do not substantially differ in their position from the other downsamples of the same individual. However, there is a degree of noise; for example, the LBK downsamples are spread over a small region on the PCA. 
+The results show that there is no apparent coverage-related bias in the pre-GLIMPSE PCA; the 0.1x samples do not substantially differ in their position from the other downsamples of the same individual. However, there is a degree of noise; for example, the LBK downsamples are spread over a small region on the PCA. Here, noise is variability in the position of technical replicates (full coverage samples and their downsamples) on the PCA. 
 
 On the other hand, downsamples of UstIshim, sf12 and Loschbour are shifted to the centre of the post-GLIMPSE PCA and away from the full coverage individual and other downsamples. This suggests that coverage-related bias is being introduced in the imputation stage. At the same time, GLIMPSE appears to have removed some of the noise in the downsampled individuals of coverage $\geq$0.5x. For instance, the noise observed in the LBK samples in the pre-imputation PCA is substantially reduced and the samples cluster more tightly.  
 
 I also performed PCAs based upon an all-v-all ChromoPainter painting using the same set of present-day European samples (Table \ref{tab:HB_pops}) and downsampled ancient individuals as previously, in both linked and unlinked modes. There is an increased amount of noise and evidence of coverage-related bias relative to the post-GLIMPSE genotype PCA. Fig. \ref{fig:CP_linked_unlinked}) displays the PCA for the same painting, but using the unlinked chunkcounts matrix. Comparing the linked and unlinked PCAs shows the effect of including linkage (i.e. haplotype information) on the amount of bias and noise across each sample. Per-sample, there appears to be reduced noise in the unlinked painting.
 
-These results suggest that imputation using GLIMPSE introduces a degree of bias into 0.1x samples that is not apparent on non-imputed genotypes. They also suggest that ChromoPainter introduces an additional degree of bias when analysing haplotypes, or that it amplifies bias already present introduced at the imputation stage. Accordingly, removing SNPs which have been poorly imputed may be a way to mitigate such biases.
+These results suggest that imputation using GLIMPSE introduces a degree of bias into 0.1x samples that is not apparent on non-imputed genotypes. They also suggest that ChromoPainter introduces an additional degree of bias when analysing haplotypes, or that it amplifies bias already present introduced at the imputation stage. Accordingly, removing SNPs which have been poorly imputed may be a way to mitigate such biases. An alternative explanation may be that an increase in switch-errors may be driving the signal, as it has been previously shown that phasing accuracy declines with coverage \cite{delaneau2018integrative}.
 
 \begin{figure}[htp]
     \centering
@@ -433,7 +434,7 @@ The previous section suggested that imputation plays a role in the introduction 
 
 Bias occurs when missing genotypes are incorrectly imputed with variants from certain populations more frequently than others. We might expect these populations to be those which are more prevalent in the reference panel. We would correspondingly expect bias to mean that, when painted, some donor populations would donate more than others, relative to if no imputation had taken place. On the other hand, if `noise' is dominating results, we would expect the incorrectly imputed genotypes to be randomly distributed across populations, and similarly we would not expect to see any populations donating more than others relative to if no imputation had taken place. 
 
-Therefore, we can compare the amount different donor groups donate under the dataset where none of the 560,442 SNPs had been imputed versus the dataset where 430,000 (86\%) of these SNPs have been imputed by plotting the mean amount donated by each population using imputed SNPs and non-imputed SNPs (Fig. \ref{fig:imputed_nonimputed_donation}). The 20 populations that contribute most are either European or Jewish. Notably, the Haplotype Reference Consortium panel that was used to impute the data consists primarily of individuals of European descent. The two populations which are over-copied the most after imputation are two English populations from Kent and Cornwall. This suggests that there is a most likely a bias towards copying more from European populations when the data has been imputed using the HRC. 
+Therefore, we can compare the amount different donor groups donate under the dataset where none of the 560,442 SNPs had been imputed versus the dataset where 430,000 (86\%) of these SNPs have been imputed by plotting the mean amount donated by each population using imputed SNPs and non-imputed SNPs (Fig. \ref{fig:imputed_nonimputed_donation}). The 20 populations that contribute most are a set containing European and Jewish population. Notably, the Haplotype Reference Consortium panel that was used to impute the data consists primarily of individuals of European descent. The two populations which are over-copied the most after imputation are two English populations from Kent and Cornwall. This suggests that there is a most likely a bias towards copying more from European populations when the data has been imputed using the HRC. 
 
 \begin{figure}[htp]
     \centering
@@ -469,7 +470,7 @@ The frequency of a particular variant in the reference panel (RAF - minor refere
 
 For each individual, I took the 428,425 SNPs in the HellBus set and removed SNPs with $0.1 > RAF$ or $RAF > 0.9$, removing an average of 50,187 SNPs per individual. $RAF$ refers to the frequency of the allele in the 1000 genomes reference panel used to phase and impute the HellBus dataset. I then painted individuals downsampled to 0.1x and 0.5x using the standard set of 125 ancient donor individuals.  
 
-Comparing the $TVD$ values between the copvyectors showed that this did not improve the 0.5x copyvectors (Table \ref{tab:TVD_table}). 
+Comparing the $TVD$ values between the copvyectors showed that, whilst there was a marginal improvement at 0.1x, this did not improve the 0.5x copyvectors (Table \ref{tab:TVD_table}). 
 
 I then chose to filter SNPs based on $max(GP)$ at each position. $max(GP)$ correspond to the accuracy with which a SNP has been imputed, with higher values reflecting a higher chance of that genotype being imputed correctly. For each individual downsampled to 0.5x and 0.1x, I only retained positions where the $max(GP) >= 0.990$. For the 0.5x individuals, this resulted in a total of 348,852 SNPs for LBK, 339,949 for Loschbour, 315,075 for sf12, 308,961 for UstIshim and 386,484 for Yamnaya. Because different SNPs were removed from different individuals, each individual was painted separately. The same standard set of 124 ancient donors was used. Again, this did not improve the accuracy of the copyvectors. 
 
