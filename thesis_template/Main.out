@@ -105,14 +105,15 @@
 \BOOKMARK [2][-]{subsection.A.3.1}{Processing}{section.A.3}% 105
 \BOOKMARK [1][-]{section.A.4}{MS POBI HellBus dataset}{appendix.A}% 106
 \BOOKMARK [1][-]{section.A.5}{Reference ancient samples}{appendix.A}% 107
-\BOOKMARK [0][-]{appendix.B}{Some commonly used terms and their motivation for use}{}% 108
-\BOOKMARK [1][-]{section.B.1}{`all-v-all'}{appendix.B}% 109
-\BOOKMARK [1][-]{section.B.2}{`Leave-one-out'}{appendix.B}% 110
-\BOOKMARK [1][-]{section.B.3}{Total Variation Distance}{appendix.B}% 111
-\BOOKMARK [0][-]{appendix.C}{Colophon}{}% 112
-\BOOKMARK [0][-]{appendix.D}{Supplementary figures}{}% 113
-\BOOKMARK [0][-]{appendix.E}{Supplementary results}{}% 114
-\BOOKMARK [1][-]{subsection.E.0.1}{Determining the number of MCMC iterations required in SOURCEFIND analysis}{appendix.E}% 115
-\BOOKMARK [2][-]{subsection.E.0.2}{Determining the number of SNPs required to separate individuals from Devon and Cornwall}{subsection.E.0.1}% 116
-\BOOKMARK [2][-]{subsection.E.0.3}{Table of individuals and their fineSTRUCTURE labels}{subsection.E.0.1}% 117
-\BOOKMARK [0][-]{table.E.1}{Bibliography}{}% 118
+\BOOKMARK [2][-]{subsection.A.5.1}{Table of individuals and their fineSTRUCTURE labels}{section.A.5}% 108
+\BOOKMARK [0][-]{appendix.B}{Some commonly used terms and their motivation for use}{}% 109
+\BOOKMARK [1][-]{section.B.1}{`all-v-all'}{appendix.B}% 110
+\BOOKMARK [1][-]{section.B.2}{`Leave-one-out'}{appendix.B}% 111
+\BOOKMARK [1][-]{section.B.3}{Total Variation Distance}{appendix.B}% 112
+\BOOKMARK [0][-]{appendix.C}{Colophon}{}% 113
+\BOOKMARK [0][-]{appendix.D}{Supplementary figures}{}% 114
+\BOOKMARK [0][-]{appendix.E}{Supplementary results}{}% 115
+\BOOKMARK [1][-]{subsection.E.0.1}{Determining the number of MCMC iterations required in SOURCEFIND analysis}{appendix.E}% 116
+\BOOKMARK [2][-]{subsection.E.0.2}{Determining the number of SNPs required to separate individuals from Devon and Cornwall}{subsection.E.0.1}% 117
+\BOOKMARK [2][-]{subsection.E.0.3}{Comparison of imputation uncertainty metrics}{subsection.E.0.1}% 118
+\BOOKMARK [0][-]{figure.caption.80}{Bibliography}{}% 119

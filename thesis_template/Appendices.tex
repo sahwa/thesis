@@ -1689,131 +1689,6 @@ Yamnaya &  & deBarrosDamgaard\_2018a\_FirstHorse & 25.20\\*
 \end{longtable}
 \endgroup{}
 
-
-
-
-
-\chapter{Some commonly used terms and their motivation for use}
-\label{appendixlabel2}
-
-
-Here are some terms I commonly use.
-
-\section{`all-v-all'} \label{sec:allvall}
-
-I use this term when painting each individual in turn is painted using all other individuals as donors. If there are $N$ individuals, the result is an $N$x$N$ coancestry matrix.
-
-
-\section{`Leave-one-out'} \label{sec:leave_one_out}
-
-Consider a situation where an all-v-all painting is performed on a set of individuals grouped into populations, where 2 of the populations are \textit{Devon} and \textit{Cornwall}. We would like to estimate the proportion of genome each recipient individual matches to both \textit{Devon} and \textit{Cornwall}, so we take the sums across columns, aggregating them by population. However, this means that each individual from, for example, Cornwall, can match to one less individual from Cornwall than other populations, as they cannot paint themselves. To avoid this, we may perform a `leave-one-out' painting, where each population is painted separately, and a single individual from each other population is removed from the set of donors. 
-
-\section{Total Variation Distance} \label{sec:appendixTVD}
-
-Often we would like to estimate how similar the copyvectors, $C_{x}$ and $C_{y}$ of two individuals or populations (average) are to one another. Given copvectors are the same length, one way would be to simply estimate Pearsons' correlation. However, this can lead to misleading results because Pearson's r-squared is often over-sensitive to outlying values.  
-
-An alternative is to estimate TVD, where $TVD_{x,y}$ between two copyvectors $C_{x}$ and $C_{y}$ is given as $TVD = \sum |C_{x} - C_{y}|$. 
-
-
-
-
-\chapter{Colophon}
-\label{appendixlabel3}
-\noindent
-This document was produced using the UCL thesis \LaTeX\ template (\url{https://github.com/UCL/ucl-latex-thesis-templates}).
-\noindent
-This document was set in the lmodern typeface using \LaTeX\ and Bib\TeX, composed with a text TexMaker on Linux. \texttt{microtype} was also used.
-\noindent
-All figures were generated using \texttt{ggplot2} using \texttt{theme\_light()}.
-\noindent
-All tables were generated using the \texttt{kbl} function from the \texttt{kableExtra} R library
-\noindent
-The final version of the thesis can be found at \url{https://github.com/sahwa/thesis}.
-
-\chapter{Supplementary figures}
-\label{appendixlabel4}
-
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../images/appendix/UstIshim_0.1x_bin.pdf}
-    \caption{Relationship between genotype likelihood and probability of genotype call being correct for UstIshim downsampled to 0.1x coverage. Genome binned by maximum posterior genotype likelihood and mean maximum posterior genotype likelihood (x-axis) and proportion of correct calls per bin (y-axis). Rugs on each margin show the distribution of x and y values. Black line is $y=x$.}
-    \label{fig:UstIshim_0.1x_bin}
-\end{figure}
-
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../images/appendix/plink_withHG_PCA.pdf}
-    \caption{Principle component analysis of genotype matrix using plink2. Grey points indicate principle component coordiantes for each sample. Black text indicated mean principle component coordinates for all individuals within that group. Coloured labels represent newly sequenced ancient samples. }
-    \label{fig:plink_PCA_HG}
-\end{figure}
-
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../images/appendix/haplotype_map_Brazil.pdf}
-    \caption{Map of haplotype donation to U.K. Biobank individuals born in Brazil. Each point represents one Human Origins population, coloured according to the summed amount of chunklengths that population donates to all U.K. Biobank individuals born in Brazil.}
-    \label{fig:haplotype_map_Brazil}
-\end{figure}
-
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../images/appendix/haplotype_map_Caribbean.pdf}
-    \caption{Map of haplotype donation to U.K. Biobank individuals born in the Caribbean. Each point represents one Human Origins population, coloured according to the summed amount of chunklengths that population donates to all U.K. Biobank individuals born in the Caribbean.}
-    \label{fig:haplotype_map_Caribbean}
-\end{figure}
-
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../images/appendix/testing_centre_afr_prop.pdf}
-    \caption{Number of individuals who have (purple) and have not (yellow) at least 50\% African ancestry (purple) by different testing centers. Centers ordered by proportion of individuals who have at least 50\% African ancestry.}
-    \label{fig:testing_centre_afr_prop}
-\end{figure}
-
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../images/appendix/chromopainter_PCA_ancients_Bavaria.pdf}
-    \caption{Principle Component Analysis on chunklengths matrix of newly sequenced ancient Bavarian samples and selected ancient literature samples.}
-    \label{fig:chromopainter_PCA_ancients_Bavaria}
-\end{figure}
-
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../images/appendix/SF_heatmap_slavs.pdf}
-    \caption{Heatmap of SOURCEFIND proportions for all fineSTRUCTURE clusters in the ancient Slav analysis.}
-    \label{fig:SF_heatmap_slavs}
-\end{figure}
-
-
-\chapter{Supplementary results} \label{appendixlabel5}
-
-Auxiliary results.
-
-\subsection{Determining the number of MCMC iterations required in SOURCEFIND analysis} \label{sec:SF_test_iterations}
-
-SOURCEFIND is a haplotype-based method for inferring ancestry. At its heart, SOURCEFIND uses Markov chain Monte Carlo sampling to explore the parameter space of ancestry proportions. As is the case with any method that uses MCMC sampling, it is important to ensure that enough iterations have been performed; if this is not the case, the algorithm may not converge.
-
-To determine what is the minimum number of iterations, I ran SOURCEFIND for 7 different numbers of iterations and 10 runs for each number. Results are presented in Figure \ref{fig:iterations}. Visually inspecting the results shows that using 50,000 iterations or less leads to variable results. 500,000 iterations appears to be the best balance between running time and accuracy. 
-
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../images/appendix/iterations.pdf}
-    \caption{Proportion of inferred Cameroon Arabic ancestry averaged across individuals from Cameroon Kanuri ethnic group. Each panel contains proportions for a different number of MCMC iterations. Within each panel, each bar is the proportion inferred from each of the 10 independent SOURCEFIND runs.}
-    \label{fig:iterations}
-\end{figure}
-
-\subsection{Determining the number of SNPs required to separate individuals from Devon and Cornwall} 
-\label{sec:SNP_Count_Assignment_DevCorn}
-
-This figure shows the how TVD assignment accuracy varies with the total number of SNPs included.
-
-
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../images/appendix/Devon_Cornwall_TVD_reduced.pdf}
-    \caption{Proportion of individuals correctly assigned (via TVD) to their correct population (y-axis) using different number of SNPs (x-axis).}
-    \label{fig:Devon_Cornwall_TVD_reduced_assignment}
-\end{figure}
-
-
 \subsection{Table of individuals and their fineSTRUCTURE labels} 
 \label{sec:fs_slavs_group}
 
@@ -1996,6 +1871,153 @@ RISE664 & Okunevo\_EMBA\\
 RISE674 & Okunevo\_EMBA\\*
 \end{longtable}
 \endgroup{}
+
+
+
+
+
+\chapter{Some commonly used terms and their motivation for use}
+\label{appendixlabel2}
+
+
+Here are some terms I commonly use.
+
+\section{`all-v-all'} \label{sec:allvall}
+
+I use this term when painting each individual in turn is painted using all other individuals as donors. If there are $N$ individuals, the result is an $N$x$N$ coancestry matrix.
+
+
+\section{`Leave-one-out'} \label{sec:leave_one_out}
+
+Consider a situation where an all-v-all painting is performed on a set of individuals grouped into populations, where 2 of the populations are \textit{Devon} and \textit{Cornwall}. We would like to estimate the proportion of genome each recipient individual matches to both \textit{Devon} and \textit{Cornwall}, so we take the sums across columns, aggregating them by population. However, this means that each individual from, for example, Cornwall, can match to one less individual from Cornwall than other populations, as they cannot paint themselves. To avoid this, we may perform a `leave-one-out' painting, where each population is painted separately, and a single individual from each other population is removed from the set of donors. 
+
+\section{Total Variation Distance} \label{sec:appendixTVD}
+
+Often we would like to estimate how similar the copyvectors, $C_{x}$ and $C_{y}$ of two individuals or populations (average) are to one another. Given copvectors are the same length, one way would be to simply estimate Pearsons' correlation. However, this can lead to misleading results because Pearson's r-squared is often over-sensitive to outlying values.  
+
+An alternative is to estimate TVD, where $TVD_{x,y}$ between two copyvectors $C_{x}$ and $C_{y}$ is given as $TVD = \sum |C_{x} - C_{y}|$. 
+
+
+
+
+\chapter{Colophon}
+\label{appendixlabel3}
+\noindent
+This document was produced using the UCL thesis \LaTeX\ template (\url{https://github.com/UCL/ucl-latex-thesis-templates}).
+\noindent
+This document was set in the lmodern typeface using \LaTeX\ and Bib\TeX, composed with a text TexMaker on Linux. \texttt{microtype} was also used.
+\noindent
+All figures were generated using \texttt{ggplot2} using \texttt{theme\_light()}.
+\noindent
+All tables were generated using the \texttt{kbl} function from the \texttt{kableExtra} R library
+\noindent
+The final version of the thesis can be found at \url{https://github.com/sahwa/thesis}.
+
+\chapter{Supplementary figures}
+\label{appendixlabel4}
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/appendix/UstIshim_0.1x_bin.pdf}
+    \caption{Relationship between genotype likelihood and probability of genotype call being correct for UstIshim downsampled to 0.1x coverage. Genome binned by maximum posterior genotype likelihood and mean maximum posterior genotype likelihood (x-axis) and proportion of correct calls per bin (y-axis). Rugs on each margin show the distribution of x and y values. Black line is $y=x$.}
+    \label{fig:UstIshim_0.1x_bin}
+\end{figure}
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/appendix/plink_withHG_PCA.pdf}
+    \caption{Principle component analysis of genotype matrix using plink2. Grey points indicate principle component coordiantes for each sample. Black text indicated mean principle component coordinates for all individuals within that group. Coloured labels represent newly sequenced ancient samples. }
+    \label{fig:plink_PCA_HG}
+\end{figure}
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/appendix/haplotype_map_Brazil.pdf}
+    \caption{Map of haplotype donation to U.K. Biobank individuals born in Brazil. Each point represents one Human Origins population, coloured according to the summed amount of chunklengths that population donates to all U.K. Biobank individuals born in Brazil.}
+    \label{fig:haplotype_map_Brazil}
+\end{figure}
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/appendix/haplotype_map_Caribbean.pdf}
+    \caption{Map of haplotype donation to U.K. Biobank individuals born in the Caribbean. Each point represents one Human Origins population, coloured according to the summed amount of chunklengths that population donates to all U.K. Biobank individuals born in the Caribbean.}
+    \label{fig:haplotype_map_Caribbean}
+\end{figure}
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/appendix/testing_centre_afr_prop.pdf}
+    \caption{Number of individuals who have (purple) and have not (yellow) at least 50\% African ancestry (purple) by different testing centers. Centers ordered by proportion of individuals who have at least 50\% African ancestry.}
+    \label{fig:testing_centre_afr_prop}
+\end{figure}
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/appendix/chromopainter_PCA_ancients_Bavaria.pdf}
+    \caption{Principle Component Analysis on chunklengths matrix of newly sequenced ancient Bavarian samples and selected ancient literature samples.}
+    \label{fig:chromopainter_PCA_ancients_Bavaria}
+\end{figure}
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/appendix/SF_heatmap_slavs.pdf}
+    \caption{Heatmap of SOURCEFIND proportions for all fineSTRUCTURE clusters in the ancient Slav analysis.}
+    \label{fig:SF_heatmap_slavs}
+\end{figure}
+
+
+\chapter{Supplementary results} \label{appendixlabel5}
+
+Auxiliary results.
+
+\subsection{Determining the number of MCMC iterations required in SOURCEFIND analysis} \label{sec:SF_test_iterations}
+
+SOURCEFIND is a haplotype-based method for inferring ancestry. At its heart, SOURCEFIND uses Markov chain Monte Carlo sampling to explore the parameter space of ancestry proportions. As is the case with any method that uses MCMC sampling, it is important to ensure that enough iterations have been performed; if this is not the case, the algorithm may not converge.
+
+To determine what is the minimum number of iterations, I ran SOURCEFIND for 7 different numbers of iterations and 10 runs for each number. Results are presented in Figure \ref{fig:iterations}. Visually inspecting the results shows that using 50,000 iterations or less leads to variable results. 500,000 iterations appears to be the best balance between running time and accuracy. 
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/appendix/iterations.pdf}
+    \caption{Proportion of inferred Cameroon Arabic ancestry averaged across individuals from Cameroon Kanuri ethnic group. Each panel contains proportions for a different number of MCMC iterations. Within each panel, each bar is the proportion inferred from each of the 10 independent SOURCEFIND runs.}
+    \label{fig:iterations}
+\end{figure}
+
+\subsection{Determining the number of SNPs required to separate individuals from Devon and Cornwall} 
+\label{sec:SNP_Count_Assignment_DevCorn}
+
+This figure shows the how TVD assignment accuracy varies with the total number of SNPs included.
+
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/appendix/Devon_Cornwall_TVD_reduced.pdf}
+    \caption{Proportion of individuals correctly assigned (via TVD) to their correct population (y-axis) using different number of SNPs (x-axis).}
+    \label{fig:Devon_Cornwall_TVD_reduced_assignment}
+\end{figure}
+
+\subsection{Comparison of imputation uncertainty metrics} \label{sec:alt_input_score_test}
+
+In Chapter 2, I presented a way of adding the uncertainty from genotype imputation back into the phased genotypes in chromopainter input. This method, called `uncertainty' here for brevity, was calculated as $U = |G-D|$, where $G$ is the genotype dosage and $D$ is dosage obtained from the genotype likelihoods. 
+
+It came to my attention that this metric may be floored; low confidence genotype calls with \texttt{1|1} may be indistinguishable from high confidence \texttt{1|0} calls. Similarly, low confidence heterozygous calls, e.g. \texttt{gp="0.313,0.374,0.313"} would yield $U=1$ and a $max(GP)$ of 0.374.
+
+To investigate this further, I randomly selected 500,000 positions from a randomly selected ancient sample and plotted $1-U$ against $max(GP)$ (Fig. \ref{fig:alt_input_score_test}). My work in chapter X showed that, whilst slightly conservative, $max(GP)$ is an accurate proxy for whether or not a genotype has been imputed correctly and thus stands as a good metric to compare $U$ against. I plotted $1-U$ so that it is directly comparable to $max(GP)$, i.e. a 
+
+Whilst the Pearson's correlation between the two metrics (0.93), Fig. \ref{fig:alt_input_score_test} shows that there is a clear difference; $1-U$ substantially over-estimates the probability that heterozygous positions have been imputed correctly. When counting only positions where $1-U \neq 1$ or $max(GP) \neq 1$, heterozygous positions had a mean $max(GP)$ of 0.82, compared to a $1-U$ of 0.89. There was also a less pronounced effect of $1-U$ underestimating equivalent score for homozygous positions relative to $max(GP)$. Concerningly 
+
+
+
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/appendix/alt_input_score_test.pdf}
+    \caption{Proportion of inferred Cameroon Arabic ancestry averaged across individuals from Cameroon Kanuri ethnic group. Each panel contains proportions for a different number of MCMC iterations. Within each panel, each bar is the proportion inferred from each of the 10 independent SOURCEFIND runs.}
+    \label{fig:alt_input_score_test}
+\end{figure}
+
+
+
 
 
 

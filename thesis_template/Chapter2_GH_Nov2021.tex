@@ -45,6 +45,8 @@ Here, I will show how it is possible to incorporate the uncertainty in imputed g
 
 We also have a posterior genotype likelihood, in the form $GL(p_{0}, p_{1}, p_{2})$, where $p_i$ is the posterior probabilities that the true genotype is $i$. Genotype probability dosage, $D$, is the expected total number of copies of the alternate allele given $GL$. $D$ can be calculated as $p_{1} + [2*p_{2}]$. We can calculate $U$, the uncertainty as $U = |G-D|$. Then, we can assign a probability to each allele; if the allele is \texttt{1} then the allele likelihood is simply $1 - U$ and if the allele is \texttt{0} then the allele likelihood is $0 + U$. Therefore, when there is no uncertainty in the genotype call, the allele probability will be either 0 or 1. When there is uncertainty, the allele probability will take a value $0 \leq x \leq 1$, with more uncertain genotypes tending towards allele probabilities of 0.5. 
 
+
+
                  
 The second difference is the incorporation of the allele probability into the emission probability of the HMM. As before, consider a recipient $h*$ whom we want to reconstruct using the set of donors $\{h_{1}, ..., h_{j}\}$ . At a given SNP $l$, let $h*_{l}$ be the probability that $h*$ carries the alternative allele, with $h_{yl}$ similarly being the probability that $h_{y}$ carries the alternate allele. The probability of $h*$ carrying allele $a$ at site $l$, given it copies from haplotype $y_{l}$ is given as:
 
@@ -84,6 +86,14 @@ I then downsampled each full-coverage genome using the \texttt{atlas downsample}
 Again, for each full coverage, downsampled and literature ancient \texttt{.bam} file, I estimated post-mortem damage (PMD) patterns using the \texttt{atlas estimatePMD} task. Recalibration parameters were then estimated using the atlas \texttt{atlas recal} task. Finally, both the recalibration and PMD parameters were given to the \texttt{atlas callNEW} task which produces genotype calls and genotype likelihood estimates for each downsampled and full coverage \texttt{.bam}. For this stage, I made calls at the 77,818,264 genome-wide positions present in the phase 3 thousand genomes project \cite{1000GenomesProjectConsortium2015}. This was done to reduce the risk of calling false-positive (i.e.\ falsely polymorphic) genotypes in the aDNA samples. No minimum read-depth filter was applied when calling genotypes. This step resulted in a \texttt{.vcf} file for each of the X samples. For each of the 22 autosomes, I merged all X samples together into a single \texttt{.vcf} file. 
 
 atlas does not make calls at positions in the genome where no reads have been aligned. If multiple \texttt{.vcf} files are merged together, and at a given position in the genome, some samples contain genotype calls and others do not, this position will be present but the genotype will be set as missing \texttt{./.} in  the merged \texttt{.vcf}. Therefore, the merged \texttt{.vcf} contained positions at all 77,818,264 positions, as across all X samples, at least one individual have a genotype call at each position. 
+
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/chapter1/workflow.pdf}
+    \caption{Schematic showing the workflow used to generate downsampled ancient genomes. Blue boxes represent the genetic data in different formats and red boxes represent methods used to process data or convert between formats. Schematic shows a reduced example of LBK being downmsapled to 3 different coverages. A high coverage .bam file is downsampled used to generated genotype likelihoods in .vcf format using atlas \cite{Link2017}. GLIMPSE is used to impute and phase the .vcf, producing posterior genotype probabilities and phased genotypes. These are combined using a custom script to generate ChromoPainter uncertainty output.}
+    \label{fig:Sensitivity_downsampled_rtgtools}
+\end{figure}
 
 \subsection{Generation of ancient literature samples} \label{AncientReferenceSamples}
 
@@ -125,6 +135,96 @@ precision = \frac{V_{baseline}-FN}{V_{baseline}}
 A `variant' is considered to be a SNP with a genotype that is either \texttt{0/1} or \texttt{1/1}, with $V_{baseline}$ and $V_{call}$ the number of variants called in the full coverage and downsampled genomes, respectively. False negatives (FN) are where a variant is called in the full coverage genome but not in the downsampled genome. False positives (FP) are cases where a variant is called in the downsampled genome but not in the full-coverage genome.
 
 $V$, or true-positive, is the number of events where a variant position (i.e. a SNP with a genotype that is either \texttt{0/1} or \texttt{1/1}) is detected in either the full coverage ($V_{baseline}$) or downsampled ($V_{baseline}$) sample. $FN$ is the number of times that a variant position is called in the full coverage sample and not the downsampled sample. Conversely, $FP$ is the number of times a variant position is called in the downsampled sample and where the same SNP in the full coverage sample is invariant (i.e. \texttt{0/0}). Only genotypes called in the full coverage and downsampled individuals were considered. No allele frequency filters were applied before conducting this analysis.
+
+\begingroup\fontsize{6}{8}\selectfont
+
+\begin{longtable}[t]{ccccccccc}
+\toprule
+True-pos-baseline & True-pos-call & False-pos & False-neg & Precision & Sensitivity & ind & coverage & type\\
+\midrule
+\endfirsthead
+\multicolumn{9}{@{}l}{\textit{(continued)}}\\
+\toprule
+True-pos-baseline & True-pos-call & False-pos & False-neg & Precision & Sensitivity & Individual & coverage & type\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
+446716 & 3693 & 451920 & 885080 & 0.99 & 0.34 & LBK & 0.1 & homozygous\\
+662464 & 55801 & 657260 & 2002379 & 0.92 & 0.25 & LBK & 0.1 & heterozygous\\
+447518 & 2573 & 461408 & 884278 & 0.99 & 0.34 & LBK & 0.5 & homozygous\\
+715712 & 32088 & 701822 & 1949131 & 0.96 & 0.27 & LBK & 0.5 & heterozygous\\
+447572 & 2163 & 462110 & 884224 & 1.00 & 0.34 & LBK & 0.7 & homozygous\\
+721972 & 30541 & 707434 & 1942871 & 0.96 & 0.27 & LBK & 0.7 & heterozygous\\
+447613 & 1812 & 462770 & 884183 & 1.00 & 0.34 & LBK & 1 & homozygous\\
+725378 & 29709 & 710221 & 1939465 & 0.96 & 0.27 & LBK & 1 & heterozygous\\
+447663 & 936 & 462248 & 884133 & 1.00 & 0.34 & LBK & 2 & homozygous\\
+733864 & 28827 & 719279 & 1930979 & 0.96 & 0.28 & LBK & 2 & heterozygous\\
+447688 & 441 & 460248 & 884108 & 1.00 & 0.34 & LBK & 3.5 & homozygous\\
+741553 & 27046 & 728993 & 1923290 & 0.96 & 0.28 & LBK & 3.5 & heterozygous\\
+447714 & 249 & 458715 & 884082 & 1.00 & 0.34 & LBK & 5 & homozygous\\
+746156 & 24199 & 735155 & 1918687 & 0.97 & 0.28 & LBK & 5 & heterozygous\\
+447745 & 101 & 456016 & 884051 & 1.00 & 0.34 & LBK & 10 & homozygous\\
+754302 & 14619 & 746031 & 1910541 & 0.98 & 0.28 & LBK & 10 & heterozygous\\
+508189 & 3406 & 493286 & 1026959 & 0.99 & 0.33 & Loschbour & 0.1 & homozygous\\
+533345 & 72648 & 548248 & 1460741 & 0.88 & 0.27 & Loschbour & 0.1 & heterozygous\\
+509749 & 2183 & 519716 & 1025399 & 1.00 & 0.33 & Loschbour & 0.5 & homozygous\\
+575601 & 32917 & 565634 & 1418485 & 0.94 & 0.29 & Loschbour & 0.5 & heterozygous\\
+509846 & 1844 & 522207 & 1025302 & 1.00 & 0.33 & Loschbour & 0.7 & homozygous\\
+580639 & 28590 & 568278 & 1413447 & 0.95 & 0.29 & Loschbour & 0.7 & heterozygous\\
+509931 & 1507 & 524256 & 1025217 & 1.00 & 0.33 & Loschbour & 1 & homozygous\\
+583785 & 26811 & 569460 & 1410301 & 0.96 & 0.29 & Loschbour & 1 & heterozygous\\
+510086 & 710 & 525806 & 1025062 & 1.00 & 0.33 & Loschbour & 2 & homozygous\\
+590796 & 22876 & 575076 & 1403290 & 0.96 & 0.30 & Loschbour & 2 & heterozygous\\
+510139 & 372 & 524548 & 1025009 & 1.00 & 0.33 & Loschbour & 3.5 & homozygous\\
+596506 & 20317 & 582097 & 1397580 & 0.97 & 0.30 & Loschbour & 3.5 & heterozygous\\
+510160 & 204 & 522888 & 1024988 & 1.00 & 0.33 & Loschbour & 5 & homozygous\\
+599985 & 17804 & 587257 & 1394101 & 0.97 & 0.30 & Loschbour & 5 & heterozygous\\
+510210 & 70 & 520177 & 1024938 & 1.00 & 0.33 & Loschbour & 10 & homozygous\\
+605511 & 14402 & 595544 & 1388575 & 0.98 & 0.30 & Loschbour & 10 & heterozygous\\
+510247 & 36 & 517559 & 1024901 & 1.00 & 0.33 & Loschbour & 20 & homozygous\\
+608668 & 5781 & 601356 & 1385418 & 0.99 & 0.31 & Loschbour & 20 & heterozygous\\
+434242 & 4167 & 420813 & 876125 & 0.99 & 0.33 & UstIshim & 0.1 & homozygous\\
+690738 & 143340 & 704167 & 1710432 & 0.83 & 0.29 & UstIshim & 0.1 & heterozygous\\
+435973 & 2655 & 447495 & 874394 & 0.99 & 0.33 & UstIshim & 0.5 & homozygous\\
+761404 & 57054 & 749882 & 1639766 & 0.93 & 0.32 & UstIshim & 0.5 & heterozygous\\
+436088 & 2269 & 450916 & 874279 & 1.00 & 0.33 & UstIshim & 0.8 & homozygous\\
+767734 & 55928 & 752906 & 1633436 & 0.93 & 0.32 & UstIshim & 0.8 & heterozygous\\
+436137 & 1873 & 453966 & 874230 & 1.00 & 0.33 & UstIshim & 1 & homozygous\\
+771305 & 47742 & 753476 & 1629865 & 0.94 & 0.32 & UstIshim & 1 & heterozygous\\
+436233 & 1011 & 456114 & 874134 & 1.00 & 0.33 & UstIshim & 2 & homozygous\\
+778047 & 41853 & 758166 & 1623123 & 0.95 & 0.32 & UstIshim & 2 & heterozygous\\
+436271 & 470 & 455417 & 874096 & 1.00 & 0.33 & UstIshim & 3.5 & homozygous\\
+783071 & 37116 & 763925 & 1618099 & 0.95 & 0.33 & UstIshim & 3.5 & heterozygous\\
+436298 & 250 & 453059 & 874069 & 1.00 & 0.33 & UstIshim & 5 & homozygous\\
+786196 & 34244 & 769435 & 1614974 & 0.96 & 0.33 & UstIshim & 5 & heterozygous\\
+436330 & 59 & 448558 & 874037 & 1.00 & 0.33 & UstIshim & 10 & homozygous\\
+791262 & 37222 & 779034 & 1609908 & 0.95 & 0.33 & UstIshim & 10 & heterozygous\\
+436349 & 29 & 444427 & 874018 & 1.00 & 0.33 & UstIshim & 20 & homozygous\\
+796618 & 15880 & 788540 & 1604552 & 0.98 & 0.33 & UstIshim & 20 & heterozygous\\
+473075 & 1511 & 469834 & 973760 & 1.00 & 0.33 & Yamnaya & 0.1 & homozygous\\
+650642 & 63366 & 653883 & 1461308 & 0.91 & 0.31 & Yamnaya & 0.1 & heterozygous\\
+473789 & 1034 & 475295 & 973046 & 1.00 & 0.33 & Yamnaya & 0.5 & homozygous\\
+697493 & 27432 & 695987 & 1414457 & 0.96 & 0.33 & Yamnaya & 0.5 & heterozygous\\
+473859 & 950 & 475595 & 972976 & 1.00 & 0.33 & Yamnaya & 0.8 & homozygous\\
+701496 & 24895 & 699760 & 1410454 & 0.97 & 0.33 & Yamnaya & 0.8 & heterozygous\\
+473875 & 860 & 475625 & 972960 & 1.00 & 0.33 & Yamnaya & 1 & homozygous\\
+702973 & 24412 & 701223 & 1408977 & 0.97 & 0.33 & Yamnaya & 1 & heterozygous\\
+473953 & 684 & 475445 & 972882 & 1.00 & 0.33 & Yamnaya & 2 & homozygous\\
+706850 & 22517 & 705358 & 1405100 & 0.97 & 0.33 & Yamnaya & 2 & heterozygous\\
+473987 & 557 & 475160 & 972848 & 1.00 & 0.33 & Yamnaya & 3.5 & homozygous\\
+708919 & 20126 & 707746 & 1403031 & 0.97 & 0.34 & Yamnaya & 3.5 & heterozygous\\
+474010 & 482 & 475003 & 972825 & 1.00 & 0.33 & Yamnaya & 5 & homozygous\\
+710310 & 19073 & 709317 & 1401640 & 0.97 & 0.34 & Yamnaya & 5 & heterozygous\\
+474058 & 312 & 474696 & 972777 & 1.00 & 0.33 & Yamnaya & 10 & homozygous\\
+712448 & 15826 & 711810 & 1399502 & 0.98 & 0.34 & Yamnaya & 10 & heterozygous\\
+474144 & 254 & 474586 & 972691 & 1.00 & 0.33 & Yamnaya & 20 & homozygous\\
+713915 & 12351 & 713473 & 1398035 & 0.98 & 0.34 & Yamnaya & 20 & heterozygous\\*
+\end{longtable}
+\endgroup{}
+
 
 
 \subsection{ChromoPainter analysis} \label{ChromoPainter_analysis}
