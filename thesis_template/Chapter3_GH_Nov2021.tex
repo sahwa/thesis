@@ -154,7 +154,9 @@ To formally test whether the ordering of populations was likely significantly di
 	    \label{fig:imputed_excess_copying_pops}
 \end{sidewaysfigure}
 
-Put together, these results suggest that using imputed data would introduce a level of bias and loss of information. Therefore, with the exception of exercises comparing the imputed and non-imputed data, in all later analysis, I chose to use the approximately 70,000 non-imputed SNPs which overlap between the Human Origins and U.K. Biobank datasets. 
+Put together, these results suggest that using imputed data would introduce a level of bias and loss of information when trying to accurately infer sub-continental ancestry of African individuals that may obscure the true pattern of African ancestry in U.K. Biobank participants. In particular, we would expect an additional 10\% of individuals to be misclassified to the correct ethnic group when using imputed compared to non-imputed data.
+
+Therefore, with the exception of exercises comparing the imputed and non-imputed data, in all later analysis, I chose to use the approximately 70,000 non-imputed SNPs which overlap between the Human Origins and U.K. Biobank datasets. 
 
 \subsection{African ancestry in the U.K. Biobank samples is concentrated in Ghana and Nigeria}
 
@@ -292,7 +294,7 @@ We can observe roughly a doubling of the mean proportion of  Buganda\_Baganda an
 
 The aim of this chapter was twofold; firstly, to determine whether using less dense non-imputed or more dense imputed SNPs is preferable when combining genotype data from multiple chips. Secondly, I wanted to explore the diversity of African ancestry in the U.K. Biobank and its relation to population history.  
 
-I also showed that, in individuals with recent African ancestry, there is enough linkage information across 70,000 genome-wide SNPs to recover a substantial amount of useful haplotype information and accurately predict the birth country of a sample. Further, I found that using the particular imputation strategy I employed significantly reduces the power to assign African individuals to the correct population. This imputation strategy also introduces a degree of bias, in that donor groups donate more to populations present in the reference panel when using imputed data relative to non-imputed data. Future work should explore the downstream effects of such bias when e.g. estimating ancestry proportions of inferring genetic clusters. 
+I also showed that, in individuals with recent African ancestry, there is enough linkage information across 70,000 genome-wide SNPs to recover a substantial amount of useful haplotype information and accurately predict the birth country of a sample. Further, I found that using the particular imputation strategy I employed, namely imputing missing genotypes in genotype arrays after merging datasets, significantly reduces the power to assign African individuals to the correct population. This imputation strategy also introduces a degree of bias, in that donor groups donate more to populations present in the reference panel when using imputed data relative to non-imputed data. Future work should explore the downstream effects of such bias when e.g. estimating ancestry proportions of inferring genetic clusters. 
 
 West African ancestry was the most common across samples with recent African ancestry, with ancestry from ethnic groups from Nigeria and Ghana being especially prevalent. In particular, individuals had substantially more ancestry from Yoruba than any other ethnicity. I did not find evidence for structure in how African ancestry was distributed across the U.K., based on the testing centre that participants registered at. 
 

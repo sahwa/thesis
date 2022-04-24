@@ -1998,26 +1998,44 @@ This figure shows the how TVD assignment accuracy varies with the total number o
 
 \subsection{Comparison of imputation uncertainty metrics} \label{sec:alt_input_score_test}
 
-In Chapter 2, I presented a way of adding the uncertainty from genotype imputation back into the phased genotypes in chromopainter input. This method, called `uncertainty' here for brevity, was calculated as $U = |G-D|$, where $G$ is the genotype dosage and $D$ is dosage obtained from the genotype likelihoods. 
+In Chapter 2, I presented a way of adding the uncertainty from genotype imputation back into the phased genotypes in chromopainter input. This method, called `uncertainty' here for brevity, was calculated as $U = |G-D|$, where $G$ is the genotype dosage and $D$ is dosage obtained from the genotype likelihoods. Low values of $U$ (and correspondingly high values of $1-U$) correspond to high confidence that the allele at that position has been called correctly. 
 
-It came to my attention that this metric may be floored; low confidence genotype calls with \texttt{1|1} may be indistinguishable from high confidence \texttt{1|0} calls. Similarly, low confidence heterozygous calls, e.g. \texttt{gp="0.313,0.374,0.313"} would yield $U=1$ and a $max(GP)$ of 0.374.
+However, $U$ as a metric may be floored; for example, low confidence heterozygous calls, e.g. \texttt{gp="0.313,0.374,0.313"} would yield $U=1$ and a $max(GP)$ of 0.374. Having high confidence in such positions may harm the painting accuracy.
 
-To investigate this further, I randomly selected 500,000 positions from a randomly selected ancient sample and plotted $1-U$ against $max(GP)$ (Fig. \ref{fig:alt_input_score_test}). My work in chapter X showed that, whilst slightly conservative, $max(GP)$ is an accurate proxy for whether or not a genotype has been imputed correctly and thus stands as a good metric to compare $U$ against. I plotted $1-U$ so that it is directly comparable to $max(GP)$, i.e. a 
+To investigate this further, I randomly selected 500,000 positions from a randomly selected ancient sample and plotted $1-U$ against $max(GP)$ (Fig. \ref{fig:alt_input_score_test}). My work in chapter X showed that, whilst slightly conservative, $max(GP)$ is an accurate proxy for whether or not a genotype has been imputed correctly and thus stands as a good metric to compare $U$ against. I plotted $1-U$ so that it is directly comparable to $max(GP)$, i.e. the genotype call has a certainty of being imputed correctly when $1-U = max(GP) = 1$
 
-Whilst the Pearson's correlation between the two metrics (0.93), Fig. \ref{fig:alt_input_score_test} shows that there is a clear difference; $1-U$ substantially over-estimates the probability that heterozygous positions have been imputed correctly. When counting only positions where $1-U \neq 1$ or $max(GP) \neq 1$, heterozygous positions had a mean $max(GP)$ of 0.82, compared to a $1-U$ of 0.89. There was also a less pronounced effect of $1-U$ underestimating equivalent score for homozygous positions relative to $max(GP)$. Concerningly 
+Whilst the Pearson's correlation between the two metrics (0.93), Fig. \ref{fig:alt_input_score_test} shows that there is a clear difference; $1-U$ substantially over-estimates the probability that heterozygous positions have been imputed correctly. When counting only positions where $1-U \neq 1$ or $max(GP) \neq 1$, heterozygous positions had a mean $max(GP)$ of 0.82, compared to a $1-U$ of 0.89. There was also a less pronounced effect of $1-U$ underestimating equivalent score for homozygous positions relative to $max(GP)$.   
 
+%\begin{figure}[htp]
+%    \centering
+%    \includegraphics[width=1.0\textwidth]{../images/appendix/alt_input_score_test.pdf}
+%    \caption{Proportion of inferred Cameroon Arabic ancestry averaged across individuals from Cameroon Kanuri ethnic group. Each panel contains proportions for a different number of MCMC iterations. Within each panel, each bar is the proportion inferred from each of the 10 independent SOURCEFIND runs.}
+%    \label{fig:alt_input_score_test}
+%\end{figure}
 
+To test whether the choice of uncertainty metric had an affect on painting accuracy, I reproduced Fig \ref{fig:CP_correlation_allSamples_0.1x_0.5x_30x} but using setting uncertainty such that, at each SNP, I set the entry in ChromoPainter input as:
 
+\begin{equation} \label{eq:cp}
+\Pr(a = alt) =     
+	\begin{cases}
+		1.0 - max(GP) &  a = 1 \\
+		max(GP) & a = 0  
+	\end{cases}       
+\end{equation}
+
+, where $a$ is the value of the allele at a given position. Whilst using $max(GP)$ (Fig. \ref{fig:alt_input_score_test_uncertainty}) rather than $U$ did reduce the $TVD$ between the full coverage and downsampled individuals, it did not perform better than not accounting for uncertainty at all (Fig. \ref{fig:alt_input_score_test_standard}).
 
 \begin{figure}[htp]
     \centering
-    \includegraphics[width=1.0\textwidth]{../images/appendix/alt_input_score_test.pdf}
-    \caption{Proportion of inferred Cameroon Arabic ancestry averaged across individuals from Cameroon Kanuri ethnic group. Each panel contains proportions for a different number of MCMC iterations. Within each panel, each bar is the proportion inferred from each of the 10 independent SOURCEFIND runs.}
-    \label{fig:alt_input_score_test}
+    \includegraphics[width=1.0\textwidth]{../images/appendix/uncertainty.pdf}
+    \caption{For five different samples (columns), the proportion of DNA that each downsampled (y-axis) or full coverage (x-axis) genome matches to each of 125 ancient individuals (dots). Results are shown for 0.1x (top row) and 0.5x (bottom row) downsampled genomes. Points coloured by manual assignment to broad-scale populations. Red line is line of equality ($y=x$). x and y units are normalised copying values and thus removed for clarity. Results obtained from using $max(GP)$ as the uncertainty metric, shown in equation \ref{eq:cp}.}
+    \label{fig:alt_input_score_test_uncertainty}
 \end{figure}
 
-
-
-
-
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/appendix/standard.pdf}
+    \caption{For five different samples (columns), the proportion of DNA that each downsampled (y-axis) or full coverage (x-axis) genome matches to each of 125 ancient individuals (dots). Results are shown for 0.1x (top row) and 0.5x (bottom row) downsampled genomes. Points coloured by manual assignment to broad-scale populations. Red line is line of equality ($y=x$). x and y units are normalised copying values and thus removed for clarity. Results obtained from not account for any uncertainty in the genotype calls.}
+    \label{fig:alt_input_score_test_standard}
+\end{figure}
 

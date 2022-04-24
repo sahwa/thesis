@@ -58,9 +58,9 @@
 \contentsline {subsection}{\numberline {3.3.2}To impute or not?}{103}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}African ancestry in the U.K. Biobank samples is concentrated in Ghana and Nigeria}{109}{subsection.3.3.3}%
 \contentsline {subsection}{\numberline {3.3.4}Verifying painting accuracy}{117}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Patterns of African ancestry across the U.K.}{122}{subsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.3.6}Patterns of African ancestry across the U.K.}{123}{subsection.3.3.6}%
-\contentsline {section}{\numberline {3.4}Summary of Results and Discussion}{126}{section.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Patterns of African ancestry across the U.K.}{123}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}Patterns of African ancestry across the U.K.}{125}{subsection.3.3.6}%
+\contentsline {section}{\numberline {3.4}Summary of Results and Discussion}{125}{section.3.4}%
 \contentsline {chapter}{\numberline {4}Bavaria ancient DNA}{128}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Introduction}{128}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Methods}{130}{section.4.2}%
@@ -122,4 +122,4 @@
 \contentsline {subsection}{\numberline {E.0.1}Determining the number of MCMC iterations required in SOURCEFIND analysis}{250}{subsection.E.0.1}%
 \contentsline {subsection}{\numberline {E.0.2}Determining the number of SNPs required to separate individuals from Devon and Cornwall}{252}{subsection.E.0.2}%
 \contentsline {subsection}{\numberline {E.0.3}Comparison of imputation uncertainty metrics}{252}{subsection.E.0.3}%
-\contentsline {chapter}{Bibliography}{255}{figure.caption.80}%
+\contentsline {chapter}{Bibliography}{257}{figure.caption.81}%
