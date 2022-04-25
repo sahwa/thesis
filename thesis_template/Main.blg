@@ -10,52 +10,52 @@ A level-1 auxiliary file: Chapter4_GH_Dec2021.aux
 A level-1 auxiliary file: Chapter5_GH.aux
 A level-1 auxiliary file: Conclusions_GH.aux
 A level-1 auxiliary file: Appendices.aux
-Reallocated field_info (elt_size=4) to 10152 items from 5000.
+Reallocated field_info (elt_size=4) to 10106 items from 5000.
 Database file #1: ../bibliography/library.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--I didn't find a database entry for "rubinacci2021efficicanent"
 Warning--empty journal in gibbs2003international
 Warning--empty journal in furholt2003absolutchronologische
 Warning--there's a number but no series in fouracre1995new
-You've used 223 entries,
+You've used 221 entries,
             1820 wiz_defined-function locations,
-            1667 strings with 90368 characters,
-and the built_in function-call counts, 56368 in all, are:
-= -- 5354
-> -- 3098
+            1658 strings with 90124 characters,
+and the built_in function-call counts, 56092 in all, are:
+= -- 5330
+> -- 3090
 < -- 9
-+ -- 1452
-- -- 726
-* -- 4097
-:= -- 8800
-add.period$ -- 673
-call.type$ -- 223
++ -- 1448
+- -- 724
+* -- 4090
+:= -- 8752
+add.period$ -- 667
+call.type$ -- 221
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 226
-duplicate$ -- 2227
-empty$ -- 4727
-format.name$ -- 920
-if$ -- 12275
+cite$ -- 224
+duplicate$ -- 2209
+empty$ -- 4695
+format.name$ -- 918
+if$ -- 12212
 int.to.chr$ -- 0
-int.to.str$ -- 223
-missing$ -- 234
-newline$ -- 1119
-num.names$ -- 223
-pop$ -- 704
+int.to.str$ -- 221
+missing$ -- 231
+newline$ -- 1109
+num.names$ -- 221
+pop$ -- 696
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1507
+skip$ -- 1501
 stack$ -- 0
 substring$ -- 4086
-swap$ -- 274
+swap$ -- 272
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 534
-width$ -- 226
-write$ -- 2418
+while$ -- 532
+width$ -- 224
+write$ -- 2397
 (There were 4 warnings)

@@ -136,97 +136,6 @@ A `variant' is considered to be a SNP with a genotype that is either \texttt{0/1
 
 $V$, or true-positive, is the number of events where a variant position (i.e. a SNP with a genotype that is either \texttt{0/1} or \texttt{1/1}) is detected in either the full coverage ($V_{baseline}$) or downsampled ($V_{baseline}$) sample. $FN$ is the number of times that a variant position is called in the full coverage sample and not the downsampled sample. Conversely, $FP$ is the number of times a variant position is called in the downsampled sample and where the same SNP in the full coverage sample is invariant (i.e. \texttt{0/0}). Only genotypes called in the full coverage and downsampled individuals were considered. No allele frequency filters were applied before conducting this analysis.
 
-\begingroup\fontsize{6}{8}\selectfont
-
-\begin{longtable}[t]{ccccccccc}
-\toprule
-True-pos-baseline & True-pos-call & False-pos & False-neg & Precision & Sensitivity & ind & coverage & type\\
-\midrule
-\endfirsthead
-\multicolumn{9}{@{}l}{\textit{(continued)}}\\
-\toprule
-True-pos-baseline & True-pos-call & False-pos & False-neg & Precision & Sensitivity & Individual & coverage & type\\
-\midrule
-\endhead
-
-\endfoot
-\bottomrule
-\endlastfoot
-446716 & 3693 & 451920 & 885080 & 0.99 & 0.34 & LBK & 0.1 & homozygous\\
-662464 & 55801 & 657260 & 2002379 & 0.92 & 0.25 & LBK & 0.1 & heterozygous\\
-447518 & 2573 & 461408 & 884278 & 0.99 & 0.34 & LBK & 0.5 & homozygous\\
-715712 & 32088 & 701822 & 1949131 & 0.96 & 0.27 & LBK & 0.5 & heterozygous\\
-447572 & 2163 & 462110 & 884224 & 1.00 & 0.34 & LBK & 0.7 & homozygous\\
-721972 & 30541 & 707434 & 1942871 & 0.96 & 0.27 & LBK & 0.7 & heterozygous\\
-447613 & 1812 & 462770 & 884183 & 1.00 & 0.34 & LBK & 1 & homozygous\\
-725378 & 29709 & 710221 & 1939465 & 0.96 & 0.27 & LBK & 1 & heterozygous\\
-447663 & 936 & 462248 & 884133 & 1.00 & 0.34 & LBK & 2 & homozygous\\
-733864 & 28827 & 719279 & 1930979 & 0.96 & 0.28 & LBK & 2 & heterozygous\\
-447688 & 441 & 460248 & 884108 & 1.00 & 0.34 & LBK & 3.5 & homozygous\\
-741553 & 27046 & 728993 & 1923290 & 0.96 & 0.28 & LBK & 3.5 & heterozygous\\
-447714 & 249 & 458715 & 884082 & 1.00 & 0.34 & LBK & 5 & homozygous\\
-746156 & 24199 & 735155 & 1918687 & 0.97 & 0.28 & LBK & 5 & heterozygous\\
-447745 & 101 & 456016 & 884051 & 1.00 & 0.34 & LBK & 10 & homozygous\\
-754302 & 14619 & 746031 & 1910541 & 0.98 & 0.28 & LBK & 10 & heterozygous\\
-508189 & 3406 & 493286 & 1026959 & 0.99 & 0.33 & Loschbour & 0.1 & homozygous\\
-533345 & 72648 & 548248 & 1460741 & 0.88 & 0.27 & Loschbour & 0.1 & heterozygous\\
-509749 & 2183 & 519716 & 1025399 & 1.00 & 0.33 & Loschbour & 0.5 & homozygous\\
-575601 & 32917 & 565634 & 1418485 & 0.94 & 0.29 & Loschbour & 0.5 & heterozygous\\
-509846 & 1844 & 522207 & 1025302 & 1.00 & 0.33 & Loschbour & 0.7 & homozygous\\
-580639 & 28590 & 568278 & 1413447 & 0.95 & 0.29 & Loschbour & 0.7 & heterozygous\\
-509931 & 1507 & 524256 & 1025217 & 1.00 & 0.33 & Loschbour & 1 & homozygous\\
-583785 & 26811 & 569460 & 1410301 & 0.96 & 0.29 & Loschbour & 1 & heterozygous\\
-510086 & 710 & 525806 & 1025062 & 1.00 & 0.33 & Loschbour & 2 & homozygous\\
-590796 & 22876 & 575076 & 1403290 & 0.96 & 0.30 & Loschbour & 2 & heterozygous\\
-510139 & 372 & 524548 & 1025009 & 1.00 & 0.33 & Loschbour & 3.5 & homozygous\\
-596506 & 20317 & 582097 & 1397580 & 0.97 & 0.30 & Loschbour & 3.5 & heterozygous\\
-510160 & 204 & 522888 & 1024988 & 1.00 & 0.33 & Loschbour & 5 & homozygous\\
-599985 & 17804 & 587257 & 1394101 & 0.97 & 0.30 & Loschbour & 5 & heterozygous\\
-510210 & 70 & 520177 & 1024938 & 1.00 & 0.33 & Loschbour & 10 & homozygous\\
-605511 & 14402 & 595544 & 1388575 & 0.98 & 0.30 & Loschbour & 10 & heterozygous\\
-510247 & 36 & 517559 & 1024901 & 1.00 & 0.33 & Loschbour & 20 & homozygous\\
-608668 & 5781 & 601356 & 1385418 & 0.99 & 0.31 & Loschbour & 20 & heterozygous\\
-434242 & 4167 & 420813 & 876125 & 0.99 & 0.33 & UstIshim & 0.1 & homozygous\\
-690738 & 143340 & 704167 & 1710432 & 0.83 & 0.29 & UstIshim & 0.1 & heterozygous\\
-435973 & 2655 & 447495 & 874394 & 0.99 & 0.33 & UstIshim & 0.5 & homozygous\\
-761404 & 57054 & 749882 & 1639766 & 0.93 & 0.32 & UstIshim & 0.5 & heterozygous\\
-436088 & 2269 & 450916 & 874279 & 1.00 & 0.33 & UstIshim & 0.8 & homozygous\\
-767734 & 55928 & 752906 & 1633436 & 0.93 & 0.32 & UstIshim & 0.8 & heterozygous\\
-436137 & 1873 & 453966 & 874230 & 1.00 & 0.33 & UstIshim & 1 & homozygous\\
-771305 & 47742 & 753476 & 1629865 & 0.94 & 0.32 & UstIshim & 1 & heterozygous\\
-436233 & 1011 & 456114 & 874134 & 1.00 & 0.33 & UstIshim & 2 & homozygous\\
-778047 & 41853 & 758166 & 1623123 & 0.95 & 0.32 & UstIshim & 2 & heterozygous\\
-436271 & 470 & 455417 & 874096 & 1.00 & 0.33 & UstIshim & 3.5 & homozygous\\
-783071 & 37116 & 763925 & 1618099 & 0.95 & 0.33 & UstIshim & 3.5 & heterozygous\\
-436298 & 250 & 453059 & 874069 & 1.00 & 0.33 & UstIshim & 5 & homozygous\\
-786196 & 34244 & 769435 & 1614974 & 0.96 & 0.33 & UstIshim & 5 & heterozygous\\
-436330 & 59 & 448558 & 874037 & 1.00 & 0.33 & UstIshim & 10 & homozygous\\
-791262 & 37222 & 779034 & 1609908 & 0.95 & 0.33 & UstIshim & 10 & heterozygous\\
-436349 & 29 & 444427 & 874018 & 1.00 & 0.33 & UstIshim & 20 & homozygous\\
-796618 & 15880 & 788540 & 1604552 & 0.98 & 0.33 & UstIshim & 20 & heterozygous\\
-473075 & 1511 & 469834 & 973760 & 1.00 & 0.33 & Yamnaya & 0.1 & homozygous\\
-650642 & 63366 & 653883 & 1461308 & 0.91 & 0.31 & Yamnaya & 0.1 & heterozygous\\
-473789 & 1034 & 475295 & 973046 & 1.00 & 0.33 & Yamnaya & 0.5 & homozygous\\
-697493 & 27432 & 695987 & 1414457 & 0.96 & 0.33 & Yamnaya & 0.5 & heterozygous\\
-473859 & 950 & 475595 & 972976 & 1.00 & 0.33 & Yamnaya & 0.8 & homozygous\\
-701496 & 24895 & 699760 & 1410454 & 0.97 & 0.33 & Yamnaya & 0.8 & heterozygous\\
-473875 & 860 & 475625 & 972960 & 1.00 & 0.33 & Yamnaya & 1 & homozygous\\
-702973 & 24412 & 701223 & 1408977 & 0.97 & 0.33 & Yamnaya & 1 & heterozygous\\
-473953 & 684 & 475445 & 972882 & 1.00 & 0.33 & Yamnaya & 2 & homozygous\\
-706850 & 22517 & 705358 & 1405100 & 0.97 & 0.33 & Yamnaya & 2 & heterozygous\\
-473987 & 557 & 475160 & 972848 & 1.00 & 0.33 & Yamnaya & 3.5 & homozygous\\
-708919 & 20126 & 707746 & 1403031 & 0.97 & 0.34 & Yamnaya & 3.5 & heterozygous\\
-474010 & 482 & 475003 & 972825 & 1.00 & 0.33 & Yamnaya & 5 & homozygous\\
-710310 & 19073 & 709317 & 1401640 & 0.97 & 0.34 & Yamnaya & 5 & heterozygous\\
-474058 & 312 & 474696 & 972777 & 1.00 & 0.33 & Yamnaya & 10 & homozygous\\
-712448 & 15826 & 711810 & 1399502 & 0.98 & 0.34 & Yamnaya & 10 & heterozygous\\
-474144 & 254 & 474586 & 972691 & 1.00 & 0.33 & Yamnaya & 20 & homozygous\\
-713915 & 12351 & 713473 & 1398035 & 0.98 & 0.34 & Yamnaya & 20 & heterozygous\\*
-\end{longtable}
-\endgroup{}
-
-
-
 \subsection{ChromoPainter analysis} \label{ChromoPainter_analysis}
 
 It is important to understand the effect of sequencing coverage on the accuracy of ChromoPainter copyvector estimation. A `copyvector', $c_{r}$, is a vector of length $D$, where each entry gives the total length of genome that recipient individual $r$ most closely matches to each of the $D$ donor individual/populations. I sometimes refer to `normalised' copyvectors; this simply refers to where each entry of $c_r$ is divided by the sum of all entries, scaling the copyvector to sum to 1. 
@@ -365,9 +274,121 @@ Different downsampled individuals varied in the precision and sensitivity of gen
 
 Imputation accuracy may also be related to demographic history. Populations which are known to have smaller effective population size, such as Western-Hunter Gathers, also contain longer tracts between individuals which are identical by descent (IBD) \cite{browning2015accurate} and fewer heterozygous positions. As imputation relies on matching IBD tracts between individuals, imputation accuracy increases where individuals share more IBD \cite{kong2008detection}. However, this would not be the case in this analysis as there are not hunter-gatherers in the reference panel for target hunter-gatherers to share IBD with. Additionally, switch-errors during the pre-phasing step of imputation may harm imputation accuracy, so a reduced density of heterozygous positions may result in increased accuracy. 
 
+\begingroup\fontsize{8}{10}\selectfont
+
+\begin{longtable}[t]{lllrr}
+\toprule
+Ind & Coverage & Type & Precision & Sensitivity\\
+\midrule
+\endfirsthead
+\multicolumn{5}{@{}l}{\textit{(continued)}}\\
+\toprule
+Ind & Coverage & Type & Precision & Sensitivity\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
+LBK & 0.1 & heterozygous & 0.9687 & 0.4315\\
+LBK & 0.1 & homozygous & 0.9957 & 0.9074\\
+LBK & 0.5 & heterozygous & 0.9759 & 0.4688\\
+LBK & 0.5 & homozygous & 0.9974 & 0.9659\\
+LBK & 0.7 & heterozygous & 0.9764 & 0.4736\\
+LBK & 0.7 & homozygous & 0.9981 & 0.9721\\
+LBK & 1 & heterozygous & 0.9763 & 0.4760\\
+LBK & 1 & homozygous & 0.9985 & 0.9754\\
+LBK & 10 & heterozygous & 0.9866 & 0.4919\\
+LBK & 10 & homozygous & 1.0000 & 0.9924\\
+LBK & 2 & heterozygous & 0.9789 & 0.4813\\
+LBK & 2 & homozygous & 0.9995 & 0.9819\\
+LBK & 3.5 & heterozygous & 0.9813 & 0.4852\\
+LBK & 3.5 & homozygous & 0.9999 & 0.9863\\
+LBK & 5 & heterozygous & 0.9838 & 0.4875\\
+LBK & 5 & homozygous & 1.0000 & 0.9887\\
+Loschbour & 0.1 & heterozygous & 0.9541 & 0.4420\\
+Loschbour & 0.1 & homozygous & 0.9962 & 0.9142\\
+Loschbour & 0.5 & heterozygous & 0.9759 & 0.4730\\
+Loschbour & 0.5 & homozygous & 0.9979 & 0.9627\\
+Loschbour & 0.7 & heterozygous & 0.9773 & 0.4769\\
+Loschbour & 0.7 & homozygous & 0.9984 & 0.9688\\
+Loschbour & 1 & heterozygous & 0.9791 & 0.4794\\
+Loschbour & 1 & homozygous & 0.9988 & 0.9721\\
+Loschbour & 10 & heterozygous & 0.9885 & 0.4946\\
+Loschbour & 10 & homozygous & 1.0000 & 0.9915\\
+Loschbour & 2 & heterozygous & 0.9826 & 0.4842\\
+Loschbour & 2 & homozygous & 0.9996 & 0.9795\\
+Loschbour & 20 & heterozygous & 0.9995 & 0.4988\\
+Loschbour & 20 & homozygous & 1.0000 & 0.9947\\
+Loschbour & 3.5 & heterozygous & 0.9850 & 0.4883\\
+Loschbour & 3.5 & homozygous & 0.9999 & 0.9843\\
+Loschbour & 5 & heterozygous & 0.9884 & 0.4906\\
+Loschbour & 5 & homozygous & 1.0000 & 0.9873\\
+sf12 & 0.1 & heterozygous & 0.9606 & 0.4356\\
+sf12 & 0.1 & homozygous & 0.9973 & 0.9011\\
+sf12 & 0.5 & heterozygous & 0.9795 & 0.4713\\
+sf12 & 0.5 & homozygous & 0.9989 & 0.9444\\
+sf12 & 0.8 & heterozygous & 0.9788 & 0.4752\\
+sf12 & 0.8 & homozygous & 0.9992 & 0.9521\\
+sf12 & 1 & heterozygous & 0.9775 & 0.4772\\
+sf12 & 1 & homozygous & 0.9993 & 0.9570\\
+sf12 & 10 & heterozygous & 0.9693 & 0.4915\\
+sf12 & 10 & homozygous & 1.0000 & 0.9877\\
+sf12 & 2 & heterozygous & 0.9688 & 0.4823\\
+sf12 & 2 & homozygous & 0.9997 & 0.9695\\
+sf12 & 20 & heterozygous & 0.9798 & 0.4932\\
+sf12 & 20 & homozygous & 1.0000 & 0.9936\\
+sf12 & 3.5 & heterozygous & 0.9577 & 0.4861\\
+sf12 & 3.5 & homozygous & 0.9998 & 0.9785\\
+sf12 & 5 & heterozygous & 0.9547 & 0.4880\\
+sf12 & 5 & homozygous & 0.9999 & 0.9831\\
+UstIshim & 0.1 & heterozygous & 0.9267 & 0.4308\\
+UstIshim & 0.1 & homozygous & 0.9935 & 0.8879\\
+UstIshim & 0.5 & heterozygous & 0.9650 & 0.4750\\
+UstIshim & 0.5 & homozygous & 0.9964 & 0.9505\\
+UstIshim & 0.8 & heterozygous & 0.9655 & 0.4794\\
+UstIshim & 0.8 & homozygous & 0.9970 & 0.9589\\
+UstIshim & 1 & heterozygous & 0.9686 & 0.4817\\
+UstIshim & 1 & homozygous & 0.9977 & 0.9634\\
+UstIshim & 10 & heterozygous & 0.9733 & 0.4933\\
+UstIshim & 10 & homozygous & 1.0000 & 0.9891\\
+UstIshim & 2 & heterozygous & 0.9719 & 0.4861\\
+UstIshim & 2 & homozygous & 0.9990 & 0.9731\\
+UstIshim & 20 & heterozygous & 0.9859 & 0.4960\\
+UstIshim & 20 & homozygous & 1.0000 & 0.9935\\
+UstIshim & 3.5 & heterozygous & 0.9774 & 0.4888\\
+UstIshim & 3.5 & homozygous & 0.9996 & 0.9792\\
+UstIshim & 5 & heterozygous & 0.9802 & 0.4906\\
+UstIshim & 5 & homozygous & 0.9999 & 0.9831\\
+Yamnaya & 0.1 & heterozygous & 0.9662 & 0.4471\\
+Yamnaya & 0.1 & homozygous & 0.9990 & 0.9358\\
+Yamnaya & 0.5 & heterozygous & 0.9785 & 0.4830\\
+Yamnaya & 0.5 & homozygous & 0.9994 & 0.9857\\
+Yamnaya & 0.8 & heterozygous & 0.9803 & 0.4868\\
+Yamnaya & 0.8 & homozygous & 0.9995 & 0.9896\\
+Yamnaya & 1 & heterozygous & 0.9792 & 0.4886\\
+Yamnaya & 1 & homozygous & 0.9996 & 0.9912\\
+Yamnaya & 10 & heterozygous & 0.9935 & 0.5097\\
+Yamnaya & 10 & homozygous & 1.0000 & 0.9974\\
+Yamnaya & 2 & heterozygous & 0.9781 & 0.4923\\
+Yamnaya & 2 & homozygous & 0.9998 & 0.9939\\
+Yamnaya & 20 & heterozygous & 0.9976 & 0.5356\\
+Yamnaya & 20 & homozygous & 1.0000 & 0.9981\\
+Yamnaya & 3.5 & heterozygous & 0.9829 & 0.4969\\
+Yamnaya & 3.5 & homozygous & 0.9999 & 0.9956\\
+Yamnaya & 5 & heterozygous & 0.9851 & 0.5027\\
+Yamnaya & 5 & homozygous & 0.9999 & 0.9963\\*
+\caption{Sensitivty and precision of imputed genotypes stratified by sample, coverage and variant type.}
+\end{longtable}
+\endgroup{}
+
+
+
 \subsection{Phasing accuracy}
 
 I also used rtg-tools to calculate the number of phased heterozygous genotypes where the downsampled individual has the same phasing as the full coverage individual (Fig \ref{fig:phasing_performance_downsampled}). I note that this should not be considered to be the same as estimating the switch error rate, since we do not know that the phasing in the full-coverage individual is the true phase. However, this can be used as a rough proxy for switch errors, since it is known that phasing in lower coverage individuals is likely to be less accurate than those in the high coverage individuals \cite{rubinacci2021efficient}.
+
+The shape of the 
 
 \begin{figure}[htp]
     \centering
@@ -535,6 +556,28 @@ The previous section suggested that imputation plays a role in the introduction 
 Bias occurs when missing genotypes are incorrectly imputed with variants from certain populations more frequently than others. We might expect these populations to be those which are more prevalent in the reference panel. We would correspondingly expect bias to mean that, when painted, some donor populations would donate more than others, relative to if no imputation had taken place. On the other hand, if `noise' is dominating results, we would expect the incorrectly imputed genotypes to be randomly distributed across populations, and similarly we would not expect to see any populations donating more than others relative to if no imputation had taken place. 
 
 Therefore, we can compare the amount different donor groups donate under the dataset where none of the 560,442 SNPs had been imputed versus the dataset where 430,000 (86\%) of these SNPs have been imputed by plotting the mean amount donated by each population using imputed SNPs and non-imputed SNPs (Fig. \ref{fig:imputed_nonimputed_donation}). The 20 populations that contribute most are a set containing European and Jewish population. Notably, the Haplotype Reference Consortium panel that was used to impute the data consists primarily of individuals of European descent. The two populations which are over-copied the most after imputation are two English populations from Kent and Cornwall. This suggests that there is a most likely a bias towards copying more from European populations when the data has been imputed using the HRC. 
+
+Another consideration is the concept of reference \textit{sequence} bias, where genotypes are imputed  with a higher accuracy when they contain more reference alleles. To display this effect, I calculated the proportion of correctly imputed genotypes in 0.1x and 0.5x downsamples and stratified by genotype class (Table \ref{tab:genotype_class_prop}). In the case of 0.5x downsamples, adding reference alleles to the genotype increased the accuracy of imputation. For 0.1x downsamples, reference homozgyous genotypes were imputed more accurately than non-reference homozygous genotypes. In 0.1x downsamples, non-reference homozygous genotypes were imputed approximately as accurately as heterozygous genotypes, potentially in part because of the difficult of calling heterozygous genotypes in very low coverage samples.
+
+\begin{table}
+\centering\begingroup\fontsize{10}{10}\selectfont
+
+\begin{tabular}[t]{lccc}
+\toprule
+type & prop correct 0.1x & prop correct 0.5x & Number of SNPs\\
+\midrule
+1/1 & 0.880 & 0.967 & 476,046\\
+0/1 & 0.850 & 0.971 & 662,819\\
+0/0 & 0.954 & 0.989 & 1,003,260\\
+\bottomrule
+\end{tabular}
+\caption{Aggregated proportion of genotypes in 0.1x and 0.5x across downsamples which match the genotype in the equivalent full coverage individual, stratified by whether genotype in full coverage sample is heterozygous, homozygous reference or homozygous alternative. Number of SNPs is the total number of SNPs aggregated across all downsamples.}
+\endgroup{}
+\label{tab:genotype_class_prop}
+\end{table}
+
+
+
 
 \begin{figure}[htp]
     \centering
