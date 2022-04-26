@@ -382,13 +382,75 @@ Yamnaya & 5 & homozygous & 0.9999 & 0.9963\\*
 \end{longtable}
 \endgroup{}
 
+\begin{table}
+\centering\begingroup\fontsize{8}{10}\selectfont
+
+\begin{tabular}[t]{llrrr}
+\toprule
+Individual & Coverage & F\_MISS & O(HOM) & N\_GENO\\
+\midrule
+LBK & 0.1 & 0.8990000 & 1965711 & 81039450\\
+Loschbour & 0.1 & 0.9036000 & 1822948 & 81039450\\
+sf12 & 0.1 & 0.9026000 & 1952792 & 81039450\\
+UstIshim & 0.1 & 0.9016000 & 1896593 & 81039450\\
+Yamnaya & 0.1 & 0.8971000 & 1975883 & 81039450\\
+LBK & 0.5 & 0.5942000 & 7676630 & 81039450\\
+Loschbour & 0.5 & 0.6103000 & 7244921 & 81039450\\
+sf12 & 0.5 & 0.6058000 & 7674511 & 81039450\\
+UstIshim & 0.5 & 0.6013000 & 7352396 & 81039450\\
+Yamnaya & 0.5 & 0.5882000 & 7635209 & 81039450\\
+LBK & 0.7 & 0.4626000 & 10012050 & 81039450\\
+Loschbour & 0.7 & 0.4817000 & 9563222 & 81039450\\
+sf12 & 0.8 & 0.4759000 & 10040003 & 81039450\\
+UstIshim & 0.8 & 0.4695000 & 9686853 & 81039450\\
+Yamnaya & 0.8 & 0.4568000 & 9932818 & 81039450\\
+LBK & 10 & 0.0030570 & 16005186 & 81039450\\
+Loschbour & 10 & 0.0022310 & 16695150 & 81039450\\
+sf12 & 10 & 0.0020340 & 16083491 & 81039450\\
+UstIshim & 10 & 0.0014870 & 15942028 & 81039450\\
+Yamnaya & 10 & 0.0135800 & 16381477 & 81039450\\
+LBK & 1 & 0.3618000 & 11716030 & 81039450\\
+Loschbour & 1 & 0.3826000 & 11311586 & 81039450\\
+sf12 & 1 & 0.3759000 & 11772021 & 81039450\\
+UstIshim & 1 & 0.3684000 & 11428257 & 81039450\\
+Yamnaya & 1 & 0.3579000 & 11583338 & 81039450\\
+Loschbour & 20 & 0.0006456 & 17151835 & 81039450\\
+sf12 & 20 & 0.0007526 & 16557290 & 81039450\\
+UstIshim & 20 & 0.0004589 & 16495247 & 81039450\\
+Yamnaya & 20 & 0.0082380 & 16852486 & 81039450\\
+LBK & 2 & 0.1431000 & 14941981 & 81039450\\
+Loschbour & 2 & 0.1611000 & 14962667 & 81039450\\
+sf12 & 2 & 0.1539000 & 15177891 & 81039450\\
+UstIshim & 2 & 0.1456000 & 14940375 & 81039450\\
+Yamnaya & 2 & 0.1491000 & 14613044 & 81039450\\
+LBK & 3.5 & 0.0420200 & 15791220 & 81039450\\
+Loschbour & 3.5 & 0.0513700 & 16367954 & 81039450\\
+sf12 & 3.5 & 0.0462600 & 16233038 & 81039450\\
+UstIshim & 3.5 & 0.0416300 & 16042984 & 81039450\\
+Yamnaya & 3.5 & 0.0560700 & 15469128 & 81039450\\
+LBK & 5 & 0.0155900 & 15748581 & 81039450\\
+Loschbour & 5 & 0.0193300 & 16564119 & 81039450\\
+sf12 & 5 & 0.0164900 & 16201322 & 81039450\\
+UstIshim & 5 & 0.0142600 & 15983872 & 81039450\\
+Yamnaya & 5 & 0.0304900 & 15667898 & 81039450\\
+LBK & full & 0.0015970 & 16509572 & 81039450\\
+Loschbour & full & 0.0006330 & 17161426 & 81039450\\
+sf12 & full & 0.0401000 & 16994174 & 81039450\\
+UstIshim & full & 0.0002959 & 16750441 & 81039450\\
+Yamnaya & full & 0.0071990 & 16915944 & 81039450\\
+\bottomrule
+\end{tabular}
+\endgroup{}
+\end{table}
+
+
 
 
 \subsection{Phasing accuracy}
 
-I also used rtg-tools to calculate the number of phased heterozygous genotypes where the downsampled individual has the same phasing as the full coverage individual (Fig \ref{fig:phasing_performance_downsampled}). I note that this should not be considered to be the same as estimating the switch error rate, since we do not know that the phasing in the full-coverage individual is the true phase. However, this can be used as a rough proxy for switch errors, since it is known that phasing in lower coverage individuals is likely to be less accurate than those in the high coverage individuals \cite{rubinacci2021efficient}.
+I also used rtg-tools to calculate the number of phased heterozygous genotypes where the downsampled individual has the same phase as the full coverage individual (Fig \ref{fig:phasing_performance_downsampled}). I note that this should not be considered to be the same as estimating the switch error rate, since we do not know that the phasing in the full-coverage individual is the true phase. However, this can be used as a rough proxy for switch errors, since it is known that phasing in lower coverage individuals is likely to be less accurate than those in the high coverage individuals \cite{rubinacci2021efficient}.
 
-The shape of the 
+Phase agreement with the full-coverage sample increased with increasing coverage. Such results are difficult to interpret because each sample has a different level of heterozygosity. 
 
 \begin{figure}[htp]
     \centering

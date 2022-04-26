@@ -139,6 +139,16 @@ I applied fineSTRUCTURE (v0.0.5)\cite{Lawson2012} to cluster the chunkcounts Chr
 
 Tree figures, coancestry matrix figures and principle component plots were generated using the fineSTRUCTURE R library \url{(https://people.maths.bris.ac.uk/~madjl/finestructure/FinestructureRcode.zip)}.
 
+The full workflow is shown in schematic form in Figure \ref{fig:workflow_bavaria}.
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/chapter4/workflow.pdf}
+    \caption{Workflow for analysing novel and reference ancient DNA samples. Each individual .bam fie is downloaded and processed using atlas, generating vcf files containing genotype calls and genotype likelihoods at each SNP identified in the 1000 genomes project. vcf files were then merged using bcftools and phased/imputed using GLIMPSE. The phased genotypes and posterior genotype probabilities from GLIMPSE were then combined to create a ChromoPainter input file. ChromoPainter was then used to generated a .chunklengths matrix for use in SOURCEFIND.}
+    \label{fig:workflow_bavaria}
+\end{figure}
+
+
 \subsection{SOURCEFIND} \label{sec:ch4_SOURCEFIND}
 
 I used SOURCEFIND \cite{Chacon-Duque2018} to infer the proportions of ancestry by which each newly sequenced ancient individual is most related to a set of surrogate populations. While this method does not explicitly attempt to identify admixture, in contrast to e.g. ALDER \cite{LohAlderAdmixture} or GLOBETROTTER \cite{Hellenthal2014}, it can reflect admixture proportions \cite{Chacon-Duque2018} but more generally reflects recent ancestry sharing patterns.
@@ -206,7 +216,7 @@ When painted using 465 ancient samples from the literature and the newly sequenc
 
 To explicitly test whether Erg1 and DIN2 group together to the exclusion of other ancient samples and therefore, whether they likely originated from a similar source population, I performed $f_{4}$ tests in the form of $f_{4}(W=Erg1, X=DIN2; Y=test, Z=Mbuti)$, where $test$ is 143 ancient populations used in the F-statistics analysis. This tests whether Erg1 and DIN2 form a clade to the exclusion of $test$ or not. Of the 143 comparisons, only the population labelled as WHG had a $|Z|>3$, ($Z=3.057$), suggesting that Erg1 and DIN2 originate from the same local population. Whilst qpAdm and SOURCEFIND results show that both Erg1 and DIN2 contain a small but significant proportion of hunter-gatherer ancestry, it is not clear whether the result of the $f_{4}$ test is due to admixture or statistical chance; one test with $|Z|>3$ may be expected when doing 143 tests, even if the null is true.
 
-To determine whether Erg1 showed increased genetic similarity to local farming populations, I also performed combinations of $f_{3}$ in the form of $f_{3}(A=Erg1, B=test, C=Mbuti)$, where $test$ iterates across 143 ancient populations. This tests the branch length, or the amount of genetic drift that has occurred on the branch shared by Erg1 and $test$ since their Thanks very much in advance!divergence from an outgroup (Mbuti). The sample/population with the highest $f_{3}$ statistic was NE7, a sample from 4,360 – 4,490 BC and the Lengyel culture (a Neolithic culture centered on the Danube River, known to be an offshoot of the LBK culture Erg1 belonged to). On the other hand, DIN2 shows a clear affinity to samples from Neolithic France.
+To determine whether Erg1 showed increased genetic similarity to local farming populations, I also performed combinations of $f_{3}$ in the form of $f_{3}(A=Erg1, B=test, C=Mbuti)$, where $test$ iterates across 143 ancient populations. This tests the branch length, or the amount of genetic drift that has occurred on the branch shared by Erg1 and $test$ since their divergence from an outgroup (Mbuti). The sample/population with the highest $f_{3}$ statistic was NE7, a sample from 4,360 – 4,490 BC and the Lengyel culture (a Neolithic culture centered on the Danube River, known to be an offshoot of the LBK culture Erg1 belonged to). On the other hand, DIN2 shows a clear affinity to samples from Neolithic France.
 
 My dataset included data from several other LBK populations local to Erg1 and DIN2; samples from Schwetzingen, Stuttgart-Mullhausen and Halberstadt. These samples appear to form a distinct cluster on the plink PCA and are shifted away from the primary cluster of Neolithic individuals and towards samples from the Anatolian Bronze Age and Baden Culture (a central European Chalcolithic culture) (Fig. \ref{fig:plink_PCA}). I wanted to know which LBK population Erg1 and DIN2 were closest to. I found strong evidence ($|Z| = 7.97$) that Erg1 shared more alleles with LBK populations from Schwetzingen than with Stuttgart-Mühlhausen, suggesting the early LBK populations showed relatively fine-scale geographic structure. Given the lack of Hunter Gatherer ancestry in the Rivollat LBK samples, this structure seems unlikely to be driven by variable amounts of Hunter-Gatherer admixture (Fig. \ref{fig:HG_ancestry_Neolithic}).
 

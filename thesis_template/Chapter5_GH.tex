@@ -32,7 +32,7 @@ In this chapter, I will analyse 17 new medium to high coverage whole ancient gen
 
 \begin{enumerate}
 \item Do the labels "Migration Period" and "Early Middle Ages" make sense from a genetic standpoint? Is there evidence of genetic change between Migration period and Early Middle Ages in the area of present-day Czech Republic? 
-\item Is it possible to use these samples to reject a null-model of continuity between the Migration Era and Early Middle Ages?
+\item To what degree to we observe evidence of continuity/discontinuity between the Migration Era and Early Middle Age samples?
 \item How are present-day Slavic speakers structured, and do the different ancient Slavic samples have different affinities to different present-day Slavic language groups?
 \end{enumerate}
 
@@ -114,6 +114,16 @@ I also performed an `all-v-all' painting of the 17 newly sequenced samples and t
 The fineSTRUCTURE \cite{Lawson2012} clustering and tree building algorithm was applied to the ChromoPainter output for both the `present-day' and `ancient' paintings, in each case using 2,000,000 MCMC iterations after 1,000,000 iterations of ``burn-in''. I then ran the tree-building mode (-m T) with 100,000 additional hill-climbing steps before tree building,
 
 Tree figures, coancestry matrix figures and principle component plots were generated using the fineSTRUCTURE R library \url{(https://people.maths.bris.ac.uk/~madjl/finestructure/FinestructureRcode.zip)}.
+
+The full workflow is shown in schematic form in Figure \ref{fig:workflow_slav}.
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/chapter4/workflow.pdf}
+    \caption{Workflow for analysing novel and reference ancient DNA samples. Each individual .bam fie is downloaded and processed using atlas, generating vcf files containing genotype calls and genotype likelihoods at each SNP identified in the 1000 genomes project. vcf files were then merged using bcftools and phased/imputed using GLIMPSE. The phased genotypes and posterior genotype probabilities from GLIMPSE were then combined to create a ChromoPainter input file. ChromoPainter was then used to generated a .chunklengths matrix for use in SOURCEFIND.}
+    \label{fig:workflow_slav}
+\end{figure}
+
 
 \begin{table}
 \centering
@@ -340,7 +350,9 @@ When considering 2-way admixture event, all of the tested populations (both anci
     \label{fig:MOSAIC_admixture_dates_plot}
 \end{figure} 
 
-Of the present-day Slavic speaking populations, Belorussian, Polish and Ukrainian, show evidence of a 3-way admixture event, in which the middle component has the lowest $f_{st}$ with Migration Era ancient samples (Fig. \ref{fig:Fst_plot_HB:lithuanian}). The major component has a low $f_{st}$ with Early Middle Age Slavs. This suggests that the formation of present-day Slavic populations could have occurred via admixture events involving Migration Era individuals with high levels of Southern European ancestry, Middle Age Era samples which show a strong affinity to present day eastern Europeans, and a small but significant east Asian source best represented by present-day Uygurs. These results are similar to those in the Middle Age samples (Fig. \ref{fig:EarlyMiddleAges_MOSAIC_3way_moderns_Mu}), though dates are more recent in the present-day samples (Fig \ref{fig:MOSAIC_admixture_dates_plot}), suggesting recent admixture in present-day populations may be masking the older signals we see in the Early Middle Ages group.
+Of the present-day Slavic speaking populations, Belorussian, Polish and Ukrainian, show evidence of a 3-way admixture event, in which the middle component has the lowest $f_{st}$ with Migration Era ancient samples (Fig. \ref{fig:Fst_plot_HB:lithuanian}). The major component has a low $f_{st}$ with Early Middle Age Slavs. This suggests that the formation of present-day Slavic populations could have occurred via admixture events involving Migration Era individuals with high levels of Southern European ancestry, Middle Age Era samples which show a strong affinity to present day eastern Europeans, and a small but significant east Asian source best represented by present-day Uygurs. It seems possible this ancestry may have been transmitted via Finno-Ugric speaking populations which contain Siberian ancestry, with admixture dates beginning approximately 3500 years ago \cite{Lamnidis2018}.
+
+These results are similar to those in the Middle Age samples (Fig. \ref{fig:EarlyMiddleAges_MOSAIC_3way_moderns_Mu}), though dates are more recent in the present-day samples (Fig \ref{fig:MOSAIC_admixture_dates_plot}), suggesting recent admixture in present-day populations may be masking the older signals we see in the Early Middle Ages group.
 
 \begin{figure}[htp]
     \centering
@@ -356,7 +368,7 @@ Referring back to the questions posed in the introduction.
 I found that the Migration Period samples, relative to the Early Middle Age samples, show a high degree of diversity in terms of ancestry, with affinities to present-day samples varying from Norway to southern Italy. On the other hand, fineSTRUCTURE analysis on the `ancients' painting grouped all Early Middle Age samples together, showing that they represent a group of samples which likely share common ancestry. Consistent with this, the Early Middle Age samples showed evidence of east Asian admixture, a signal that was not present in the Migration Period samples. These results suggest a population turnover may have occurred between approximately 500-700 AD, the time period between the Migration Period and Early Middle Age. However, based on MOSAIC results of present day populations, a model of mixture between sources close to Migration Era, Early Middle Age and east-Asians seems plausible (Fig. \ref{fig:Fst_plot_HB:lithuanian}).
 
 
-All of the Early Middle Age samples showed a high genetic similarity to present-day Slavic and non-Slavic speaking populations from eastern Europe, such as Poland and Lithuania (Fig. \ref{fig:copymatrix_moderns_ancient_slavs}). This is in stark contrast to the Migration Period, who all fell on a cline of genetic similarity between present-day Scandinavian and Mediterranean populations (Fig. \ref{fig:chunklengths_moderns_ancients_PCA}). These results provide strong evidence that continuity exists between the Early Middle Ages and the present-day, but not between the Migration Period and Early Middle Ages.
+All of the Early Middle Age samples showed a high genetic similarity to present-day Slavic and non-Slavic speaking populations from eastern Europe, such as Poland and Lithuania (Fig. \ref{fig:copymatrix_moderns_ancient_slavs}). This is in stark contrast to the Migration Period, who all fell on a cline of genetic similarity between present-day Scandinavian and Mediterranean populations (Fig. \ref{fig:chunklengths_moderns_ancients_PCA}). Whilst I did not explicitly test a model of genetic continuity, these results provide strong evidence a higher degree of continuity existed between the Early Middle Ages and the present-day, relative to between the Migration Period and Early Middle Ages.
 
 Finally, a joint fineSTRUCTURE analysis which included both ancient and present-day samples showed that present-day Slavic speakers can be split into  `north-west' and `south-east' groups, and that different Early Middle Ages samples had differing affinities to these groups (Fig \ref{fig:tree_with_ancients}). 
 
