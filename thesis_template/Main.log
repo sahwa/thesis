@@ -1,12 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.19)  27 APR 2022 16:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.19)  30 APR 2022 11:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Main.tex
-(./Main.tex
-LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-01-09> xparse <2020-03-03>
-(/usr/share/texlive/texmf-dist/tex/latex/nag/nag.sty
+**\nonstopmode \input{Main.tex}
+(./Main.tex (/usr/share/texlive/texmf-dist/tex/latex/nag/nag.sty
 Package: nag 2011/11/25 0.7 warning about old commands (ulmi)
 \c@nag@c=\count177
 \c@nag@sins=\count178
@@ -2272,13 +2269,13 @@ Package rerunfilecheck Info: File `Main.out' has not changed.
 ### simple group (level 1) entered at line 38 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 26252 strings out of 481134
- 481651 string characters out of 5913145
- 916750 words of memory out of 5000000
- 41110 multiletter control sequences out of 15000+600000
- 527560 words of font info for 308 fonts, out of 8000000 for 9000
+ 26255 strings out of 481134
+ 481683 string characters out of 5913145
+ 917917 words of memory out of 5000000
+ 41111 multiletter control sequences out of 15000+600000
+ 527689 words of font info for 309 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 92i,16n,92p,2154b,699s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 96i,16n,95p,2175b,699s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{cite.Sawcer2011} has been reference
 d but does not exist, replaced by a fixed one
 
@@ -2916,7 +2913,7 @@ fb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmro12.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/pu
 blic/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Main.pdf (301 pages, 21801655 bytes).
+Output written on Main.pdf (301 pages, 21801585 bytes).
 PDF statistics:
  4009 PDF objects out of 4296 (max. 8388607)
  3500 compressed objects within 35 object streams
