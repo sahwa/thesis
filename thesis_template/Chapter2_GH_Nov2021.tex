@@ -268,6 +268,26 @@ To estimate how accurately GLIMPSE imputes genotypes in ancient samples of diffe
     \label{fig:precision_downsampled_rtgtools}
 \end{figure}
 
+\begingroup\fontsize{8}{10}\selectfont
+
+\begin{table}
+\centering\begingroup\fontsize{8}{10}\selectfont
+
+\begin{tabular}[t]{lrl}
+\toprule
+stage & N-variants & notes\\
+\midrule
+atlas & 77,818,345 & number of SNPs present in the 1000 Genomes phase III dataset\\
+Post-imputation & 57,266,382 & number of SNPs in the resequenced 30x  1000 genomes dataset\\
+ChromoPainter & 430,088 & number of SNPs on the HellBus array\\
+\bottomrule
+\end{tabular}
+\caption{Number of SNPs retained at different steps of the analysis pipeline. atlas called SNPs at 77,818,345 positions across the autosomes. The 30x 1000 genomes dataset was used as an imputation reference panel, which contains 57,266,382 autosomal SNPs. Finally, the ChromoPainter analysis was performed on 430,088 SNPs present in the HellBus dataset.}
+\endgroup{}
+\end{table}
+
+
+
 As expected, both the overall sensitivity and precision of imputation fell with coverage, with a particularly sharp drop-off in both metrics between 0.5x and 0.1x coverage. Whilst I did not investigate this, other studies have shown the probability of any one SNP in an sample being correctly imputed depends strongly on the frequency in the reference panel \cite{hui2020evaluating, rubinacci2021efficient}. In particular, alleles which are rare in the reference panel are less likely to be imputed correctly.
 
 Different downsampled individuals varied in the precision and sensitivity of genotype imputation. At all coverages, Yamnaya had the both the highest sensitivity and precision. This may be because the imputation reference panel contains a high proportion of present-day Europeans, who have a relatively higher porportion of recent Yamnaya-like ancestry relative to e.g. Hunter Gatherer-like ancestry \cite{Haak2005}. Many studies in present-day individuals have shown that imputation accuracy increases when more haplotypes which are close to the target individual are found in the reference panel \cite{HUANG2009235, delaneau2018integrative}. On the other hand, the sample Ust'Ishim is known to have contributed very little genetic ancestry to present-day populations \cite{Prufer2014} and may therefore have fewer closely matching haplotypes in the reference panel, and a correspondingly lower imputation accuracy. 
