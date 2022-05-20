@@ -17,15 +17,15 @@ As discussed in the introduction, ChromoPainter is a method designed to estimate
 
 In ChromoPainter, sampled individuals are split into `donor' and `recipient' haplotypes. It employs the widely-used Li and Stephens copying model \cite{Li2003} to model each recipient haplotype as a mosaic of all haplotypes observed in the donor panel. Typically (and throughout this thesis) an individual does not act as a donor to themself, e.g.\ one of the individual's two haplotypes can not act as a donor for the other haplotype. Unlike the original Li and Stephens model, which uses the product of approximate conditionals (PAC) likelihoods, ChromoPainter reconstructs each recipient haplotype as a mosaic of \textit{all} other donor haplotypes. Here, the term `copying' can be though of as a genealogical process where haplotypes are reconstructed using the genealogically closest haplotype in the donor set.  
 
-Suppose we have a particular recipient haplotype, $h*$, which we wish to paint using $j$ donor haplotypes, denoted by $\{h_{1}, ..., h_{j}\}$. $h*$ consists of a sequence of $L$ alleles denoted $\{h*_{1}, ..., h*_{L}\}$, where $h*_{l}$ is the observed allele at site $l$.
+Suppose we have a particular recipient haplotype, $h*$, which consists of a sequence of $L$ alleles denoted by $\{h*_{1}, ..., h*_{L}\}$, where $h*_{l}$ is the observed allele at site $l$. We wish to paint $h*$ using $j$ donor haplotypes, denoted by $\{h_{1}, ..., h_{j}\}$. 
 
-The copying model is implemented in the form of a Hidden Markov Model (HMM), with the observed states being the alleles carried by the donor and recipient individuals, and the hidden states being the `nearest-neighbour' haplotype the recipient haplotype $h*$ copies from. Thus we can define a hidden-state sequence vector $\{Y_{1}, ..., Y_{L}\}$, which corresponds to which of the $j$ donors $h*$ copies from at a given site $l$. The emission probabilities are given as the probability of $h*$ carrying allele $a$ at site $l$, given it copies from haplotype $y_{l}$, and is conditional upon whether, $h*$ and $y_{l}$ both carry allele $a$ or not:
+The copying model is implemented in the form of a Hidden Markov Model (HMM), with the observed states being the alleles carried by the donor and recipient individuals, and the hidden states being the `nearest-neighbour' haplotype the recipient haplotype $h*$ copies from. Thus we can define a hidden-state sequence vector $\{Y_{1}, ..., Y_{L}\}$, which corresponds to which of the $j$ donors $h*$ copies from at a given site $l$. The emission probabilities are given as the probability of $h*$ carrying allele $a$ at site $l$, given it copies from donor haplotype $y$ and $h_{yl}$ is the allele carried by donor haplotype $y$ at site $l$. This probability is conditional upon whether, $h*$ and $y$ both carry allele $a$ at site $l$ or not:
 
 \begin{equation} \label{eq:cp}
-\Pr(h*_{l} = a \mid Y_{l} = y_{l}) =     
+\Pr(h*_{l} = a \mid Y_{l} = y) =     
 	\begin{cases}
-		1.0 - \theta & h_{yl} = a \\
-		\theta & h_{yl} \neq a 
+		1.0 - \theta & h_{yl} = a; \\
+		\theta & h_{yl} \neq a. 
 	\end{cases}       
 \end{equation}
 
@@ -48,17 +48,17 @@ We also have a posterior genotype likelihood, in the form $GL(p_{0}, p_{1}, p_{2
 
 
                  
-The second difference is the incorporation of the allele probability into the emission probability of the HMM. As before, consider a recipient $h*$ whom we want to reconstruct using the set of donors $\{h_{1}, ..., h_{j}\}$ . At a given SNP $l$, let $h*_{l}$ be the probability that $h*$ carries the alternative allele, with $h_{yl}$ similarly being the probability that $h_{y}$ carries the alternate allele. The probability of $h*$ carrying allele $a$ at site $l$, given it copies from haplotype $y_{l}$ is given as:
+The second difference is the incorporation of the allele probability into the emission probability of the HMM. As before, consider a recipient $h*$ whom we want to paint using the set of donors $\{h_{1}, ..., h_{j}\}$ . At a given SNP $l$, let $h*_{l}$ be the probability that $h*$ carries the alternative allele, with $h_{yl}$ similarly being the probability that donor haplotype $y$ carries the alternate allele at position $l$. The probability of $h*$ carrying allele $a$ at site $l$, given it copies from haplotype $y$ is given as:
 
 \begin{align} \label{eq:cp_uncertainty}
 \begin{split}
-	\Pr(h*_{l} = a \mid Y_{l} = y_{l}) = &
-				\,(1 - \theta) \cdot [h*_{l} \cdot h_{yl} + (1-h*_{l}) \cdot (1-h_{yl})]\, +  \\
-				& \theta \cdot [h*_{l} \cdot (1-h_{yl}) + (1-h*_{l}) \cdot h_{yl}]
+	\Pr(h*_{l} = a \mid Y_{l} = y) = &
+				\,(1 - \theta) \cdot [a \cdot h_{yl} + (1-a) \cdot (1-h_{yl})]\, +  \\
+				& \theta \cdot [a \cdot (1-h_{yl}) + (1-a) \cdot h_{yl}]
 \end{split}
 \end{align}
 
-Note that equation \ref{eq:cp_uncertainty} reduces to equation \ref{eq:cp} if $h_{yl} = \{0,1\}$ and if $h*_{l} = \{0,1\}$, i.e\ there is no uncertainty in the calls.
+Note that equation \ref{eq:cp_uncertainty} reduces to equation \ref{eq:cp} if $h_{yl} = \{0,1\}$ and if $a = \{0,1\}$, i.e\ there is no uncertainty in the calls.
 
 A consideration of a different uncertainty metric, $max(GP)$, can be found in Appendix section \ref{sec:alt_input_score_test}.
 
@@ -268,29 +268,172 @@ To estimate how accurately GLIMPSE imputes genotypes in ancient samples of diffe
     \label{fig:precision_downsampled_rtgtools}
 \end{figure}
 
-\begingroup\fontsize{8}{10}\selectfont
+
 
 \begin{table}
-\centering\begingroup\fontsize{8}{10}\selectfont
-
-\begin{tabular}[t]{lrl}
+\centering
+\begin{tabular}[t]{llllr}
 \toprule
-stage & N-variants & notes\\
+stage & total & transitions & transversions & t/v ratio\\
 \midrule
-atlas & 77,818,345 & number of SNPs present in the 1000 Genomes phase III dataset\\
-Post-imputation & 57,266,382 & number of SNPs in the resequenced 30x  1000 genomes dataset\\
-ChromoPainter & 430,088 & number of SNPs on the HellBus array\\
+atlas & 77,876,460 & 52,693,235 & 25,183,225 & 2.09\\
+Post-imputation & 77,815,634 & 52,655,160 & 25,160,474 & 2.09\\
+ChromoPainter & 430,088 & 351,087 & 79,000 & 4.44\\
 \bottomrule
 \end{tabular}
-\caption{Number of SNPs retained at different steps of the analysis pipeline. atlas called SNPs at 77,818,345 positions across the autosomes. The 30x 1000 genomes dataset was used as an imputation reference panel, which contains 57,266,382 autosomal SNPs. Finally, the ChromoPainter analysis was performed on 430,088 SNPs present in the HellBus dataset.}
-\endgroup{}
+\caption{Number of SNPs retained at different steps of the analysis pipeline. t/v ratio is the ratio of transitions to transversions.}
 \end{table}
 
+\begingroup\fontsize{8}{10}\selectfont
+
+\begin{longtable}[t]{lrllllll}
+\toprule
+Ind & Coverage & Type & total & hom\_ref & hom\_alt & het & missing\\
+\midrule
+LBK & 0.1 & atlas & 7,863,659 & 7,588,206 & 261,066 & 14,387 & 70,012,596\\
+LBK & 0.1 & chromopainter & 174,772 & 82,535 & 35,669 & 56,568 & 255,315\\
+LBK & 0.1 & glimpse & 31,789,601 & 30,462,480 & 518,406 & 808,715 & 46,026,033\\
+LBK & 0.5 & atlas & 31,594,229 & 30,407,259 & 969,621 & 217,349 & 46,281,316\\
+LBK & 0.5 & chromopainter & 396,582 & 183,341 & 82,675 & 130,566 & 33,505\\
+LBK & 0.5 & glimpse & 71,596,325 & 68,472,726 & 1,223,743 & 1,899,856 & 6,219,309\\
+LBK & 0.7 & atlas & 41,843,708 & 40,197,199 & 1,231,550 & 414,959 & 36,031,516\\
+LBK & 0.7 & chromopainter & 420,309 & 193,890 & 88,078 & 138,341 & 9,778\\
+LBK & 0.7 & glimpse & 75,872,626 & 72,532,663 & 1,306,213 & 2,033,750 & 1,943,008\\
+LBK & 1.0 & atlas & 49,687,572 & 47,648,221 & 1,401,883 & 637,468 & 28,187,240\\
+LBK & 1.0 & chromopainter & 427,072 & 196,857 & 89,918 & 140,297 & 3,015\\
+LBK & 1.0 & glimpse & 77,152,471 & 73,739,162 & 1,334,040 & 2,079,269 & 663,163\\
+LBK & 2.0 & atlas & 66,701,209 & 63,534,792 & 1,619,653 & 1,546,764 & 11,172,575\\
+LBK & 2.0 & chromopainter & 430,050 & 197,939 & 91,166 & 140,945 & 37\\
+LBK & 2.0 & glimpse & 77,778,825 & 74,307,718 & 1,346,120 & 2,124,987 & 36,809\\
+LBK & 3.5 & atlas & 74,554,206 & 70,453,001 & 1,534,742 & 2,566,463 & 3,318,536\\
+LBK & 3.5 & chromopainter & 430,087 & 197,854 & 91,454 & 140,779 & 0\\
+LBK & 3.5 & glimpse & 77,806,040 & 74,318,824 & 1,339,785 & 2,147,431 & 9,594\\
+LBK & 5.0 & atlas & 76,607,872 & 72,092,675 & 1,425,203 & 3,089,994 & 1,264,050\\
+LBK & 5.0 & chromopainter & 430,087 & 197,758 & 91,555 & 140,774 & 0\\
+LBK & 5.0 & glimpse & 77,810,787 & 74,319,369 & 1,334,420 & 2,156,998 & 4,847\\
+LBK & 10.0 & atlas & 77,581,890 & 73,218,587 & 1,303,557 & 3,059,746 & 288,413\\
+LBK & 10.0 & chromopainter & 430,087 & 197,767 & 91,671 & 140,649 & 0\\
+LBK & 10.0 & glimpse & 77,814,052 & 74,329,568 & 1,323,705 & 2,160,779 & 1,582\\
+LBK & 20.0 & atlas & 77,694,833 & 73,820,576 & 1,290,921 & 2,583,336 & 174,119\\
+LBK & 20.0 & chromopainter & 430,087 & 197,818 & 91,731 & 140,538 & 0\\
+LBK & 20.0 & glimpse & 77,815,338 & 74,343,714 & 1,316,235 & 2,155,389 & 296\\
+Loschbour & 0.1 & atlas & 7,628,084 & 7,370,184 & 245,862 & 12,038 & 70,245,058\\
+Loschbour & 0.1 & chromopainter & 174,772 & 86,532 & 38,706 & 49,534 & 255,315\\
+Loschbour & 0.1 & glimpse & 31,789,601 & 30,519,105 & 565,276 & 705,220 & 46,026,033\\
+Loschbour & 0.5 & atlas & 30,780,528 & 29,712,532 & 916,081 & 151,915 & 47,081,605\\
+Loschbour & 0.5 & chromopainter & 396,582 & 195,412 & 93,591 & 107,579 & 33,505\\
+Loschbour & 0.5 & glimpse & 71,596,325 & 68,667,343 & 1,373,792 & 1,555,190 & 6,219,309\\
+Loschbour & 0.7 & atlas & 40,883,211 & 39,425,706 & 1,175,631 & 281,874 & 36,973,485\\
+Loschbour & 0.7 & chromopainter & 420,309 & 207,169 & 99,953 & 113,187 & 9,778\\
+Loschbour & 0.7 & glimpse & 75,872,626 & 72,748,733 & 1,472,121 & 1,651,772 & 1,943,008\\
+Loschbour & 1.0 & atlas & 48,650,549 & 46,860,231 & 1,358,909 & 431,409 & 29,201,103\\
+Loschbour & 1.0 & chromopainter & 427,072 & 210,281 & 102,198 & 114,593 & 3,015\\
+Loschbour & 1.0 & glimpse & 77,152,471 & 73,963,816 & 1,507,099 & 1,681,556 & 663,163\\
+Loschbour & 2.0 & atlas & 65,853,923 & 63,144,388 & 1,658,474 & 1,051,061 & 11,983,909\\
+Loschbour & 2.0 & chromopainter & 430,050 & 211,678 & 104,100 & 114,272 & 37\\
+Loschbour & 2.0 & glimpse & 77,778,825 & 74,544,266 & 1,527,789 & 1,706,770 & 36,809\\
+Loschbour & 3.5 & atlas & 74,181,557 & 70,747,172 & 1,658,730 & 1,775,655 & 3,645,307\\
+Loschbour & 3.5 & chromopainter & 430,087 & 211,655 & 104,673 & 113,759 & 0\\
+Loschbour & 3.5 & glimpse & 77,806,040 & 74,562,077 & 1,524,547 & 1,719,416 & 9,594\\
+Loschbour & 5.0 & atlas & 76,517,579 & 72,731,738 & 1,588,393 & 2,197,448 & 1,304,225\\
+Loschbour & 5.0 & chromopainter & 430,087 & 211,636 & 104,949 & 113,502 & 0\\
+Loschbour & 5.0 & glimpse & 77,810,787 & 74,564,499 & 1,518,703 & 1,727,585 & 4,847\\
+Loschbour & 10.0 & atlas & 77,674,711 & 73,807,087 & 1,481,465 & 2,386,159 & 142,717\\
+Loschbour & 10.0 & chromopainter & 430,087 & 211,630 & 105,182 & 113,275 & 0\\
+Loschbour & 10.0 & glimpse & 77,814,052 & 74,563,530 & 1,508,188 & 1,742,334 & 1,582\\
+Loschbour & 20.0 & atlas & 77,768,448 & 74,340,455 & 1,469,135 & 1,958,858 & 48,221\\
+Loschbour & 20.0 & chromopainter & 430,087 & 211,706 & 105,332 & 113,049 & 0\\
+Loschbour & 20.0 & glimpse & 77,815,338 & 74,581,352 & 1,497,789 & 1,736,197 & 296\\
+sf12 & 0.1 & atlas & 7,587,373 & 7,336,322 & 236,147 & 14,904 & 70,288,793\\
+sf12 & 0.1 & chromopainter & 174,772 & 84,128 & 34,002 & 56,642 & 255,315\\
+sf12 & 0.1 & glimpse & 31,789,601 & 30,484,260 & 487,734 & 817,607 & 46,026,033\\
+sf12 & 0.5 & atlas & 30,688,125 & 29,606,869 & 898,622 & 182,634 & 47,186,835\\
+sf12 & 0.5 & chromopainter & 396,582 & 189,406 & 81,260 & 125,916 & 33,505\\
+sf12 & 0.5 & glimpse & 71,596,325 & 68,564,219 & 1,166,608 & 1,865,498 & 6,219,309\\
+sf12 & 0.8 & atlas & 40,808,399 & 39,317,115 & 1,151,362 & 339,922 & 37,065,944\\
+sf12 & 0.8 & chromopainter & 420,309 & 200,429 & 87,984 & 131,896 & 9,778\\
+sf12 & 0.8 & glimpse & 75,872,626 & 72,625,472 & 1,257,618 & 1,989,536 & 1,943,008\\
+sf12 & 1.0 & atlas & 48,588,367 & 46,748,059 & 1,324,815 & 515,493 & 29,285,496\\
+sf12 & 1.0 & chromopainter & 427,072 & 203,684 & 90,629 & 132,759 & 3,015\\
+sf12 & 1.0 & glimpse & 77,152,471 & 73,829,354 & 1,293,711 & 2,029,406 & 663,163\\
+sf12 & 2.0 & atlas & 65,862,294 & 63,043,247 & 1,581,552 & 1,237,495 & 12,009,874\\
+sf12 & 2.0 & chromopainter & 430,050 & 204,670 & 93,985 & 131,395 & 37\\
+sf12 & 2.0 & glimpse & 77,778,825 & 74,373,518 & 1,323,114 & 2,082,193 & 36,809\\
+sf12 & 3.5 & atlas & 74,228,518 & 70,594,011 & 1,544,188 & 2,090,319 & 3,642,111\\
+sf12 & 3.5 & chromopainter & 430,087 & 204,353 & 95,572 & 130,162 & 0\\
+sf12 & 3.5 & glimpse & 77,806,040 & 74,350,373 & 1,325,545 & 2,130,122 & 9,594\\
+sf12 & 5.0 & atlas & 76,539,118 & 72,461,162 & 1,449,890 & 2,628,066 & 1,330,339\\
+sf12 & 5.0 & chromopainter & 430,087 & 204,286 & 96,166 & 129,635 & 0\\
+sf12 & 5.0 & glimpse & 77,810,787 & 74,331,202 & 1,321,586 & 2,157,999 & 4,847\\
+sf12 & 10.0 & atlas & 77,660,653 & 73,356,950 & 1,308,470 & 2,995,233 & 206,644\\
+sf12 & 10.0 & chromopainter & 430,087 & 204,392 & 97,098 & 128,597 & 0\\
+sf12 & 10.0 & glimpse & 77,814,052 & 74,368,059 & 1,317,620 & 2,128,373 & 1,582\\
+sf12 & 20.0 & atlas & 77,758,773 & 73,930,624 & 1,278,517 & 2,549,632 & 106,192\\
+sf12 & 20.0 & chromopainter & 430,087 & 204,693 & 97,630 & 127,764 & 0\\
+sf12 & 20.0 & glimpse & 77,815,338 & 74,415,488 & 1,310,559 & 2,089,291 & 296\\
+UstIshim & 0.1 & atlas & 7,786,181 & 7,432,667 & 329,609 & 23,905 & 70,086,937\\
+UstIshim & 0.1 & chromopainter & 174,772 & 80,029 & 33,344 & 61,399 & 255,315\\
+UstIshim & 0.1 & glimpse & 31,789,601 & 30,347,768 & 482,910 & 958,923 & 46,026,033\\
+UstIshim & 0.5 & atlas & 31,488,887 & 30,337,316 & 958,513 & 193,058 & 46,372,621\\
+UstIshim & 0.5 & chromopainter & 396,582 & 180,030 & 81,103 & 135,449 & 33,505\\
+UstIshim & 0.5 & glimpse & 71,596,325 & 68,324,000 & 1,182,070 & 2,090,255 & 6,219,309\\
+UstIshim & 0.8 & atlas & 41,850,784 & 40,269,671 & 1,218,249 & 362,864 & 36,004,942\\
+UstIshim & 0.8 & chromopainter & 420,309 & 190,363 & 86,981 & 142,965 & 9,778\\
+UstIshim & 0.8 & glimpse & 75,872,626 & 72,373,517 & 1,270,046 & 2,229,063 & 1,943,008\\
+UstIshim & 1.0 & atlas & 49,768,765 & 47,831,665 & 1,388,385 & 548,715 & 28,081,614\\
+UstIshim & 1.0 & chromopainter & 427,072 & 193,316 & 89,121 & 144,635 & 3,015\\
+UstIshim & 1.0 & glimpse & 77,152,471 & 73,597,414 & 1,303,425 & 2,251,632 & 663,163\\
+UstIshim & 2.0 & atlas & 67,062,432 & 64,120,181 & 1,614,975 & 1,327,276 & 10,773,728\\
+UstIshim & 2.0 & chromopainter & 430,050 & 194,399 & 91,175 & 144,476 & 37\\
+UstIshim & 2.0 & glimpse & 77,778,825 & 74,181,418 & 1,322,097 & 2,275,310 & 36,809\\
+UstIshim & 3.5 & atlas & 74,919,994 & 71,129,843 & 1,524,122 & 2,266,029 & 2,905,623\\
+UstIshim & 3.5 & chromopainter & 430,087 & 194,227 & 91,973 & 143,887 & 0\\
+UstIshim & 3.5 & glimpse & 77,806,040 & 74,206,978 & 1,316,655 & 2,282,407 & 9,594\\
+UstIshim & 5.0 & atlas & 76,888,994 & 72,621,237 & 1,403,149 & 2,864,608 & 931,764\\
+UstIshim & 5.0 & chromopainter & 430,087 & 194,165 & 92,403 & 143,519 & 0\\
+UstIshim & 5.0 & glimpse & 77,810,787 & 74,211,695 & 1,308,177 & 2,290,915 & 4,847\\
+UstIshim & 10.0 & atlas & 77,723,502 & 73,311,539 & 1,260,452 & 3,151,511 & 93,822\\
+UstIshim & 10.0 & chromopainter & 430,087 & 194,059 & 92,805 & 143,223 & 0\\
+UstIshim & 10.0 & glimpse & 77,814,052 & 74,198,170 & 1,291,089 & 2,324,793 & 1,582\\
+UstIshim & 20.0 & atlas & 77,782,585 & 73,919,501 & 1,244,171 & 2,618,913 & 34,154\\
+UstIshim & 20.0 & chromopainter & 430,087 & 194,223 & 93,081 & 142,783 & 0\\
+UstIshim & 20.0 & glimpse & 77,815,338 & 74,244,692 & 1,275,230 & 2,295,416 & 296\\
+Yamnaya & 0.1 & atlas & 8,165,424 & 7,837,096 & 310,333 & 17,995 & 69,707,971\\
+Yamnaya & 0.1 & chromopainter & 174,772 & 82,050 & 36,011 & 56,711 & 255,315\\
+Yamnaya & 0.1 & glimpse & 31,789,601 & 30,437,553 & 540,479 & 811,569 & 46,026,033\\
+Yamnaya & 0.5 & atlas & 32,588,629 & 31,348,275 & 1,007,256 & 233,098 & 45,273,342\\
+Yamnaya & 0.5 & chromopainter & 396,582 & 183,027 & 83,207 & 130,348 & 33,505\\
+Yamnaya & 0.5 & glimpse & 71,596,325 & 68,452,137 & 1,270,312 & 1,873,876 & 6,219,309\\
+Yamnaya & 0.8 & atlas & 42,932,013 & 41,218,304 & 1,265,634 & 448,075 & 34,924,034\\
+Yamnaya & 0.8 & chromopainter & 420,309 & 193,465 & 88,637 & 138,207 & 9,778\\
+Yamnaya & 0.8 & glimpse & 75,872,626 & 72,514,711 & 1,359,849 & 1,998,066 & 1,943,008\\
+Yamnaya & 1.0 & atlas & 50,685,590 & 48,564,638 & 1,428,476 & 692,476 & 27,165,519\\
+Yamnaya & 1.0 & chromopainter & 427,072 & 196,530 & 90,041 & 140,501 & 3,015\\
+Yamnaya & 1.0 & glimpse & 77,152,471 & 73,722,704 & 1,389,219 & 2,040,548 & 663,163\\
+Yamnaya & 2.0 & atlas & 66,872,411 & 63,571,601 & 1,622,362 & 1,678,448 & 10,964,758\\
+Yamnaya & 2.0 & chromopainter & 430,050 & 197,631 & 90,666 & 141,753 & 37\\
+Yamnaya & 2.0 & glimpse & 77,778,825 & 74,301,224 & 1,409,000 & 2,068,601 & 36,809\\
+Yamnaya & 3.5 & atlas & 73,859,932 & 69,713,521 & 1,532,552 & 2,613,859 & 3,966,618\\
+Yamnaya & 3.5 & chromopainter & 430,087 & 197,605 & 90,706 & 141,776 & 0\\
+Yamnaya & 3.5 & glimpse & 77,806,040 & 74,324,453 & 1,410,929 & 2,070,658 & 9,594\\
+Yamnaya & 5.0 & atlas & 75,688,825 & 71,333,069 & 1,446,906 & 2,908,850 & 2,133,156\\
+Yamnaya & 5.0 & chromopainter & 430,087 & 197,508 & 90,698 & 141,881 & 0\\
+Yamnaya & 5.0 & glimpse & 77,810,787 & 74,327,884 & 1,410,512 & 2,072,391 & 4,847\\
+Yamnaya & 10.0 & atlas & 76,836,943 & 72,953,272 & 1,372,488 & 2,511,183 & 981,054\\
+Yamnaya & 10.0 & chromopainter & 430,087 & 197,539 & 90,708 & 141,840 & 0\\
+Yamnaya & 10.0 & glimpse & 77,814,052 & 74,334,567 & 1,409,677 & 2,069,808 & 1,582\\
+Yamnaya & 20.0 & atlas & 77,210,145 & 73,701,551 & 1,373,349 & 2,135,245 & 606,580\\
+Yamnaya & 20.0 & chromopainter & 430,087 & 197,565 & 90,739 & 141,783 & 0\\
+Yamnaya & 20.0 & glimpse & 77,815,338 & 74,343,330 & 1,409,070 & 2,062,938 & 296\\
+\bottomrule
+\caption{Number and type of variants passing different steps of the analysis pipeline for different downsamples at different coverages. `atlas' refers to after variant calling with atlas, `glimpse` to after imputation with GLIMPSE and `chromopainter' to ChromoPainter analysis.}\\
+\end{longtable}
+\endgroup{}
 
 
 As expected, both the overall sensitivity and precision of imputation fell with coverage, with a particularly sharp drop-off in both metrics between 0.5x and 0.1x coverage. Whilst I did not investigate this, other studies have shown the probability of any one SNP in an sample being correctly imputed depends strongly on the frequency in the reference panel \cite{hui2020evaluating, rubinacci2021efficient}. In particular, alleles which are rare in the reference panel are less likely to be imputed correctly.
 
-Different downsampled individuals varied in the precision and sensitivity of genotype imputation. At all coverages, Yamnaya had the both the highest sensitivity and precision. This may be because the imputation reference panel contains a high proportion of present-day Europeans, who have a relatively higher porportion of recent Yamnaya-like ancestry relative to e.g. Hunter Gatherer-like ancestry \cite{Haak2005}. Many studies in present-day individuals have shown that imputation accuracy increases when more haplotypes which are close to the target individual are found in the reference panel \cite{HUANG2009235, delaneau2018integrative}. On the other hand, the sample Ust'Ishim is known to have contributed very little genetic ancestry to present-day populations \cite{Prufer2014} and may therefore have fewer closely matching haplotypes in the reference panel, and a correspondingly lower imputation accuracy. 
+Different downsampled individuals varied in the precision and sensitivity of genotype imputation. At all coverages, Yamnaya had the both the highest sensitivity and precision. This may be because the imputation reference panel contains a high proportion of present-day Europeans, who have a relatively higher proportion of recent Yamnaya-like ancestry relative to e.g. Hunter Gatherer-like ancestry \cite{Haak2005}. Many studies in present-day individuals have shown that imputation accuracy increases when more haplotypes which are close to the target individual are found in the reference panel \cite{HUANG2009235, delaneau2018integrative}. On the other hand, the sample Ust'Ishim is known to have contributed very little genetic ancestry to present-day populations \cite{Prufer2014} and may therefore have fewer closely matching haplotypes in the reference panel, and a correspondingly lower imputation accuracy. 
 
 Imputation accuracy may also be related to demographic history. Populations which are known to have smaller effective population size, such as Western-Hunter Gathers, also contain longer tracts between individuals which are identical by descent (IBD) \cite{browning2015accurate} and fewer heterozygous positions. As imputation relies on matching IBD tracts between individuals, imputation accuracy increases where individuals share more IBD \cite{kong2008detection}. However, this would not be the case in this analysis as there are not hunter-gatherers in the reference panel for target hunter-gatherers to share IBD with. Additionally, switch-errors during the pre-phasing step of imputation may harm imputation accuracy, so a reduced density of heterozygous positions may result in increased accuracy. 
 
@@ -398,71 +541,9 @@ Yamnaya & 3.5 & heterozygous & 0.9829 & 0.4969\\
 Yamnaya & 3.5 & homozygous & 0.9999 & 0.9956\\
 Yamnaya & 5 & heterozygous & 0.9851 & 0.5027\\
 Yamnaya & 5 & homozygous & 0.9999 & 0.9963\\*
-\caption{Sensitivty and precision of imputed genotypes stratified by sample, coverage and variant type.}
+\caption{Sensitivity and precision of imputed genotypes stratified by sample, coverage and variant type.}
 \end{longtable}
 \endgroup{}
-
-\begin{table}
-\centering\begingroup\fontsize{8}{10}\selectfont
-
-\begin{tabular}[t]{llrrr}
-\toprule
-Individual & Coverage & F\_MISS & O(HOM) & N\_GENO\\
-\midrule
-LBK & 0.1 & 0.8990000 & 1965711 & 81039450\\
-Loschbour & 0.1 & 0.9036000 & 1822948 & 81039450\\
-sf12 & 0.1 & 0.9026000 & 1952792 & 81039450\\
-UstIshim & 0.1 & 0.9016000 & 1896593 & 81039450\\
-Yamnaya & 0.1 & 0.8971000 & 1975883 & 81039450\\
-LBK & 0.5 & 0.5942000 & 7676630 & 81039450\\
-Loschbour & 0.5 & 0.6103000 & 7244921 & 81039450\\
-sf12 & 0.5 & 0.6058000 & 7674511 & 81039450\\
-UstIshim & 0.5 & 0.6013000 & 7352396 & 81039450\\
-Yamnaya & 0.5 & 0.5882000 & 7635209 & 81039450\\
-LBK & 0.7 & 0.4626000 & 10012050 & 81039450\\
-Loschbour & 0.7 & 0.4817000 & 9563222 & 81039450\\
-sf12 & 0.8 & 0.4759000 & 10040003 & 81039450\\
-UstIshim & 0.8 & 0.4695000 & 9686853 & 81039450\\
-Yamnaya & 0.8 & 0.4568000 & 9932818 & 81039450\\
-LBK & 10 & 0.0030570 & 16005186 & 81039450\\
-Loschbour & 10 & 0.0022310 & 16695150 & 81039450\\
-sf12 & 10 & 0.0020340 & 16083491 & 81039450\\
-UstIshim & 10 & 0.0014870 & 15942028 & 81039450\\
-Yamnaya & 10 & 0.0135800 & 16381477 & 81039450\\
-LBK & 1 & 0.3618000 & 11716030 & 81039450\\
-Loschbour & 1 & 0.3826000 & 11311586 & 81039450\\
-sf12 & 1 & 0.3759000 & 11772021 & 81039450\\
-UstIshim & 1 & 0.3684000 & 11428257 & 81039450\\
-Yamnaya & 1 & 0.3579000 & 11583338 & 81039450\\
-Loschbour & 20 & 0.0006456 & 17151835 & 81039450\\
-sf12 & 20 & 0.0007526 & 16557290 & 81039450\\
-UstIshim & 20 & 0.0004589 & 16495247 & 81039450\\
-Yamnaya & 20 & 0.0082380 & 16852486 & 81039450\\
-LBK & 2 & 0.1431000 & 14941981 & 81039450\\
-Loschbour & 2 & 0.1611000 & 14962667 & 81039450\\
-sf12 & 2 & 0.1539000 & 15177891 & 81039450\\
-UstIshim & 2 & 0.1456000 & 14940375 & 81039450\\
-Yamnaya & 2 & 0.1491000 & 14613044 & 81039450\\
-LBK & 3.5 & 0.0420200 & 15791220 & 81039450\\
-Loschbour & 3.5 & 0.0513700 & 16367954 & 81039450\\
-sf12 & 3.5 & 0.0462600 & 16233038 & 81039450\\
-UstIshim & 3.5 & 0.0416300 & 16042984 & 81039450\\
-Yamnaya & 3.5 & 0.0560700 & 15469128 & 81039450\\
-LBK & 5 & 0.0155900 & 15748581 & 81039450\\
-Loschbour & 5 & 0.0193300 & 16564119 & 81039450\\
-sf12 & 5 & 0.0164900 & 16201322 & 81039450\\
-UstIshim & 5 & 0.0142600 & 15983872 & 81039450\\
-Yamnaya & 5 & 0.0304900 & 15667898 & 81039450\\
-LBK & full & 0.0015970 & 16509572 & 81039450\\
-Loschbour & full & 0.0006330 & 17161426 & 81039450\\
-sf12 & full & 0.0401000 & 16994174 & 81039450\\
-UstIshim & full & 0.0002959 & 16750441 & 81039450\\
-Yamnaya & full & 0.0071990 & 16915944 & 81039450\\
-\bottomrule
-\end{tabular}
-\endgroup{}
-\end{table}
-
 
 
 
