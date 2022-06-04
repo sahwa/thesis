@@ -85,20 +85,21 @@
 \contentsline {section}{\numberline {5.1}Introduction}{165}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Methods}{169}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Description of samples}{169}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Ancient DNA processing}{170}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Present-day DNA processing}{171}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}plink PCA}{171}{subsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.2.5}Allele-frequency based tests}{171}{subsection.5.2.5}%
-\contentsline {subsection}{\numberline {5.2.6}ChromoPainter and fineSTRUCTURE analysis}{172}{subsection.5.2.6}%
-\contentsline {subsection}{\numberline {5.2.7}SOURCEFIND ancestry proportion analysis}{172}{subsection.5.2.7}%
-\contentsline {subsection}{\numberline {5.2.8}MOSAIC admixture analysis}{173}{subsection.5.2.8}%
+\contentsline {subsection}{\numberline {5.2.2}Processing of samples performed by collaborators}{170}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Ancient DNA processing}{171}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Present-day DNA processing}{171}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}plink PCA}{172}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}Allele-frequency based tests}{172}{subsection.5.2.6}%
+\contentsline {subsection}{\numberline {5.2.7}ChromoPainter and fineSTRUCTURE analysis}{172}{subsection.5.2.7}%
+\contentsline {subsection}{\numberline {5.2.8}SOURCEFIND ancestry proportion analysis}{173}{subsection.5.2.8}%
+\contentsline {subsection}{\numberline {5.2.9}MOSAIC admixture analysis}{175}{subsection.5.2.9}%
 \contentsline {section}{\numberline {5.3}Results}{175}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Mixed ancestry of Migration Period Slavs}{177}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.1}Mixed ancestry of Migration Period Slavs}{175}{subsection.5.3.1}%
 \contentsline {subsection}{\numberline {5.3.2}Early Middle Age Slavs represent a relatively homogeneous group typical of European Middle Ages}{179}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Assessing continuity between Early Middle Age and Migration Period samples}{181}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Legacy of Slavic migrations in present-day individuals}{182}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.3}Assessing continuity between Early Middle Age and Migration Period samples}{180}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Legacy of Slavic migrations in present-day individuals}{183}{subsection.5.3.4}%
 \contentsline {subsection}{\numberline {5.3.5}Genetic structure and admixture events of present-day Slavic people}{186}{subsection.5.3.5}%
-\contentsline {section}{\numberline {5.4}Summary of Results and Discussion}{189}{section.5.4}%
+\contentsline {section}{\numberline {5.4}Summary of Results and Discussion}{188}{section.5.4}%
 \contentsline {chapter}{\numberline {6}General Conclusions}{193}{chapter.6}%
 \contentsline {section}{\numberline {6.1}General summary}{193}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Recommendations}{196}{section.6.2}%

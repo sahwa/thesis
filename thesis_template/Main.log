@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.4.30)  20 MAY 2022 16:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.4.30)  4 JUN 2022 14:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1113,7 +1113,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 6173) has occurred while \output is active []
 
  [24]
-<../images/introduction/broushaki_haplotype_sharing.jpg, id=865, 308.352pt x 21
+<../images/introduction/broushaki_haplotype_sharing.jpg, id=870, 308.352pt x 21
 4.1601pt>
 File: ../images/introduction/broushaki_haplotype_sharing.jpg Graphic file (type
  jpg)
@@ -1174,7 +1174,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [40]
 [41]
-<../images/chapter1/workflow.pdf, id=1068, 963.6pt x 542.025pt>
+<../images/chapter1/workflow.pdf, id=1073, 963.6pt x 542.025pt>
 File: ../images/chapter1/workflow.pdf Graphic file (type pdf)
 <use ../images/chapter1/workflow.pdf>
 Package pdftex.def Info: ../images/chapter1/workflow.pdf  used on input line 93
@@ -1233,7 +1233,7 @@ ttps : / / www . sanger . ac . uk / tool /
  []
 
 [53]
-<../images/chapter1/allDownsampled_rtgtools_sensitivity.pdf, id=1198, 1870.99pt
+<../images/chapter1/allDownsampled_rtgtools_sensitivity.pdf, id=1203, 1870.99pt
  x 1870.99pt>
 File: ../images/chapter1/allDownsampled_rtgtools_sensitivity.pdf Graphic file (
 type pdf)
@@ -1241,7 +1241,7 @@ type pdf)
 Package pdftex.def Info: ../images/chapter1/allDownsampled_rtgtools_sensitivity
 .pdf  used on input line 259.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-<../images/chapter1/allDownsampled_rtgtools_Precision.pdf, id=1199, 1870.99pt x
+<../images/chapter1/allDownsampled_rtgtools_Precision.pdf, id=1204, 1870.99pt x
  1870.99pt>
 File: ../images/chapter1/allDownsampled_rtgtools_Precision.pdf Graphic file (ty
 pe pdf)
@@ -1256,7 +1256,7 @@ Overfull \hbox (8.10324pt too wide) in alignment at lines 289--430
 
 [54] [55] [56] [57] [58] [59 <../images/chapter1/allDownsampled_rtgtools_sensit
 ivity.pdf>] [60] [61]
-<../images/chapter1/phasing_performance_downsampled.pdf, id=1260, 1870.99pt x 1
+<../images/chapter1/phasing_performance_downsampled.pdf, id=1265, 1870.99pt x 1
 870.99pt>
 File: ../images/chapter1/phasing_performance_downsampled.pdf Graphic file (type
  pdf)
@@ -1265,7 +1265,7 @@ Package pdftex.def Info: ../images/chapter1/phasing_performance_downsampled.pdf
   used on input line 558.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
  [62]
-<../images/chapter1/Yamnaya_0.1x_bin.pdf, id=1267, 1870.99pt x 1870.99pt>
+<../images/chapter1/Yamnaya_0.1x_bin.pdf, id=1272, 1870.99pt x 1870.99pt>
 File: ../images/chapter1/Yamnaya_0.1x_bin.pdf Graphic file (type pdf)
 <use ../images/chapter1/Yamnaya_0.1x_bin.pdf>
 Package pdftex.def Info: ../images/chapter1/Yamnaya_0.1x_bin.pdf  used on input
@@ -1276,7 +1276,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
  [63 <../images/chapter1/allDownsampled_rtgtools_Precision.pdf>] [64 <../images
 /chapter1/phasing_performance_downsampled.pdf>]
 [65 <../images/chapter1/Yamnaya_0.1x_bin.pdf>]
-<../images/chapter1/CP_correlation_allSamples_0.1x_0.5x_30x.pdf, id=1306, 1870.
+<../images/chapter1/CP_correlation_allSamples_0.1x_0.5x_30x.pdf, id=1311, 1870.
 99pt x 1870.99pt>
 File: ../images/chapter1/CP_correlation_allSamples_0.1x_0.5x_30x.pdf Graphic fi
 le (type pdf)
@@ -1289,7 +1289,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [66]
 [67 <../images/chapter1/CP_correlation_allSamples_0.1x_0.5x_30x.pdf>]
-<../images/chapter1/TVD_ancients_flat_prior.pdf, id=1329, 1870.99pt x 1870.99pt
+<../images/chapter1/TVD_ancients_flat_prior.pdf, id=1334, 1870.99pt x 1870.99pt
 >
 File: ../images/chapter1/TVD_ancients_flat_prior.pdf Graphic file (type pdf)
 <use ../images/chapter1/TVD_ancients_flat_prior.pdf>
@@ -1301,8 +1301,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [68]
 [69 <../images/chapter1/TVD_ancients_flat_prior.pdf>]
-<../images/chapter1/CP_correlation_allSamples_0.1x_0.5x_30x_moderns.pdf, id=134
-9, 1870.99pt x 1870.99pt>
+<../images/chapter1/CP_correlation_allSamples_0.1x_0.5x_30x_moderns.pdf, id=135
+4, 1870.99pt x 1870.99pt>
 File: ../images/chapter1/CP_correlation_allSamples_0.1x_0.5x_30x_moderns.pdf Gr
 aphic file (type pdf)
 <use ../images/chapter1/CP_correlation_allSamples_0.1x_0.5x_30x_moderns.pdf>
@@ -1314,7 +1314,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [70]
 [71 <../images/chapter1/CP_correlation_allSamples_0.1x_0.5x_30x_moderns.pdf>]
-<../images/chapter1/PCA_panel_allInds.allCoverage.pdf, id=1372, 1870.99pt x 187
+<../images/chapter1/PCA_panel_allInds.allCoverage.pdf, id=1377, 1870.99pt x 187
 0.99pt>
 File: ../images/chapter1/PCA_panel_allInds.allCoverage.pdf Graphic file (type p
 df)
@@ -1332,13 +1332,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [72]
 [73 <../images/chapter1/PCA_panel_allInds.allCoverage.pdf>]
-<../images/chapter1/3pop_SF_downsampled.pdf, id=1393, 1870.99pt x 1870.99pt>
+<../images/chapter1/3pop_SF_downsampled.pdf, id=1398, 1870.99pt x 1870.99pt>
 File: ../images/chapter1/3pop_SF_downsampled.pdf Graphic file (type pdf)
 <use ../images/chapter1/3pop_SF_downsampled.pdf>
 Package pdftex.def Info: ../images/chapter1/3pop_SF_downsampled.pdf  used on in
 put line 664.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-<../images/chapter1/Allpops_SF_downsampled.pdf, id=1395, 1870.99pt x 1870.99pt>
+<../images/chapter1/Allpops_SF_downsampled.pdf, id=1400, 1870.99pt x 1870.99pt>
 
 File: ../images/chapter1/Allpops_SF_downsampled.pdf Graphic file (type pdf)
 <use ../images/chapter1/Allpops_SF_downsampled.pdf>
@@ -1350,13 +1350,13 @@ Package pdftex.def Info: ../images/chapter1/Allpops_SF_downsampled.pdf  used on
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [78]
-<../images/chapter1/pre_post_GLIMPSE_PCA.pdf, id=1442, 1870.99pt x 1870.99pt>
+<../images/chapter1/pre_post_GLIMPSE_PCA.pdf, id=1447, 1870.99pt x 1870.99pt>
 File: ../images/chapter1/pre_post_GLIMPSE_PCA.pdf Graphic file (type pdf)
 <use ../images/chapter1/pre_post_GLIMPSE_PCA.pdf>
 Package pdftex.def Info: ../images/chapter1/pre_post_GLIMPSE_PCA.pdf  used on i
 nput line 703.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-<../images/chapter1/CP_linked_unlinked.pdf, id=1443, 1870.99pt x 1870.99pt>
+<../images/chapter1/CP_linked_unlinked.pdf, id=1448, 1870.99pt x 1870.99pt>
 File: ../images/chapter1/CP_linked_unlinked.pdf Graphic file (type pdf)
 <use ../images/chapter1/CP_linked_unlinked.pdf>
 Package pdftex.def Info: ../images/chapter1/CP_linked_unlinked.pdf  used on inp
@@ -1376,7 +1376,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `tab:genotype_class_prop' on page 82 undefined on inpu
 t line 723.
 
-<../images/chapter1/donation_imputed_nonimputed.pdf, id=1482, 1870.99pt x 1870.
+<../images/chapter1/donation_imputed_nonimputed.pdf, id=1487, 1870.99pt x 1870.
 99pt>
 File: ../images/chapter1/donation_imputed_nonimputed.pdf Graphic file (type pdf
 )
@@ -1389,7 +1389,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [82]
 [83 <../images/chapter1/donation_imputed_nonimputed.pdf>]
-<../images/chapter1/uncertainty_v_noUncertainty_0.5x_0.1x.pdf, id=1500, 1870.99
+<../images/chapter1/uncertainty_v_noUncertainty_0.5x_0.1x.pdf, id=1505, 1870.99
 pt x 1870.99pt>
 File: ../images/chapter1/uncertainty_v_noUncertainty_0.5x_0.1x.pdf Graphic file
  (type pdf)
@@ -1419,7 +1419,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [87]
-<../images/chapter1/het_prob.pdf, id=1537, 910.40125pt x 765.86125pt>
+<../images/chapter1/het_prob.pdf, id=1542, 910.40125pt x 765.86125pt>
 File: ../images/chapter1/het_prob.pdf Graphic file (type pdf)
 <use ../images/chapter1/het_prob.pdf>
 Package pdftex.def Info: ../images/chapter1/het_prob.pdf  used on input line 81
@@ -1440,7 +1440,7 @@ Underfull \vbox (badness 1412) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [91]
-<../images/chapter1/avg_good_windows.pdf, id=1570, 1870.99pt x 3035.34pt>
+<../images/chapter1/avg_good_windows.pdf, id=1575, 1870.99pt x 3035.34pt>
 File: ../images/chapter1/avg_good_windows.pdf Graphic file (type pdf)
 <use ../images/chapter1/avg_good_windows.pdf>
 Package pdftex.def Info: ../images/chapter1/avg_good_windows.pdf  used on input
@@ -1450,7 +1450,7 @@ Package pdftex.def Info: ../images/chapter1/avg_good_windows.pdf  used on input
 
 LaTeX Warning: Float too large for page by 36.88992pt on input line 922.
 
-<../images/chapter1/cumulative_windows_val.pdf, id=1571, 1870.99pt x 3035.34pt>
+<../images/chapter1/cumulative_windows_val.pdf, id=1576, 1870.99pt x 3035.34pt>
 
 File: ../images/chapter1/cumulative_windows_val.pdf Graphic file (type pdf)
 <use ../images/chapter1/cumulative_windows_val.pdf>
@@ -1495,7 +1495,7 @@ Underfull \vbox (badness 1158) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [102]
-<../images/chapter3/HumanOriginsMap.pdf, id=1683, 1870.99pt x 1445.4pt>
+<../images/chapter3/HumanOriginsMap.pdf, id=1688, 1870.99pt x 1445.4pt>
 File: ../images/chapter3/HumanOriginsMap.pdf Graphic file (type pdf)
 <use ../images/chapter3/HumanOriginsMap.pdf>
 Package pdftex.def Info: ../images/chapter3/HumanOriginsMap.pdf  used on input 
@@ -1518,7 +1518,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [108]
-<../images/chapter3/African_Inds_proportions.pdf, id=1740, 1870.99pt x 1870.99p
+<../images/chapter3/African_Inds_proportions.pdf, id=1745, 1870.99pt x 1870.99p
 t>
 File: ../images/chapter3/African_Inds_proportions.pdf Graphic file (type pdf)
 <use ../images/chapter3/African_Inds_proportions.pdf>
@@ -1536,7 +1536,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [112]
-<../images/chapter3/imputed_excess_copying_pops.pdf, id=1780, 1870.99pt x 1300.
+<../images/chapter3/imputed_excess_copying_pops.pdf, id=1785, 1870.99pt x 1300.
 86pt>
 File: ../images/chapter3/imputed_excess_copying_pops.pdf Graphic file (type pdf
 )
@@ -1549,7 +1549,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [113]
 [114 <../images/chapter3/imputed_excess_copying_pops.pdf>]
-<../images/chapter3/ChromoPainter_PCA_UKB_HO.pdf, id=1797, 1870.99pt x 1870.99p
+<../images/chapter3/ChromoPainter_PCA_UKB_HO.pdf, id=1802, 1870.99pt x 1870.99p
 t>
 File: ../images/chapter3/ChromoPainter_PCA_UKB_HO.pdf Graphic file (type pdf)
 <use ../images/chapter3/ChromoPainter_PCA_UKB_HO.pdf>
@@ -1561,7 +1561,7 @@ Underfull \vbox (badness 5105) has occurred while \output is active []
 
  [115]
 [116 <../images/chapter3/ChromoPainter_PCA_UKB_HO.pdf>]
-<../images/chapter3/haplotype_sharing_map.pdf, id=1820, 1870.99pt x 1870.99pt>
+<../images/chapter3/haplotype_sharing_map.pdf, id=1825, 1870.99pt x 1870.99pt>
 File: ../images/chapter3/haplotype_sharing_map.pdf Graphic file (type pdf)
 <use ../images/chapter3/haplotype_sharing_map.pdf>
 Package pdftex.def Info: ../images/chapter3/haplotype_sharing_map.pdf  used on 
@@ -1571,7 +1571,7 @@ input line 178.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [118]
-<../images/chapter3/SF_props_map.pdf, id=1851, 1870.99pt x 1870.99pt>
+<../images/chapter3/SF_props_map.pdf, id=1857, 1870.99pt x 1870.99pt>
 File: ../images/chapter3/SF_props_map.pdf Graphic file (type pdf)
 <use ../images/chapter3/SF_props_map.pdf>
 Package pdftex.def Info: ../images/chapter3/SF_props_map.pdf  used on input lin
@@ -1579,7 +1579,7 @@ e 193.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
 
 [119 <../images/chapter3/SF_props_map.pdf>]
-<../images/chapter3/SF_props_distribution_top30.pdf, id=1870, 1870.99pt x 2312.
+<../images/chapter3/SF_props_distribution_top30.pdf, id=1875, 1870.99pt x 2312.
 64pt>
 File: ../images/chapter3/SF_props_distribution_top30.pdf Graphic file (type pdf
 )
@@ -1587,7 +1587,7 @@ File: ../images/chapter3/SF_props_distribution_top30.pdf Graphic file (type pdf
 Package pdftex.def Info: ../images/chapter3/SF_props_distribution_top30.pdf  us
 ed on input line 203.
 (pdftex.def)             Requested size: 398.33858pt x 492.33817pt.
-<../images/chapter3/all_countries_SF_props_pie_chart.pdf, id=1872, 1870.99pt x 
+<../images/chapter3/all_countries_SF_props_pie_chart.pdf, id=1877, 1870.99pt x 
 1870.99pt>
 File: ../images/chapter3/all_countries_SF_props_pie_chart.pdf Graphic file (typ
 e pdf)
@@ -1601,7 +1601,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [120]
 [121 <../images/chapter3/SF_props_distribution_top30.pdf>] [122 <../images/chap
 ter3/all_countries_SF_props_pie_chart.pdf>] [123]
-<../images/chapter3/haplotype_map_SouthAfrica.pdf, id=1906, 1870.99pt x 1870.99
+<../images/chapter3/haplotype_map_SouthAfrica.pdf, id=1911, 1870.99pt x 1870.99
 pt>
 File: ../images/chapter3/haplotype_map_SouthAfrica.pdf Graphic file (type pdf)
 <use ../images/chapter3/haplotype_map_SouthAfrica.pdf>
@@ -1609,7 +1609,7 @@ Package pdftex.def Info: ../images/chapter3/haplotype_map_SouthAfrica.pdf  used
  on input line 229.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
  [124 <../images/chapter3/haplotype_map_SouthAfrica.pdf>]
-<../images/chapter3/country_of_origin_allInds.pdf, id=1929, 1870.99pt x 1870.99
+<../images/chapter3/country_of_origin_allInds.pdf, id=1934, 1870.99pt x 1870.99
 pt>
 File: ../images/chapter3/country_of_origin_allInds.pdf Graphic file (type pdf)
 <use ../images/chapter3/country_of_origin_allInds.pdf>
@@ -1624,7 +1624,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [127]
-<../images/chapter3/SOURCEFIND_imp_nonimp.pdf, id=1954, 1870.99pt x 1870.99pt>
+<../images/chapter3/SOURCEFIND_imp_nonimp.pdf, id=1959, 1870.99pt x 1870.99pt>
 File: ../images/chapter3/SOURCEFIND_imp_nonimp.pdf Graphic file (type pdf)
 <use ../images/chapter3/SOURCEFIND_imp_nonimp.pdf>
 Package pdftex.def Info: ../images/chapter3/SOURCEFIND_imp_nonimp.pdf  used on 
@@ -1632,7 +1632,7 @@ input line 255.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
 
 [128 <../images/chapter3/SOURCEFIND_imp_nonimp.pdf>]
-<../images/chapter3/SF_props_pie_chart.pdf, id=1969, 1445.4pt x 2890.8pt>
+<../images/chapter3/SF_props_pie_chart.pdf, id=1974, 1445.4pt x 2890.8pt>
 File: ../images/chapter3/SF_props_pie_chart.pdf Graphic file (type pdf)
 <use ../images/chapter3/SF_props_pie_chart.pdf>
 Package pdftex.def Info: ../images/chapter3/SF_props_pie_chart.pdf  used on inp
@@ -1643,7 +1643,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [129]
 [130 <../images/chapter3/SF_props_pie_chart.pdf>]
-<../images/chapter3/rollingaverage_time_Buganda_ancestry.pdf, id=1993, 1870.99p
+<../images/chapter3/rollingaverage_time_Buganda_ancestry.pdf, id=1998, 1870.99p
 t x 1870.99pt>
 File: ../images/chapter3/rollingaverage_time_Buganda_ancestry.pdf Graphic file 
 (type pdf)
@@ -1675,13 +1675,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 4144) has occurred while \output is active []
 
  [135]
-<../images/chapter4/sample_map.pdf, id=2059, 1870.99pt x 1870.99pt>
+<../images/chapter4/sample_map.pdf, id=2064, 1870.99pt x 1870.99pt>
 File: ../images/chapter4/sample_map.pdf Graphic file (type pdf)
 <use ../images/chapter4/sample_map.pdf>
 Package pdftex.def Info: ../images/chapter4/sample_map.pdf  used on input line 
 36.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-<../images/chapter4/Dates.pdf, id=2060, 1870.99pt x 1870.99pt>
+<../images/chapter4/Dates.pdf, id=2065, 1870.99pt x 1870.99pt>
 File: ../images/chapter4/Dates.pdf Graphic file (type pdf)
 <use ../images/chapter4/Dates.pdf>
 Package pdftex.def Info: ../images/chapter4/Dates.pdf  used on input line 43.
@@ -1703,7 +1703,7 @@ Underfull \vbox (badness 4132) has occurred while \output is active []
 
  [140]
 [141]
-<../images/chapter4/workflow.pdf, id=2122, 963.6pt x 542.025pt>
+<../images/chapter4/workflow.pdf, id=2127, 963.6pt x 542.025pt>
 File: ../images/chapter4/workflow.pdf Graphic file (type pdf)
 <use ../images/chapter4/workflow.pdf>
 Package pdftex.def Info: ../images/chapter4/workflow.pdf  used on input line 14
@@ -1722,13 +1722,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [146]
-<../images/chapter4/plink_PCA.pdf, id=2186, 1870.99pt x 1870.99pt>
+<../images/chapter4/plink_PCA.pdf, id=2191, 1870.99pt x 1870.99pt>
 File: ../images/chapter4/plink_PCA.pdf Graphic file (type pdf)
 <use ../images/chapter4/plink_PCA.pdf>
 Package pdftex.def Info: ../images/chapter4/plink_PCA.pdf  used on input line 1
 97.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-<../images/chapter4/chunklengths_moderns_ancients_PCA.pdf, id=2187, 1870.99pt x
+<../images/chapter4/chunklengths_moderns_ancients_PCA.pdf, id=2192, 1870.99pt x
  1870.99pt>
 File: ../images/chapter4/chunklengths_moderns_ancients_PCA.pdf Graphic file (ty
 pe pdf)
@@ -1743,7 +1743,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [150]
 [151]
-<../images/chapter4/SOURCEFINDheatmapOlderSurrogates_2.pdf, id=2260, 1870.99pt 
+<../images/chapter4/SOURCEFINDheatmapOlderSurrogates_2.pdf, id=2265, 1870.99pt 
 x 2746.26pt>
 File: ../images/chapter4/SOURCEFINDheatmapOlderSurrogates_2.pdf Graphic file (t
 ype pdf)
@@ -1755,19 +1755,19 @@ pdf  used on input line 230.
 
 LaTeX Warning: Float too large for page by 29.74768pt on input line 233.
 
-<../images/chapter4/Erg1_MU_matrix.pdf, id=2264, 1870.99pt x 1870.99pt>
+<../images/chapter4/Erg1_MU_matrix.pdf, id=2269, 1870.99pt x 1870.99pt>
 File: ../images/chapter4/Erg1_MU_matrix.pdf Graphic file (type pdf)
 <use ../images/chapter4/Erg1_MU_matrix.pdf>
 Package pdftex.def Info: ../images/chapter4/Erg1_MU_matrix.pdf  used on input l
 ine 241.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-<../images/chapter4/HG_ancestry_Neolithic.pdf, id=2265, 1870.99pt x 1870.99pt>
+<../images/chapter4/HG_ancestry_Neolithic.pdf, id=2270, 1870.99pt x 1870.99pt>
 File: ../images/chapter4/HG_ancestry_Neolithic.pdf Graphic file (type pdf)
 <use ../images/chapter4/HG_ancestry_Neolithic.pdf>
 Package pdftex.def Info: ../images/chapter4/HG_ancestry_Neolithic.pdf  used on 
 input line 250.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-<../images/chapter4/plots3PopBarlot.pdf, id=2266, 1870.99pt x 1870.99pt>
+<../images/chapter4/plots3PopBarlot.pdf, id=2271, 1870.99pt x 1870.99pt>
 File: ../images/chapter4/plots3PopBarlot.pdf Graphic file (type pdf)
 <use ../images/chapter4/plots3PopBarlot.pdf>
 Package pdftex.def Info: ../images/chapter4/plots3PopBarlot.pdf  used on input 
@@ -1792,7 +1792,7 @@ Overfull \hbox (52.97505pt too wide) in paragraph at lines 321--322
  []
 
 [160]
-<../images/chapter4/germanic_slavic_HB_sharing.pdf, id=2353, 1870.99pt x 1870.9
+<../images/chapter4/germanic_slavic_HB_sharing.pdf, id=2358, 1870.99pt x 1870.9
 9pt>
 File: ../images/chapter4/germanic_slavic_HB_sharing.pdf Graphic file (type pdf)
 
@@ -1822,7 +1822,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-<../images/chapter5/Slavic_tribes_in_the_7th_to_9th_century.jpg, id=2403, 1525.
+<../images/chapter5/Slavic_tribes_in_the_7th_to_9th_century.jpg, id=2408, 1525.
 7pt x 1447.4075pt>
 File: ../images/chapter5/Slavic_tribes_in_the_7th_to_9th_century.jpg Graphic fi
 le (type jpg)
@@ -1856,131 +1856,115 @@ Overfull \hbox (68.8908pt too wide) in paragraph at lines 48--74
  [][] 
  []
 
-[169]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [170]
-[171]
+[169] [170] [171] [172]
 File: ../images/chapter4/workflow.pdf Graphic file (type pdf)
 <use ../images/chapter4/workflow.pdf>
 Package pdftex.def Info: ../images/chapter4/workflow.pdf  used on input line 12
-2.
+7.
 (pdftex.def)             Requested size: 398.33858pt x 224.0595pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [172]
-[173]
+ [173]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [174]
 
-LaTeX Warning: Float too large for page by 86.813pt on input line 236.
+LaTeX Warning: Float too large for page by 86.813pt on input line 241.
 
-<../images/chapter5/plink_pca.pdf, id=2513, 1870.99pt x 1870.99pt>
+<../images/chapter5/plink_pca.pdf, id=2517, 1870.99pt x 1870.99pt>
 File: ../images/chapter5/plink_pca.pdf Graphic file (type pdf)
 <use ../images/chapter5/plink_pca.pdf>
 Package pdftex.def Info: ../images/chapter5/plink_pca.pdf  used on input line 2
-43.
+48.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-[175 <../images/chapter5/plink_pca.pdf>] [176]
-<../images/chapter5/fs_PCA.pdf, id=2537, 1870.99pt x 1870.99pt>
+[175] [176] [177 <../images/chapter5/plink_pca.pdf>]
+<../images/chapter5/fs_PCA.pdf, id=2547, 1870.99pt x 1870.99pt>
 File: ../images/chapter5/fs_PCA.pdf Graphic file (type pdf)
 <use ../images/chapter5/fs_PCA.pdf>
-Package pdftex.def Info: ../images/chapter5/fs_PCA.pdf  used on input line 255.
+Package pdftex.def Info: ../images/chapter5/fs_PCA.pdf  used on input line 260.
 
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
+ [178 <../images/chapter5/fs_PCA.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Underfull \vbox (badness 4132) has occurred while \output is active []
-
- [177]
-[178 <../images/chapter5/fs_PCA.pdf>]
-<../images/chapter5/Mu_plot_EarlyMiddleAges_3way.pdf, id=2565, 1870.99pt x 1870
+ [179]
+<../images/chapter5/Mu_plot_EarlyMiddleAges_3way.pdf, id=2575, 1870.99pt x 1870
 .99pt>
 File: ../images/chapter5/Mu_plot_EarlyMiddleAges_3way.pdf Graphic file (type pd
 f)
 <use ../images/chapter5/Mu_plot_EarlyMiddleAges_3way.pdf>
 Package pdftex.def Info: ../images/chapter5/Mu_plot_EarlyMiddleAges_3way.pdf  u
-sed on input line 274.
+sed on input line 279.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-<../images/chapter5/EarlyMiddleAges_3way_acoanc.pdf, id=2566, 1084.05pt x 722.7
+<../images/chapter5/EarlyMiddleAges_3way_acoanc.pdf, id=2576, 1084.05pt x 722.7
 pt>
 File: ../images/chapter5/EarlyMiddleAges_3way_acoanc.pdf Graphic file (type pdf
 )
 <use ../images/chapter5/EarlyMiddleAges_3way_acoanc.pdf>
 Package pdftex.def Info: ../images/chapter5/EarlyMiddleAges_3way_acoanc.pdf  us
-ed on input line 281.
+ed on input line 286.
 (pdftex.def)             Requested size: 398.33858pt x 265.55322pt.
 
+Underfull \vbox (badness 5105) has occurred while \output is active []
+
+ [180]
+[181 <../images/chapter5/Mu_plot_EarlyMiddleAges_3way.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [179]
-[180 <../images/chapter5/Mu_plot_EarlyMiddleAges_3way.pdf>] [181 <../images/cha
-pter5/EarlyMiddleAges_3way_acoanc.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [182]
-<../images/chapter5/chunklengths_moderns_ancients_PCA.pdf, id=2655, 1870.99pt x
+ [182 <../images/chapter5/EarlyMiddleAges_3way_acoanc.pdf>]
+<../images/chapter5/chunklengths_moderns_ancients_PCA.pdf, id=2659, 1870.99pt x
  1870.99pt>
 File: ../images/chapter5/chunklengths_moderns_ancients_PCA.pdf Graphic file (ty
 pe pdf)
 <use ../images/chapter5/chunklengths_moderns_ancients_PCA.pdf>
 Package pdftex.def Info: ../images/chapter5/chunklengths_moderns_ancients_PCA.p
-df  used on input line 303.
+df  used on input line 308.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-<../images/chapter5/copymatrix_moderns_ancient_slavs.pdf, id=2657, 1870.99pt x 
+<../images/chapter5/copymatrix_moderns_ancient_slavs.pdf, id=2661, 1870.99pt x 
 1870.99pt>
 File: ../images/chapter5/copymatrix_moderns_ancient_slavs.pdf Graphic file (typ
 e pdf)
 <use ../images/chapter5/copymatrix_moderns_ancient_slavs.pdf>
 Package pdftex.def Info: ../images/chapter5/copymatrix_moderns_ancient_slavs.pd
-f  used on input line 312.
+f  used on input line 317.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
 
-[183 <../images/chapter5/chunklengths_moderns_ancients_PCA.pdf>] [184 <../image
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [183]
+[184 <../images/chapter5/chunklengths_moderns_ancients_PCA.pdf>] [185 <../image
 s/chapter5/copymatrix_moderns_ancient_slavs.pdf>]
-<../images/chapter5/f3_HB_ancient_slavs.pdf, id=2682, 1871.99374pt x 1035.87pt>
+<../images/chapter5/f3_HB_ancient_slavs.pdf, id=2692, 1871.99374pt x 1035.87pt>
 
 File: ../images/chapter5/f3_HB_ancient_slavs.pdf Graphic file (type pdf)
 <use ../images/chapter5/f3_HB_ancient_slavs.pdf>
 Package pdftex.def Info: ../images/chapter5/f3_HB_ancient_slavs.pdf  used on in
-put line 323.
+put line 328.
 (pdftex.def)             Requested size: 398.33858pt x 220.41582pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [185 <../images/chapter5/f3_HB_ancient_slavs.pdf>]
-<../images/chapter5/tree_with_ancients.pdf, id=2694, 963.6pt x 542.025pt>
+ [186 <../images/chapter5/f3_HB_ancient_slavs.pdf>]
+<../images/chapter5/tree_with_ancients.pdf, id=2703, 963.6pt x 542.025pt>
 File: ../images/chapter5/tree_with_ancients.pdf Graphic file (type pdf)
 <use ../images/chapter5/tree_with_ancients.pdf>
 Package pdftex.def Info: ../images/chapter5/tree_with_ancients.pdf  used on inp
-ut line 336.
+ut line 341.
 (pdftex.def)             Requested size: 398.33858pt x 224.0595pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [186]
-<../images/chapter5/MOSAIC_admixture_dates_plot.pdf, id=2706, 1870.99pt x 1870.
+ [187 <../images/chapter5/tree_with_ancients.pdf>]
+<../images/chapter5/MOSAIC_admixture_dates_plot.pdf, id=2750, 1870.99pt x 1870.
 99pt>
 File: ../images/chapter5/MOSAIC_admixture_dates_plot.pdf Graphic file (type pdf
 )
 <use ../images/chapter5/MOSAIC_admixture_dates_plot.pdf>
 Package pdftex.def Info: ../images/chapter5/MOSAIC_admixture_dates_plot.pdf  us
-ed on input line 348.
+ed on input line 353.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [187 <../images/chapter5/tree_with_ancients.pdf>] [188 <../images/chapter5/MOS
-AIC_admixture_dates_plot.pdf>]
-<../images/chapter5/Fst_plot_HB:belorussian.pdf, id=2766, 1870.99pt x 1870.99pt
+<../images/chapter5/Fst_plot_HB:belorussian.pdf, id=2757, 1870.99pt x 1870.99pt
 >
 File: ../images/chapter5/Fst_plot_HB:belorussian.pdf Graphic file (type pdf)
 <use ../images/chapter5/Fst_plot_HB:belorussian.pdf>
 Package pdftex.def Info: ../images/chapter5/Fst_plot_HB:belorussian.pdf  used o
-n input line 359.
+n input line 364.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
- [189] [190 <../images/chapter5/Fst_plot_HB:belorussian.pdf>]
+
+[188] [189 <../images/chapter5/MOSAIC_admixture_dates_plot.pdf>] [190 <../image
+s/chapter5/Fst_plot_HB:belorussian.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [191])
@@ -2059,45 +2043,45 @@ Appendix C.
 
 ]
 Appendix D.
-<../images/appendix/UstIshim_0.1x_bin.pdf, id=3204, 1870.99pt x 1870.99pt>
+<../images/appendix/UstIshim_0.1x_bin.pdf, id=3209, 1870.99pt x 1870.99pt>
 File: ../images/appendix/UstIshim_0.1x_bin.pdf Graphic file (type pdf)
 <use ../images/appendix/UstIshim_0.1x_bin.pdf>
 Package pdftex.def Info: ../images/appendix/UstIshim_0.1x_bin.pdf  used on inpu
 t line 2412.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-<../images/appendix/plink_withHG_PCA.pdf, id=3205, 1870.99pt x 1870.99pt>
+<../images/appendix/plink_withHG_PCA.pdf, id=3210, 1870.99pt x 1870.99pt>
 File: ../images/appendix/plink_withHG_PCA.pdf Graphic file (type pdf)
 <use ../images/appendix/plink_withHG_PCA.pdf>
 Package pdftex.def Info: ../images/appendix/plink_withHG_PCA.pdf  used on input
  line 2419.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-<../images/appendix/MAF_HIST_imputed.pdf, id=3206, 1870.99pt x 1870.99pt>
+<../images/appendix/MAF_HIST_imputed.pdf, id=3211, 1870.99pt x 1870.99pt>
 File: ../images/appendix/MAF_HIST_imputed.pdf Graphic file (type pdf)
 <use ../images/appendix/MAF_HIST_imputed.pdf>
 Package pdftex.def Info: ../images/appendix/MAF_HIST_imputed.pdf  used on input
  line 2427.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-<../images/appendix/haplotype_map_Brazil.pdf, id=3207, 1870.99pt x 1870.99pt>
+<../images/appendix/haplotype_map_Brazil.pdf, id=3212, 1870.99pt x 1870.99pt>
 File: ../images/appendix/haplotype_map_Brazil.pdf Graphic file (type pdf)
 <use ../images/appendix/haplotype_map_Brazil.pdf>
 Package pdftex.def Info: ../images/appendix/haplotype_map_Brazil.pdf  used on i
 nput line 2435.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-<../images/appendix/haplotype_map_Caribbean.pdf, id=3208, 1870.99pt x 1870.99pt
+<../images/appendix/haplotype_map_Caribbean.pdf, id=3213, 1870.99pt x 1870.99pt
 >
 File: ../images/appendix/haplotype_map_Caribbean.pdf Graphic file (type pdf)
 <use ../images/appendix/haplotype_map_Caribbean.pdf>
 Package pdftex.def Info: ../images/appendix/haplotype_map_Caribbean.pdf  used o
 n input line 2442.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-<../images/appendix/testing_centre_afr_prop.pdf, id=3209, 1870.99pt x 1870.99pt
+<../images/appendix/testing_centre_afr_prop.pdf, id=3214, 1870.99pt x 1870.99pt
 >
 File: ../images/appendix/testing_centre_afr_prop.pdf Graphic file (type pdf)
 <use ../images/appendix/testing_centre_afr_prop.pdf>
 Package pdftex.def Info: ../images/appendix/testing_centre_afr_prop.pdf  used o
 n input line 2449.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-<../images/appendix/chromopainter_PCA_ancients_Bavaria.pdf, id=3210, 1870.99pt 
+<../images/appendix/chromopainter_PCA_ancients_Bavaria.pdf, id=3215, 1870.99pt 
 x 1870.99pt>
 File: ../images/appendix/chromopainter_PCA_ancients_Bavaria.pdf Graphic file (t
 ype pdf)
@@ -2105,7 +2089,7 @@ ype pdf)
 Package pdftex.def Info: ../images/appendix/chromopainter_PCA_ancients_Bavaria.
 pdf  used on input line 2456.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-<../images/appendix/SF_heatmap_slavs.pdf, id=3211, 1870.99pt x 1870.99pt>
+<../images/appendix/SF_heatmap_slavs.pdf, id=3216, 1870.99pt x 1870.99pt>
 File: ../images/appendix/SF_heatmap_slavs.pdf Graphic file (type pdf)
 <use ../images/appendix/SF_heatmap_slavs.pdf>
 Package pdftex.def Info: ../images/appendix/SF_heatmap_slavs.pdf  used on input
@@ -2130,13 +2114,13 @@ Underfull \hbox (badness 1742) in paragraph at lines 2477--2478
 tions, I ran
  []
 
-<../images/appendix/iterations.pdf, id=3323, 1870.99pt x 1870.99pt>
+<../images/appendix/iterations.pdf, id=3328, 1870.99pt x 1870.99pt>
 File: ../images/appendix/iterations.pdf Graphic file (type pdf)
 <use ../images/appendix/iterations.pdf>
 Package pdftex.def Info: ../images/appendix/iterations.pdf  used on input line 
 2481.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-<../images/appendix/Devon_Cornwall_TVD_reduced.pdf, id=3324, 1870.99pt x 1870.9
+<../images/appendix/Devon_Cornwall_TVD_reduced.pdf, id=3329, 1870.99pt x 1870.9
 9pt>
 File: ../images/appendix/Devon_Cornwall_TVD_reduced.pdf Graphic file (type pdf)
 
@@ -2164,13 +2148,13 @@ put line 2507.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [275]
-<../images/appendix/uncertainty.pdf, id=3356, 1870.99pt x 1870.99pt>
+<../images/appendix/uncertainty.pdf, id=3361, 1870.99pt x 1870.99pt>
 File: ../images/appendix/uncertainty.pdf Graphic file (type pdf)
 <use ../images/appendix/uncertainty.pdf>
 Package pdftex.def Info: ../images/appendix/uncertainty.pdf  used on input line
  2530.
 (pdftex.def)             Requested size: 398.33858pt x 398.31526pt.
-<../images/appendix/standard.pdf, id=3359, 1870.99pt x 1870.99pt>
+<../images/appendix/standard.pdf, id=3364, 1870.99pt x 1870.99pt>
 File: ../images/appendix/standard.pdf Graphic file (type pdf)
 <use ../images/appendix/standard.pdf>
 Package pdftex.def Info: ../images/appendix/standard.pdf  used on input line 25
@@ -2202,18 +2186,18 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: 113876CC2BA8D00EF51591A76A06AEB1;27588.
+(rerunfilecheck)             Checksum: E9FA1172B5AA405588B99F1109248B92;27906.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 38 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 30366 strings out of 480129
- 567570 string characters out of 5893409
- 1006315 words of memory out of 5000000
- 46221 multiletter control sequences out of 15000+600000
- 593619 words of font info for 311 fonts, out of 8000000 for 9000
+ 30370 strings out of 480129
+ 567628 string characters out of 5893409
+ 1006316 words of memory out of 5000000
+ 46222 multiletter control sequences out of 15000+600000
+ 593716 words of font info for 312 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  93i,16n,95p,2193b,784s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{cite.Sawcer2011} has been reference
@@ -2853,10 +2837,10 @@ fb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmro12.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/pu
 blic/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Main.pdf (303 pages, 21829044 bytes).
+Output written on Main.pdf (303 pages, 21830171 bytes).
 PDF statistics:
- 4040 PDF objects out of 4296 (max. 8388607)
- 3505 compressed objects within 36 object streams
- 996 named destinations out of 1000 (max. 500000)
- 78610 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 4046 PDF objects out of 4296 (max. 8388607)
+ 3511 compressed objects within 36 object streams
+ 997 named destinations out of 1000 (max. 500000)
+ 78618 words of extra memory for PDF output out of 89155 (max. 10000000)
 

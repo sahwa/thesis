@@ -78,6 +78,11 @@ POH44 & Pohansko – Pohřebištĕ U Kostela & NA & Early Middle Ages & 5.3\\
 The Migration Period and Early Middle Age samples were categorised based upon the style of pottery found in the burial grounds (Z. Hofmanová, personal communication).  
 
 
+\subsection{Processing of samples performed by collaborators}
+
+Sequencing quality of reads was checked with fastQC. Duplicate reads were marked with picard-tools MarkDuplicates. Libraries from the same samples were merged using SAMtools merge, and duplicates were marked again as described above to tag duplicate reads of the same libraries among sequencing lanes. Genotypes and genotype likelihoods were called using the atlas pipeline. First, aligned reads from paired-end sequenced read groups were merged to avoid double-use of bases in the overlapping part. PMD patterns were estimated for each read group with ATLAS task=PMD, providing the reference with ref= and enabling the option filterSoftClips to remove reads with soft-clipping. 
+Base quality recalibration parameters were obtained (short recal-parameters) from highly conserved regions. A .bam file with corrected recalibration and pmd parameters was created with atlas BAMUpdateQualities, providing PMD and recal-parameters and applying soft-clip filter (pmdFile, withPMD, recal, filterSoftClips).
+
 \subsection{Ancient DNA processing} \label{AncientDNAprocessing}
 
 I merged the 17 newly sequenced individuals with the ancient literature samples given in section \ref{section:AncientReferenceDataset}, resulting in a total of 959 ancient individuals with genotype likelihoods at 77,213,942 genome-wide autosomal SNPs. 
