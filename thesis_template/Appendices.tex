@@ -2502,16 +2502,16 @@ In Chapter 2, I presented a way of adding the uncertainty from genotype imputati
 
 However, $U$ as a metric may be floored; for example, low confidence heterozygous calls, e.g. \texttt{gp="0.313,0.374,0.313"} would yield $U=1$ and a $max(GP)$ of 0.374. Having high confidence in such positions may harm the painting accuracy.
 
-To investigate this further, I randomly selected 500,000 positions from a randomly selected ancient sample and plotted $1-U$ against $max(GP)$ (Fig. \ref{fig:alt_input_score_test}). My work in chapter X showed that, whilst slightly conservative, $max(GP)$ is an accurate proxy for whether or not a genotype has been imputed correctly and thus stands as a good metric to compare $U$ against. I plotted $1-U$ so that it is directly comparable to $max(GP)$, i.e. the genotype call has a certainty of being imputed correctly when $1-U = max(GP) = 1$
+To investigate this further, I randomly selected 500,000 positions from a randomly selected ancient sample and plotted $1-U$ against $max(GP)$ (Fig. E.3}). My work in chapter 2 showed that, whilst slightly conservative, $max(GP)$ is an accurate proxy for whether or not a genotype has been imputed correctly and thus stands as a good metric to compare $U$ against (Fig. \ref{fig:Yamnaya_0.1x_GL_calibration}). I plotted $1-U$ so that it is directly comparable to $max(GP)$, i.e. the genotype call has a certainty of being imputed correctly when $1-U = max(GP) = 1$
 
 Whilst the Pearson's correlation between the two metrics (0.93), Fig. \ref{fig:alt_input_score_test} shows that there is a clear difference; $1-U$ substantially over-estimates the probability that heterozygous positions have been imputed correctly. When counting only positions where $1-U \neq 1$ or $max(GP) \neq 1$, heterozygous positions had a mean $max(GP)$ of 0.82, compared to a $1-U$ of 0.89. There was also a less pronounced effect of $1-U$ underestimating equivalent score for homozygous positions relative to $max(GP)$.   
 
-%\begin{figure}[htp]
-%    \centering
-%    \includegraphics[width=1.0\textwidth]{../images/appendix/alt_input_score_test.pdf}
-%    \caption{Proportion of inferred Cameroon Arabic ancestry averaged across individuals from Cameroon Kanuri ethnic group. Each panel contains proportions for a different number of MCMC iterations. Within each panel, each bar is the proportion inferred from each of the 10 independent SOURCEFIND runs.}
-%    \label{fig:alt_input_score_test}
-%\end{figure}
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{../images/appendix/alt_input_score_test.pdf}
+    \caption{Comparison of metrics to describe the uncertainty in an imputed genotype calls. Each point corresponds to a SNP (n=500,000) from a randomly selected ancient sample, coloured by whether the genotype was homozygous reference, heterozygous or homozygous alternate.}
+    \label{fig:alt_input_score_test}
+\end{figure}
 
 To test whether the choice of uncertainty metric had an affect on painting accuracy, I reproduced Fig \ref{fig:CP_correlation_allSamples_0.1x_0.5x_30x} but using setting uncertainty such that, at each SNP, I set the entry in ChromoPainter input as:
 

@@ -107,7 +107,7 @@ Genotype imputation and phasing are two important steps for processing low-cover
 
 Three different characteristics are desirable for an imputation algorithm in this context. Firstly, it should take genotype likelihoods as input. This is because genotype likelihoods allow for flexible representation of the possible genotypes at a particular position, particularly when there may not be enough coverage to make a hard genotype call. Secondly, it should emit posterior genotype-probabilities which, when accurately calibrated, give the probability that a particular genotype call is correct. This is necessary for estimating the uncertainty values, described in section \ref{sec:DescriptionChromoPainterV2Uncertainty}, needed for ChromoPainterUncertainty analysis. Thirdly, the algorithm must be able to complete in a reasonable running time when using a large number of samples and high number of SNPs. Using a large number of densely positioned SNPs (e.g. such as the approximately 77 million identified in the 1000 Genomes Project) increases the useful linkage-disequilibrium information between each SNP, and it is well-established that increasing the number of individuals used in imputation/phasing reference panels improves accuracy \cite{delaneau2018integrative, HUANG2009235, mccarthy2016reference, rubinacci2021efficient}. 
 
-Two programs, Beagle 4.0 \cite{Browning2007} and GLIMPSE \cite{rubinacci2021efficient} fulfil the first and second criteria above, but GLIMPSE offers up to 1000x reduction in running time compared to Beagle 4.0 \cite{rubinacci2021efficicanent}, and hence chose it for the imputation and phasing steps.   
+Two programs, Beagle 4.0 \cite{Browning2007} and GLIMPSE \cite{rubinacci2021efficient} fulfil the first and second criteria above, but GLIMPSE offers up to 1000x reduction in running time compared to Beagle 4.0 \cite{rubinacci2021efficient}, and hence chose it for the imputation and phasing steps.   
 
 Phasing and imputation ideally requires a reference panel of high-coverage present-day individuals. I used the 1000 Genomes Project dataset re-sequenced to 30x average coverage, which contains 3202 individuals from 26 worldwide populations \cite{byrska2021high}. A description of the processing of this reference dataset can be found in Appendix \ref{section:1000genomes}. This reference dataset contained 50,509,915 unique bi-allelic SNPs. 
 
@@ -720,8 +720,6 @@ Bias occurs when missing genotypes are incorrectly imputed with variants from ce
 
 Therefore, we can compare the amount different donor groups donate under the dataset where none of the 560,442 SNPs had been imputed versus the dataset where 430,000 (86\%) of these SNPs have been imputed by plotting the mean amount donated by each population using imputed SNPs and non-imputed SNPs (Fig. \ref{fig:imputed_nonimputed_donation}). The 20 populations that contribute most are a set containing European / Ashkenazi Jewish / Levite Jewish populations. Notably, the Haplotype Reference Consortium panel that was used to impute the data consists primarily of individuals of European descent. The two populations which are over-copied the most after imputation are two English populations from Kent and Cornwall. This suggests that there is a most likely a bias towards copying more from European populations when the data has been imputed using the HRC. 
 
-Another consideration is the concept of reference \textit{sequence} bias, where genotypes are imputed  with a higher accuracy when they contain more reference alleles. To display this effect, I calculated the proportion of correctly imputed genotypes in 0.1x and 0.5x downsamples and stratified by genotype class (Table \ref{tab:genotype_class_prop}). In the case of 0.5x downsamples, adding reference alleles to the genotype increased the accuracy of imputation. For 0.1x downsamples, reference homozgyous genotypes were imputed more accurately than non-reference homozygous genotypes. In 0.1x downsamples, non-reference homozygous genotypes were imputed approximately as accurately as heterozygous genotypes, potentially in part because of the difficult of calling heterozygous genotypes in very low coverage samples.
-
 \begin{table}
 \centering\begingroup\fontsize{10}{10}\selectfont
 
@@ -738,6 +736,8 @@ type & prop correct 0.1x & prop correct 0.5x & Number of SNPs\\
 \endgroup{}
 \label{tab:genotype_class_prop}
 \end{table}
+
+Another consideration is the concept of reference \textit{sequence} bias, where genotypes are imputed  with a higher accuracy when they contain more reference alleles. To display this effect, I calculated the proportion of correctly imputed genotypes in 0.1x and 0.5x downsamples and stratified by genotype class (Table 2.6). In the case of 0.5x downsamples, adding reference alleles to the genotype increased the accuracy of imputation. For 0.1x downsamples, reference homozgyous genotypes were imputed more accurately than non-reference homozygous genotypes. In 0.1x downsamples, non-reference homozygous genotypes were imputed approximately as accurately as heterozygous genotypes, potentially in part because of the difficult of calling heterozygous genotypes in very low coverage samples.
 
 
 

@@ -92,36 +92,36 @@
 \contentsline {subsection}{\numberline {5.2.6}Allele-frequency based tests}{172}{subsection.5.2.6}%
 \contentsline {subsection}{\numberline {5.2.7}ChromoPainter and fineSTRUCTURE analysis}{172}{subsection.5.2.7}%
 \contentsline {subsection}{\numberline {5.2.8}SOURCEFIND ancestry proportion analysis}{173}{subsection.5.2.8}%
-\contentsline {subsection}{\numberline {5.2.9}MOSAIC admixture analysis}{175}{subsection.5.2.9}%
-\contentsline {section}{\numberline {5.3}Results}{175}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Mixed ancestry of Migration Period Slavs}{175}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Early Middle Age Slavs represent a relatively homogeneous group typical of European Middle Ages}{179}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Assessing continuity between Early Middle Age and Migration Period samples}{180}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.2.9}MOSAIC admixture analysis}{174}{subsection.5.2.9}%
+\contentsline {section}{\numberline {5.3}Results}{178}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Mixed ancestry of Migration Period Slavs}{178}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Early Middle Age Slavs represent a relatively homogeneous group typical of European Middle Ages}{180}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Assessing continuity between Early Middle Age and Migration Period samples}{182}{subsection.5.3.3}%
 \contentsline {subsection}{\numberline {5.3.4}Legacy of Slavic migrations in present-day individuals}{183}{subsection.5.3.4}%
-\contentsline {subsection}{\numberline {5.3.5}Genetic structure and admixture events of present-day Slavic people}{186}{subsection.5.3.5}%
-\contentsline {section}{\numberline {5.4}Summary of Results and Discussion}{188}{section.5.4}%
-\contentsline {chapter}{\numberline {6}General Conclusions}{193}{chapter.6}%
-\contentsline {section}{\numberline {6.1}General summary}{193}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Recommendations}{196}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Limitations of work and future avenues of research}{197}{section.6.3}%
-\contentsline {chapter}{Appendices}{199}{section.6.3}%
-\contentsline {chapter}{\numberline {A}Datasets used}{199}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Ancient reference dataset}{199}{section.A.1}%
-\contentsline {section}{\numberline {A.2}30x 1000 genomes dataset}{201}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Human Origins dataset}{203}{section.A.3}%
-\contentsline {subsection}{\numberline {A.3.1}Processing}{210}{subsection.A.3.1}%
-\contentsline {section}{\numberline {A.4}MS POBI HellBus dataset}{210}{section.A.4}%
-\contentsline {section}{\numberline {A.5}Reference ancient samples}{216}{section.A.5}%
-\contentsline {subsection}{\numberline {A.5.1}Table of individuals and their fineSTRUCTURE labels - chapter 4}{242}{subsection.A.5.1}%
-\contentsline {subsection}{\numberline {A.5.2}Table of individuals and their fineSTRUCTURE labels}{255}{subsection.A.5.2}%
-\contentsline {chapter}{\numberline {B}Some commonly used terms and their motivation for use}{260}{appendix.B}%
-\contentsline {section}{\numberline {B.1}`all-v-all'}{260}{section.B.1}%
-\contentsline {section}{\numberline {B.2}`Leave-one-out'}{260}{section.B.2}%
-\contentsline {section}{\numberline {B.3}Total Variation Distance}{261}{section.B.3}%
-\contentsline {chapter}{\numberline {C}Colophon}{262}{appendix.C}%
-\contentsline {chapter}{\numberline {D}Supplementary figures}{263}{appendix.D}%
-\contentsline {chapter}{\numberline {E}Supplementary results}{272}{appendix.E}%
-\contentsline {subsection}{\numberline {E.0.1}Determining the number of MCMC iterations required in SOURCEFIND analysis}{272}{subsection.E.0.1}%
-\contentsline {subsection}{\numberline {E.0.2}Determining the number of SNPs required to separate individuals from Devon and Cornwall}{274}{subsection.E.0.2}%
-\contentsline {subsection}{\numberline {E.0.3}Comparison of imputation uncertainty metrics}{274}{subsection.E.0.3}%
-\contentsline {chapter}{Bibliography}{279}{figure.caption.86}%
+\contentsline {subsection}{\numberline {5.3.5}Genetic structure and admixture events of present-day Slavic people}{187}{subsection.5.3.5}%
+\contentsline {section}{\numberline {5.4}Summary of Results and Discussion}{190}{section.5.4}%
+\contentsline {chapter}{\numberline {6}General Conclusions}{194}{chapter.6}%
+\contentsline {section}{\numberline {6.1}General summary}{194}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Recommendations}{197}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Limitations of work and future avenues of research}{198}{section.6.3}%
+\contentsline {chapter}{Appendices}{200}{section.6.3}%
+\contentsline {chapter}{\numberline {A}Datasets used}{200}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Ancient reference dataset}{200}{section.A.1}%
+\contentsline {section}{\numberline {A.2}30x 1000 genomes dataset}{202}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Human Origins dataset}{204}{section.A.3}%
+\contentsline {subsection}{\numberline {A.3.1}Processing}{211}{subsection.A.3.1}%
+\contentsline {section}{\numberline {A.4}MS POBI HellBus dataset}{211}{section.A.4}%
+\contentsline {section}{\numberline {A.5}Reference ancient samples}{217}{section.A.5}%
+\contentsline {subsection}{\numberline {A.5.1}Table of individuals and their fineSTRUCTURE labels - chapter 4}{243}{subsection.A.5.1}%
+\contentsline {subsection}{\numberline {A.5.2}Table of individuals and their fineSTRUCTURE labels}{256}{subsection.A.5.2}%
+\contentsline {chapter}{\numberline {B}Some commonly used terms and their motivation for use}{261}{appendix.B}%
+\contentsline {section}{\numberline {B.1}`all-v-all'}{261}{section.B.1}%
+\contentsline {section}{\numberline {B.2}`Leave-one-out'}{261}{section.B.2}%
+\contentsline {section}{\numberline {B.3}Total Variation Distance}{262}{section.B.3}%
+\contentsline {chapter}{\numberline {C}Colophon}{263}{appendix.C}%
+\contentsline {chapter}{\numberline {D}Supplementary figures}{264}{appendix.D}%
+\contentsline {chapter}{\numberline {E}Supplementary results}{273}{appendix.E}%
+\contentsline {subsection}{\numberline {E.0.1}Determining the number of MCMC iterations required in SOURCEFIND analysis}{273}{subsection.E.0.1}%
+\contentsline {subsection}{\numberline {E.0.2}Determining the number of SNPs required to separate individuals from Devon and Cornwall}{275}{subsection.E.0.2}%
+\contentsline {subsection}{\numberline {E.0.3}Comparison of imputation uncertainty metrics}{275}{subsection.E.0.3}%
+\contentsline {chapter}{Bibliography}{281}{figure.caption.87}%

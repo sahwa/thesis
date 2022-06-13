@@ -10,16 +10,15 @@ A level-1 auxiliary file: Chapter4_GH_Dec2021.aux
 A level-1 auxiliary file: Chapter5_GH.aux
 A level-1 auxiliary file: Conclusions_GH.aux
 A level-1 auxiliary file: Appendices.aux
-Reallocated field_info (elt_size=4) to 10106 items from 5000.
+Reallocated field_info (elt_size=4) to 10083 items from 5000.
 Database file #1: ../bibliography/library.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
-Warning--I didn't find a database entry for "rubinacci2021efficicanent"
 Warning--empty journal in gibbs2003international
 Warning--empty journal in furholt2003absolutchronologische
 Warning--there's a number but no series in fouracre1995new
 You've used 221 entries,
             1820 wiz_defined-function locations,
-            1657 strings with 90426 characters,
+            1656 strings with 90401 characters,
 and the built_in function-call counts, 55987 in all, are:
 = -- 5313
 > -- 3098
@@ -58,4 +57,4 @@ warning$ -- 3
 while$ -- 531
 width$ -- 224
 write$ -- 2396
-(There were 4 warnings)
+(There were 3 warnings)
