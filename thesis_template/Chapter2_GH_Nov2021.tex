@@ -549,9 +549,11 @@ Yamnaya & 5 & homozygous & 0.9999 & 0.9963\\*
 
 \subsection{Phasing accuracy}
 
-I also used rtg-tools to calculate the number of phased heterozygous genotypes where the downsampled individual has the same phase as the full coverage individual (Fig \ref{fig:phasing_performance_downsampled}). I note that this should not be considered to be the same as estimating the switch error rate, since we do not know that the phasing in the full-coverage individual is the true phase. However, this can be used as a rough proxy for switch errors, since it is known that phasing in lower coverage individuals is likely to be less accurate than those in the high coverage individuals \cite{rubinacci2021efficient}.
+I also used rtg-tools to calculate the number of phased heterozygous genotypes where the downsampled individual has the same phase as the full coverage individual (Fig \ref{fig:phasing_performance_downsampled}). I note that this should not be considered to be the same as estimating the switch error rate, since we do not know that the phasing in the full-coverage individual is the true phase. However, this can be used as a rough proxy for switch- errors, since it is known that phasing in lower coverage individuals is likely to be less accurate than those in the high coverage individuals \cite{rubinacci2021efficient}.
 
-Phase agreement with the full-coverage sample increased with increasing coverage. Such results are difficult to interpret because each sample has a different level of heterozygosity. However, given switch errors occur on a scale greater than the estimated chunk size, they are not expected to significantly contribute towards painting accuracy.
+
+
+Switch-errors may break up haplotypes and thus will spuriously increase the number of donor individuals for stretches of DNA that would otherwise have a single nearest neighbor. Phase agreement with the full-coverage sample increased with increasing coverage. Such results are difficult to interpret because each sample has a different level of heterozygosity. However, Lawson and Falush showed that sporadic, randomly distributed switch-errors do not seriously harm the performance of ChromoPainter. However, non-randomly distributed switch-errors may lead to certain samples appearing more similar to one another than they truly are \cite{LawsonFalushReview}.
 
 \begin{figure}[htp]
     \centering

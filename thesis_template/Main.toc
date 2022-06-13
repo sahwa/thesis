@@ -33,15 +33,15 @@
 \contentsline {subsection}{\numberline {2.6.2}Phasing accuracy}{62}{subsection.2.6.2}%
 \contentsline {subsection}{\numberline {2.6.3}Validating posterior probability calibration}{62}{subsection.2.6.3}%
 \contentsline {subsection}{\numberline {2.6.4}ChromoPainter analysis}{66}{subsection.2.6.4}%
-\contentsline {subsection}{\numberline {2.6.5}SOURCEFIND}{74}{subsection.2.6.5}%
-\contentsline {section}{\numberline {2.7}Issues and possible solutions for low coverage ancient DNA}{77}{section.2.7}%
+\contentsline {subsection}{\numberline {2.6.5}SOURCEFIND}{73}{subsection.2.6.5}%
+\contentsline {section}{\numberline {2.7}Issues and possible solutions for low coverage ancient DNA}{75}{section.2.7}%
 \contentsline {subsection}{\numberline {2.7.1}PCA imputation test}{77}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}Direct imputation test}{79}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.2}Direct imputation test}{78}{subsection.2.7.2}%
 \contentsline {section}{\numberline {2.8}Solutions}{82}{section.2.8}%
-\contentsline {subsection}{\numberline {2.8.1}Accounting for allele likelihoods}{84}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.1}Accounting for allele likelihoods}{82}{subsection.2.8.1}%
 \contentsline {subsection}{\numberline {2.8.2}Filtering SNPs}{84}{subsection.2.8.2}%
-\contentsline {subsection}{\numberline {2.8.3}Restricting analysis to non-imputed SNPs}{87}{subsection.2.8.3}%
-\contentsline {section}{\numberline {2.9}Summary of Results and Discussion}{92}{section.2.9}%
+\contentsline {subsection}{\numberline {2.8.3}Restricting analysis to non-imputed SNPs}{86}{subsection.2.8.3}%
+\contentsline {section}{\numberline {2.9}Summary of Results and Discussion}{94}{section.2.9}%
 \contentsline {chapter}{\numberline {3}Investigating the sub-continental ancestry of ethnic minorities within the U.K. Biobank from sparse genotype data}{97}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Introduction}{97}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Methods}{101}{section.3.2}%

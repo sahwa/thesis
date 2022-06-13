@@ -7,6 +7,6 @@ dat %>%
 	# rename(Ind = ind, Coverage = coverage, Type = type) %>%
 	# arrange(Ind, Coverage, Type) %>%
 	# # mutate(across(1:4, function(x) formattable::comma(x, digits=0)))
-	kbl(booktabs = T, format='latex', linesep = "", longtable=F) %>% 
+	kbl(booktabs = T, format='latex', linesep = "", longtable=T) %>% 
 	kable_styling(position = "center",  font_size = 8, full_width = F) 
 
