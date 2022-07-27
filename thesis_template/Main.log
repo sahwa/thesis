@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.4.30)  24 JUN 2022 16:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.4.30)  27 JUL 2022 16:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2020,7 +2020,7 @@ Here is how much of TeX's memory you used:
  46203 multiletter control sequences out of 15000+600000
  576260 words of font info for 282 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 93i,16n,95p,2233b,784s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 93i,16n,95p,2200b,784s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{cite.Sawcer2011} has been referenced but does not
  exist, replaced by a fixed one
 
@@ -2662,7 +2662,7 @@ xmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 sy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmtt8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb
 >
-Output written on Main.pdf (255 pages, 25234555 bytes).
+Output written on Main.pdf (255 pages, 25234545 bytes).
 PDF statistics:
  3873 PDF objects out of 4296 (max. 8388607)
  3375 compressed objects within 34 object streams
